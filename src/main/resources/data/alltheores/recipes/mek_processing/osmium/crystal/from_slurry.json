@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crystallizing",
+  "chemicalType": "slurry",
+  "input": {
+    "amount": 200,
+    "slurry": "alltheores:clean_osmium"
+  },
+  "output": {
+    "item": "alltheores:osmium_crystal"
+  }
+}

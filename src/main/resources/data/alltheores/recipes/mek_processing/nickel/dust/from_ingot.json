@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ingots/nickel"
+    }
+  },
+  "output": {
+    "item": "alltheores:nickel_dust"
+  }
+}

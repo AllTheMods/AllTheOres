@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:dirty_dusts/silver"
+    }
+  },
+  "output": {
+    "item": "alltheores:silver_dust"
+  }
+}

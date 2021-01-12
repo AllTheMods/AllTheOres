@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        "#mekanism:crystals/aluminum",
+        "#mekanism:crystals/copper",
+        "#mekanism:crystals/lead",
+        "#mekanism:crystals/nickel",
+        "#mekanism:crystals/osmium",
+        "#mekanism:crystals/platinum",
+        "#mekanism:crystals/silver",
+        "#mekanism:crystals/tin",
+        "#mekanism:crystals/uranium",
+        "#mekanism:crystals/zinc"
+    ]
+}

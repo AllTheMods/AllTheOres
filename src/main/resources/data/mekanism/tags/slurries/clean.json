@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        "alltheores:clean_aluminum",
+        "alltheores:clean_copper",
+        "alltheores:clean_lead",
+        "alltheores:clean_nickel",
+        "alltheores:clean_osmium",
+        "alltheores:clean_platinum",
+        "alltheores:clean_silver",
+        "alltheores:clean_tin",
+        "alltheores:clean_uranium",
+        "alltheores:clean_zinc"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/tin"
+    }
+  },
+  "output": {
+    "item": "alltheores:dirty_tin_dust"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crystallizing",
+  "chemicalType": "slurry",
+  "input": {
+    "amount": 200,
+    "slurry": "alltheores:clean_copper"
+  },
+  "output": {
+    "item": "alltheores:copper_crystal"
+  }
+}

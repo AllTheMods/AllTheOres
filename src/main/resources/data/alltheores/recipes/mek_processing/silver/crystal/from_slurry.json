@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crystallizing",
+  "chemicalType": "slurry",
+  "input": {
+    "amount": 200,
+    "slurry": "alltheores:clean_silver"
+  },
+  "output": {
+    "item": "alltheores:silver_crystal"
+  }
+}

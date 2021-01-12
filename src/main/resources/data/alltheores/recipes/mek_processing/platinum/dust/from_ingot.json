@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ingots/platinum"
+    }
+  },
+  "output": {
+    "item": "alltheores:platinum_dust"
+  }
+}

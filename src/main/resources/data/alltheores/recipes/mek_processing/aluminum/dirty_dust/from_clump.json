@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/aluminum"
+    }
+  },
+  "output": {
+    "item": "alltheores:dirty_aluminum_dust"
+  }
+}

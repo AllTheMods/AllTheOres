@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "tag": "mekanism:clumps/nickel"
+    }
+  },
+  "output": {
+    "item": "alltheores:dirty_nickel_dust"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/uranium"
+    }
+  },
+  "output": {
+    "item": "alltheores:uranium_dust",
+    "count": 2
+  }
+}
