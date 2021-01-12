@@ -3,7 +3,7 @@
   "chemicalType": "slurry",
   "input": {
     "amount": 200,
-    "slurry": "mekaniusm:clean_uranium"
+    "slurry": "mekanism:clean_uranium"
   },
   "output": {
     "item": "alltheores:uranium_crystal"

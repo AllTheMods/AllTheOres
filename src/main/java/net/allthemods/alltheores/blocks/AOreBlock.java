@@ -33,12 +33,12 @@ public class AOreBlock extends Block {
 		return 1;
 	}
 
-
+/*
 	@Deprecated
 	@Override
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 		List<ItemStack> list = new ArrayList<ItemStack>();
 		list.add(new ItemStack(state.getBlock().asItem()));
 		return list;
-	}
+	}*/
 }
