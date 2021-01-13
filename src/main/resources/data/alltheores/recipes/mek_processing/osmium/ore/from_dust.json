@@ -13,5 +13,11 @@
   },
   "output": {
     "item": "alltheores:ore_osmium"
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
 }

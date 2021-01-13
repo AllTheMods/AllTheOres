@@ -12,5 +12,11 @@
   "output": {
     "item": "alltheores:nickel_clump",
     "count": 3
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
 }

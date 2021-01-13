@@ -11,5 +11,11 @@
   },
   "output": {
     "item": "alltheores:platinum_clump"
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
 }

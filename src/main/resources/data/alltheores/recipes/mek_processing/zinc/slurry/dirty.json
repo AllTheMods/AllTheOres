@@ -13,5 +13,11 @@
     "slurry": "alltheores:dirty_zinc",
     "amount": 1000,
     "chemicalType": "slurry"
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
 }
