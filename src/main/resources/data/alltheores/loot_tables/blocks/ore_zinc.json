@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "alltheores:zinc_ore"
+          "name": "alltheores:ore_zinc"
         }
       ],
       "conditions": [

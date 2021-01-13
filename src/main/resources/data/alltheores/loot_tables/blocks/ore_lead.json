@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "alltheores:tin_ore"
+          "name": "alltheores:ore_lead"
         }
       ],
       "conditions": [

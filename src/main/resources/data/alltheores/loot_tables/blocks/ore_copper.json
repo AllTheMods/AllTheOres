@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "alltheores:silver_ore"
+          "name": "alltheores:ore_copper"
         }
       ],
       "conditions": [

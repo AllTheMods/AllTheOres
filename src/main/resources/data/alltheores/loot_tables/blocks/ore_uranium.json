@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "alltheores:uranium_ore"
+          "name": "alltheores:ore_uranium"
         }
       ],
       "conditions": [

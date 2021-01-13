@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "alltheores:lead_ore"
+          "name": "alltheores:ore_osmium"
         }
       ],
       "conditions": [
