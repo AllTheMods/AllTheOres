@@ -23,42 +23,52 @@ public class Configuration {
 	public static int aluminum_MinY;
 	public static int aluminum_MaxY;
 	public static int aluminum_SpawnSize;
+	public static int aluminum_VeinCount;
 
 	public static int copper_MinY;
 	public static int copper_MaxY;
 	public static int copper_SpawnSize;
+	public static int copper_VeinCount;
 
 	public static int lead_MinY;
 	public static int lead_MaxY;
 	public static int lead_SpawnSize;
+	public static int lead_VeinCount;
 
 	public static int nickel_MinY;
 	public static int nickel_MaxY;
 	public static int nickel_SpawnSize;
+	public static int nickel_VeinCount;
 
 	public static int osmium_MinY;
 	public static int osmium_MaxY;
 	public static int osmium_SpawnSize;
+	public static int osmium_VeinCount;
 
 	public static int platinum_MinY;
 	public static int platinum_MaxY;
 	public static int platinum_SpawnSize;
+	public static int platinum_VeinCount;
 
 	public static int silver_MinY;
 	public static int silver_MaxY;
 	public static int silver_SpawnSize;
+	public static int silver_VeinCount;
 
 	public static int tin_MinY;
 	public static int tin_MaxY;
 	public static int tin_SpawnSize;
+	public static int tin_VeinCount;
 
 	public static int zinc_MinY;
 	public static int zinc_MaxY;
 	public static int zinc_SpawnSize;
+	public static int zinc_VeinCount;
 
 	public static int uranium_MinY;
 	public static int uranium_MaxY;
 	public static int uranium_SpawnSize;
+	public static int uranium_VeinCount;
 
 	public static final ForgeConfigSpec COMMON_SPEC;
 	public static final Common COMMON;
@@ -88,42 +98,52 @@ public class Configuration {
 		aluminum_MinY = Configuration.COMMON.aluminum_MinY.get();
 		aluminum_MaxY = Configuration.COMMON.aluminum_MaxY.get();
 		aluminum_SpawnSize = Configuration.COMMON.aluminum_SpawnSize.get();
+		aluminum_VeinCount = Configuration.COMMON.aluminum_VeinCount.get();
 
 		copper_MinY = Configuration.COMMON.copper_MinY.get();
 		copper_MaxY = Configuration.COMMON.copper_MaxY.get();
 		copper_SpawnSize = Configuration.COMMON.copper_SpawnSize.get();
+		copper_VeinCount = Configuration.COMMON.copper_VeinCount.get();
 
 		lead_MinY = Configuration.COMMON.lead_MinY.get();
 		lead_MaxY = Configuration.COMMON.lead_MaxY.get();
 		lead_SpawnSize = Configuration.COMMON.lead_SpawnSize.get();
+		lead_VeinCount = Configuration.COMMON.lead_VeinCount.get();
 
 		nickel_MinY = Configuration.COMMON.nickel_MinY.get();
 		nickel_MaxY = Configuration.COMMON.nickel_MaxY.get();
 		nickel_SpawnSize = Configuration.COMMON.nickel_SpawnSize.get();
+		nickel_VeinCount = Configuration.COMMON.nickel_VeinCount.get();
 
 		osmium_MinY = Configuration.COMMON.osmium_MinY.get();
 		osmium_MaxY = Configuration.COMMON.osmium_MaxY.get();
 		osmium_SpawnSize = Configuration.COMMON.osmium_SpawnSize.get();
+		osmium_VeinCount = Configuration.COMMON.osmium_VeinCount.get();
 
 		platinum_MinY = Configuration.COMMON.platinum_MinY.get();
 		platinum_MaxY = Configuration.COMMON.platinum_MaxY.get();
 		platinum_SpawnSize = Configuration.COMMON.platinum_SpawnSize.get();
+		platinum_VeinCount = Configuration.COMMON.platinum_VeinCount.get();
 
 		silver_MinY = Configuration.COMMON.silver_MinY.get();
 		silver_MaxY = Configuration.COMMON.silver_MaxY.get();
 		silver_SpawnSize = Configuration.COMMON.silver_SpawnSize.get();
+		silver_VeinCount = Configuration.COMMON.silver_VeinCount.get();
 
 		tin_MinY = Configuration.COMMON.tin_MinY.get();
 		tin_MaxY = Configuration.COMMON.tin_MaxY.get();
 		tin_SpawnSize = Configuration.COMMON.tin_SpawnSize.get();
+		tin_VeinCount = Configuration.COMMON.tin_VeinCount.get();
 
 		zinc_MinY = Configuration.COMMON.zinc_MinY.get();
 		zinc_MaxY = Configuration.COMMON.zinc_MaxY.get();
 		zinc_SpawnSize = Configuration.COMMON.zinc_SpawnSize.get();
+		zinc_VeinCount = Configuration.COMMON.zinc_VeinCount.get();
 
 		uranium_MinY = Configuration.COMMON.uranium_MinY.get();
 		uranium_MaxY = Configuration.COMMON.uranium_MaxY.get();
 		uranium_SpawnSize = Configuration.COMMON.uranium_SpawnSize.get();
+		uranium_VeinCount = Configuration.COMMON.uranium_VeinCount.get();
 	}
 
 	public static class Common {
@@ -141,44 +161,55 @@ public class Configuration {
 		public final ForgeConfigSpec.IntValue aluminum_MinY;
 		public final ForgeConfigSpec.IntValue aluminum_MaxY;
 		public final ForgeConfigSpec.IntValue aluminum_SpawnSize;
+		public final ForgeConfigSpec.IntValue aluminum_VeinCount;
 
 		public final ForgeConfigSpec.IntValue copper_MinY;
 		public final ForgeConfigSpec.IntValue copper_MaxY;
 		public final ForgeConfigSpec.IntValue copper_SpawnSize;
+		public final ForgeConfigSpec.IntValue copper_VeinCount;
 
 		public final ForgeConfigSpec.IntValue lead_MinY;
 		public final ForgeConfigSpec.IntValue lead_MaxY;
 		public final ForgeConfigSpec.IntValue lead_SpawnSize;
+		public final ForgeConfigSpec.IntValue lead_VeinCount;
 
 		public final ForgeConfigSpec.IntValue nickel_MinY;
 		public final ForgeConfigSpec.IntValue nickel_MaxY;
 		public final ForgeConfigSpec.IntValue nickel_SpawnSize;
+		public final ForgeConfigSpec.IntValue nickel_VeinCount;
 
 		public final ForgeConfigSpec.IntValue osmium_MinY;
 		public final ForgeConfigSpec.IntValue osmium_MaxY;
 		public final ForgeConfigSpec.IntValue osmium_SpawnSize;
+		public final ForgeConfigSpec.IntValue osmium_VeinCount;
 
 		public final ForgeConfigSpec.IntValue platinum_MinY;
 		public final ForgeConfigSpec.IntValue platinum_MaxY;
 		public final ForgeConfigSpec.IntValue platinum_SpawnSize;
+		public final ForgeConfigSpec.IntValue platinum_VeinCount;
 
 		public final ForgeConfigSpec.IntValue silver_MinY;
 		public final ForgeConfigSpec.IntValue silver_MaxY;
 		public final ForgeConfigSpec.IntValue silver_SpawnSize;
+		public final ForgeConfigSpec.IntValue silver_VeinCount;
 
 		public final ForgeConfigSpec.IntValue tin_MinY;
 		public final ForgeConfigSpec.IntValue tin_MaxY;
 		public final ForgeConfigSpec.IntValue tin_SpawnSize;
+		public final ForgeConfigSpec.IntValue tin_VeinCount;
 
 		public final ForgeConfigSpec.IntValue zinc_MinY;
 		public final ForgeConfigSpec.IntValue zinc_MaxY;
 		public final ForgeConfigSpec.IntValue zinc_SpawnSize;
+		public final ForgeConfigSpec.IntValue zinc_VeinCount;
 
 		public final ForgeConfigSpec.IntValue uranium_MinY;
 		public final ForgeConfigSpec.IntValue uranium_MaxY;
 		public final ForgeConfigSpec.IntValue uranium_SpawnSize;
+		public final ForgeConfigSpec.IntValue uranium_VeinCount;
 
 		public Common(ForgeConfigSpec.Builder BUILDER) {
+
 			BUILDER.push("spawncontrol");
 			aluminumGen = BUILDER.comment("Enable Aluminum Worldgen").define("aluminum", true);
 			copperGen = BUILDER.comment("Enable Copper Worldgen").define("copper", true);
@@ -200,6 +231,8 @@ public class Configuration {
 					1, 254);
 			aluminum_SpawnSize = BUILDER.comment("Aluminum deposit size").defineInRange("aluminum_deposit_size",
 					7, 1, 64);
+			aluminum_VeinCount = BUILDER.comment("Aluminum veins per chunk").defineInRange("aluminum_vein_count",
+					10, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("copper");
@@ -209,6 +242,8 @@ public class Configuration {
 					254);
 			copper_SpawnSize = BUILDER.comment("Copper deposit size").defineInRange("copper_deposit_size", 7, 1,
 					64);
+			copper_VeinCount = BUILDER.comment("Copper veins per chunk").defineInRange("copper_vein_count",
+					10, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("zinc");
@@ -216,12 +251,16 @@ public class Configuration {
 			zinc_MinY = BUILDER.comment("Zinc bottom Y level for spawn").defineInRange("zinc_min_y", 30, 1, 254);
 			zinc_MaxY = BUILDER.comment("Zinc top Y level for spawn").defineInRange("zinc_max_y", 60, 1, 254);
 			zinc_SpawnSize = BUILDER.comment("Zinc deposit size").defineInRange("zinc_deposit_size", 7, 1, 64);
+			zinc_VeinCount = BUILDER.comment("Zinc veins per chunk").defineInRange("zinc_vein_count",
+					10, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("lead");
 			lead_MinY = BUILDER.comment("Lead bottom Y level for spawn").defineInRange("lead_min_y", 20, 1, 254);
 			lead_MaxY = BUILDER.comment("Lead top Y level for spawn").defineInRange("lead_max_y", 40, 1, 254);
 			lead_SpawnSize = BUILDER.comment("Lead deposit size").defineInRange("lead_deposit_size", 7, 1, 64);
+			lead_VeinCount = BUILDER.comment("Lead veins per chunk").defineInRange("lead_vein_count",
+					8, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("nickel");
@@ -231,6 +270,8 @@ public class Configuration {
 					254);
 			nickel_SpawnSize = BUILDER.comment("Nickel deposit size").defineInRange("nickel_deposit_size", 7, 1,
 					64);
+			nickel_VeinCount = BUILDER.comment("Nickel veins per chunk").defineInRange("nickel_vein_count",
+					8, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("osmium");
@@ -240,6 +281,8 @@ public class Configuration {
 					254);
 			osmium_SpawnSize = BUILDER.comment("Osmium deposit size").defineInRange("osmium_deposit_size", 7, 1,
 					64);
+			osmium_VeinCount = BUILDER.comment("Osmium veins per chunk").defineInRange("osmium_vein_count",
+					8, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("platinum");
@@ -249,6 +292,8 @@ public class Configuration {
 					1, 254);
 			platinum_SpawnSize = BUILDER.comment("Platinum deposit size").defineInRange("platinum_deposit_size",
 					3, 1, 64);
+			platinum_VeinCount = BUILDER.comment("Platinum veins per chunk").defineInRange("platinum_vein_count",
+					6, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("silver");
@@ -258,12 +303,16 @@ public class Configuration {
 					254);
 			silver_SpawnSize = BUILDER.comment("Silver deposit size").defineInRange("silver_deposit_size", 5, 1,
 					64);
+			silver_VeinCount = BUILDER.comment("Silver veins per chunk").defineInRange("silver_vein_count",
+					8, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("tin");
 			tin_MinY = BUILDER.comment("Tin bottom Y level for spawn").defineInRange("tin_min_y", 30, 1, 254);
 			tin_MaxY = BUILDER.comment("Tin top Y level for spawn").defineInRange("tin_max_y", 60, 1, 254);
 			tin_SpawnSize = BUILDER.comment("Tin deposit size").defineInRange("tin_deposit_size", 7, 1, 64);
+			tin_VeinCount = BUILDER.comment("Tin veins per chunk").defineInRange("tin_vein_count",
+					10, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("uranium");
@@ -273,7 +322,8 @@ public class Configuration {
 					254);
 			uranium_SpawnSize = BUILDER.comment("Uranium deposit size").defineInRange("uranium_deposit_size", 4,
 					1, 64);
-
+			uranium_VeinCount = BUILDER.comment("Uranium veins per chunk").defineInRange("uranium_vein_count",
+					6, 1, 64);
 			BUILDER.pop(2);
 
 		}

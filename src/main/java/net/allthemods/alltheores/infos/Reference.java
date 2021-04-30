@@ -10,7 +10,7 @@ public class Reference {
 
 		public static final String MOD_ID = "alltheores";
 		public static final ItemGroup GROUP = new ItemGroup(MOD_ID) {
-			public ItemStack createIcon() {
+			public ItemStack makeIcon() {
 				return new ItemStack(Blocks.DIAMOND_ORE);
 			}
 		};

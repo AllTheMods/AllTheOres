@@ -11,8 +11,8 @@ public class BlockBreak {
 
     @SubscribeEvent
     public static void on(BlockEvent.BreakEvent event) {
-        if(event.getPlayer().isCreative() == true) { return; }
-        if((event.getState().getBlock() instanceof OtherOreBlock) && ((event.getPlayer() instanceof FakePlayer) || (event.getPlayer() == null) || (event.getPlayer().getHeldItemMainhand().isEmpty() == true))) {
+        if(event.getPlayer().isCreative()) { return; }
+        if((event.getState().getBlock() instanceof OtherOreBlock) && ((event.getPlayer() instanceof FakePlayer) || (event.getPlayer() == null) || (event.getPlayer().getMainHandItem().isEmpty()))) {
             event.setCanceled(true);
             return;
         }

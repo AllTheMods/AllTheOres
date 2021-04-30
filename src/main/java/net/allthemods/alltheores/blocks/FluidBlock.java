@@ -11,4 +11,6 @@ public class FluidBlock extends FlowingFluidBlock {
 	public FluidBlock(Supplier<? extends FlowingFluid> supplier, Properties p_i48368_1_) {
 		super(supplier, p_i48368_1_);
 	}
+
+
 }

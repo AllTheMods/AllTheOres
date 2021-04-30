@@ -28,8 +28,8 @@ import java.util.List;
 public class OtherOreBlock extends Block {
 
     public OtherOreBlock() {
-        super(Properties.create(Material.IRON).setRequiresTool().sound(SoundType.STONE)
-                .hardnessAndResistance(113.0f));
+        super(Properties.of(Material.HEAVY_METAL).requiresCorrectToolForDrops().sound(SoundType.STONE)
+                .strength(113.0f));
     }
 
 
@@ -47,7 +47,7 @@ public class OtherOreBlock extends Block {
     }
 
     @Override
-    public PushReaction getPushReaction(BlockState state) {
+    public PushReaction getPistonPushReaction(BlockState state) {
 
         return PushReaction.BLOCK;
     }
