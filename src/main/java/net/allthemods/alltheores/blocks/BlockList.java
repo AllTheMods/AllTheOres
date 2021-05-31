@@ -54,12 +54,12 @@ public class BlockList {
 						.viscosity(300).temperature(400)).bucket(moltenAluminum_bucket).block(molten_Aluminum_block);
 	}
 
-	public static final RegistryObject<Block> ALUMINUM_ORE = BLOCKS.register("ore_aluminum", AOreBlock::new);
-	public static final RegistryObject<Block> OTHER_ALUMINUM_ORE = BLOCKS.register("ore_other_aluminum", OtherOreBlock::new);
+	public static final RegistryObject<Block> ALUMINUM_ORE = BLOCKS.register("aluminum_ore", AOreBlock::new);
+	public static final RegistryObject<Block> OTHER_ALUMINUM_ORE = BLOCKS.register("other_aluminum_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> ALUMINUM_BLOCK = BLOCKS.register("aluminum_block", AOreBlock::new);
-	public static final RegistryObject<Item> ALUMINUM_ORE_ITEM = ITEMS.register("ore_aluminum",
+	public static final RegistryObject<Item> ALUMINUM_ORE_ITEM = ITEMS.register("aluminum_ore",
 			() -> new ToolTipBlockItem(ALUMINUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_ALUMINUM_ORE_ITEM = ITEMS.register("ore_other_aluminum",
+	public static final RegistryObject<Item> OTHER_ALUMINUM_ORE_ITEM = ITEMS.register("other_aluminum_ore",
 			() -> new BlockItem(OTHER_ALUMINUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> ALUMINUM_BLOCK_ITEM = ITEMS.register("aluminum_block",
 			() -> new BlockItem(ALUMINUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -89,12 +89,12 @@ public class BlockList {
 						.viscosity(300).temperature(400)).bucket(moltenCopper_bucket).block(molten_Copper_block);
 	}
 
-	public static final RegistryObject<Block> COPPER_ORE = BLOCKS.register("ore_copper", AOreBlock::new);
-	public static final RegistryObject<Block> OTHER_COPPER_ORE = BLOCKS.register("ore_other_copper", OtherOreBlock::new);
+	public static final RegistryObject<Block> COPPER_ORE = BLOCKS.register("copper_ore", AOreBlock::new);
+	public static final RegistryObject<Block> OTHER_COPPER_ORE = BLOCKS.register("other_copper_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> COPPER_BLOCK = BLOCKS.register("copper_block", AOreBlock::new);
-	public static final RegistryObject<Item> COPPER_ORE_ITEM = ITEMS.register("ore_copper",
+	public static final RegistryObject<Item> COPPER_ORE_ITEM = ITEMS.register("copper_ore",
 			() -> new ToolTipBlockItem(COPPER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_COPPER_ORE_ITEM = ITEMS.register("ore_other_copper",
+	public static final RegistryObject<Item> OTHER_COPPER_ORE_ITEM = ITEMS.register("other_copper_ore",
 			() -> new BlockItem(OTHER_COPPER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 
 	public static final RegistryObject<Item> COPPER_BLOCK_ITEM = ITEMS.register("copper_block",
@@ -125,12 +125,12 @@ public class BlockList {
 						.viscosity(300).temperature(400)).bucket(moltenLead_bucket).block(molten_Lead_block);
 	}
 
-	public static final RegistryObject<Block> LEAD_ORE = BLOCKS.register("ore_lead", AOreBlock::new);
-	public static final RegistryObject<Block> OTHER_LEAD_ORE = BLOCKS.register("ore_other_lead", OtherOreBlock::new);
+	public static final RegistryObject<Block> LEAD_ORE = BLOCKS.register("lead_ore", AOreBlock::new);
+	public static final RegistryObject<Block> OTHER_LEAD_ORE = BLOCKS.register("other_lead_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> LEAD_BLOCK = BLOCKS.register("lead_block", AOreBlock::new);
-	public static final RegistryObject<Item> LEAD_ORE_ITEM = ITEMS.register("ore_lead",
+	public static final RegistryObject<Item> LEAD_ORE_ITEM = ITEMS.register("lead_ore",
 			() -> new ToolTipBlockItem(LEAD_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_LEAD_ORE_ITEM = ITEMS.register("ore_other_lead",
+	public static final RegistryObject<Item> OTHER_LEAD_ORE_ITEM = ITEMS.register("other_lead_ore",
 			() -> new BlockItem(OTHER_LEAD_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> LEAD_BLOCK_ITEM = ITEMS.register("lead_block",
 			() -> new BlockItem(LEAD_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -160,12 +160,12 @@ public class BlockList {
 						.viscosity(300).temperature(400)).bucket(moltenNickel_bucket).block(molten_Nickel_block);
 	}
 
-	public static final RegistryObject<Block> NICKEL_ORE = BLOCKS.register("ore_nickel", AOreBlock::new);
-	public static final RegistryObject<Block> OTHER_NICKEL_ORE = BLOCKS.register("ore_other_nickel", OtherOreBlock::new);
+	public static final RegistryObject<Block> NICKEL_ORE = BLOCKS.register("nickel_ore", AOreBlock::new);
+	public static final RegistryObject<Block> OTHER_NICKEL_ORE = BLOCKS.register("other_nickel_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> NICKEL_BLOCK = BLOCKS.register("nickel_block", AOreBlock::new);
-	public static final RegistryObject<Item> NICKEL_ORE_ITEM = ITEMS.register("ore_nickel",
+	public static final RegistryObject<Item> NICKEL_ORE_ITEM = ITEMS.register("nickel_ore",
 			() -> new ToolTipBlockItem(NICKEL_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_NICKEL_ORE_ITEM = ITEMS.register("ore_other_nickel",
+	public static final RegistryObject<Item> OTHER_NICKEL_ORE_ITEM = ITEMS.register("other_nickel_ore",
 			() -> new BlockItem(OTHER_NICKEL_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> NICKEL_BLOCK_ITEM = ITEMS.register("nickel_block",
 			() -> new BlockItem(NICKEL_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -195,12 +195,12 @@ public class BlockList {
 						.viscosity(300).temperature(400)).bucket(moltenOsmium_bucket).block(molten_Osmium_block);
 	}
 
-	public static final RegistryObject<Block> OSMIUM_ORE = BLOCKS.register("ore_osmium", AOreBlock::new);
-	public static final RegistryObject<Block> OTHER_OSMIUM_ORE = BLOCKS.register("ore_other_osmium", OtherOreBlock::new);
+	public static final RegistryObject<Block> OSMIUM_ORE = BLOCKS.register("osmium_ore", AOreBlock::new);
+	public static final RegistryObject<Block> OTHER_OSMIUM_ORE = BLOCKS.register("other_osmium_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> OSMIUM_BLOCK = BLOCKS.register("osmium_block", AOreBlock::new);
-	public static final RegistryObject<Item> OSMIUM_ORE_ITEM = ITEMS.register("ore_osmium",
+	public static final RegistryObject<Item> OSMIUM_ORE_ITEM = ITEMS.register("osmium_ore",
 			() -> new ToolTipBlockItem(OSMIUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_OSMIUM_ORE_ITEM = ITEMS.register("ore_other_osmium",
+	public static final RegistryObject<Item> OTHER_OSMIUM_ORE_ITEM = ITEMS.register("other_osmium_ore",
 			() -> new BlockItem(OTHER_OSMIUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OSMIUM_BLOCK_ITEM = ITEMS.register("osmium_block",
 			() -> new BlockItem(OSMIUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -230,12 +230,12 @@ public class BlockList {
 						.viscosity(300).temperature(400)).bucket(moltenPlatinum_bucket).block(molten_Platinum_block);
 	}
 
-	public static final RegistryObject<Block> PLATINUM_ORE = BLOCKS.register("ore_platinum", AOreBlock::new);
-	public static final RegistryObject<Block> OTHER_PLATINUM_ORE = BLOCKS.register("ore_other_platinum", OtherOreBlock::new);
+	public static final RegistryObject<Block> PLATINUM_ORE = BLOCKS.register("platinum_ore", AOreBlock::new);
+	public static final RegistryObject<Block> OTHER_PLATINUM_ORE = BLOCKS.register("other_platinum_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> PLATINUM_BLOCK = BLOCKS.register("platinum_block", AOreBlock::new);
-	public static final RegistryObject<Item> PLATINUM_ORE_ITEM = ITEMS.register("ore_platinum",
+	public static final RegistryObject<Item> PLATINUM_ORE_ITEM = ITEMS.register("platinum_ore",
 			() -> new ToolTipBlockItem(PLATINUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_PLATINUM_ORE_ITEM = ITEMS.register("ore_other_platinum",
+	public static final RegistryObject<Item> OTHER_PLATINUM_ORE_ITEM = ITEMS.register("other_platinum_ore",
 			() -> new BlockItem(OTHER_PLATINUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> PLATINUM_BLOCK_ITEM = ITEMS.register("platinum_block",
 			() -> new BlockItem(PLATINUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -265,12 +265,12 @@ public class BlockList {
 						.viscosity(300).temperature(400)).bucket(moltenSilver_bucket).block(molten_Silver_block);
 	}
 
-	public static final RegistryObject<Block> SILVER_ORE = BLOCKS.register("ore_silver", AOreBlock::new);
-	public static final RegistryObject<Block> OTHER_SILVER_ORE = BLOCKS.register("ore_other_silver", OtherOreBlock::new);
+	public static final RegistryObject<Block> SILVER_ORE = BLOCKS.register("silver_ore", AOreBlock::new);
+	public static final RegistryObject<Block> OTHER_SILVER_ORE = BLOCKS.register("other_silver_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> SILVER_BLOCK = BLOCKS.register("silver_block", AOreBlock::new);
-	public static final RegistryObject<Item> SILVER_ORE_ITEM = ITEMS.register("ore_silver",
+	public static final RegistryObject<Item> SILVER_ORE_ITEM = ITEMS.register("silver_ore",
 			() -> new ToolTipBlockItem(SILVER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_SILVER_ORE_ITEM = ITEMS.register("ore_other_silver",
+	public static final RegistryObject<Item> OTHER_SILVER_ORE_ITEM = ITEMS.register("other_silver_ore",
 			() -> new BlockItem(OTHER_SILVER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> SILVER_BLOCK_ITEM = ITEMS.register("silver_block",
 			() -> new BlockItem(SILVER_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -300,12 +300,12 @@ public class BlockList {
 						.viscosity(300).temperature(400)).bucket(moltenTin_bucket).block(molten_Tin_block);
 	}
 
-	public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("ore_tin", AOreBlock::new);
-	public static final RegistryObject<Block> OTHER_TIN_ORE = BLOCKS.register("ore_other_tin", OtherOreBlock::new);
+	public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore", AOreBlock::new);
+	public static final RegistryObject<Block> OTHER_TIN_ORE = BLOCKS.register("other_tin_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> TIN_BLOCK = BLOCKS.register("tin_block", AOreBlock::new);
-	public static final RegistryObject<Item> TIN_ORE_ITEM = ITEMS.register("ore_tin",
+	public static final RegistryObject<Item> TIN_ORE_ITEM = ITEMS.register("tin_ore",
 			() -> new ToolTipBlockItem(TIN_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_TIN_ORE_ITEM = ITEMS.register("ore_other_tin",
+	public static final RegistryObject<Item> OTHER_TIN_ORE_ITEM = ITEMS.register("other_tin_ore",
 			() -> new BlockItem(OTHER_TIN_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> TIN_BLOCK_ITEM = ITEMS.register("tin_block",
 			() -> new BlockItem(TIN_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -335,12 +335,12 @@ public class BlockList {
 						.viscosity(300).temperature(400)).bucket(moltenUranium_bucket).block(molten_Uranium_block);
 	}
 
-	public static final RegistryObject<Block> URANIUM_ORE = BLOCKS.register("ore_uranium", AOreBlock::new);
-	public static final RegistryObject<Block> OTHER_URANIUM_ORE = BLOCKS.register("ore_other_uranium", OtherOreBlock::new);
+	public static final RegistryObject<Block> URANIUM_ORE = BLOCKS.register("uranium_ore", AOreBlock::new);
+	public static final RegistryObject<Block> OTHER_URANIUM_ORE = BLOCKS.register("other_uranium_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block", AOreBlock::new);
-	public static final RegistryObject<Item> URANIUM_ORE_ITEM = ITEMS.register("ore_uranium",
+	public static final RegistryObject<Item> URANIUM_ORE_ITEM = ITEMS.register("uranium_ore",
 			() -> new ToolTipBlockItem(URANIUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_URANIUM_ORE_ITEM = ITEMS.register("ore_other_uranium",
+	public static final RegistryObject<Item> OTHER_URANIUM_ORE_ITEM = ITEMS.register("other_uranium_ore",
 			() -> new BlockItem(OTHER_URANIUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> URANIUM_BLOCK_ITEM = ITEMS.register("uranium_block",
 			() -> new BlockItem(URANIUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -370,12 +370,12 @@ public class BlockList {
 						.viscosity(300).temperature(400)).bucket(moltenZinc_bucket).block(molten_Zinc_block);
 	}
 
-	public static final RegistryObject<Block> ZINC_ORE = BLOCKS.register("ore_zinc", AOreBlock::new);
-	public static final RegistryObject<Block> OTHER_ZINC_ORE = BLOCKS.register("ore_other_zinc", OtherOreBlock::new);
+	public static final RegistryObject<Block> ZINC_ORE = BLOCKS.register("zinc_ore", AOreBlock::new);
+	public static final RegistryObject<Block> OTHER_ZINC_ORE = BLOCKS.register("other_zinc_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> ZINC_BLOCK = BLOCKS.register("zinc_block", AOreBlock::new);
-	public static final RegistryObject<Item> ZINC_ORE_ITEM = ITEMS.register("ore_zinc",
+	public static final RegistryObject<Item> ZINC_ORE_ITEM = ITEMS.register("zinc_ore",
 			() -> new ToolTipBlockItem(ZINC_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_ZINC_ORE_ITEM = ITEMS.register("ore_other_zinc",
+	public static final RegistryObject<Item> OTHER_ZINC_ORE_ITEM = ITEMS.register("other_zinc_ore",
 			() -> new BlockItem(OTHER_ZINC_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> ZINC_BLOCK_ITEM = ITEMS.register("zinc_block",
 			() -> new BlockItem(ZINC_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -391,21 +391,21 @@ public class BlockList {
 	public static final RegistryObject<Item> GOLD_DUST = ITEMS.register("gold_dust",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
-	public static final RegistryObject<Block> OTHER_COAL_ORE = BLOCKS.register("ore_other_coal", OtherOreBlock::new);
-	public static final RegistryObject<Block> OTHER_IRON_ORE = BLOCKS.register("ore_other_iron", OtherOreBlock::new);
-	public static final RegistryObject<Block> OTHER_REDSTONE_ORE = BLOCKS.register("ore_other_redstone", OtherOreBlock::new);
-	public static final RegistryObject<Block> OTHER_DIAMOND_ORE = BLOCKS.register("ore_other_diamond", OtherOreBlock::new);
-	public static final RegistryObject<Block> OTHER_LAPIS_ORE = BLOCKS.register("ore_other_lapis", OtherOreBlock::new);
+	public static final RegistryObject<Block> OTHER_COAL_ORE = BLOCKS.register("other_coal_ore", OtherOreBlock::new);
+	public static final RegistryObject<Block> OTHER_IRON_ORE = BLOCKS.register("other_iron_ore", OtherOreBlock::new);
+	public static final RegistryObject<Block> OTHER_REDSTONE_ORE = BLOCKS.register("other_redstone_ore", OtherOreBlock::new);
+	public static final RegistryObject<Block> OTHER_DIAMOND_ORE = BLOCKS.register("other_diamond_ore", OtherOreBlock::new);
+	public static final RegistryObject<Block> OTHER_LAPIS_ORE = BLOCKS.register("other_lapis_ore", OtherOreBlock::new);
 	
-	public static final RegistryObject<Item> OTHER_COAL_ORE_ITEM = ITEMS.register("ore_other_coal",
+	public static final RegistryObject<Item> OTHER_COAL_ORE_ITEM = ITEMS.register("other_coal_ore",
 			() -> new BlockItem(OTHER_COAL_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_IRON_ORE_ITEM = ITEMS.register("ore_other_iron",
+	public static final RegistryObject<Item> OTHER_IRON_ORE_ITEM = ITEMS.register("other_iron_ore",
 			() -> new BlockItem(OTHER_IRON_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_REDSTONE_ORE_ITEM = ITEMS.register("ore_other_redstone",
+	public static final RegistryObject<Item> OTHER_REDSTONE_ORE_ITEM = ITEMS.register("other_redstone_ore",
 			() -> new BlockItem(OTHER_REDSTONE_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_DIAMOND_ORE_ITEM = ITEMS.register("ore_other_diamond",
+	public static final RegistryObject<Item> OTHER_DIAMOND_ORE_ITEM = ITEMS.register("other_diamond_ore",
 			() -> new BlockItem(OTHER_DIAMOND_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_LAPIS_ORE_ITEM = ITEMS.register("ore_other_lapis",
+	public static final RegistryObject<Item> OTHER_LAPIS_ORE_ITEM = ITEMS.register("other_lapis_ore",
 			() -> new BlockItem(OTHER_LAPIS_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 
 

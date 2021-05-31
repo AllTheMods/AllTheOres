@@ -12,7 +12,7 @@
     }
   },
   "output": {
-    "item": "alltheores:ore_aluminum"
+    "item": "alltheores:aluminum_ore"
   },
   "conditions": [
     {

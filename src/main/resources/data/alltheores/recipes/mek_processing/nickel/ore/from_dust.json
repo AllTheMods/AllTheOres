@@ -12,7 +12,7 @@
     }
   },
   "output": {
-    "item": "alltheores:ore_nickel"
+    "item": "alltheores:nickel_ore"
   },
   "conditions": [
     {

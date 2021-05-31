@@ -12,7 +12,7 @@
     }
   },
   "output": {
-    "item": "alltheores:ore_zinc"
+    "item": "alltheores:zinc_ore"
   },
   "conditions": [
     {

@@ -12,7 +12,7 @@
     }
   },
   "output": {
-    "item": "alltheores:ore_platinum"
+    "item": "alltheores:platinum_ore"
   },
   "conditions": [
     {

@@ -12,7 +12,7 @@
     }
   },
   "output": {
-    "item": "alltheores:ore_tin"
+    "item": "alltheores:tin_ore"
   },
   "conditions": [
     {
