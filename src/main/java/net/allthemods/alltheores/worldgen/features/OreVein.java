@@ -22,12 +22,14 @@ import java.util.UUID;
 
 public class OreVein extends Feature<NoFeatureConfig> {
 private Block oreType;
+private Block deepSlate_oreType;
 private BlockPos genLocation;
 private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,Direction.EAST,Direction.SOUTH,Direction.WEST};
 
-    public OreVein(Codec<NoFeatureConfig> p_i231953_1_, Block oretype) {
+    public OreVein(Codec<NoFeatureConfig> p_i231953_1_, Block oretype, Block deepSlate_oretype) {
         super(p_i231953_1_);
         this.oreType = oretype;
+        this.deepSlate_oreType = deepSlate_oretype;
     }
     private BlockPos getPreviousLocation() {
         return this.genLocation;
@@ -89,6 +91,8 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                 veinSize = Configuration.COMMON.zinc_SpawnSize.get();
                 veinCount = Configuration.COMMON.zinc_VeinCount.get();
         }
+        if((minY > pos.getY()) || (maxY < pos.getY())) { return false; }
+
         int distance_away = ((prev.getX() - pos.getX())^2 + (prev.getZ() - pos.getZ()));
         int processed = 0;
         if(distance_away >= veinCount) {
@@ -96,7 +100,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                 return false;
             }
             int step = (veinSize - 1) / 3;
-            world.setBlock(pos, this.oreType.defaultBlockState(), 1, 512);
+            world.setBlock(pos, pos.getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
             processed++;
             int new_direction = 0;
             for (int i = 0; i <= step; i++) {
@@ -112,10 +116,11 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
-                                    (state.getBlock() == this.oreType)) {
+                                    (state.getBlock() == this.oreType) ||
+                                    (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.above(), this.oreType.defaultBlockState(), 1, 512);
+                            world.setBlock(pos.above(), pos.above().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -127,7 +132,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (new_direction == direction) {
                             direction = direction + 2;
                             break;
-                        }
+                        } else { direction = new_direction; }
                     case 1:
                         for (int down = 1; down <= 3; down++) {
                             state = world.getBlockState(pos.below());
@@ -135,10 +140,11 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
-                                    (state.getBlock() == this.oreType)) {
+                                    (state.getBlock() == this.oreType) ||
+                                    (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.below(), this.oreType.defaultBlockState(), 1, 512);
+                            world.setBlock(pos.below(),pos.below().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -149,7 +155,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (new_direction == direction) {
                             direction = direction + 2;
                             break;
-                        }
+                        }else { direction = new_direction; }
                     case 2:
                         for (int north = 1; north <= 3; north++) {
                             state = world.getBlockState(pos.north());
@@ -157,10 +163,11 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
-                                    (state.getBlock() == this.oreType)) {
+                                    (state.getBlock() == this.oreType) ||
+                                    (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.north(), this.oreType.defaultBlockState(), 1, 512);
+                            world.setBlock(pos.north(), pos.north().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -171,7 +178,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (new_direction == direction) {
                             direction = direction + 1;
                             break;
-                        }
+                        } else { direction = new_direction; }
                     case 3:
                         for (int east = 1; east <= 3; east++) {
                             state = world.getBlockState(pos.east());
@@ -179,10 +186,11 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
-                                    (state.getBlock() == this.oreType)) {
+                                    (state.getBlock() == this.oreType) ||
+                                    (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.east(), this.oreType.defaultBlockState(), 1, 512);
+                            world.setBlock(pos.east(), pos.east().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -193,7 +201,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (new_direction == direction) {
                             direction = direction + 1;
                             break;
-                        }
+                        } else { direction = new_direction; }
                     case 4:
                         for (int south = 1; south <= 3; south++) {
                             state = world.getBlockState(pos.south());
@@ -201,10 +209,11 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
-                                    (state.getBlock() == this.oreType)) {
+                                    (state.getBlock() == this.oreType) ||
+                                    (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.south(), this.oreType.defaultBlockState(), 1, 512);
+                            world.setBlock(pos.south(), pos.south().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -215,7 +224,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (new_direction == direction) {
                             direction = direction + 1;
                             break;
-                        }
+                        } else { direction = new_direction; }
                     case 5:
                         for (int west = 1; west <= 3; west++) {
                             state = world.getBlockState(pos.west());
@@ -223,10 +232,11 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
-                                    (state.getBlock() == this.oreType)) {
+                                    (state.getBlock() == this.oreType) ||
+                                    (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.west(), this.oreType.defaultBlockState(), 1, 512);
+                            world.setBlock(pos.west(), pos.west().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -237,7 +247,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (new_direction == direction) {
                             direction = direction - 3;
                             break;
-                        }
+                        } else { direction = new_direction; }
                 }
 
             }
