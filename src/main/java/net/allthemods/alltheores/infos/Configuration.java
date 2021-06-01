@@ -229,9 +229,9 @@ public class Configuration {
 					40, 1, 254);
 			aluminum_MaxY = BUILDER.comment("Aluminum top Y level for spawn").defineInRange("aluminum_max_y", 70,
 					1, 254);
-			aluminum_SpawnSize = BUILDER.comment("Aluminum deposit size").defineInRange("aluminum_deposit_size",
+			aluminum_SpawnSize = BUILDER.comment("Aluminum deposit size(number of ores)").defineInRange("aluminum_deposit_size",
 					7, 1, 64);
-			aluminum_VeinCount = BUILDER.comment("Aluminum veins per chunk").defineInRange("aluminum_vein_count",
+			aluminum_VeinCount = BUILDER.comment("Aluminum : Distance between veins").defineInRange("aluminum_vein_count",
 					10, 1, 64);
 			BUILDER.pop();
 
@@ -242,7 +242,7 @@ public class Configuration {
 					254);
 			copper_SpawnSize = BUILDER.comment("Copper deposit size").defineInRange("copper_deposit_size", 7, 1,
 					64);
-			copper_VeinCount = BUILDER.comment("Copper veins per chunk").defineInRange("copper_vein_count",
+			copper_VeinCount = BUILDER.comment("Copper : Distance between veins").defineInRange("copper_vein_count",
 					10, 1, 64);
 			BUILDER.pop();
 
@@ -250,16 +250,16 @@ public class Configuration {
 
 			zinc_MinY = BUILDER.comment("Zinc bottom Y level for spawn").defineInRange("zinc_min_y", 30, 1, 254);
 			zinc_MaxY = BUILDER.comment("Zinc top Y level for spawn").defineInRange("zinc_max_y", 60, 1, 254);
-			zinc_SpawnSize = BUILDER.comment("Zinc deposit size").defineInRange("zinc_deposit_size", 7, 1, 64);
-			zinc_VeinCount = BUILDER.comment("Zinc veins per chunk").defineInRange("zinc_vein_count",
+			zinc_SpawnSize = BUILDER.comment("Zinc deposit size(number of ores)").defineInRange("zinc_deposit_size", 7, 1, 64);
+			zinc_VeinCount = BUILDER.comment("Zinc : Distance between veins").defineInRange("zinc_vein_count",
 					10, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("lead");
 			lead_MinY = BUILDER.comment("Lead bottom Y level for spawn").defineInRange("lead_min_y", 20, 1, 254);
 			lead_MaxY = BUILDER.comment("Lead top Y level for spawn").defineInRange("lead_max_y", 40, 1, 254);
-			lead_SpawnSize = BUILDER.comment("Lead deposit size").defineInRange("lead_deposit_size", 7, 1, 64);
-			lead_VeinCount = BUILDER.comment("Lead veins per chunk").defineInRange("lead_vein_count",
+			lead_SpawnSize = BUILDER.comment("Lead deposit size(number of ores)").defineInRange("lead_deposit_size", 7, 1, 64);
+			lead_VeinCount = BUILDER.comment("Lead : Distance between veins").defineInRange("lead_vein_count",
 					8, 1, 64);
 			BUILDER.pop();
 
@@ -268,9 +268,9 @@ public class Configuration {
 					254);
 			nickel_MaxY = BUILDER.comment("Nickel top Y level for spawn").defineInRange("nickel_max_y", 25, 1,
 					254);
-			nickel_SpawnSize = BUILDER.comment("Nickel deposit size").defineInRange("nickel_deposit_size", 7, 1,
+			nickel_SpawnSize = BUILDER.comment("Nickel deposit size(number of ores)").defineInRange("nickel_deposit_size", 7, 1,
 					64);
-			nickel_VeinCount = BUILDER.comment("Nickel veins per chunk").defineInRange("nickel_vein_count",
+			nickel_VeinCount = BUILDER.comment("Nickel : Distance between veins").defineInRange("nickel_vein_count",
 					8, 1, 64);
 			BUILDER.pop();
 
@@ -279,9 +279,9 @@ public class Configuration {
 					254);
 			osmium_MaxY = BUILDER.comment("Osmium top Y level for spawn").defineInRange("osmium_max_y", 40, 1,
 					254);
-			osmium_SpawnSize = BUILDER.comment("Osmium deposit size").defineInRange("osmium_deposit_size", 7, 1,
+			osmium_SpawnSize = BUILDER.comment("Osmium deposit size(number of ores)").defineInRange("osmium_deposit_size", 7, 1,
 					64);
-			osmium_VeinCount = BUILDER.comment("Osmium veins per chunk").defineInRange("osmium_vein_count",
+			osmium_VeinCount = BUILDER.comment("Osmium : Distance between veins").defineInRange("osmium_vein_count",
 					8, 1, 64);
 			BUILDER.pop();
 
@@ -290,9 +290,9 @@ public class Configuration {
 					1, 1, 254);
 			platinum_MaxY = BUILDER.comment("Platinum top Y level for spawn").defineInRange("platinum_max_y", 25,
 					1, 254);
-			platinum_SpawnSize = BUILDER.comment("Platinum deposit size").defineInRange("platinum_deposit_size",
+			platinum_SpawnSize = BUILDER.comment("Platinum deposit size(number of ores)").defineInRange("platinum_deposit_size",
 					3, 1, 64);
-			platinum_VeinCount = BUILDER.comment("Platinum veins per chunk").defineInRange("platinum_vein_count",
+			platinum_VeinCount = BUILDER.comment("Platinum : Distance between veins").defineInRange("platinum_vein_count",
 					6, 1, 64);
 			BUILDER.pop();
 
@@ -301,17 +301,17 @@ public class Configuration {
 					254);
 			silver_MaxY = BUILDER.comment("Silver top Y level for spawn").defineInRange("silver_max_y", 25, 1,
 					254);
-			silver_SpawnSize = BUILDER.comment("Silver deposit size").defineInRange("silver_deposit_size", 5, 1,
+			silver_SpawnSize = BUILDER.comment("Silver deposit size(number of ores)").defineInRange("silver_deposit_size", 5, 1,
 					64);
-			silver_VeinCount = BUILDER.comment("Silver veins per chunk").defineInRange("silver_vein_count",
+			silver_VeinCount = BUILDER.comment("Silver : Distance between veins").defineInRange("silver_vein_count",
 					8, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("tin");
 			tin_MinY = BUILDER.comment("Tin bottom Y level for spawn").defineInRange("tin_min_y", 30, 1, 254);
 			tin_MaxY = BUILDER.comment("Tin top Y level for spawn").defineInRange("tin_max_y", 60, 1, 254);
-			tin_SpawnSize = BUILDER.comment("Tin deposit size").defineInRange("tin_deposit_size", 7, 1, 64);
-			tin_VeinCount = BUILDER.comment("Tin veins per chunk").defineInRange("tin_vein_count",
+			tin_SpawnSize = BUILDER.comment("Tin deposit size(number of ores)").defineInRange("tin_deposit_size", 7, 1, 64);
+			tin_VeinCount = BUILDER.comment("Tin : Distance between veins").defineInRange("tin_vein_count",
 					10, 1, 64);
 			BUILDER.pop();
 
@@ -320,9 +320,9 @@ public class Configuration {
 					1, 254);
 			uranium_MaxY = BUILDER.comment("Uranium top Y level for spawn").defineInRange("uranium_max_y", 25, 1,
 					254);
-			uranium_SpawnSize = BUILDER.comment("Uranium deposit size").defineInRange("uranium_deposit_size", 4,
+			uranium_SpawnSize = BUILDER.comment("Uranium deposit size(number of ores)").defineInRange("uranium_deposit_size", 4,
 					1, 64);
-			uranium_VeinCount = BUILDER.comment("Uranium veins per chunk").defineInRange("uranium_vein_count",
+			uranium_VeinCount = BUILDER.comment("Uranium : Distance between veins").defineInRange("uranium_vein_count",
 					6, 1, 64);
 			BUILDER.pop(2);
 
