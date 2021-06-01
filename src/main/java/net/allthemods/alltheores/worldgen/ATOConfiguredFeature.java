@@ -16,6 +16,10 @@ public class ATOConfiguredFeature {
 	//Orevein(codec, regular, deepslate)
 	public static Feature<NoFeatureConfig> ALUMINUM = registerFeature("aluminum_ore",new OreVein(NoFeatureConfig.CODEC,BlockList.ALUMINUM_ORE.get(),BlockList.ALUMINUM_ORE.get()));
 	public static ConfiguredFeature<?,?> ORE_ALUMINUM = newConfiguredFeature("aluminum_ore", ALUMINUM.configured(IFeatureConfig.NONE));
+
+	//to-do remove :D
+	public static ConfiguredFeature<?,?> ORE_COPPER = newConfiguredFeature("copper_ore", ALUMINUM.configured(IFeatureConfig.NONE));
+
 	public static Feature<NoFeatureConfig> URANIUM = registerFeature("uranium_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.URANIUM_ORE.get(),BlockList.URANIUM_ORE.get()));
 	public static ConfiguredFeature<?, ?> ORE_URANIUM = newConfiguredFeature("uranium_ore", URANIUM.configured(IFeatureConfig.NONE));
 	public static Feature<NoFeatureConfig> TIN = registerFeature("tin_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.TIN_ORE.get(),BlockList.TIN_ORE.get()));

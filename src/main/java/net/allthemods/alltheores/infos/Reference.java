@@ -2,9 +2,13 @@ package net.allthemods.alltheores.infos;
 
 
 
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Reference {
 
@@ -14,4 +18,5 @@ public class Reference {
 				return new ItemStack(Blocks.DIAMOND_ORE);
 			}
 		};
+		public static List<Block> WORLDGEN_BLACKLIST = new ArrayList<>();
 }

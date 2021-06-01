@@ -5,6 +5,7 @@ import net.allthemods.alltheores.events.BlockBreak;
 import net.allthemods.alltheores.slurries.SlurryRegistry;
 import net.allthemods.alltheores.worldgen.EventWorldgen;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,7 +34,7 @@ public class AllTheOres {
 	public static final Logger LOGGER = LogManager.getLogger(Reference.MOD_ID);
 
 	public AllTheOres() {
-
+		setupBlackList();
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_SPEC);
 		MinecraftForge.EVENT_BUS.register(Configuration.class);
@@ -46,6 +47,13 @@ public class AllTheOres {
 		if(ModList.get().isLoaded("mekanism")) {
 			modEventBus.register(MekRegistry.class);
 		}
+	}
+	private void setupBlackList() {
+		Reference.WORLDGEN_BLACKLIST.add(Blocks.VOID_AIR);
+		Reference.WORLDGEN_BLACKLIST.add(Blocks.WATER);
+		Reference.WORLDGEN_BLACKLIST.add(Blocks.BEDROCK);
+		Reference.WORLDGEN_BLACKLIST.add(Blocks.AIR);
+		Reference.WORLDGEN_BLACKLIST.add(Blocks.CAVE_AIR);
 	}
 	@SubscribeEvent
 	public static void onConfigLoad(ModConfig.ModConfigEvent configEvent) {
