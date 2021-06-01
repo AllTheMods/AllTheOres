@@ -1,6 +1,7 @@
 package net.allthemods.alltheores.worldgen.features;
 
 import com.mojang.serialization.Codec;
+import net.allthemods.alltheores.AllTheOres;
 import net.allthemods.alltheores.infos.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -91,16 +92,19 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                 veinSize = Configuration.COMMON.zinc_SpawnSize.get();
                 veinCount = Configuration.COMMON.zinc_VeinCount.get();
         }
-        if((minY > pos.getY()) || (maxY < pos.getY())) { return false; }
+        int targetY = rand.nextInt(maxY - minY) + minY;
+        AllTheOres.LOGGER.debug("Attempting " + veinSize + " " + this.oreType.getRegistryName().toString() + " generation at " + pos.getX() +","+ targetY +","+ pos.getZ());
 
-        int distance_away = ((prev.getX() - pos.getX())^2 + (prev.getZ() - pos.getZ()));
+        int distance_away = ((prev.getX() - pos.getX())^2 + (prev.getZ() - pos.getZ())^2);
         int processed = 0;
         if(distance_away >= veinCount) {
             if ((veinSize <= 0) || (state.getBlock() == Blocks.VOID_AIR) || (state.getBlock() == Blocks.BEDROCK) || (state.getBlock() == Blocks.AIR) || (state.getBlock() == Blocks.CAVE_AIR)) {
+              AllTheOres.LOGGER.debug("YIKES:" + distance_away + "," + veinSize);
                 return false;
             }
+            pos = new BlockPos(pos.getX(), targetY, pos.getZ());
             int step = (veinSize - 1) / 3;
-            world.setBlock(pos, pos.getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
+            world.setBlock(pos, pos.getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
             processed++;
             int new_direction = 0;
             for (int i = 0; i <= step; i++) {
@@ -120,7 +124,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.above(), pos.above().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
+                            world.setBlock(pos.above(), pos.above().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -144,7 +148,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.below(),pos.below().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
+                            world.setBlock(pos.below(),pos.below().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -167,7 +171,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.north(), pos.north().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
+                            world.setBlock(pos.north(), pos.north().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -190,7 +194,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.east(), pos.east().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
+                            world.setBlock(pos.east(), pos.east().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -213,7 +217,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.south(), pos.south().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
+                            world.setBlock(pos.south(), pos.south().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -236,7 +240,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                                     (state.getBlock() == this.deepSlate_oreType)) {
                                 break;
                             }
-                            world.setBlock(pos.west(), pos.west().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 1, 512);
+                            world.setBlock(pos.west(), pos.west().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                             processed++;
                             if (processed == veinSize) {
                                 break;
@@ -253,6 +257,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
             }
         }
         if((this.genLocation == null) && (processed>0) ) { this.genLocation = pos; return true; }
+        AllTheOres.LOGGER.debug(processed + " processed of " + this.oreType.getRegistryName().toString());
         return false;
     }
 }

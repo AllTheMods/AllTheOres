@@ -17,9 +17,6 @@ public class EventWorldgen {
             if (Configuration.aluminumGen) {
                 event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_ALUMINUM);
             }
-            if (Configuration.copperGen) {
-                event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_COPPER);
-            }
             if (Configuration.leadGen) {
                 event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_LEAD);
             }
