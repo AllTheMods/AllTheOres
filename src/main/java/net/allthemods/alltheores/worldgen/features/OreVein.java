@@ -40,7 +40,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
         BlockPos prev;
         if(this.getPreviousLocation() != null) { prev = this.getPreviousLocation();}
         else { prev = new BlockPos(0,65,0); }
-        BlockState state = world.getBlockState(pos);
+
         int minY = -64,maxY = -64,veinSize = -64,veinCount = -64,curY = -64, curX,curZ;
         curY = pos.getY();
         int direction = rand.nextInt(5);
@@ -93,18 +93,16 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                 veinCount = Configuration.COMMON.zinc_VeinCount.get();
         }
         int targetY = rand.nextInt(maxY - minY) + minY;
-        AllTheOres.LOGGER.debug("Attempting " + veinSize + " " + this.oreType.getRegistryName().toString() + " generation at " + pos.getX() +","+ targetY +","+ pos.getZ());
-
+        pos = new BlockPos(pos.getX(), targetY, pos.getZ());
+        BlockState state = world.getBlockState(pos);
         int distance_away = ((prev.getX() - pos.getX())^2 + (prev.getZ() - pos.getZ())^2);
         int processed = 0;
         if(distance_away >= veinCount) {
             if ((veinSize <= 0) || (state.getBlock() == Blocks.VOID_AIR) || (state.getBlock() == Blocks.BEDROCK) || (state.getBlock() == Blocks.AIR) || (state.getBlock() == Blocks.CAVE_AIR)) {
-              AllTheOres.LOGGER.debug("YIKES:" + distance_away + "," + veinSize);
                 return false;
             }
-            pos = new BlockPos(pos.getX(), targetY, pos.getZ());
             int step = (veinSize - 1) / 3;
-            world.setBlock(pos, pos.getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
+            world.setBlock(pos, pos.getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2);
             processed++;
             int new_direction = 0;
             for (int i = 0; i <= step; i++) {
@@ -117,6 +115,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         for (int up = 1; up <= 3; up++) {
                             state = world.getBlockState(pos.above());
                             if ((state.getBlock() == Blocks.VOID_AIR) ||
+                                    (state.getBlock() == Blocks.WATER) ||
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
@@ -141,6 +140,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         for (int down = 1; down <= 3; down++) {
                             state = world.getBlockState(pos.below());
                             if ((state.getBlock() == Blocks.VOID_AIR) ||
+                                    (state.getBlock() == Blocks.WATER) ||
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
@@ -164,6 +164,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         for (int north = 1; north <= 3; north++) {
                             state = world.getBlockState(pos.north());
                             if ((state.getBlock() == Blocks.VOID_AIR) ||
+                                    (state.getBlock() == Blocks.WATER) ||
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
@@ -187,6 +188,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         for (int east = 1; east <= 3; east++) {
                             state = world.getBlockState(pos.east());
                             if ((state.getBlock() == Blocks.VOID_AIR) ||
+                                    (state.getBlock() == Blocks.WATER) ||
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
@@ -210,6 +212,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         for (int south = 1; south <= 3; south++) {
                             state = world.getBlockState(pos.south());
                             if ((state.getBlock() == Blocks.VOID_AIR) ||
+                                    (state.getBlock() == Blocks.WATER) ||
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
@@ -233,6 +236,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         for (int west = 1; west <= 3; west++) {
                             state = world.getBlockState(pos.west());
                             if ((state.getBlock() == Blocks.VOID_AIR) ||
+                                    (state.getBlock() == Blocks.WATER) ||
                                     (state.getBlock() == Blocks.BEDROCK) ||
                                     (state.getBlock() == Blocks.AIR) ||
                                     (state.getBlock() == Blocks.CAVE_AIR) ||
@@ -256,8 +260,10 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
 
             }
         }
-        if((this.genLocation == null) && (processed>0) ) { this.genLocation = pos; return true; }
-        AllTheOres.LOGGER.debug(processed + " processed of " + this.oreType.getRegistryName().toString());
+        if( (processed>0) ) {
+            this.genLocation = pos;
+            return true; }
         return false;
     }
+
 }
