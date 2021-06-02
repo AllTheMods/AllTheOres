@@ -93,12 +93,17 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                 veinSize = Configuration.COMMON.zinc_SpawnSize.get();
                 veinCount = Configuration.COMMON.zinc_VeinCount.get();
         }
-
+        boolean negX = rand.nextBoolean();
+        boolean negZ = rand.nextBoolean();
+        int offsetX=rand.nextInt(15);
+        int offsetZ=rand.nextInt(15);
+        if(negX){ offsetX = offsetX *-1;}
+        if(negZ){ offsetZ = offsetZ *-1;}
         int targetY = rand.nextInt(maxY - minY) + minY;
-        pos = new BlockPos(pos.getX(), targetY, pos.getZ());
+        pos = new BlockPos(pos.getX() + offsetX, targetY, pos.getZ() + offsetZ);
         BlockState state = world.getBlockState(pos);
         int processed = 0;
-            if ((veinSize <= 0) || (state.getBlock() == Blocks.VOID_AIR) || (state.getBlock() == Blocks.BEDROCK) || (state.getBlock() == Blocks.AIR) || (state.getBlock() == Blocks.CAVE_AIR)) {
+            if ((veinSize <= 0) || (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock()))) {
                 return false;
             }
             int step = (veinSize - 1) / 3;
