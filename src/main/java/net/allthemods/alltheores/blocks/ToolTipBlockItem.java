@@ -27,9 +27,9 @@ public class ToolTipBlockItem  extends BlockItem {
         if(stack.getItem() == BlockList.ALUMINUM_ORE_ITEM.get()) {
             tooltip.add((ITextComponent) TextComponentHelper.createComponentTranslation(null, "Y: " + Configuration.aluminum_MinY + "-" + Configuration.aluminum_MaxY , new Object()).withStyle(TextFormatting.YELLOW));
         }
-        if(stack.getItem() == BlockList.COPPER_ORE_ITEM.get()) {
+        /*if(stack.getItem() == BlockList.COPPER_ORE_ITEM.get()) {
             tooltip.add((ITextComponent) TextComponentHelper.createComponentTranslation(null, "Y: " + Configuration.copper_MinY + "-" + Configuration.copper_MaxY , new Object()).withStyle(TextFormatting.YELLOW));
-        }
+        }*/
         if(stack.getItem() == BlockList.LEAD_ORE_ITEM.get()) {
             tooltip.add((ITextComponent) TextComponentHelper.createComponentTranslation(null, "Y: " + Configuration.lead_MinY + "-" + Configuration.lead_MaxY , new Object()).withStyle(TextFormatting.YELLOW));
         }

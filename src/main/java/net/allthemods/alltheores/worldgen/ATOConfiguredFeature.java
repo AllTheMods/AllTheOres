@@ -14,27 +14,27 @@ import net.minecraft.world.gen.placement.Placement;
 
 public class ATOConfiguredFeature {
 	//Orevein(codec, regular, deepslate)
-	public static Feature<NoFeatureConfig> ALUMINUM = registerFeature("aluminum_ore",new OreVein(NoFeatureConfig.CODEC,BlockList.ALUMINUM_ORE.get(),BlockList.ALUMINUM_ORE.get()));
+	public static Feature<NoFeatureConfig> ALUMINUM = registerFeature("aluminum_ore",new OreVein(NoFeatureConfig.CODEC,BlockList.ALUMINUM_ORE.get(),BlockList.ALUMINUM_SLATE_ORE.get()));
 	public static ConfiguredFeature<?,?> ORE_ALUMINUM = newConfiguredFeature("aluminum_ore", ALUMINUM.configured(IFeatureConfig.NONE));
 
 	//to-do remove :D
 	public static ConfiguredFeature<?,?> ORE_COPPER = newConfiguredFeature("copper_ore", ALUMINUM.configured(IFeatureConfig.NONE));
 
-	public static Feature<NoFeatureConfig> URANIUM = registerFeature("uranium_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.URANIUM_ORE.get(),BlockList.URANIUM_ORE.get()));
+	public static Feature<NoFeatureConfig> URANIUM = registerFeature("uranium_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.URANIUM_ORE.get(),BlockList.URANIUM_SLATE_ORE.get()));
 	public static ConfiguredFeature<?, ?> ORE_URANIUM = newConfiguredFeature("uranium_ore", URANIUM.configured(IFeatureConfig.NONE));
-	public static Feature<NoFeatureConfig> TIN = registerFeature("tin_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.TIN_ORE.get(),BlockList.TIN_ORE.get()));
+	public static Feature<NoFeatureConfig> TIN = registerFeature("tin_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.TIN_ORE.get(),BlockList.TIN_SLATE_ORE.get()));
 	public static ConfiguredFeature<?, ?> ORE_TIN = newConfiguredFeature("tin_ore", TIN.configured(IFeatureConfig.NONE));
-	public static Feature<NoFeatureConfig> SILVER = registerFeature("silver_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.SILVER_ORE.get(),BlockList.SILVER_ORE.get()));
+	public static Feature<NoFeatureConfig> SILVER = registerFeature("silver_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.SILVER_ORE.get(),BlockList.SILVER_SLATE_ORE.get()));
 	public static ConfiguredFeature<?, ?> ORE_SILVER = newConfiguredFeature("silver_ore", SILVER.configured(IFeatureConfig.NONE));
-	public static Feature<NoFeatureConfig> LEAD = registerFeature("lead_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.LEAD_ORE.get(),BlockList.LEAD_ORE.get()));
+	public static Feature<NoFeatureConfig> LEAD = registerFeature("lead_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.LEAD_ORE.get(),BlockList.LEAD_SLATE_ORE.get()));
 	public static ConfiguredFeature<?, ?> ORE_LEAD = newConfiguredFeature("lead_ore", LEAD.configured(IFeatureConfig.NONE));
-	public static Feature<NoFeatureConfig> ZINC = registerFeature("zinc_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.ZINC_ORE.get(),BlockList.ZINC_ORE.get()));
+	public static Feature<NoFeatureConfig> ZINC = registerFeature("zinc_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.ZINC_ORE.get(),BlockList.ZINC_SLATE_ORE.get()));
 	public static ConfiguredFeature<?, ?> ORE_ZINC = newConfiguredFeature("zinc_ore", ZINC.configured(IFeatureConfig.NONE));
-	public static Feature<NoFeatureConfig> NICKEL = registerFeature("nickel_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.NICKEL_ORE.get(),BlockList.NICKEL_ORE.get()));
+	public static Feature<NoFeatureConfig> NICKEL = registerFeature("nickel_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.NICKEL_ORE.get(),BlockList.NICKEL_SLATE_ORE.get()));
 	public static ConfiguredFeature<?, ?> ORE_NICKEL = newConfiguredFeature("nickel_ore", NICKEL.configured(IFeatureConfig.NONE));
-	public static Feature<NoFeatureConfig> PLATINUM = registerFeature("platinum_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.PLATINUM_ORE.get(),BlockList.PLATINUM_ORE.get()));
+	public static Feature<NoFeatureConfig> PLATINUM = registerFeature("platinum_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.PLATINUM_ORE.get(),BlockList.PLATINUM_SLATE_ORE.get()));
 	public static ConfiguredFeature<?, ?> ORE_PLATINUM = newConfiguredFeature("platinum_ore", PLATINUM.configured(IFeatureConfig.NONE));
-	public static Feature<NoFeatureConfig> OSMIUM = registerFeature("osmium_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.OSMIUM_ORE.get(),BlockList.OSMIUM_ORE.get()));
+	public static Feature<NoFeatureConfig> OSMIUM = registerFeature("osmium_ore", new OreVein(NoFeatureConfig.CODEC,BlockList.OSMIUM_ORE.get(),BlockList.OSMIUM_SLATE_ORE.get()));
 	public static ConfiguredFeature<?, ?> ORE_OSMIUM = newConfiguredFeature("osmium_ore", OSMIUM.configured(IFeatureConfig.NONE));
 	
 	

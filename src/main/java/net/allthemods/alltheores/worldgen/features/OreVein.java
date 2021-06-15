@@ -95,8 +95,8 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
         }
         boolean negX = rand.nextBoolean();
         boolean negZ = rand.nextBoolean();
-        int offsetX=rand.nextInt(15);
-        int offsetZ=rand.nextInt(15);
+        int offsetX=rand.nextInt(12)+4;
+        int offsetZ=rand.nextInt(12)+4;
         if(negX){ offsetX = offsetX *-1;}
         if(negZ){ offsetZ = offsetZ *-1;}
         int targetY = rand.nextInt(maxY - minY) + minY;

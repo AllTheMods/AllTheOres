@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "#forge:storage_blocks/aluminum",
-    "#forge:storage_blocks/copper",
     "#forge:storage_blocks/lead",
     "#forge:storage_blocks/nickel",
     "#forge:storage_blocks/osmium",

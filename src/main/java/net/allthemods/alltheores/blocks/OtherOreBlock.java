@@ -71,7 +71,7 @@ public class OtherOreBlock extends Block {
         }
         return 6;
     }
-
+/*
     @Deprecated
     @Override
     @MethodsReturnNonnullByDefault
@@ -101,7 +101,7 @@ public class OtherOreBlock extends Block {
             list.add(new ItemStack(BlockList.ALUMINUM_ORE_ITEM.get(), RANDOM.nextInt(5)+3));
         }
         if (state.getBlock() == BlockList.OTHER_COPPER_ORE.get()) {
-            list.add(new ItemStack(BlockList.COPPER_ORE_ITEM.get(), RANDOM.nextInt(5)+3));
+            //list.add(new ItemStack(BlockList.COPPER_ORE_ITEM.get(), RANDOM.nextInt(5)+3));
         }
         if (state.getBlock() == BlockList.OTHER_LEAD_ORE.get()) {
             list.add(new ItemStack(BlockList.LEAD_ORE_ITEM.get(), RANDOM.nextInt(5)+3));
@@ -126,7 +126,7 @@ public class OtherOreBlock extends Block {
         }
 
         return list;
-    }
+    }*/
 }
 
 

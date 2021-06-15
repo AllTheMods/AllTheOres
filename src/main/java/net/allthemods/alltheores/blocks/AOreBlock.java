@@ -16,9 +16,9 @@ import net.minecraftforge.common.loot.LootModifier;
 
 public class AOreBlock extends Block {
 
-	public AOreBlock() {
+	public AOreBlock(float strength1, float strength2) {
 		super(Block.Properties.of(Material.METAL).requiresCorrectToolForDrops().sound(SoundType.STONE)
-				.strength(3.0f));
+				.strength(strength1,strength2));
 	}
 
 	@Override
