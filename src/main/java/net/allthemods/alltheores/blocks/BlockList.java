@@ -76,7 +76,7 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> ALUMINUM_DUST = ITEMS.register("aluminum_dust",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> ALUMINUM_RAW = ITEMS.register("aluminum_raw",
+	public static final RegistryObject<Item> ALUMINUM_RAW = ITEMS.register("raw_aluminum",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	public static final RegistryObject<Source> MOLTEN_COPPER = FLUIDS.register("molten_copper",
@@ -154,7 +154,7 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> LEAD_DUST = ITEMS.register("lead_dust",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> LEAD_RAW = ITEMS.register("lead_raw",
+	public static final RegistryObject<Item> LEAD_RAW = ITEMS.register("raw_lead",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	public static final RegistryObject<Source> MOLTEN_NICKEL = FLUIDS.register("molten_nickel",
@@ -197,7 +197,7 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> NICKEL_DUST = ITEMS.register("nickel_dust",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> NICKEL_RAW = ITEMS.register("nickel_raw",
+	public static final RegistryObject<Item> NICKEL_RAW = ITEMS.register("raw_nickel",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	public static final RegistryObject<Source> MOLTEN_OSMIUM = FLUIDS.register("molten_osmium",
@@ -239,7 +239,7 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OSMIUM_DUST = ITEMS.register("osmium_dust",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OSMIUM_RAW = ITEMS.register("osmium_raw",
+	public static final RegistryObject<Item> OSMIUM_RAW = ITEMS.register("raw_osmium",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	public static final RegistryObject<Source> MOLTEN_PLATINUM = FLUIDS.register("molten_platinum",
@@ -281,7 +281,7 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> PLATINUM_DUST = ITEMS.register("platinum_dust",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> PLATINUM_RAW = ITEMS.register("platinum_raw",
+	public static final RegistryObject<Item> PLATINUM_RAW = ITEMS.register("raw_platinum",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	public static final RegistryObject<Source> MOLTEN_SILVER = FLUIDS.register("molten_silver",
@@ -323,7 +323,7 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> SILVER_DUST = ITEMS.register("silver_dust",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> SILVER_RAW = ITEMS.register("silver_raw",
+	public static final RegistryObject<Item> SILVER_RAW = ITEMS.register("raw_silver",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	public static final RegistryObject<Source> MOLTEN_TIN = FLUIDS.register("molten_tin",
@@ -366,7 +366,7 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> TIN_DUST = ITEMS.register("tin_dust",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> TIN_RAW = ITEMS.register("tin_raw",
+	public static final RegistryObject<Item> TIN_RAW = ITEMS.register("raw_tin",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	public static final RegistryObject<Source> MOLTEN_URANIUM = FLUIDS.register("molten_uranium",
@@ -408,7 +408,7 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> URANIUM_DUST = ITEMS.register("uranium_dust",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> URANIUM_RAW = ITEMS.register("uranium_raw",
+	public static final RegistryObject<Item> URANIUM_RAW = ITEMS.register("raw_uranium",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	public static final RegistryObject<Source> MOLTEN_ZINC = FLUIDS.register("molten_zinc",
@@ -450,7 +450,7 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> ZINC_DUST = ITEMS.register("zinc_dust",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> ZINC_RAW = ITEMS.register("zinc_raw",
+	public static final RegistryObject<Item> ZINC_RAW = ITEMS.register("raw_zinc",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	public static final RegistryObject<Item> IRON_DUST = ITEMS.register("iron_dust",
