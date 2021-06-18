@@ -2,7 +2,9 @@ package net.allthemods.alltheores.datagen.server;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
+import net.allthemods.alltheores.blocks.AOreBlock;
 import net.allthemods.alltheores.blocks.BlockList;
+import net.allthemods.alltheores.blocks.OtherOreBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.data.DataGenerator;
@@ -37,7 +39,42 @@ public class LootTables extends LootTableProvider {
         protected void addTables()
         {
             getKnownBlocks().forEach(this::dropSelf);
+            //getKnownRaw().forEach(this::dropRaw);
         }
+
+        private void dropRaw(Block block) {
+            if(block instanceof AOreBlock) {
+                String oretype = block.getRegistryName().getPath().toString();
+                if(oretype.contains("aluminum")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.ALUMINUM_RAW.get());
+                }); }
+                if(oretype.contains("lead")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.LEAD_RAW.get());
+                }); }
+                if(oretype.contains("nickel")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.NICKEL_RAW.get());
+                }); }
+                if(oretype.contains("osmium")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.OSMIUM_RAW.get());
+                }); }
+                if(oretype.contains("platinum")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.PLATINUM_RAW.get());
+                }); }
+                if(oretype.contains("silver")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.SILVER_RAW.get());
+                }); }
+                if(oretype.contains("tin_")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.TIN_RAW.get());
+                }); }
+                if(oretype.contains("uranium")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.URANIUM_RAW.get());
+                }); }
+                if(oretype.contains("zinc")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.ZINC_RAW.get());
+                }); }
+            }
+        }
+
 
         @Override
         protected Iterable<Block> getKnownBlocks()
@@ -45,7 +82,17 @@ public class LootTables extends LootTableProvider {
             return BlockList.BLOCKS.getEntries()
                 .stream().map(RegistryObject::get)
                 .filter(block -> !(block instanceof FlowingFluidBlock))
+                .filter(block -> !(block instanceof AOreBlock))
+                .filter(block -> !(block instanceof OtherOreBlock))
                 .collect(Collectors.toList());
+        }
+
+        protected Iterable<Block> getKnownRaw()
+        {
+            return BlockList.BLOCKS.getEntries()
+                    .stream().map(RegistryObject::get)
+                    .filter(block -> (block instanceof AOreBlock))
+                    .collect(Collectors.toList());
         }
     }
 

@@ -26,9 +26,10 @@ public class ItemModels extends ItemModelProvider {
             .filter(item -> !(item.get() instanceof BlockItem))
             .forEach(item -> {
                 String name = item.getId().getPath();
+                if(!name.contains("bucket")){
                 withExistingParent(name, generated)
                     .texture("layer0", res(name));
 
-            });
+            }});
     }
 }
