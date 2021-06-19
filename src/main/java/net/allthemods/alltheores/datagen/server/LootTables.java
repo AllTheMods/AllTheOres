@@ -39,7 +39,7 @@ public class LootTables extends LootTableProvider {
         protected void addTables()
         {
             getKnownBlocks().forEach(this::dropSelf);
-            //getKnownRaw().forEach(this::dropRaw);
+            getKnownRaw().forEach(this::dropRaw);
         }
 
         private void dropRaw(Block block) {
