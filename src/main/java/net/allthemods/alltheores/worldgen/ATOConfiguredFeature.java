@@ -55,14 +55,14 @@ public class ATOConfiguredFeature {
 							new DepthAverageConfig((Configuration.uranium_MaxY * 2 + Configuration.uranium_MinY) / 2,
 									(Configuration.uranium_MaxY - Configuration.uranium_MinY) / 2))).squared().range(10));
 
-	public static ConfiguredFeature<?, ?> ORE_OTHER_COPPER = newConfiguredFeature("ore_other_copper",
+	/*public static ConfiguredFeature<?, ?> ORE_OTHER_COPPER = newConfiguredFeature("ore_other_copper",
 			Feature.ORE
 					.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHER_ORE_REPLACEABLES,
 							BlockList.OTHER_COPPER_ORE.get().defaultBlockState(), Configuration.copper_SpawnSize * 2))
 					.decorated(Placement.DEPTH_AVERAGE.configured(
 							new DepthAverageConfig((Configuration.copper_MaxY * 2 + Configuration.copper_MinY) / 2,
 									(Configuration.copper_MaxY - Configuration.copper_MinY) / 2))).squared().range(10));
-
+*/
 	public static ConfiguredFeature<?, ?> ORE_OTHER_TIN = newConfiguredFeature("ore_other_tin",
 			Feature.ORE
 					.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHER_ORE_REPLACEABLES,

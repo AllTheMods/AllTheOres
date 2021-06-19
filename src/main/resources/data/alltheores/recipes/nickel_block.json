@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "alltheores",
   "pattern": [
-    "XXX",
-    "XXX",
-    "XXX"
+    "aaa",
+    "aaa",
+    "aaa"
   ],
   "key": {
-    "X": {
+    "a": {
       "tag": "forge:ingots/nickel"
     }
   },

@@ -1,6 +1,7 @@
 {
-    "variants": {
-        "": { "model": "alltheores:block/raw_tin_block" }
+  "variants": {
+    "": {
+      "model": "alltheores:block/raw_tin_block"
     }
+  }
 }
- 

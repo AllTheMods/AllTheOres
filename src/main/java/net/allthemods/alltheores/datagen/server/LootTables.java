@@ -38,8 +38,8 @@ public class LootTables extends LootTableProvider {
         @Override
         protected void addTables()
         {
-            getKnownBlocks().forEach(this::dropSelf);
-            getKnownRaw().forEach(this::dropRaw);
+            getKnownBlocks().forEach(this::dropRaw);
+
         }
 
         private void dropRaw(Block block) {
@@ -72,6 +72,8 @@ public class LootTables extends LootTableProvider {
                 if(oretype.contains("zinc")) { this.add(block, (block1) -> {
                     return createOreDrop(block1, BlockList.ZINC_RAW.get());
                 }); }
+            } else {
+                this.dropSelf(block);
             }
         }
 
@@ -82,18 +84,10 @@ public class LootTables extends LootTableProvider {
             return BlockList.BLOCKS.getEntries()
                 .stream().map(RegistryObject::get)
                 .filter(block -> !(block instanceof FlowingFluidBlock))
-                .filter(block -> !(block instanceof AOreBlock))
-                .filter(block -> !(block instanceof OtherOreBlock))
                 .collect(Collectors.toList());
         }
 
-        protected Iterable<Block> getKnownRaw()
-        {
-            return BlockList.BLOCKS.getEntries()
-                    .stream().map(RegistryObject::get)
-                    .filter(block -> (block instanceof AOreBlock))
-                    .collect(Collectors.toList());
-        }
+
     }
 
     @Override

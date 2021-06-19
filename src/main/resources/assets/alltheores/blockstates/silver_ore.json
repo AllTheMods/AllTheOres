@@ -1,6 +1,7 @@
 {
-    "variants": {
-        "": { "model": "alltheores:block/silver_ore" }
+  "variants": {
+    "": {
+      "model": "alltheores:block/silver_ore"
     }
+  }
 }
- 

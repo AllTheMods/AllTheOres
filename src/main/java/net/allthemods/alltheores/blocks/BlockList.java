@@ -28,6 +28,7 @@ public class BlockList {
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
 			Reference.MOD_ID);
+
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
 	public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS,
 			Reference.MOD_ID);
@@ -100,12 +101,12 @@ public class BlockList {
 	}
 
 	//public static final RegistryObject<Block> COPPER_ORE = BLOCKS.register("copper_ore", AOreBlock::new);
-	public static final RegistryObject<Block> OTHER_COPPER_ORE = BLOCKS.register("other_copper_ore", OtherOreBlock::new);
+	//public static final RegistryObject<Block> OTHER_COPPER_ORE = BLOCKS.register("other_copper_ore", OtherOreBlock::new);
 	//public static final RegistryObject<Block> COPPER_BLOCK = BLOCKS.register("copper_block", AOreBlock::new);
 	//public static final RegistryObject<Item> COPPER_ORE_ITEM = ITEMS.register("copper_ore",
 	//		() -> new ToolTipBlockItem(COPPER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OTHER_COPPER_ORE_ITEM = ITEMS.register("other_copper_ore",
-			() -> new BlockItem(OTHER_COPPER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+	//public static final RegistryObject<Item> OTHER_COPPER_ORE_ITEM = ITEMS.register("other_copper_ore",
+	//		() -> new BlockItem(OTHER_COPPER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 
 	//public static final RegistryObject<Item> COPPER_BLOCK_ITEM = ITEMS.register("copper_block",
 	//		() -> new BlockItem(COPPER_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -458,7 +459,7 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> GOLD_DUST = ITEMS.register("gold_dust",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-
+//TO-DO ORES from BLOCKS for other vanilla ores
 	public static final RegistryObject<Block> OTHER_COAL_ORE = BLOCKS.register("other_coal_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> OTHER_IRON_ORE = BLOCKS.register("other_iron_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> OTHER_REDSTONE_ORE = BLOCKS.register("other_redstone_ore", OtherOreBlock::new);
