@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:invar_gear"
+    ]
+  },
+  "criteria": {
+    "has_ingots/invar_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/invar"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:invar_gear"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ingots/invar_ingot",
+      "has_the_recipe"
+    ]
+  ]
+}

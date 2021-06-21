@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:constantan_gear"
+    ]
+  },
+  "criteria": {
+    "has_ingots/constantan_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/constantan"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:constantan_gear"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ingots/constantan_ingot",
+      "has_the_recipe"
+    ]
+  ]
+}

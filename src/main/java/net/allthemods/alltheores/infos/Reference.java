@@ -27,8 +27,13 @@ public class Reference {
 	public static ResourceLocation forge(String path) {
 		return new ResourceLocation("forge", path);
 	}
-		public static ResourceLocation ingot(String path) {
+	public static ResourceLocation ingot(String path) {
 		return forge("ingots/" + path);
 	}
-
+	public static ResourceLocation nugget(String path) {
+		return forge("nuggets/" + path);
+	}
+	public static ResourceLocation block(String path) {
+		return forge("storage_blocks/" + path);
+	}
 }

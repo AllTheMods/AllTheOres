@@ -35,7 +35,6 @@ public class ShapedBlockBuilder {
     private final ICriterionInstance criterion;
     private final EnumMap<Slot, Item> pieces = new EnumMap<>(Slot.class);
     private final ITag<Item> ingot;
-    private Item core;
 
 
     public ShapedBlockBuilder(ITag<Item> ingot) {
@@ -73,10 +72,6 @@ public class ShapedBlockBuilder {
 
 
     protected void validate(ResourceLocation id) {
-        if (core == null) {
-            throw new RecipeException(id.toString(), "recipe must have a core");
-        }
-
         if (pieces.isEmpty()) {
             throw new RecipeException(id.toString(), "recipe must have at least 1 output");
         }
@@ -88,20 +83,21 @@ public class ShapedBlockBuilder {
 
         Optional.ofNullable(pieces.get(Slot.METALBLOCK))
             .map(this::block)
-            .map(this::addCriterion)
+            .map(this::addCriterionIngot)
             .ifPresent(register);
         Optional.ofNullable(pieces.get(Slot.GEAR))
                 .map(this::gear)
-                .map(this::addCriterion)
+                .map(this::addCriterionIngot)
                 .ifPresent(register);
         Optional.ofNullable(pieces.get(Slot.ROD))
                 .map(this::rod)
-                .map(this::addCriterion)
+                .map(this::addCriterionIngot)
                 .ifPresent(register);
         Optional.ofNullable(pieces.get(Slot.PLATE))
                 .map(this::plate)
-                .map(this::addCriterion)
+                .map(this::addCriterionIngot)
                 .ifPresent(register);
+
     }
 
     private ShapedRecipeBuilder shaped(IItemProvider provider) {
@@ -109,11 +105,12 @@ public class ShapedBlockBuilder {
             .group(Reference.MOD_ID);
     }
 
-    private ShapedRecipeBuilder addCriterion(ShapedRecipeBuilder builder) {
+    private ShapedRecipeBuilder addCriterionIngot(ShapedRecipeBuilder builder) {
         return builder
             .define('a', ingot)
             .unlockedBy(criteriaName, criterion);
     }
+
 
     private ShapedRecipeBuilder block(IItemProvider provider) {
         return shaped(provider)
@@ -122,6 +119,15 @@ public class ShapedBlockBuilder {
             .pattern("aaa");
 
     }
+
+    private ShapedRecipeBuilder ingot(IItemProvider provider) {
+        return shaped(provider)
+                .pattern("aaa")
+                .pattern("aaa")
+                .pattern("aaa");
+
+    }
+
     private ShapedRecipeBuilder gear(IItemProvider provider) {
         return shaped(provider)
                 .pattern("aaa")

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:lumium_rod"
+    ]
+  },
+  "criteria": {
+    "has_ingots/lumium_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/lumium"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:lumium_rod"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ingots/lumium_ingot",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -15,9 +15,12 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector3i;
 import net.minecraft.util.math.vector.Vector4f;
 import net.minecraft.world.ISeedReader;
+import net.minecraft.world.World;
 import net.minecraft.world.gen.ChunkGenerator;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
+import net.minecraftforge.registries.IRegistryDelegate;
 
 import java.util.Random;
 import java.util.UUID;
@@ -36,6 +39,19 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
     private BlockPos getPreviousLocation() {
         return this.genLocation;
     }
+
+
+
+    @Override
+    public Codec<ConfiguredFeature<NoFeatureConfig, Feature<NoFeatureConfig>>> configuredCodec() {
+        return super.configuredCodec();
+    }
+
+    @Override
+    public ConfiguredFeature<NoFeatureConfig, ?> configured(NoFeatureConfig p_225566_1_) {
+        return super.configured(p_225566_1_);
+    }
+
     @Override
     public boolean place(ISeedReader world, ChunkGenerator chunkgen, Random rand, BlockPos pos, NoFeatureConfig config) {
         BlockPos prev;
@@ -115,6 +131,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
             if (processed == veinSize) {
                 break;
             }
+            if(rand.nextInt(10) > 5) { processed = processed + allBlocks(this,world, pos); }
             switch (direction) {
                 case 0:
                     for (int up = 1; up <= 3; up++) {
@@ -131,6 +148,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
 
                     }
                     new_direction = rand.nextInt(5);
+
                     if (new_direction == direction) {
                         direction = direction + 2;
                         break;
@@ -232,6 +250,56 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
             this.genLocation = pos;
             return true; }
         return false;
+    }
+
+    private int allBlocks(OreVein oreVein, ISeedReader world, BlockPos pos) {
+        int x = 0;
+
+        BlockState state = world.getBlockState(pos.below());
+        if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
+            return x;
+        } else {
+            world.setBlock(pos.below(), pos.below().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+            x++;
+            state = world.getBlockState(pos.above());
+            if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
+                return x;
+            } else {
+                world.setBlock(pos.above(), pos.above().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+                x++;
+                state = world.getBlockState(pos.east());
+                if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
+                    return x;
+                } else {
+                    world.setBlock(pos.east(), pos.east().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+                    x++;
+                    state = world.getBlockState(pos.west());
+                    if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
+                        return x;
+                    } else {
+                        world.setBlock(pos.west(), pos.west().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+                        x++;
+                        state = world.getBlockState(pos.north());
+                        if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
+                            return x;
+                        } else {
+                            world.setBlock(pos.north(), pos.north().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+                            x++;
+                            state = world.getBlockState(pos.south());
+                            if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
+                                return x;
+                            } else {
+                                world.setBlock(pos.south(), pos.south().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+                                x++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return x;
+
     }
 
 }

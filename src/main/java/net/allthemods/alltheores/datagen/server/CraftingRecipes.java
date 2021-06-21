@@ -91,7 +91,60 @@ public class CraftingRecipes extends RecipeProvider {
                 .setRod(BlockList.ZINC_ROD)
                 .build(consumer);
 
+        ShapedBlockBuilder.builder(ItemTagRegistry.BRONZE_INGOT)
+                .setBlock(BlockList.BRONZE_BLOCK_ITEM)
+                .setGear(BlockList.BRONZE_GEAR)
+                .setPlate(BlockList.BRONZE_PLATE)
+                .setRod(BlockList.BRONZE_ROD)
+                .build(consumer);
 
+        ShapedBlockBuilder.builder(ItemTagRegistry.CONSTANTAN_INGOT)
+                .setBlock(BlockList.CONSTANTAN_BLOCK_ITEM)
+                .setGear(BlockList.CONSTANTAN_GEAR)
+                .setPlate(BlockList.CONSTANTAN_PLATE)
+                .setRod(BlockList.CONSTANTAN_ROD)
+                .build(consumer);
 
+        ShapedBlockBuilder.builder(ItemTagRegistry.ELECTRUM_INGOT)
+                .setBlock(BlockList.ELECTRUM_BLOCK_ITEM)
+                .setGear(BlockList.ELECTRUM_GEAR)
+                .setPlate(BlockList.ELECTRUM_PLATE)
+                .setRod(BlockList.ELECTRUM_ROD)
+                .build(consumer);
+
+        ShapedBlockBuilder.builder(ItemTagRegistry.ENDERIUM_INGOT)
+                .setBlock(BlockList.ENDERIUM_BLOCK_ITEM)
+                .setGear(BlockList.ENDERIUM_GEAR)
+                .setPlate(BlockList.ENDERIUM_PLATE)
+                .setRod(BlockList.ENDERIUM_ROD)
+                .build(consumer);
+
+        ShapedBlockBuilder.builder(ItemTagRegistry.INVAR_INGOT)
+                .setBlock(BlockList.INVAR_BLOCK_ITEM)
+                .setGear(BlockList.INVAR_GEAR)
+                .setPlate(BlockList.INVAR_PLATE)
+                .setRod(BlockList.INVAR_ROD)
+                .build(consumer);
+
+        ShapedBlockBuilder.builder(ItemTagRegistry.LUMIUM_INGOT)
+                .setBlock(BlockList.LUMIUM_BLOCK_ITEM)
+                .setGear(BlockList.LUMIUM_GEAR)
+                .setPlate(BlockList.LUMIUM_PLATE)
+                .setRod(BlockList.LUMIUM_ROD)
+                .build(consumer);
+
+        ShapedBlockBuilder.builder(ItemTagRegistry.SIGNALUM_INGOT)
+                .setBlock(BlockList.SIGNALUM_BLOCK_ITEM)
+                .setGear(BlockList.SIGNALUM_GEAR)
+                .setPlate(BlockList.SIGNALUM_PLATE)
+                .setRod(BlockList.SIGNALUM_ROD)
+                .build(consumer);
+
+        ShapedBlockBuilder.builder(ItemTagRegistry.STEEL_INGOT)
+                .setBlock(BlockList.STEEL_BLOCK_ITEM)
+                .setGear(BlockList.STEEL_GEAR)
+                .setPlate(BlockList.STEEL_PLATE)
+                .setRod(BlockList.STEEL_ROD)
+                .build(consumer);
     }
 }

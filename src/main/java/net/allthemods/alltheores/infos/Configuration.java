@@ -100,11 +100,6 @@ public class Configuration {
 		aluminum_SpawnSize = Configuration.COMMON.aluminum_SpawnSize.get();
 		aluminum_VeinCount = Configuration.COMMON.aluminum_VeinCount.get();
 
-		copper_MinY = Configuration.COMMON.copper_MinY.get();
-		copper_MaxY = Configuration.COMMON.copper_MaxY.get();
-		copper_SpawnSize = Configuration.COMMON.copper_SpawnSize.get();
-		copper_VeinCount = Configuration.COMMON.copper_VeinCount.get();
-
 		lead_MinY = Configuration.COMMON.lead_MinY.get();
 		lead_MaxY = Configuration.COMMON.lead_MaxY.get();
 		lead_SpawnSize = Configuration.COMMON.lead_SpawnSize.get();
@@ -148,7 +143,6 @@ public class Configuration {
 
 	public static class Common {
 		public final ForgeConfigSpec.BooleanValue aluminumGen;
-		public final ForgeConfigSpec.BooleanValue copperGen;
 		public final ForgeConfigSpec.BooleanValue leadGen;
 		public final ForgeConfigSpec.BooleanValue nickelGen;
 		public final ForgeConfigSpec.BooleanValue osmiumGen;
@@ -162,11 +156,6 @@ public class Configuration {
 		public final ForgeConfigSpec.IntValue aluminum_MaxY;
 		public final ForgeConfigSpec.IntValue aluminum_SpawnSize;
 		public final ForgeConfigSpec.IntValue aluminum_VeinCount;
-
-		public final ForgeConfigSpec.IntValue copper_MinY;
-		public final ForgeConfigSpec.IntValue copper_MaxY;
-		public final ForgeConfigSpec.IntValue copper_SpawnSize;
-		public final ForgeConfigSpec.IntValue copper_VeinCount;
 
 		public final ForgeConfigSpec.IntValue lead_MinY;
 		public final ForgeConfigSpec.IntValue lead_MaxY;
@@ -212,7 +201,6 @@ public class Configuration {
 
 			BUILDER.push("spawncontrol");
 			aluminumGen = BUILDER.comment("Enable Aluminum Worldgen").define("aluminum", true);
-			copperGen = BUILDER.comment("Enable Copper Worldgen").define("copper", true);
 			leadGen = BUILDER.comment("Enable Lead Worldgen").define("lead", true);
 			nickelGen = BUILDER.comment("Enable Nickel Worldgen").define("nickel", true);
 			osmiumGen = BUILDER.comment("Enable Osmium Worldgen").define("osmium", true);
@@ -226,8 +214,8 @@ public class Configuration {
 
 			BUILDER.push("aluminum");
 			aluminum_MinY = BUILDER.comment("Aluminum bottom Y level for spawn").defineInRange("aluminum_min_y",
-					40, 1, 254);
-			aluminum_MaxY = BUILDER.comment("Aluminum top Y level for spawn").defineInRange("aluminum_max_y", 70,
+					60, 1, 254);
+			aluminum_MaxY = BUILDER.comment("Aluminum top Y level for spawn").defineInRange("aluminum_max_y", 80,
 					1, 254);
 			aluminum_SpawnSize = BUILDER.comment("Aluminum deposit size(number of ores)").defineInRange("aluminum_deposit_size",
 					7, 1, 64);
@@ -235,20 +223,9 @@ public class Configuration {
 					10, 1, 64);
 			BUILDER.pop();
 
-			BUILDER.push("copper");
-			copper_MinY = BUILDER.comment("Copper bottom Y level for spawn").defineInRange("copper_min_y", 30, 1,
-					254);
-			copper_MaxY = BUILDER.comment("Copper top Y level for spawn").defineInRange("copper_max_y", 60, 1,
-					254);
-			copper_SpawnSize = BUILDER.comment("Copper deposit size").defineInRange("copper_deposit_size", 7, 1,
-					64);
-			copper_VeinCount = BUILDER.comment("Copper : Distance between veins").defineInRange("copper_vein_count",
-					10, 1, 64);
-			BUILDER.pop();
-
 			BUILDER.push("zinc");
 
-			zinc_MinY = BUILDER.comment("Zinc bottom Y level for spawn").defineInRange("zinc_min_y", 30, 1, 254);
+			zinc_MinY = BUILDER.comment("Zinc bottom Y level for spawn").defineInRange("zinc_min_y", 1, 1, 254);
 			zinc_MaxY = BUILDER.comment("Zinc top Y level for spawn").defineInRange("zinc_max_y", 60, 1, 254);
 			zinc_SpawnSize = BUILDER.comment("Zinc deposit size(number of ores)").defineInRange("zinc_deposit_size", 7, 1, 64);
 			zinc_VeinCount = BUILDER.comment("Zinc : Distance between veins").defineInRange("zinc_vein_count",
@@ -256,7 +233,7 @@ public class Configuration {
 			BUILDER.pop();
 
 			BUILDER.push("lead");
-			lead_MinY = BUILDER.comment("Lead bottom Y level for spawn").defineInRange("lead_min_y", 20, 1, 254);
+			lead_MinY = BUILDER.comment("Lead bottom Y level for spawn").defineInRange("lead_min_y", 10, 1, 254);
 			lead_MaxY = BUILDER.comment("Lead top Y level for spawn").defineInRange("lead_max_y", 40, 1, 254);
 			lead_SpawnSize = BUILDER.comment("Lead deposit size(number of ores)").defineInRange("lead_deposit_size", 7, 1, 64);
 			lead_VeinCount = BUILDER.comment("Lead : Distance between veins").defineInRange("lead_vein_count",
@@ -275,7 +252,7 @@ public class Configuration {
 			BUILDER.pop();
 
 			BUILDER.push("osmium");
-			osmium_MinY = BUILDER.comment("Osmium bottom Y level for spawn").defineInRange("osmium_min_y", 20, 1,
+			osmium_MinY = BUILDER.comment("Osmium bottom Y level for spawn").defineInRange("osmium_min_y", 5, 1,
 					254);
 			osmium_MaxY = BUILDER.comment("Osmium top Y level for spawn").defineInRange("osmium_max_y", 40, 1,
 					254);

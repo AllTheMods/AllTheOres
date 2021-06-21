@@ -5,10 +5,7 @@ import net.allthemods.alltheores.meka.Clump;
 import net.allthemods.alltheores.meka.Crystal;
 import net.allthemods.alltheores.meka.DirtyDust;
 import net.allthemods.alltheores.meka.Shard;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowingFluidBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.BlockItem;
@@ -59,7 +56,7 @@ public class BlockList {
 	public static final RegistryObject<Block> ALUMINUM_SLATE_ORE = BLOCKS.register("aluminum_slate_ore",() -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> ALUMINUM_ORE = BLOCKS.register("aluminum_ore",() -> new AOreBlock( 3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_ALUMINUM_ORE = BLOCKS.register("other_aluminum_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> ALUMINUM_BLOCK = BLOCKS.register("aluminum_block",() -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f)));
+	public static final RegistryObject<Block> ALUMINUM_BLOCK = BLOCKS.register("aluminum_block",() -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> RAW_ALUMINUM_BLOCK = BLOCKS.register("raw_aluminum_block",() -> new Block(Block.Properties.of(Material.STONE).strength(3.0f,3.0f)));
 	public static final RegistryObject<Item> RAW_ALUMINUM_BLOCK_ITEM = ITEMS.register("raw_aluminum_block",
 			() -> new BlockItem(RAW_ALUMINUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -138,7 +135,7 @@ public class BlockList {
 	public static final RegistryObject<Block> LEAD_SLATE_ORE = BLOCKS.register("lead_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> LEAD_ORE = BLOCKS.register("lead_ore",() -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_LEAD_ORE = BLOCKS.register("other_lead_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> LEAD_BLOCK = BLOCKS.register("lead_block",() -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f)));
+	public static final RegistryObject<Block> LEAD_BLOCK = BLOCKS.register("lead_block",() -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> RAW_LEAD_BLOCK = BLOCKS.register("raw_lead_block",() -> new Block(Block.Properties.of(Material.STONE).strength(3.0f,3.0f)));
 	public static final RegistryObject<Item> RAW_LEAD_BLOCK_ITEM = ITEMS.register("raw_lead_block",
 			() -> new BlockItem(RAW_LEAD_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -180,7 +177,7 @@ public class BlockList {
 	public static final RegistryObject<Block> NICKEL_SLATE_ORE = BLOCKS.register("nickel_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> NICKEL_ORE = BLOCKS.register("nickel_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_NICKEL_ORE = BLOCKS.register("other_nickel_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> NICKEL_BLOCK = BLOCKS.register("nickel_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f)));
+	public static final RegistryObject<Block> NICKEL_BLOCK = BLOCKS.register("nickel_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> RAW_NICKEL_BLOCK = BLOCKS.register("raw_nickel_block",() -> new Block(Block.Properties.of(Material.STONE).strength(3.0f,3.0f)));
 	public static final RegistryObject<Item> RAW_NICKEL_BLOCK_ITEM = ITEMS.register("raw_nickel_block",
 			() -> new BlockItem(RAW_NICKEL_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -223,7 +220,7 @@ public class BlockList {
 	public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("osmium_slate_ore",() -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> OSMIUM_ORE = BLOCKS.register("osmium_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_OSMIUM_ORE = BLOCKS.register("other_osmium_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> OSMIUM_BLOCK = BLOCKS.register("osmium_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f)));
+	public static final RegistryObject<Block> OSMIUM_BLOCK = BLOCKS.register("osmium_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> RAW_OSMIUM_BLOCK = BLOCKS.register("raw_osmium_block",() -> new Block(Block.Properties.of(Material.STONE).strength(3.0f,3.0f)));
 	public static final RegistryObject<Item> RAW_OSMIUM_BLOCK_ITEM = ITEMS.register("raw_osmium_block",
 			() -> new BlockItem(RAW_OSMIUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -265,7 +262,7 @@ public class BlockList {
 	public static final RegistryObject<Block> PLATINUM_SLATE_ORE = BLOCKS.register("platinum_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> PLATINUM_ORE = BLOCKS.register("platinum_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_PLATINUM_ORE = BLOCKS.register("other_platinum_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> PLATINUM_BLOCK = BLOCKS.register("platinum_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f)));
+	public static final RegistryObject<Block> PLATINUM_BLOCK = BLOCKS.register("platinum_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> RAW_PLATINUM_BLOCK = BLOCKS.register("raw_platinum_block",() -> new Block(Block.Properties.of(Material.STONE).strength(3.0f,3.0f)));
 	public static final RegistryObject<Item> RAW_PLATINUM_BLOCK_ITEM = ITEMS.register("raw_platinum_block",
 			() -> new BlockItem(RAW_PLATINUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -307,7 +304,7 @@ public class BlockList {
 	public static final RegistryObject<Block> SILVER_SLATE_ORE = BLOCKS.register("silver_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> SILVER_ORE = BLOCKS.register("silver_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_SILVER_ORE = BLOCKS.register("other_silver_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> SILVER_BLOCK = BLOCKS.register("silver_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f)));
+	public static final RegistryObject<Block> SILVER_BLOCK = BLOCKS.register("silver_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> RAW_SILVER_BLOCK = BLOCKS.register("raw_silver_block",() -> new Block(Block.Properties.of(Material.STONE).strength(3.0f,3.0f)));
 	public static final RegistryObject<Item> RAW_SILVER_BLOCK_ITEM = ITEMS.register("raw_silver_block",
 			() -> new BlockItem(RAW_SILVER_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -349,7 +346,7 @@ public class BlockList {
 	public static final RegistryObject<Block> TIN_SLATE_ORE = BLOCKS.register("tin_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_TIN_ORE = BLOCKS.register("other_tin_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> TIN_BLOCK = BLOCKS.register("tin_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f)));
+	public static final RegistryObject<Block> TIN_BLOCK = BLOCKS.register("tin_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> RAW_TIN_BLOCK = BLOCKS.register("raw_tin_block",() -> new Block(Block.Properties.of(Material.STONE).strength(3.0f,3.0f)));
 	public static final RegistryObject<Item> RAW_TIN_BLOCK_ITEM = ITEMS.register("raw_tin_block",
 			() -> new BlockItem(RAW_TIN_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -392,7 +389,7 @@ public class BlockList {
 	public static final RegistryObject<Block> URANIUM_SLATE_ORE = BLOCKS.register("uranium_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> URANIUM_ORE = BLOCKS.register("uranium_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_URANIUM_ORE = BLOCKS.register("other_uranium_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f)));
+	public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> RAW_URANIUM_BLOCK = BLOCKS.register("raw_uranium_block",() -> new Block(Block.Properties.of(Material.STONE).strength(3.0f,3.0f)));
 	public static final RegistryObject<Item> RAW_URANIUM_BLOCK_ITEM = ITEMS.register("raw_uranium_block",
 			() -> new BlockItem(RAW_URANIUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -434,7 +431,7 @@ public class BlockList {
 	public static final RegistryObject<Block> ZINC_SLATE_ORE = BLOCKS.register("zinc_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> ZINC_ORE = BLOCKS.register("zinc_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_ZINC_ORE = BLOCKS.register("other_zinc_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> ZINC_BLOCK = BLOCKS.register("zinc_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f)));
+	public static final RegistryObject<Block> ZINC_BLOCK = BLOCKS.register("zinc_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> RAW_ZINC_BLOCK = BLOCKS.register("raw_zinc_block",() -> new Block(Block.Properties.of(Material.STONE).strength(3.0f,3.0f)));
 	public static final RegistryObject<Item> RAW_ZINC_BLOCK_ITEM = ITEMS.register("raw_zinc_block",
 			() -> new BlockItem(RAW_ZINC_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
@@ -605,6 +602,40 @@ public class BlockList {
 	public static final RegistryObject<Item> SIGNALUM_PLATE = ITEMS.register("signalum_plate", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> CONSTANTAN_PLATE = ITEMS.register("constantan_plate", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
+	public static final RegistryObject<Item> STEEL_NUGGET = ITEMS.register("steel_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> INVAR_NUGGET = ITEMS.register("invar_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ELECTRUM_NUGGET = ITEMS.register("electrum_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> BRONZE_NUGGET = ITEMS.register("bronze_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ENDERIUM_NUGGET = ITEMS.register("enderium_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> LUMIUM_NUGGET = ITEMS.register("lumium_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> SIGNALUM_NUGGET = ITEMS.register("signalum_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> CONSTANTAN_NUGGET = ITEMS.register("constantan_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
+	public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> INVAR_INGOT = ITEMS.register("invar_ingot", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ELECTRUM_INGOT = ITEMS.register("electrum_ingot", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ENDERIUM_INGOT = ITEMS.register("enderium_ingot", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> LUMIUM_INGOT = ITEMS.register("lumium_ingot", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> SIGNALUM_INGOT = ITEMS.register("signalum_ingot", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> CONSTANTAN_INGOT = ITEMS.register("constantan_ingot", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+
+	public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", () -> new Block(Block.Properties.of(Material.METAL).strength(6.0f,6.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+	public static final RegistryObject<Block> INVAR_BLOCK = BLOCKS.register("invar_block", () -> new Block(Block.Properties.of(Material.METAL).strength(6.0f,6.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+	public static final RegistryObject<Block> ELECTRUM_BLOCK = BLOCKS.register("electrum_block", () -> new Block(Block.Properties.of(Material.METAL).strength(6.0f,6.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+	public static final RegistryObject<Block> BRONZE_BLOCK = BLOCKS.register("bronze_block", () -> new Block(Block.Properties.of(Material.METAL).strength(6.0f,6.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+	public static final RegistryObject<Block> ENDERIUM_BLOCK = BLOCKS.register("enderium_block", () -> new Block(Block.Properties.of(Material.METAL).strength(6.0f,6.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+	public static final RegistryObject<Block> LUMIUM_BLOCK = BLOCKS.register("lumium_block", () -> new Block(Block.Properties.of(Material.METAL).strength(6.0f,6.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+	public static final RegistryObject<Block> SIGNALUM_BLOCK = BLOCKS.register("signalum_block", () -> new Block(Block.Properties.of(Material.METAL).strength(6.0f,6.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+	public static final RegistryObject<Block> CONSTANTAN_BLOCK = BLOCKS.register("constantan_block", () -> new Block(Block.Properties.of(Material.METAL).strength(6.0f,6.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+
+	public static final RegistryObject<Item> STEEL_BLOCK_ITEM = ITEMS.register("steel_block", () -> new BlockItem(STEEL_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> INVAR_BLOCK_ITEM = ITEMS.register("invar_block", () -> new BlockItem(INVAR_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ELECTRUM_BLOCK_ITEM = ITEMS.register("electrum_block", () -> new BlockItem(ELECTRUM_BLOCK.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> BRONZE_BLOCK_ITEM = ITEMS.register("bronze_block", () -> new BlockItem(BRONZE_BLOCK.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ENDERIUM_BLOCK_ITEM = ITEMS.register("enderium_block", () -> new BlockItem(ENDERIUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> LUMIUM_BLOCK_ITEM = ITEMS.register("lumium_block", () -> new BlockItem(LUMIUM_BLOCK.get() ,new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> SIGNALUM_BLOCK_ITEM = ITEMS.register("signalum_block", () -> new BlockItem(SIGNALUM_BLOCK.get() ,new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> CONSTANTAN_BLOCK_ITEM = ITEMS.register("constantan_block", () -> new BlockItem(CONSTANTAN_BLOCK.get(),new Item.Properties().tab(Reference.GROUP)));
 
 }
