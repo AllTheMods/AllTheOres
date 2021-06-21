@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "alltheores:raw_osmium"
+  },
+  "result": "alltheores:osmium_ingot",
+  "experience": 0.15,
+  "cookingtime": 100
+}

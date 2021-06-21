@@ -26,7 +26,7 @@ import java.util.function.Consumer;
 
 public class ShapedBlockBuilder {
     public enum Slot {
-        METALBLOCK, GEAR, ROD, PLATE;
+        BLOCK, GEAR, ROD, PLATE;
         public String lower() {
             return toString().toLowerCase(Locale.ROOT);
         }
@@ -56,7 +56,7 @@ public class ShapedBlockBuilder {
 
 
     public ShapedBlockBuilder setBlock(RegistryObject<Item> object) {
-        pieces.put(Slot.METALBLOCK, object.get());
+        pieces.put(Slot.BLOCK, object.get());
         return this;
     }
     public ShapedBlockBuilder setGear(RegistryObject<Item> object) {
@@ -83,7 +83,7 @@ public class ShapedBlockBuilder {
 
         Consumer<ShapedRecipeBuilder> register = builder -> builder.save(consumer);
 
-           Optional.ofNullable(pieces.get(Slot.METALBLOCK))
+           Optional.ofNullable(pieces.get(Slot.BLOCK))
                 .map(this::block)
                 .map(this::addCriterionIngot)
                 .ifPresent(register);

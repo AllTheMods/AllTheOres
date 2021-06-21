@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "alltheores:raw_uranium"
+  },
+  "result": "alltheores:uranium_ingot",
+  "experience": 0.15,
+  "cookingtime": 100
+}

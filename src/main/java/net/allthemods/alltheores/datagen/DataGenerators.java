@@ -2,23 +2,23 @@ package net.allthemods.alltheores.datagen;
 
 import net.allthemods.alltheores.datagen.client.BlockStates;
 import net.allthemods.alltheores.datagen.client.ItemModels;
-import net.allthemods.alltheores.datagen.server.BlockTags;
-import net.allthemods.alltheores.datagen.server.CraftingRecipes;
-import net.allthemods.alltheores.datagen.server.ItemTags;
-import net.allthemods.alltheores.datagen.server.LootTables;
+import net.allthemods.alltheores.datagen.server.*;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.DirectoryCache;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+
+import java.io.IOException;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class DataGenerators {
     private DataGenerators() {}
 
     @SubscribeEvent
-    public static void gatherData(GatherDataEvent event) {
+    public static void gatherData(GatherDataEvent event) throws IOException {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
 
@@ -27,6 +27,9 @@ public final class DataGenerators {
             generator.addProvider(new ItemTags(generator, blockTagsProvider, fileHelper));
             generator.addProvider(blockTagsProvider);
             generator.addProvider(new CraftingRecipes(generator));
+            generator.addProvider(new ShapelessCrafting(generator));
+            generator.addProvider(new BlastingRecipes(generator));
+            generator.addProvider(new SmeltingRecipes(generator));
             generator.addProvider(new LootTables(generator));
         }
         if (event.includeClient()) {
