@@ -2,12 +2,11 @@ package net.allthemods.alltheores.datagen.server;
 
 import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.datagen.builder.ShapedBlockBuilder;
+import net.allthemods.alltheores.datagen.builder.ShapedIngotBuilder;
 import net.allthemods.alltheores.infos.ItemTagRegistry;
 import net.allthemods.alltheores.infos.Reference;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.RecipeProvider;
-import net.minecraft.data.ShapedRecipeBuilder;
+import net.minecraft.data.*;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.IItemProvider;
 import net.minecraftforge.common.Tags;
 
@@ -36,6 +35,8 @@ public class CraftingRecipes extends RecipeProvider {
             .unlockedBy("has_platinum_ingot", has(ItemTagRegistry.PLATINUM_INGOT))
             .save(consumer);
 */
+        final String hasCondition = "has_item";
+
         ShapedBlockBuilder.builder(ItemTagRegistry.ALUMINUM_INGOT)
                 .setBlock(BlockList.ALUMINUM_BLOCK_ITEM)
                 .setGear(BlockList.ALUMINUM_GEAR)
@@ -164,5 +165,365 @@ public class CraftingRecipes extends RecipeProvider {
                 .setPlate(BlockList.STEEL_PLATE)
                 .setRod(BlockList.STEEL_ROD)
                 .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.ALUMINUM_NUGGET)
+                .setIngot(BlockList.ALUMINUM_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.LEAD_NUGGET)
+                .setIngot(BlockList.LEAD_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.NICKEL_NUGGET)
+                .setIngot(BlockList.NICKEL_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.OSMIUM_NUGGET)
+                .setIngot(BlockList.OSMIUM_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.PLATINUM_NUGGET)
+                .setIngot(BlockList.PLATINUM_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.SILVER_NUGGET)
+                .setIngot(BlockList.SILVER_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.TIN_NUGGET)
+                .setIngot(BlockList.TIN_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.URANIUM_NUGGET)
+                .setIngot(BlockList.URANIUM_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.ZINC_NUGGET)
+                .setIngot(BlockList.ZINC_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.BRONZE_NUGGET)
+                .setIngot(BlockList.BRONZE_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.CONSTANTAN_NUGGET)
+                .setIngot(BlockList.CONSTANTAN_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.ELECTRUM_NUGGET)
+                .setIngot(BlockList.ELECTRUM_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.ENDERIUM_NUGGET)
+                .setIngot(BlockList.ENDERIUM_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.INVAR_NUGGET)
+                .setIngot(BlockList.INVAR_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.LUMIUM_NUGGET)
+                .setIngot(BlockList.LUMIUM_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.SIGNALUM_NUGGET)
+                .setIngot(BlockList.SIGNALUM_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.STEEL_NUGGET)
+                .setIngot(BlockList.STEEL_INGOT)
+                .build(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ALUMINUM_INGOT.get(),9)
+                .requires(ItemTagRegistry.ALUMINUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ALUMINUM_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ALUMINUM_NUGGET.get(),9)
+                .requires(ItemTagRegistry.ALUMINUM_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ALUMINUM_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.LEAD_INGOT.get(),9)
+                .requires(ItemTagRegistry.LEAD_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.LEAD_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.LEAD_NUGGET.get(),9)
+                .requires(ItemTagRegistry.LEAD_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.LEAD_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.OSMIUM_INGOT.get(),9)
+                .requires(ItemTagRegistry.OSMIUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.OSMIUM_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.OSMIUM_NUGGET.get(),9)
+                .requires(ItemTagRegistry.OSMIUM_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.OSMIUM_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.NICKEL_INGOT.get(),9)
+                .requires(ItemTagRegistry.NICKEL_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.NICKEL_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.NICKEL_NUGGET.get(),9)
+                .requires(ItemTagRegistry.NICKEL_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.NICKEL_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.PLATINUM_INGOT.get(),9)
+                .requires(ItemTagRegistry.PLATINUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.PLATINUM_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.PLATINUM_NUGGET.get(),9)
+                .requires(ItemTagRegistry.PLATINUM_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.PLATINUM_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.SILVER_INGOT.get(),9)
+                .requires(ItemTagRegistry.SILVER_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.SILVER_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.SILVER_NUGGET.get(),9)
+                .requires(ItemTagRegistry.SILVER_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.SILVER_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.TIN_INGOT.get(),9)
+                .requires(ItemTagRegistry.TIN_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.TIN_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.TIN_NUGGET.get(),9)
+                .requires(ItemTagRegistry.TIN_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.TIN_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.URANIUM_INGOT.get(),9)
+                .requires(ItemTagRegistry.URANIUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.URANIUM_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.URANIUM_NUGGET.get(),9)
+                .requires(ItemTagRegistry.URANIUM_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.URANIUM_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ZINC_INGOT.get(),9)
+                .requires(ItemTagRegistry.ZINC_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ZINC_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ZINC_NUGGET.get(),9)
+                .requires(ItemTagRegistry.ZINC_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ZINC_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.BRONZE_INGOT.get(),9)
+                .requires(ItemTagRegistry.BRONZE_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.BRONZE_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.BRONZE_NUGGET.get(),9)
+                .requires(ItemTagRegistry.BRONZE_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.BRONZE_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.CONSTANTAN_INGOT.get(),9)
+                .requires(ItemTagRegistry.CONSTANTAN_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.CONSTANTAN_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.CONSTANTAN_NUGGET.get(),9)
+                .requires(ItemTagRegistry.CONSTANTAN_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.CONSTANTAN_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ELECTRUM_INGOT.get(),9)
+                .requires(ItemTagRegistry.ELECTRUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ELECTRUM_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ELECTRUM_NUGGET.get(),9)
+                .requires(ItemTagRegistry.ELECTRUM_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ELECTRUM_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ENDERIUM_INGOT.get(),9)
+                .requires(ItemTagRegistry.ENDERIUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ENDERIUM_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ENDERIUM_NUGGET.get(),9)
+                .requires(ItemTagRegistry.ENDERIUM_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ENDERIUM_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.INVAR_INGOT.get(),9)
+                .requires(ItemTagRegistry.INVAR_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.INVAR_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.INVAR_NUGGET.get(),9)
+                .requires(ItemTagRegistry.INVAR_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.INVAR_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.LUMIUM_INGOT.get(),9)
+                .requires(ItemTagRegistry.LUMIUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.LUMIUM_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.LUMIUM_NUGGET.get(),9)
+                .requires(ItemTagRegistry.LUMIUM_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.LUMIUM_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.SIGNALUM_INGOT.get(),9)
+                .requires(ItemTagRegistry.SIGNALUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.SIGNALUM_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.SIGNALUM_NUGGET.get(),9)
+                .requires(ItemTagRegistry.SIGNALUM_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.SIGNALUM_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.STEEL_INGOT.get(),9)
+                .requires(ItemTagRegistry.STEEL_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.STEEL_BLOCK_ITEM.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.STEEL_NUGGET.get(),9)
+                .requires(ItemTagRegistry.STEEL_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.STEEL_INGOT.get()))
+                .group("shapeless")
+                .save(consumer);
+
+        CookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.ALUMINUM_RAW.get()),BlockList.ALUMINUM_INGOT.get(),0.15f,200)
+                .blasting(Ingredient.of(BlockList.ALUMINUM_RAW.get()),BlockList.ALUMINUM_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ALUMINUM_RAW.get()))
+                .save(consumer);
+
+        CookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.LEAD_RAW.get()),BlockList.LEAD_INGOT.get(),0.15f,200)
+                .blasting(Ingredient.of(BlockList.LEAD_RAW.get()),BlockList.LEAD_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.LEAD_RAW.get()))
+                .save(consumer);
+
+        CookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.OSMIUM_RAW.get()),BlockList.OSMIUM_INGOT.get(),0.15f,200)
+                .blasting(Ingredient.of(BlockList.OSMIUM_RAW.get()),BlockList.OSMIUM_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.OSMIUM_RAW.get()))
+                .save(consumer);
+
+        CookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.NICKEL_RAW.get()),BlockList.NICKEL_INGOT.get(),0.15f,200)
+                .blasting(Ingredient.of(BlockList.NICKEL_RAW.get()),BlockList.NICKEL_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.NICKEL_RAW.get()))
+                .save(consumer);
+
+        CookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.PLATINUM_RAW.get()),BlockList.PLATINUM_INGOT.get(),0.15f,200)
+                .blasting(Ingredient.of(BlockList.PLATINUM_RAW.get()),BlockList.PLATINUM_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.PLATINUM_RAW.get()))
+                .save(consumer);
+
+        CookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.SILVER_RAW.get()),BlockList.SILVER_INGOT.get(),0.15f,200)
+                .blasting(Ingredient.of(BlockList.SILVER_RAW.get()),BlockList.SILVER_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.SILVER_RAW.get()))
+                .save(consumer);
+
+        CookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.TIN_RAW.get()),BlockList.TIN_INGOT.get(),0.15f,200)
+                .blasting(Ingredient.of(BlockList.TIN_RAW.get()),BlockList.TIN_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.TIN_RAW.get()))
+                .save(consumer);
+
+        CookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.URANIUM_RAW.get()),BlockList.URANIUM_INGOT.get(),0.15f,200)
+                .blasting(Ingredient.of(BlockList.URANIUM_RAW.get()),BlockList.URANIUM_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.URANIUM_RAW.get()))
+                .save(consumer);
+
+        CookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.ZINC_RAW.get()),BlockList.ZINC_INGOT.get(),0.15f,200)
+                .blasting(Ingredient.of(BlockList.ZINC_RAW.get()),BlockList.ZINC_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ZINC_RAW.get()))
+                .save(consumer);
+
     }
 }

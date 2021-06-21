@@ -1,10 +1,12 @@
 package net.allthemods.alltheores.datagen.builder;
 
+import mekanism.common.recipe.impl.SmeltingIRecipe;
 import net.allthemods.alltheores.datagen.RecipeException;
 import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.advancements.ICriterionInstance;
 import net.minecraft.advancements.criterion.InventoryChangeTrigger;
 import net.minecraft.advancements.criterion.ItemPredicate;
+import net.minecraft.data.CookingRecipeBuilder;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.item.ArmorItem;
@@ -81,19 +83,19 @@ public class ShapedBlockBuilder {
 
         Consumer<ShapedRecipeBuilder> register = builder -> builder.save(consumer);
 
-        Optional.ofNullable(pieces.get(Slot.METALBLOCK))
-            .map(this::block)
-            .map(this::addCriterionIngot)
-            .ifPresent(register);
-        Optional.ofNullable(pieces.get(Slot.GEAR))
+           Optional.ofNullable(pieces.get(Slot.METALBLOCK))
+                .map(this::block)
+                .map(this::addCriterionIngot)
+                .ifPresent(register);
+            Optional.ofNullable(pieces.get(Slot.GEAR))
                 .map(this::gear)
                 .map(this::addCriterionIngot)
                 .ifPresent(register);
-        Optional.ofNullable(pieces.get(Slot.ROD))
+            Optional.ofNullable(pieces.get(Slot.ROD))
                 .map(this::rod)
                 .map(this::addCriterionIngot)
                 .ifPresent(register);
-        Optional.ofNullable(pieces.get(Slot.PLATE))
+            Optional.ofNullable(pieces.get(Slot.PLATE))
                 .map(this::plate)
                 .map(this::addCriterionIngot)
                 .ifPresent(register);
@@ -149,4 +151,5 @@ public class ShapedBlockBuilder {
                 .pattern("   ");
 
     }
+
 }

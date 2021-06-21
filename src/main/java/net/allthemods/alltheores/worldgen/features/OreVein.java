@@ -131,7 +131,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
             if (processed == veinSize) {
                 break;
             }
-            if(rand.nextInt(10) > 5) { processed = processed + allBlocks(this,world, pos); }
+            if(rand.nextBoolean()) { processed = processed + allBlocks(this,world, pos); }
             switch (direction) {
                 case 0:
                     for (int up = 1; up <= 3; up++) {

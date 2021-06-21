@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:platinum_ingot"
+    ]
+  },
+  "criteria": {
+    "has_nuggets/platinum_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:nuggets/platinum"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:platinum_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nuggets/platinum_nugget",
+      "has_the_recipe"
+    ]
+  ]
+}

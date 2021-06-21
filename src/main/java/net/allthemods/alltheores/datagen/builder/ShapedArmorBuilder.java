@@ -53,10 +53,6 @@ public class ShapedArmorBuilder {
         return new ShapedArmorBuilder(ingot);
     }
 
-    public ShapedArmorBuilder setCore(RegistryObject<Item> object) {
-        this.core = object.get();
-        return this;
-    }
 
     public ShapedArmorBuilder setHelmet(RegistryObject<ArmorItem> object) {
         pieces.put(Slot.HELMET, object.get());
@@ -80,10 +76,6 @@ public class ShapedArmorBuilder {
 
 
     protected void validate(ResourceLocation id) {
-        if (core == null) {
-            throw new RecipeException(id.toString(), "recipe must have a core");
-        }
-
         if (pieces.isEmpty()) {
             throw new RecipeException(id.toString(), "recipe must have at least 1 output");
         }
@@ -121,30 +113,28 @@ public class ShapedArmorBuilder {
 
     private ShapedRecipeBuilder addCriterion(ShapedRecipeBuilder builder) {
         return builder
-            .define('c', core)
             .define('a', ingot)
             .unlockedBy(criteriaName, criterion);
     }
 
     private ShapedRecipeBuilder helmet(IItemProvider provider) {
         return shaped(provider)
-            .pattern("aca")
-            .pattern("aga")
-            .pattern("   ")
-            .define('g', Tags.Items.GLASS);
+            .pattern("aaa")
+            .pattern("a a")
+            .pattern("   ");
 
     }
 
     private ShapedRecipeBuilder chestplate(IItemProvider provider) {
         return shaped(provider)
             .pattern("a a")
-            .pattern("aca")
+            .pattern("aaa")
             .pattern("aaa");
     }
 
     private ShapedRecipeBuilder leggings(IItemProvider provider) {
         return shaped(provider)
-            .pattern("aca")
+            .pattern("aaa")
             .pattern("a a")
             .pattern("a a");
     }
@@ -152,7 +142,7 @@ public class ShapedArmorBuilder {
     private ShapedRecipeBuilder boots(IItemProvider provider) {
         return shaped(provider)
             .pattern("a a")
-            .pattern("aca")
+            .pattern("a a")
             .pattern("   ");
     }
 }

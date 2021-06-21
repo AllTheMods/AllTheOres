@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:silver_ingot"
+    ]
+  },
+  "criteria": {
+    "has_nuggets/silver_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:nuggets/silver"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:silver_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nuggets/silver_nugget",
+      "has_the_recipe"
+    ]
+  ]
+}
