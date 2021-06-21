@@ -91,6 +91,24 @@ public class CraftingRecipes extends RecipeProvider {
                 .setRod(BlockList.ZINC_ROD)
                 .build(consumer);
 
+        ShapedBlockBuilder.builder(Tags.Items.INGOTS_IRON)
+                .setGear(BlockList.IRON_GEAR)
+                .setPlate(BlockList.IRON_PLATE)
+                .setRod(BlockList.IRON_ROD)
+                .build(consumer);
+
+        ShapedBlockBuilder.builder(Tags.Items.INGOTS_GOLD)
+                .setGear(BlockList.GOLD_GEAR)
+                .setPlate(BlockList.GOLD_PLATE)
+                .setRod(BlockList.GOLD_ROD)
+                .build(consumer);
+
+        ShapedBlockBuilder.builder(Tags.Items.GEMS_DIAMOND)
+                .setGear(BlockList.DIAMOND_GEAR)
+                .setPlate(BlockList.DIAMOND_PLATE)
+                .setRod(BlockList.DIAMOND_ROD)
+                .build(consumer);
+
         ShapedBlockBuilder.builder(ItemTagRegistry.BRONZE_INGOT)
                 .setBlock(BlockList.BRONZE_BLOCK_ITEM)
                 .setGear(BlockList.BRONZE_GEAR)

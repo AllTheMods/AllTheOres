@@ -67,5 +67,37 @@ public class ItemTagRegistry {
     public static final Tags.IOptionalNamedTag<Block> SIGNALUM_BLOCK = BlockTags.createOptional(Reference.block("signalum"));
     public static final Tags.IOptionalNamedTag<Block> STEEL_BLOCK = BlockTags.createOptional(Reference.block("steel"));
 
+    public static final Tags.IOptionalNamedTag<Item> LEAD_BLOCK_ITEM = ItemTags.createOptional(Reference.block("lead"));
+    public static final Tags.IOptionalNamedTag<Item> COPPER_BLOCK_ITEM = ItemTags.createOptional(Reference.block("copper"));
+    public static final Tags.IOptionalNamedTag<Item> SILVER_BLOCK_ITEM = ItemTags.createOptional(Reference.block("silver"));
+    public static final Tags.IOptionalNamedTag<Item> PLATINUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("platinum"));
+    public static final Tags.IOptionalNamedTag<Item> ALUMINUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("aluminum"));
+    public static final Tags.IOptionalNamedTag<Item> NICKEL_BLOCK_ITEM = ItemTags.createOptional(Reference.block("nickel"));
+    public static final Tags.IOptionalNamedTag<Item> URANIUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("uranium"));
+    public static final Tags.IOptionalNamedTag<Item> OSMIUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("osmium"));
+    public static final Tags.IOptionalNamedTag<Item> ZINC_BLOCK_ITEM = ItemTags.createOptional(Reference.block("zinc"));
+    public static final Tags.IOptionalNamedTag<Item> TIN_BLOCK_ITEM = ItemTags.createOptional(Reference.block("tin"));
+    public static final Tags.IOptionalNamedTag<Item> BRONZE_BLOCK_ITEM = ItemTags.createOptional(Reference.block("bronze"));
+    public static final Tags.IOptionalNamedTag<Item> CONSTANTAN_BLOCK_ITEM = ItemTags.createOptional(Reference.block("constantan"));
+    public static final Tags.IOptionalNamedTag<Item> ELECTRUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("electrum"));
+    public static final Tags.IOptionalNamedTag<Item> ENDERIUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("enderium"));
+    public static final Tags.IOptionalNamedTag<Item> INVAR_BLOCK_ITEM = ItemTags.createOptional(Reference.block("invar"));
+    public static final Tags.IOptionalNamedTag<Item> LUMIUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("lumium"));
+    public static final Tags.IOptionalNamedTag<Item> SIGNALUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("signalum"));
+    public static final Tags.IOptionalNamedTag<Item> STEEL_BLOCK_ITEM = ItemTags.createOptional(Reference.block("steel"));
 
+
+    //ORE
+
+
+    public static final Tags.IOptionalNamedTag<Block> LEAD_ORE = BlockTags.createOptional(Reference.ore("lead"));
+    public static final Tags.IOptionalNamedTag<Block> COPPER_ORE = BlockTags.createOptional(Reference.ore("copper"));
+    public static final Tags.IOptionalNamedTag<Block> SILVER_ORE = BlockTags.createOptional(Reference.ore("silver"));
+    public static final Tags.IOptionalNamedTag<Block> PLATINUM_ORE = BlockTags.createOptional(Reference.ore("platinum"));
+    public static final Tags.IOptionalNamedTag<Block> ALUMINUM_ORE = BlockTags.createOptional(Reference.ore("aluminum"));
+    public static final Tags.IOptionalNamedTag<Block> NICKEL_ORE = BlockTags.createOptional(Reference.ore("nickel"));
+    public static final Tags.IOptionalNamedTag<Block> URANIUM_ORE = BlockTags.createOptional(Reference.ore("uranium"));
+    public static final Tags.IOptionalNamedTag<Block> OSMIUM_ORE = BlockTags.createOptional(Reference.ore("osmium"));
+    public static final Tags.IOptionalNamedTag<Block> ZINC_ORE = BlockTags.createOptional(Reference.ore("zinc"));
+    public static final Tags.IOptionalNamedTag<Block> TIN_ORE = BlockTags.createOptional(Reference.ore("tin"));
 }

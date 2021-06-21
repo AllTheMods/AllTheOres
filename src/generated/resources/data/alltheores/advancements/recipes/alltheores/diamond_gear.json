@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:diamond_gear"
+    ]
+  },
+  "criteria": {
+    "has_gems/diamond_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:gems/diamond"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:diamond_gear"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gems/diamond_ingot",
+      "has_the_recipe"
+    ]
+  ]
+}
