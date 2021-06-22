@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a  ",
+    "a  ",
+    "a  "
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:ingots/lead"
+    }
+  },
+  "result": {
+    "item": "alltheores:lead_rod"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:blasting/tin_ingot_from_raw"
+    ]
+  },
+  "criteria": {
+    "has_raw": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "alltheores:raw_tin"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:blasting/tin_ingot_from_raw"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_raw",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -5,10 +5,8 @@ import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fml.RegistryObject;
 
@@ -29,6 +27,12 @@ public class BlockStates extends BlockStateProvider {
             .collect(Collectors.toList());
 
         entries.forEach(this::simpleBlockAndItem);
+
+        List<Block> ore = BlockList.ORE.getEntries()
+                .stream().map(RegistryObject::get)
+                .collect(Collectors.toList());
+
+        ore.forEach(this::simpleBlockAndItem);
     }
 
     /**

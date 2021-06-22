@@ -54,10 +54,10 @@ public class OtherOreBlock extends Block {
 
     @Override
     public int getHarvestLevel(BlockState state) {
-        if (state.getBlock() == BlockList.OTHER_PLATINUM_ORE.get()) {
+        if (state.getBlock() == BlockList.PLATINUM.OTHER_ORE.get()) {
             return 7;
         }
-        if (state.getBlock() == BlockList.OTHER_URANIUM_ORE.get()) {
+        if (state.getBlock() == BlockList.URANIUM.OTHER_ORE.get()) {
             return 7;
         }
         if (state.getBlock() == BlockList.OTHER_REDSTONE_ORE.get()) {

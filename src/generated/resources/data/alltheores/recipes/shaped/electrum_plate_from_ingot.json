@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aa ",
+    "aa ",
+    "   "
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:ingots/electrum"
+    }
+  },
+  "result": {
+    "item": "alltheores:electrum_plate"
+  }
+}

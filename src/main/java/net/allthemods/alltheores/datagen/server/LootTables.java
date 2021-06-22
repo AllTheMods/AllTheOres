@@ -2,9 +2,8 @@ package net.allthemods.alltheores.datagen.server;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
-import net.allthemods.alltheores.blocks.AOreBlock;
 import net.allthemods.alltheores.blocks.BlockList;
-import net.allthemods.alltheores.blocks.OtherOreBlock;
+import net.allthemods.alltheores.registry.OreRegistryGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.data.DataGenerator;
@@ -30,7 +29,10 @@ public class LootTables extends LootTableProvider {
     @Override
     protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootParameterSet>> getTables()
     {
-        return ImmutableList.of(Pair.of(Blocks::new, LootParameterSets.BLOCK));
+        return ImmutableList.of(
+                Pair.of(Blocks::new, LootParameterSets.BLOCK),
+                Pair.of(Ore::new, LootParameterSets.BLOCK)
+        );
     }
 
     private static class Blocks extends BlockLootTables
@@ -38,45 +40,9 @@ public class LootTables extends LootTableProvider {
         @Override
         protected void addTables()
         {
-            getKnownBlocks().forEach(this::dropRaw);
+            getKnownBlocks().forEach(this::dropSelf);
 
         }
-
-        private void dropRaw(Block block) {
-            if(block instanceof AOreBlock) {
-                String oretype = block.getRegistryName().getPath().toString();
-                if(oretype.contains("aluminum")) { this.add(block, (block1) -> {
-                    return createOreDrop(block1, BlockList.ALUMINUM_RAW.get());
-                }); }
-                if(oretype.contains("lead")) { this.add(block, (block1) -> {
-                    return createOreDrop(block1, BlockList.LEAD_RAW.get());
-                }); }
-                if(oretype.contains("nickel")) { this.add(block, (block1) -> {
-                    return createOreDrop(block1, BlockList.NICKEL_RAW.get());
-                }); }
-                if(oretype.contains("osmium")) { this.add(block, (block1) -> {
-                    return createOreDrop(block1, BlockList.OSMIUM_RAW.get());
-                }); }
-                if(oretype.contains("platinum")) { this.add(block, (block1) -> {
-                    return createOreDrop(block1, BlockList.PLATINUM_RAW.get());
-                }); }
-                if(oretype.contains("silver")) { this.add(block, (block1) -> {
-                    return createOreDrop(block1, BlockList.SILVER_RAW.get());
-                }); }
-                if(oretype.contains("tin_")) { this.add(block, (block1) -> {
-                    return createOreDrop(block1, BlockList.TIN_RAW.get());
-                }); }
-                if(oretype.contains("uranium")) { this.add(block, (block1) -> {
-                    return createOreDrop(block1, BlockList.URANIUM_RAW.get());
-                }); }
-                if(oretype.contains("zinc")) { this.add(block, (block1) -> {
-                    return createOreDrop(block1, BlockList.ZINC_RAW.get());
-                }); }
-            } else {
-                this.dropSelf(block);
-            }
-        }
-
 
         @Override
         protected Iterable<Block> getKnownBlocks()
@@ -86,8 +52,32 @@ public class LootTables extends LootTableProvider {
                 .filter(block -> !(block instanceof FlowingFluidBlock))
                 .collect(Collectors.toList());
         }
+    }
 
+    private static class Ore extends BlockLootTables
+    {
+        @Override
+        protected void addTables()
+        {
+            GroupHelper.applyToOre(this::addGroup);
+        }
 
+        /**
+         * Register loot tables for a MetalRegistryGroup
+         * @param group the registry group
+         */
+        private void addGroup(OreRegistryGroup group) {
+            this.add(group.ORE.get(), block -> createOreDrop(block, group.RAW.get()));
+            this.add(group.SLATE_ORE.get(), block -> createOreDrop(block, group.RAW.get()));
+        }
+
+        @Override
+        protected Iterable<Block> getKnownBlocks()
+        {
+            return BlockList.ORE.getEntries()
+                    .stream().map(RegistryObject::get)
+                    .collect(Collectors.toList());
+        }
     }
 
     @Override

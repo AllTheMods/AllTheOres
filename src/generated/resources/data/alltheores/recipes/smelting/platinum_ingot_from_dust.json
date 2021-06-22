@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:dusts/platinum"
+  },
+  "result": "alltheores:platinum_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}

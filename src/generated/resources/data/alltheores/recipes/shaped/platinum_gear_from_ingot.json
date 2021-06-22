@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aaa",
+    "a a",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:ingots/platinum"
+    }
+  },
+  "result": {
+    "item": "alltheores:platinum_gear"
+  }
+}

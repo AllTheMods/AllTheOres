@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:nuggets/lumium"
+    }
+  },
+  "result": {
+    "item": "alltheores:lumium_ingot"
+  }
+}

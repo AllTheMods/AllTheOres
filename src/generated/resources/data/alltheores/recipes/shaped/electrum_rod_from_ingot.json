@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a  ",
+    "a  ",
+    "a  "
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:ingots/electrum"
+    }
+  },
+  "result": {
+    "item": "alltheores:electrum_rod"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a  ",
+    "a  ",
+    "a  "
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:ingots/enderium"
+    }
+  },
+  "result": {
+    "item": "alltheores:enderium_rod"
+  }
+}

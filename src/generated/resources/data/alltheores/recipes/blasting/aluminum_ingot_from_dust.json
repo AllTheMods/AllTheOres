@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "forge:dusts/aluminum"
+  },
+  "result": "alltheores:aluminum_ingot",
+  "experience": 0.15,
+  "cookingtime": 100
+}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "alltheores:item/dirty_copper_dust"
-  }
-}

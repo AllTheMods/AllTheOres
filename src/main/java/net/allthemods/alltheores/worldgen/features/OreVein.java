@@ -68,46 +68,58 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                 maxY = Configuration.COMMON.aluminum_MaxY.get();
                 veinSize = Configuration.COMMON.aluminum_SpawnSize.get();
                 veinCount = Configuration.COMMON.aluminum_VeinCount.get();
+                break;
             case "alltheores:lead_ore":
                 minY = Configuration.COMMON.lead_MinY.get();
                 maxY = Configuration.COMMON.lead_MaxY.get();
                 veinSize = Configuration.COMMON.lead_SpawnSize.get();
                 veinCount = Configuration.COMMON.lead_VeinCount.get();
+                break;
             case "alltheores:nickel_ore":
                 minY = Configuration.COMMON.nickel_MinY.get();
                 maxY = Configuration.COMMON.nickel_MaxY.get();
                 veinSize = Configuration.COMMON.nickel_SpawnSize.get();
                 veinCount = Configuration.COMMON.nickel_VeinCount.get();
+                break;
             case "alltheores:osmium_ore":
                 minY = Configuration.COMMON.osmium_MinY.get();
                 maxY = Configuration.COMMON.osmium_MaxY.get();
                 veinSize = Configuration.COMMON.osmium_SpawnSize.get();
                 veinCount = Configuration.COMMON.osmium_VeinCount.get();
+                break;
             case "alltheores:platinum_ore":
                 minY = Configuration.COMMON.platinum_MinY.get();
                 maxY = Configuration.COMMON.platinum_MaxY.get();
                 veinSize = Configuration.COMMON.platinum_SpawnSize.get();
                 veinCount = Configuration.COMMON.platinum_VeinCount.get();
+                break;
             case "alltheores:silver_ore":
                 minY = Configuration.COMMON.silver_MinY.get();
                 maxY = Configuration.COMMON.silver_MaxY.get();
                 veinSize = Configuration.COMMON.silver_SpawnSize.get();
                 veinCount = Configuration.COMMON.silver_VeinCount.get();
+                break;
             case "alltheores:tin_ore":
                 minY = Configuration.COMMON.tin_MinY.get();
                 maxY = Configuration.COMMON.tin_MaxY.get();
                 veinSize = Configuration.COMMON.tin_SpawnSize.get();
                 veinCount = Configuration.COMMON.tin_VeinCount.get();
+                break;
             case "alltheores:uranium_ore":
                 minY = Configuration.COMMON.uranium_MinY.get();
                 maxY = Configuration.COMMON.uranium_MaxY.get();
                 veinSize = Configuration.COMMON.uranium_SpawnSize.get();
                 veinCount = Configuration.COMMON.uranium_VeinCount.get();
+                break;
             case "alltheores:zinc_ore":
                 minY = Configuration.COMMON.zinc_MinY.get();
                 maxY = Configuration.COMMON.zinc_MaxY.get();
                 veinSize = Configuration.COMMON.zinc_SpawnSize.get();
                 veinCount = Configuration.COMMON.zinc_VeinCount.get();
+                break;
+            default:
+                // nothing to do
+                break;
         }
         boolean negX = rand.nextBoolean();
         boolean negZ = rand.nextBoolean();

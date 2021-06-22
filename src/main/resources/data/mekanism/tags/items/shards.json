@@ -2,7 +2,6 @@
     "replace": false,
     "values": [
         "#mekanism:shards/aluminum",
-        "#mekanism:shards/copper",
         "#mekanism:shards/lead",
         "#mekanism:shards/nickel",
         "#mekanism:shards/osmium",
