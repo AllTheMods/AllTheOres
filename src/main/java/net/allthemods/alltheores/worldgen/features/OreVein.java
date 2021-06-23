@@ -139,7 +139,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                             break;
                         }
-                        world.setBlock(pos.above(), pos.above().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
+                        world.setBlock(pos.above(), pos.above().getY() > 16 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                         processed++;
                         if (processed == veinSize) {
                             break;
@@ -159,7 +159,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                             break;
                         }
-                        world.setBlock(pos.below(),pos.below().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
+                        world.setBlock(pos.below(),pos.below().getY() > 16 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                         processed++;
                         if (processed == veinSize) {
                             break;
@@ -177,7 +177,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                             break;
                         }
-                        world.setBlock(pos.north(), pos.north().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
+                        world.setBlock(pos.north(), pos.north().getY() > 16 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                         processed++;
                         if (processed == veinSize) {
                             break;
@@ -195,7 +195,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                             break;
                         }
-                        world.setBlock(pos.east(), pos.east().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
+                        world.setBlock(pos.east(), pos.east().getY() > 16 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                         processed++;
                         if (processed == veinSize) {
                             break;
@@ -213,7 +213,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                             break;
                         }
-                        world.setBlock(pos.south(), pos.south().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
+                        world.setBlock(pos.south(), pos.south().getY() > 16 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                         processed++;
                         if (processed == veinSize) {
                             break;
@@ -231,7 +231,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
                         if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                             break;
                         }
-                        world.setBlock(pos.west(), pos.west().getY() > 0 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
+                        world.setBlock(pos.west(), pos.west().getY() > 16 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState() , 2, 512);
                         processed++;
                         if (processed == veinSize) {
                             break;
@@ -259,37 +259,37 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
         if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
             return x;
         } else {
-            world.setBlock(pos.below(), pos.below().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+            world.setBlock(pos.below(), pos.below().getY() > 16 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
             x++;
             state = world.getBlockState(pos.above());
             if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                 return x;
             } else {
-                world.setBlock(pos.above(), pos.above().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+                world.setBlock(pos.above(), pos.above().getY() > 16 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
                 x++;
                 state = world.getBlockState(pos.east());
                 if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                     return x;
                 } else {
-                    world.setBlock(pos.east(), pos.east().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+                    world.setBlock(pos.east(), pos.east().getY() > 16 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
                     x++;
                     state = world.getBlockState(pos.west());
                     if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                         return x;
                     } else {
-                        world.setBlock(pos.west(), pos.west().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+                        world.setBlock(pos.west(), pos.west().getY() > 16 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
                         x++;
                         state = world.getBlockState(pos.north());
                         if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                             return x;
                         } else {
-                            world.setBlock(pos.north(), pos.north().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+                            world.setBlock(pos.north(), pos.north().getY() > 16 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
                             x++;
                             state = world.getBlockState(pos.south());
                             if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                                 return x;
                             } else {
-                                world.setBlock(pos.south(), pos.south().getY() > 0 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
+                                world.setBlock(pos.south(), pos.south().getY() > 16 ? oreVein.oreType.defaultBlockState() : oreVein.deepSlate_oreType.defaultBlockState(), 2, 512);
                                 x++;
                             }
                         }
