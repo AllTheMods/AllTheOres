@@ -111,8 +111,7 @@ public class BlockList {
 	//		() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> COPPER_DUST = ITEMS.register("copper_dust",
-			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+
 
 	public static final RegistryObject<Source> MOLTEN_LEAD = FLUIDS.register("molten_lead",
 			() -> new ForgeFlowingFluid.Source(makeMoltenLeadProperties()));
@@ -452,10 +451,7 @@ public class BlockList {
 	public static final RegistryObject<Item> ZINC_RAW = ITEMS.register("raw_zinc",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
-	public static final RegistryObject<Item> IRON_DUST = ITEMS.register("iron_dust",
-			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> GOLD_DUST = ITEMS.register("gold_dust",
-			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+
 //TO-DO ORES from BLOCKS for other vanilla ores
 	public static final RegistryObject<Block> OTHER_COAL_ORE = BLOCKS.register("other_coal_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> OTHER_IRON_ORE = BLOCKS.register("other_iron_ore", OtherOreBlock::new);
@@ -482,6 +478,19 @@ public class BlockList {
 
 	// ********************** MEK PROCESSING
 
+	// *********************** Misc Dusts
+
+	public static final RegistryObject<Item> IRON_DUST = ITEMS.register("iron_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> COPPER_DUST = ITEMS.register("copper_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> GOLD_DUST = ITEMS.register("gold_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> DIAMOND_DUST = ITEMS.register("diamond_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> NETHERITE_DUST = ITEMS.register("netherite_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> BRONZE_DUST = ITEMS.register("bronze_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> CONSTANTAN_DUST = ITEMS.register("constantan_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ELECTRUM_DUST = ITEMS.register("electrum_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ENDERIUM_DUST = ITEMS.register("enderium_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> LUMIUM_DUST = ITEMS.register("lumium_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> SIGNALUM_DUST = ITEMS.register("signalum_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	//  ***********************DIRTY DUSTS
 	public static final RegistryObject<Item> ALUM_DIRTY = ITEMS.register("dirty_aluminum_dust", () -> new DirtyDust(new Item.Properties().tab(Reference.GROUP)));
