@@ -26,7 +26,7 @@ public class AlloyRegistryGroup {
     public final Tags.IOptionalNamedTag<Item> BLOCK_ITEM_TAG;
     public final Tags.IOptionalNamedTag<Item> INGOT_TAG;
     public final Tags.IOptionalNamedTag<Item> NUGGET_TAG;
-//    public final Tags.IOptionalNamedTag<Item> DUST_TAG;
+    public final Tags.IOptionalNamedTag<Item> DUST_TAG;
 
 
     // Blocks
@@ -36,7 +36,7 @@ public class AlloyRegistryGroup {
     public final RegistryObject<BlockItem> BLOCK_ITEM;
 
     // Items
-//    public final RegistryObject<Item> DUST;
+    public final RegistryObject<Item> DUST;
     public final RegistryObject<Item> INGOT;
     public final RegistryObject<Item> NUGGET;
 
@@ -52,7 +52,7 @@ public class AlloyRegistryGroup {
         BLOCK_ITEM_TAG = ItemTags.createOptional(Reference.block(name));
         INGOT_TAG = ItemTags.createOptional(Reference.ingot(name));
         NUGGET_TAG = ItemTags.createOptional(Reference.nugget(name));
-//        DUST_TAG = ItemTags.createOptional(Reference.dust(name));
+        DUST_TAG = ItemTags.createOptional(Reference.dust(name));
 
         BLOCK = BlockList.BLOCKS.register(String.format("%s_block", name),
                 () -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(5.0f, 6.0f).sound(SoundType.METAL)));
@@ -61,7 +61,7 @@ public class AlloyRegistryGroup {
 
         INGOT = material(String.format("%s_ingot", name));
         NUGGET = material(String.format("%s_nugget", name));
-//        DUST = material(String.format("%s_dust", name));
+        DUST = material(String.format("%s_dust", name));
 
         ROD = material(String.format("%s_rod", name));
         GEAR = material(String.format("%s_gear", name));

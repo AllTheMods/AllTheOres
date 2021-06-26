@@ -39,7 +39,6 @@ public class OreRegistryGroup extends AlloyRegistryGroup {
     // Tags
     public final Tags.IOptionalNamedTag<Block> ORE_TAG;
     public final Tags.IOptionalNamedTag<Item> ORE_ITEM_TAG;
-    public final Tags.IOptionalNamedTag<Item> DUST_TAG;
 
 
     // Blocks
@@ -56,7 +55,6 @@ public class OreRegistryGroup extends AlloyRegistryGroup {
 
     // Items
     public final RegistryObject<Item> RAW;
-    public final RegistryObject<Item> DUST;
 
     // Fluid Registry
     public final RegistryObject<ForgeFlowingFluid.Source> MOLTEN;
@@ -76,7 +74,6 @@ public class OreRegistryGroup extends AlloyRegistryGroup {
 
         ORE_TAG = BlockTags.createOptional(Reference.ore(name));
         ORE_ITEM_TAG = ItemTags.createOptional(Reference.ore(name));
-        DUST_TAG = ItemTags.createOptional(Reference.dust(name));
 
         MOLTEN = BlockList.FLUIDS.register(String.format("molten_%s", name),
                 () -> new ForgeFlowingFluid.Source(makeMoltenProperties()));
@@ -107,7 +104,6 @@ public class OreRegistryGroup extends AlloyRegistryGroup {
         OTHER_ORE_ITEM = blockItem(OTHER_ORE);
         RAW_BLOCK_ITEM = blockItem(RAW_BLOCK);
 
-        DUST = material(String.format("%s_dust", name));
         RAW = material(String.format("raw_%s", name));
 
         MEK_DIRTY = BlockList.ITEMS.register(String.format("dirty_%s_dust", name), () -> new DirtyDust(new Item.Properties().tab(Reference.GROUP)));

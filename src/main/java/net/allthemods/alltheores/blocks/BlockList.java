@@ -48,6 +48,7 @@ public class BlockList {
 	public static final VanillaRegistryGroup COPPER = new VanillaRegistryGroup("copper", ItemTagRegistry.COPPER_INGOT);
 
 	public static final RegistryObject<Item> COPPER_NUGGET = material("copper_nugget");
+	public static final RegistryObject<Item> NETHERITE_DUST = material("netherite_dust");
 
 	// Temporary
 	public static final RegistryObject<Item> COPPER_INGOT = material("copper_ingot");
