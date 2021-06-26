@@ -1,29 +1,15 @@
 package net.allthemods.alltheores.blocks;
 
-import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.loot.LootContext;
-import net.minecraft.loot.conditions.RandomChanceWithLooting;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.util.FakePlayer;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class OtherOreBlock extends Block {
 
@@ -60,13 +46,13 @@ public class OtherOreBlock extends Block {
         if (state.getBlock() == BlockList.URANIUM.OTHER_ORE.get()) {
             return 7;
         }
-        if (state.getBlock() == BlockList.OTHER_REDSTONE_ORE.get()) {
+        if (state.getBlock() == BlockList.OTHER_REDSTONE.OTHER_ORE.get()) {
             return 7;
         }
-        if (state.getBlock() == BlockList.OTHER_LAPIS_ORE.get()) {
+        if (state.getBlock() == BlockList.OTHER_LAPIS.OTHER_ORE.get()) {
             return 7;
         }
-        if (state.getBlock() == BlockList.OTHER_DIAMOND_ORE.get()) {
+        if (state.getBlock() == BlockList.OTHER_DIAMOND.OTHER_ORE.get()) {
             return 7;
         }
         return 6;

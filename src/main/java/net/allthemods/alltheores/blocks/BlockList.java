@@ -4,15 +4,13 @@ import net.allthemods.alltheores.infos.ItemTagRegistry;
 import net.allthemods.alltheores.infos.Reference;
 import net.allthemods.alltheores.registry.AlloyRegistryGroup;
 import net.allthemods.alltheores.registry.OreRegistryGroup;
+import net.allthemods.alltheores.registry.OtherOreRegistryGroup;
 import net.allthemods.alltheores.registry.VanillaRegistryGroup;
 import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -55,17 +53,11 @@ public class BlockList {
 	public static final RegistryObject<Item> COPPER_INGOT = material("copper_ingot");
 
 //TO-DO ORES from BLOCKS for other vanilla ores
-	public static final RegistryObject<Block> OTHER_COAL_ORE = BLOCKS.register("other_coal_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> OTHER_IRON_ORE = BLOCKS.register("other_iron_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> OTHER_REDSTONE_ORE = BLOCKS.register("other_redstone_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> OTHER_DIAMOND_ORE = BLOCKS.register("other_diamond_ore", OtherOreBlock::new);
-	public static final RegistryObject<Block> OTHER_LAPIS_ORE = BLOCKS.register("other_lapis_ore", OtherOreBlock::new);
-	
-	public static final RegistryObject<BlockItem> OTHER_COAL_ORE_ITEM = blockItem(OTHER_COAL_ORE);
-	public static final RegistryObject<BlockItem> OTHER_IRON_ORE_ITEM = blockItem(OTHER_IRON_ORE);
-	public static final RegistryObject<BlockItem> OTHER_REDSTONE_ORE_ITEM = blockItem(OTHER_REDSTONE_ORE);
-	public static final RegistryObject<BlockItem> OTHER_DIAMOND_ORE_ITEM = blockItem(OTHER_DIAMOND_ORE);
-	public static final RegistryObject<BlockItem> OTHER_LAPIS_ORE_ITEM = blockItem(OTHER_LAPIS_ORE);
+	public static final OtherOreRegistryGroup OTHER_COAL = new OtherOreRegistryGroup("coal", Items.COAL_ORE, Items.COAL);
+	public static final OtherOreRegistryGroup OTHER_IRON = new OtherOreRegistryGroup("iron", Items.IRON_ORE, Items.IRON_INGOT);
+	public static final OtherOreRegistryGroup OTHER_REDSTONE = new OtherOreRegistryGroup("redstone", Items.REDSTONE_ORE, Items.REDSTONE);
+	public static final OtherOreRegistryGroup OTHER_DIAMOND = new OtherOreRegistryGroup("diamond", Items.DIAMOND_ORE, Items.DIAMOND);
+	public static final OtherOreRegistryGroup OTHER_LAPIS = new OtherOreRegistryGroup("lapis", Items.LAPIS_ORE, Items.LAPIS_LAZULI);
 
 	/**
 	 * Register a BlockItem for a Block

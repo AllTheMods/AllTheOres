@@ -97,7 +97,7 @@ public class OreRegistryGroup extends AlloyRegistryGroup {
 
         ORE = BlockList.ORE.register(String.format("%s_ore", name), () -> new AOreBlock(3.0f, 3.0f));
         SLATE_ORE = BlockList.ORE.register(String.format("%s_slate_ore", name), () -> new AOreBlock(6.0f, 6.0f));
-        OTHER_ORE = BlockList.BLOCKS.register(String.format("other_%s_ore", name), OtherOreBlock::new);
+        OTHER_ORE = BlockList.ORE.register(String.format("other_%s_ore", name), OtherOreBlock::new);
         RAW_BLOCK = BlockList.BLOCKS.register(String.format("raw_%s_block", name),
                 () -> new Block(AbstractBlock.Properties.of(Material.STONE).strength(3.0f, 3.0f)));
 

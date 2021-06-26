@@ -4,12 +4,21 @@ import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
 import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.registry.OreRegistryGroup;
+import net.allthemods.alltheores.registry.OtherOreRegistryGroup;
+import net.minecraft.advancements.criterion.EnchantmentPredicate;
+import net.minecraft.advancements.criterion.ItemPredicate;
+import net.minecraft.advancements.criterion.MinMaxBounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.LootTableProvider;
 import net.minecraft.data.loot.BlockLootTables;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.Item;
 import net.minecraft.loot.*;
+import net.minecraft.loot.conditions.ILootCondition;
+import net.minecraft.loot.conditions.MatchTool;
+import net.minecraft.loot.functions.ApplyBonus;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
 
@@ -56,10 +65,14 @@ public class LootTables extends LootTableProvider {
 
     private static class Ore extends BlockLootTables
     {
+        private static final ILootCondition.IBuilder HAS_SILK_TOUCH = MatchTool.toolMatches(ItemPredicate.Builder.item()
+                .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.IntBound.atLeast(1))));
+
         @Override
         protected void addTables()
         {
             GroupHelper.applyToOre(this::addGroup);
+            GroupHelper.applyToOtherOre(this::addOtherGroup);
         }
 
         /**
@@ -69,6 +82,30 @@ public class LootTables extends LootTableProvider {
         private void addGroup(OreRegistryGroup group) {
             this.add(group.ORE.get(), block -> createOreDrop(block, group.RAW.get()));
             this.add(group.SLATE_ORE.get(), block -> createOreDrop(block, group.RAW.get()));
+            this.add(group.OTHER_ORE.get(), block -> createOtherOreDrop(group.ORE_ITEM.get(), group.RAW.get()));
+        }
+
+        /**
+         * Register loot tables for OtherOreRegistryGroup
+         * @param group the registry group
+         */
+        private void addOtherGroup(OtherOreRegistryGroup group) {
+            this.add(group.OTHER_ORE.get(), block -> createOtherOreDrop(group.ORE, group.RAW));
+        }
+
+        private LootTable.Builder createOtherOreDrop(Item ore, Item raw) {
+            LootEntry.Builder<?> itemEntry = ItemLootEntry.lootTableItem(raw)
+                    .apply(ApplyBonus.addOreBonusCount(Enchantments.BLOCK_FORTUNE));
+
+            LootEntry.Builder<?> lootEntry = ItemLootEntry.lootTableItem(ore)
+                    .when(HAS_SILK_TOUCH).otherwise(itemEntry);
+
+            LootPool.Builder lootPool = LootPool.lootPool()
+                    .setRolls(ConstantRange.exactly(4))
+                    .add(lootEntry);
+
+            return LootTable.lootTable()
+                    .withPool(lootPool);
         }
 
         @Override

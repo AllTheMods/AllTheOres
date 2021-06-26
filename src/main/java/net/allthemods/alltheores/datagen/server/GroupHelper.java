@@ -3,6 +3,7 @@ package net.allthemods.alltheores.datagen.server;
 import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.registry.AlloyRegistryGroup;
 import net.allthemods.alltheores.registry.OreRegistryGroup;
+import net.allthemods.alltheores.registry.OtherOreRegistryGroup;
 import net.allthemods.alltheores.registry.VanillaRegistryGroup;
 
 import java.util.function.Consumer;
@@ -40,5 +41,13 @@ public class GroupHelper {
         consumer.accept(BlockList.GOLD);
         consumer.accept(BlockList.COPPER);
         consumer.accept(BlockList.DIAMOND);
+    }
+
+    public static void applyToOtherOre(Consumer<OtherOreRegistryGroup> consumer) {
+        consumer.accept(BlockList.OTHER_COAL);
+        consumer.accept(BlockList.OTHER_IRON);
+        consumer.accept(BlockList.OTHER_REDSTONE);
+        consumer.accept(BlockList.OTHER_DIAMOND);
+        consumer.accept(BlockList.OTHER_LAPIS);
     }
 }

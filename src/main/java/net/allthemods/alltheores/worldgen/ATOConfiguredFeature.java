@@ -4,7 +4,6 @@ import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.infos.Configuration;
 import net.allthemods.alltheores.infos.Reference;
 import net.allthemods.alltheores.worldgen.features.OreVein;
-import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -124,35 +123,35 @@ public class ATOConfiguredFeature {
 	public static ConfiguredFeature<?, ?> ORE_OTHER_IRON = newConfiguredFeature("ore_other_iron",
 			Feature.ORE
 					.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHER_ORE_REPLACEABLES,
-							BlockList.OTHER_IRON_ORE.get().defaultBlockState(), 17))
+							BlockList.OTHER_IRON.OTHER_ORE.get().defaultBlockState(), 17))
 					.decorated(Placement.DEPTH_AVERAGE.configured(
 							new DepthAverageConfig(90,50))).squared().range(10));
 
 	public static ConfiguredFeature<?, ?> ORE_OTHER_COAL = newConfiguredFeature("ore_other_coal",
 			Feature.ORE
 					.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHER_ORE_REPLACEABLES,
-							BlockList.OTHER_COAL_ORE.get().defaultBlockState(), 16))
+							BlockList.OTHER_COAL.OTHER_ORE.get().defaultBlockState(), 16))
 					.decorated(Placement.DEPTH_AVERAGE.configured(
 							new DepthAverageConfig(37, 75))).squared().range(10));
 
 	public static ConfiguredFeature<?, ?> ORE_OTHER_LAPIS = newConfiguredFeature("ore_other_lapis",
 			Feature.ORE
 					.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHER_ORE_REPLACEABLES,
-							BlockList.OTHER_LAPIS_ORE.get().defaultBlockState(), 12))
+							BlockList.OTHER_LAPIS.OTHER_ORE.get().defaultBlockState(), 12))
 					.decorated(Placement.DEPTH_AVERAGE.configured(
 							new DepthAverageConfig(65,145))).squared().range(10));
 
 	public static ConfiguredFeature<?, ?> ORE_OTHER_DIAMOND = newConfiguredFeature("ore_other_diamond",
 			Feature.ORE
 					.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHER_ORE_REPLACEABLES,
-							BlockList.OTHER_DIAMOND_ORE.get().defaultBlockState(), 8))
+							BlockList.OTHER_DIAMOND.OTHER_ORE.get().defaultBlockState(), 8))
 					.decorated(Placement.DEPTH_AVERAGE.configured(
 							new DepthAverageConfig(100,140))).squared().range(10));
 
 	public static ConfiguredFeature<?, ?> ORE_OTHER_REDSTONE = newConfiguredFeature("ore_other_redstone",
 			Feature.ORE
 					.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHER_ORE_REPLACEABLES,
-							BlockList.OTHER_REDSTONE_ORE.get().defaultBlockState(), 16))
+							BlockList.OTHER_REDSTONE.OTHER_ORE.get().defaultBlockState(), 16))
 					.decorated(Placement.DEPTH_AVERAGE.configured(
 							new DepthAverageConfig(50,129))).squared().range(10));
 
