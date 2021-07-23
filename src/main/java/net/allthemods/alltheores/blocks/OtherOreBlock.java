@@ -1,29 +1,19 @@
 package net.allthemods.alltheores.blocks;
 
-import mcp.MethodsReturnNonnullByDefault;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.material.PushReaction;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.loot.LootContext;
-import net.minecraft.loot.conditions.RandomChanceWithLooting;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.world.Explosion;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Position;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.util.FakePlayer;
-
-import java.util.ArrayList;
-import java.util.List;
+import net.minecraftforge.common.util.FakePlayerFactory;
+import net.minecraftforge.server.permission.context.PlayerContext;
+import net.minecraftforge.server.permission.context.WorldContext;
 
 public class OtherOreBlock extends Block {
 
@@ -33,8 +23,9 @@ public class OtherOreBlock extends Block {
     }
 
 
+
     @Override
-    public boolean canHarvestBlock(BlockState state, IBlockReader world, BlockPos pos, PlayerEntity player) {
+    public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
         if ((player instanceof FakePlayer) && (state.getBlock() instanceof OtherOreBlock)) {
             return false;
         }

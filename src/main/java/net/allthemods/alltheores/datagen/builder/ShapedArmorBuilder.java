@@ -2,19 +2,19 @@ package net.allthemods.alltheores.datagen.builder;
 
 import net.allthemods.alltheores.datagen.RecipeException;
 import net.allthemods.alltheores.infos.Reference;
-import net.minecraft.advancements.ICriterionInstance;
-import net.minecraft.advancements.criterion.InventoryChangeTrigger;
-import net.minecraft.advancements.criterion.ItemPredicate;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.ShapedRecipeBuilder;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.tags.ITag;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeBuilder;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.util.IItemProvider;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.tags.Tag;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.fmllegacy.RegistryObject;
 
 import java.util.EnumMap;
 import java.util.Locale;
@@ -33,23 +33,24 @@ public class ShapedArmorBuilder {
     }
 
     private final String criteriaName;
-    private final ICriterionInstance criterion;
+    private final InventoryChangeTrigger.TriggerInstance criterion;
     private final EnumMap<Slot, Item> pieces = new EnumMap<>(Slot.class);
-    private final ITag<Item> ingot;
+    private final Tag<Item> ingot;
     private Item core;
 
 
-    public ShapedArmorBuilder(ITag<Item> ingot) {
+    public ShapedArmorBuilder(Tag<Item> ingot) {
         this.ingot = ingot;
 
         ResourceLocation tagLocation = Objects.requireNonNull(ItemTags.getAllTags().getId(ingot));
         this.criteriaName = String.format("has_%s_ingot", tagLocation.getPath().replace("ingot/", ""));
 
         ItemPredicate predicate = ItemPredicate.Builder.item().of(ingot).build();
-        this.criterion = InventoryChangeTrigger.Instance.hasItems(predicate);
+        this.criterion = InventoryChangeTrigger.TriggerInstance.hasItems(predicate);
+
     }
 
-    public static ShapedArmorBuilder builder(ITag<Item> ingot) {
+    public static ShapedArmorBuilder builder(Tag<Item> ingot) {
         return new ShapedArmorBuilder(ingot);
     }
 
@@ -81,7 +82,7 @@ public class ShapedArmorBuilder {
         }
     }
 
-    public void build(Consumer<IFinishedRecipe> consumer) {
+    public void build(Consumer<FinishedRecipe> consumer) {
 
         Consumer<ShapedRecipeBuilder> register = builder -> builder.save(consumer);
 
@@ -106,7 +107,7 @@ public class ShapedArmorBuilder {
             .ifPresent(register);
     }
 
-    private ShapedRecipeBuilder shaped(IItemProvider provider) {
+    private ShapedRecipeBuilder shaped(ItemLike provider) {
         return ShapedRecipeBuilder.shaped(provider)
             .group(Reference.MOD_ID);
     }
@@ -117,7 +118,7 @@ public class ShapedArmorBuilder {
             .unlockedBy(criteriaName, criterion);
     }
 
-    private ShapedRecipeBuilder helmet(IItemProvider provider) {
+    private ShapedRecipeBuilder helmet(ItemLike provider) {
         return shaped(provider)
             .pattern("aaa")
             .pattern("a a")
@@ -125,21 +126,21 @@ public class ShapedArmorBuilder {
 
     }
 
-    private ShapedRecipeBuilder chestplate(IItemProvider provider) {
+    private ShapedRecipeBuilder chestplate(ItemLike provider) {
         return shaped(provider)
             .pattern("a a")
             .pattern("aaa")
             .pattern("aaa");
     }
 
-    private ShapedRecipeBuilder leggings(IItemProvider provider) {
+    private ShapedRecipeBuilder leggings(ItemLike provider) {
         return shaped(provider)
             .pattern("aaa")
             .pattern("a a")
             .pattern("a a");
     }
 
-    private ShapedRecipeBuilder boots(IItemProvider provider) {
+    private ShapedRecipeBuilder boots(ItemLike provider) {
         return shaped(provider)
             .pattern("a a")
             .pattern("a a")

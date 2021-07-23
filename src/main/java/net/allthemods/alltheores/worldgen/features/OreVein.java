@@ -1,37 +1,30 @@
 package net.allthemods.alltheores.worldgen.features;
 
 import com.mojang.serialization.Codec;
-import net.allthemods.alltheores.AllTheOres;
 import net.allthemods.alltheores.infos.Configuration;
 import net.allthemods.alltheores.infos.Reference;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceContext;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.math.vector.Vector3i;
-import net.minecraft.util.math.vector.Vector4f;
-import net.minecraft.world.ISeedReader;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.NoFeatureConfig;
-import net.minecraftforge.registries.IRegistryDelegate;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.chunk.ChunkGenerator;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+import net.minecraft.world.level.levelgen.feature.NoOpFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+import net.minecraftforge.server.permission.context.WorldContext;
 
 import java.util.Random;
-import java.util.UUID;
 
-public class OreVein extends Feature<NoFeatureConfig> {
+public class OreVein extends Feature<NoneFeatureConfiguration> {
 private Block oreType;
 private Block deepSlate_oreType;
 private BlockPos genLocation;
 private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,Direction.EAST,Direction.SOUTH,Direction.WEST};
 
-    public OreVein(Codec<NoFeatureConfig> p_i231953_1_, Block oretype, Block deepSlate_oretype) {
+    public OreVein(Codec<NoneFeatureConfiguration> p_i231953_1_, Block oretype, Block deepSlate_oretype) {
         super(p_i231953_1_);
         this.oreType = oretype;
         this.deepSlate_oreType = deepSlate_oretype;
@@ -43,17 +36,23 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
 
 
     @Override
-    public Codec<ConfiguredFeature<NoFeatureConfig, Feature<NoFeatureConfig>>> configuredCodec() {
+    public Codec<ConfiguredFeature<NoneFeatureConfiguration, Feature<NoneFeatureConfiguration>>> configuredCodec() {
         return super.configuredCodec();
     }
 
     @Override
-    public ConfiguredFeature<NoFeatureConfig, ?> configured(NoFeatureConfig p_225566_1_) {
+    public ConfiguredFeature<NoneFeatureConfiguration, ?> configured(NoneFeatureConfiguration p_225566_1_) {
         return super.configured(p_225566_1_);
     }
 
+
+
+
     @Override
-    public boolean place(ISeedReader world, ChunkGenerator chunkgen, Random rand, BlockPos pos, NoFeatureConfig config) {
+    public boolean place(FeaturePlaceContext config) {
+        BlockPos pos = config.origin();
+        Random rand = config.random();
+        WorldGenLevel world = config.level();
         BlockPos prev;
         if(this.getPreviousLocation() != null) { prev = this.getPreviousLocation();}
         else { prev = new BlockPos(0,65,0); }
@@ -252,7 +251,7 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
         return false;
     }
 
-    private int allBlocks(OreVein oreVein, ISeedReader world, BlockPos pos) {
+    private int allBlocks(OreVein oreVein, WorldGenLevel world, BlockPos pos) {
         int x = 0;
 
         BlockState state = world.getBlockState(pos.below());

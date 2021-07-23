@@ -1,22 +1,17 @@
 package net.allthemods.alltheores.datagen.builder;
 
-import mekanism.common.recipe.impl.SmeltingIRecipe;
 import net.allthemods.alltheores.datagen.RecipeException;
 import net.allthemods.alltheores.infos.Reference;
-import net.minecraft.advancements.ICriterionInstance;
-import net.minecraft.advancements.criterion.InventoryChangeTrigger;
-import net.minecraft.advancements.criterion.ItemPredicate;
-import net.minecraft.data.CookingRecipeBuilder;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.ShapedRecipeBuilder;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.tags.ITag;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.util.IItemProvider;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.tags.Tag;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.fmllegacy.RegistryObject;
 
 import java.util.EnumMap;
 import java.util.Locale;
@@ -34,22 +29,22 @@ public class ShapedBlockBuilder {
 
 
     private final String criteriaName;
-    private final ICriterionInstance criterion;
+    private final InventoryChangeTrigger.TriggerInstance criterion;
     private final EnumMap<Slot, Item> pieces = new EnumMap<>(Slot.class);
-    private final ITag<Item> ingot;
+    private final Tag<Item> ingot;
 
 
-    public ShapedBlockBuilder(ITag<Item> ingot) {
+    public ShapedBlockBuilder(Tag<Item> ingot) {
         this.ingot = ingot;
 
         ResourceLocation tagLocation = Objects.requireNonNull(ItemTags.getAllTags().getId(ingot));
         this.criteriaName = String.format("has_%s_ingot", tagLocation.getPath().replace("ingot/", ""));
 
         ItemPredicate predicate = ItemPredicate.Builder.item().of(ingot).build();
-        this.criterion = InventoryChangeTrigger.Instance.hasItems(predicate);
+        this.criterion = InventoryChangeTrigger.TriggerInstance.hasItems(predicate);
     }
 
-    public static ShapedBlockBuilder builder(ITag<Item> ingot) {
+    public static ShapedBlockBuilder builder(Tag<Item> ingot) {
         return new ShapedBlockBuilder(ingot);
     }
 
@@ -79,7 +74,7 @@ public class ShapedBlockBuilder {
         }
     }
 
-    public void build(Consumer<IFinishedRecipe> consumer) {
+    public void build(Consumer<FinishedRecipe> consumer) {
 
         Consumer<ShapedRecipeBuilder> register = builder -> builder.save(consumer);
 
@@ -102,7 +97,7 @@ public class ShapedBlockBuilder {
 
     }
 
-    private ShapedRecipeBuilder shaped(IItemProvider provider) {
+    private ShapedRecipeBuilder shaped(ItemLike provider) {
         return ShapedRecipeBuilder.shaped(provider)
             .group(Reference.MOD_ID);
     }
@@ -114,7 +109,7 @@ public class ShapedBlockBuilder {
     }
 
 
-    private ShapedRecipeBuilder block(IItemProvider provider) {
+    private ShapedRecipeBuilder block(ItemLike provider) {
         return shaped(provider)
             .pattern("aaa")
             .pattern("aaa")
@@ -122,7 +117,7 @@ public class ShapedBlockBuilder {
 
     }
 
-    private ShapedRecipeBuilder ingot(IItemProvider provider) {
+    private ShapedRecipeBuilder ingot(ItemLike provider) {
         return shaped(provider)
                 .pattern("aaa")
                 .pattern("aaa")
@@ -130,21 +125,21 @@ public class ShapedBlockBuilder {
 
     }
 
-    private ShapedRecipeBuilder gear(IItemProvider provider) {
+    private ShapedRecipeBuilder gear(ItemLike provider) {
         return shaped(provider)
                 .pattern("aaa")
                 .pattern("a a")
                 .pattern("aaa");
 
     }
-    private ShapedRecipeBuilder rod(IItemProvider provider) {
+    private ShapedRecipeBuilder rod(ItemLike provider) {
         return shaped(provider)
                 .pattern("a  ")
                 .pattern("a  ")
                 .pattern("a  ");
 
     }
-    private ShapedRecipeBuilder plate(IItemProvider provider) {
+    private ShapedRecipeBuilder plate(ItemLike provider) {
         return shaped(provider)
                 .pattern("aa ")
                 .pattern("aa ")

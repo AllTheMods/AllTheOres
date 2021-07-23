@@ -1,10 +1,10 @@
 package net.allthemods.alltheores.meka;
 
-import net.minecraft.item.Item;
+import net.minecraft.world.item.Item;
 
 public class Crystal extends Item {
 
-    public Crystal(Properties properties) {
+    public Crystal(Item.Properties properties) {
         super(properties);
     }
 }

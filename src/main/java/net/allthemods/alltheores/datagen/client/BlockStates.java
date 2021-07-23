@@ -2,15 +2,13 @@ package net.allthemods.alltheores.datagen.client;
 
 import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.infos.Reference;
-import net.minecraft.block.Block;
-import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +23,6 @@ public class BlockStates extends BlockStateProvider {
     protected void registerStatesAndModels() {
         List<Block> entries = BlockList.BLOCKS.getEntries()
             .stream().map(RegistryObject::get)
-            .filter(block -> !(block instanceof FlowingFluidBlock))
             .collect(Collectors.toList());
 
         entries.forEach(this::simpleBlockAndItem);

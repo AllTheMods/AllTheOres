@@ -4,7 +4,10 @@ import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.infos.ItemTagRegistry;
 import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.data.*;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -16,7 +19,7 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
     return new ResourceLocation(Reference.MOD_ID,typeIn + "_from_" + typeOut);
 }
     @Override
-    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
 
         final String hasCondition = "has_item";
 

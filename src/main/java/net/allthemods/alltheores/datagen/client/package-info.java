@@ -1,7 +1,5 @@
 @ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
-package com.thevortex.mcgttg.datagen.client;
 
-import mcp.MethodsReturnNonnullByDefault;
+package net.allthemods.alltheores.datagen.client;
 
 import javax.annotation.ParametersAreNonnullByDefault;

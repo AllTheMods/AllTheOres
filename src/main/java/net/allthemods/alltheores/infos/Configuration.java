@@ -1,5 +1,10 @@
 package net.allthemods.alltheores.infos;
 
+import com.electronwill.nightconfig.core.Config;
+import net.allthemods.alltheores.AllTheOres;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.fml.config.ConfigTracker;
+import net.minecraftforge.fml.config.IConfigEvent;
 import org.apache.commons.lang3.tuple.Pair;
 
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -78,12 +83,13 @@ public class Configuration {
 		COMMON = specPair.getLeft();
 	}
 
-	@SubscribeEvent
-	public static void onModConfigEvent(final ModConfig.ModConfigEvent configEvent) {
+
+	public static void onModConfigEvent(final IConfigEvent.ConfigConfig configEvent) {
 		bakeConfigs();
 	}
 
 	private static void bakeConfigs() {
+		AllTheOres.LOGGER.debug("Loading Configs....");
 		aluminumGen = Configuration.COMMON.aluminumGen.get();
 		copperGen = Configuration.COMMON.aluminumGen.get();
 		leadGen = Configuration.COMMON.aluminumGen.get();

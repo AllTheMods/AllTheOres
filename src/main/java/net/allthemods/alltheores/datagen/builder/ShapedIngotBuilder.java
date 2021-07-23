@@ -2,17 +2,16 @@ package net.allthemods.alltheores.datagen.builder;
 
 import net.allthemods.alltheores.datagen.RecipeException;
 import net.allthemods.alltheores.infos.Reference;
-import net.minecraft.advancements.ICriterionInstance;
-import net.minecraft.advancements.criterion.InventoryChangeTrigger;
-import net.minecraft.advancements.criterion.ItemPredicate;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.ShapedRecipeBuilder;
-import net.minecraft.item.Item;
-import net.minecraft.tags.ITag;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.util.IItemProvider;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.tags.Tag;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.fmllegacy.RegistryObject;
 
 import java.util.EnumMap;
 import java.util.Locale;
@@ -30,22 +29,22 @@ public class ShapedIngotBuilder {
 
 
     private final String criteriaName;
-    private final ICriterionInstance criterion;
+    private final InventoryChangeTrigger.TriggerInstance criterion;
     private final EnumMap<Slot, Item> pieces = new EnumMap<>(Slot.class);
-    private final ITag<Item> nugget;
+    private final Tag<Item> nugget;
 
 
-    public ShapedIngotBuilder(ITag<Item> nugget) {
+    public ShapedIngotBuilder(Tag<Item> nugget) {
         this.nugget = nugget;
 
         ResourceLocation tagLocation = Objects.requireNonNull(ItemTags.getAllTags().getId(nugget));
         this.criteriaName = String.format("has_%s_nugget", tagLocation.getPath().replace("nugget/", ""));
 
         ItemPredicate predicate = ItemPredicate.Builder.item().of(nugget).build();
-        this.criterion = InventoryChangeTrigger.Instance.hasItems(predicate);
+        this.criterion = InventoryChangeTrigger.TriggerInstance.hasItems(predicate);
     }
 
-    public static ShapedIngotBuilder builder(ITag<Item> nugget) {
+    public static ShapedIngotBuilder builder(Tag<Item> nugget) {
         return new ShapedIngotBuilder(nugget);
     }
 
@@ -63,7 +62,7 @@ public class ShapedIngotBuilder {
         }
     }
 
-    public void build(Consumer<IFinishedRecipe> consumer) {
+    public void build(Consumer<FinishedRecipe> consumer) {
 
         Consumer<ShapedRecipeBuilder> register = builder -> builder.save(consumer);
 
@@ -74,7 +73,7 @@ public class ShapedIngotBuilder {
 
     }
 
-    private ShapedRecipeBuilder shaped(IItemProvider provider) {
+    private ShapedRecipeBuilder shaped(ItemLike provider) {
         return ShapedRecipeBuilder.shaped(provider)
             .group(Reference.MOD_ID);
     }
@@ -85,7 +84,7 @@ public class ShapedIngotBuilder {
             .unlockedBy(criteriaName, criterion);
     }
 
-    private ShapedRecipeBuilder ingot(IItemProvider provider) {
+    private ShapedRecipeBuilder ingot(ItemLike provider) {
         return shaped(provider)
                 .pattern("aaa")
                 .pattern("aaa")

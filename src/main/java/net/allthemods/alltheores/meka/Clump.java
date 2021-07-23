@@ -1,10 +1,10 @@
 package net.allthemods.alltheores.meka;
 
-import net.minecraft.item.Item;
+import net.minecraft.world.item.Item;
 
 public class Clump extends Item {
 
-    public Clump(Properties properties) {
+    public Clump(Item.Properties properties) {
         super(properties);
     }
 }

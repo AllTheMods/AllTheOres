@@ -3,17 +3,13 @@ package net.allthemods.alltheores.blocks;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.loot.LootContext;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.ToolType;
-import net.minecraftforge.common.loot.LootModifier;
+
+import javax.annotation.Nullable;
 
 public class AOreBlock extends Block {
 
@@ -22,6 +18,8 @@ public class AOreBlock extends Block {
 				.strength(strength1,strength2));
 
 	}
+
+
 
 	@Override
 	public ToolType getHarvestTool(BlockState state) {
@@ -35,12 +33,4 @@ public class AOreBlock extends Block {
 		return 1;
 	}
 
-/*
-	@Deprecated
-	@Override
-	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> list = new ArrayList<ItemStack>();
-		list.add(new ItemStack(state.getBlock().asItem()));
-		return list;
-	}*/
 }

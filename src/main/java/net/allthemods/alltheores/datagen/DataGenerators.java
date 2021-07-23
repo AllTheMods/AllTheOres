@@ -3,13 +3,14 @@ package net.allthemods.alltheores.datagen;
 import net.allthemods.alltheores.datagen.client.BlockStates;
 import net.allthemods.alltheores.datagen.client.ItemModels;
 import net.allthemods.alltheores.datagen.server.*;
-import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DirectoryCache;
+import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.ForgeBlockTagsProvider;
+import net.minecraftforge.common.data.ForgeItemTagsProvider;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 import java.io.IOException;
 
@@ -23,8 +24,8 @@ public final class DataGenerators {
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
 
         if (event.includeServer()) {
-            BlockTagsProvider blockTagsProvider = new BlockTags(generator, fileHelper);
-            generator.addProvider(new ItemTags(generator, blockTagsProvider, fileHelper));
+            BlockTagsProvider blockTagsProvider = new ForgeBlockTagsProvider(generator, fileHelper);
+            generator.addProvider(new ForgeItemTagsProvider(generator, blockTagsProvider, fileHelper));
             generator.addProvider(blockTagsProvider);
             generator.addProvider(new CraftingRecipes(generator));
             generator.addProvider(new ShapelessCrafting(generator));

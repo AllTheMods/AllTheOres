@@ -5,19 +5,19 @@ import net.allthemods.alltheores.meka.Clump;
 import net.allthemods.alltheores.meka.Crystal;
 import net.allthemods.alltheores.meka.DirtyDust;
 import net.allthemods.alltheores.meka.Shard;
-import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.BucketItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.FlowingFluid;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Flowing;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Source;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -35,24 +35,8 @@ public class BlockList {
 	public static final ResourceLocation MOLTEN_FLOW = new ResourceLocation(Reference.MOD_ID,
 			"block/fluid/molten_metal_flow");
 
-	public static final RegistryObject<Source> MOLTEN_ALUMINUM = FLUIDS.register("molten_aluminum",
-			() -> new ForgeFlowingFluid.Source(makeMoltenAluminumProperties()));
-	public static final RegistryObject<Flowing> FLOWING_MOLTEN_ALUMINUM = FLUIDS.register("flowing_molten_aluminum",
-			() -> new ForgeFlowingFluid.Flowing(makeMoltenAluminumProperties()));
-	public static final RegistryObject<FlowingFluidBlock> molten_Aluminum_block = BLOCKS
-			.register("molten_aluminum_block", () -> new FluidBlock(MOLTEN_ALUMINUM,
-					Block.Properties.of(Material.LAVA).randomTicks().lightLevel((state) -> {
-						return 15;
-					}).noOcclusion().strength(100.0F).jumpFactor(0.1F).speedFactor(0.01F).noDrops()));
-	public static final RegistryObject<Item> moltenAluminum_bucket = ITEMS.register("molten_aluminum_bucket",
-			() -> new BucketItem(MOLTEN_ALUMINUM,
-					new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(Reference.GROUP)));
 
-	private static ForgeFlowingFluid.Properties makeMoltenAluminumProperties() {
-		return new ForgeFlowingFluid.Properties(MOLTEN_ALUMINUM, FLOWING_MOLTEN_ALUMINUM,
-				FluidAttributes.builder(MOLTEN_STILL, MOLTEN_FLOW).overlay(MOLTEN_STILL).color(0xFFE3E3E3).density(300)
-						.viscosity(300).temperature(400)).bucket(moltenAluminum_bucket).block(molten_Aluminum_block);
-	}
+
 	public static final RegistryObject<Block> ALUMINUM_SLATE_ORE = BLOCKS.register("aluminum_slate_ore",() -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> ALUMINUM_ORE = BLOCKS.register("aluminum_ore",() -> new AOreBlock( 3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_ALUMINUM_ORE = BLOCKS.register("other_aluminum_ore", OtherOreBlock::new);
@@ -78,24 +62,6 @@ public class BlockList {
 	public static final RegistryObject<Item> ALUMINUM_RAW = ITEMS.register("raw_aluminum",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
-	public static final RegistryObject<Source> MOLTEN_COPPER = FLUIDS.register("molten_copper",
-			() -> new ForgeFlowingFluid.Source(makeMoltenCopperProperties()));
-	public static final RegistryObject<Flowing> FLOWING_MOLTEN_COPPER = FLUIDS.register("flowing_molten_copper",
-			() -> new ForgeFlowingFluid.Flowing(makeMoltenCopperProperties()));
-	public static final RegistryObject<FlowingFluidBlock> molten_Copper_block = BLOCKS.register("molten_copper_block",
-			() -> new FluidBlock(MOLTEN_COPPER,
-					Block.Properties.of(Material.LAVA).randomTicks().lightLevel((state) -> {
-						return 15;
-					}).noOcclusion().strength(100.0F).jumpFactor(0.1F).speedFactor(0.01F).noDrops()));
-	public static final RegistryObject<Item> moltenCopper_bucket = ITEMS.register("molten_copper_bucket",
-			() -> new BucketItem(MOLTEN_COPPER,
-					new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(Reference.GROUP)));
-
-	private static ForgeFlowingFluid.Properties makeMoltenCopperProperties() {
-		return new ForgeFlowingFluid.Properties(MOLTEN_COPPER, FLOWING_MOLTEN_COPPER,
-				FluidAttributes.builder(MOLTEN_STILL, MOLTEN_FLOW).overlay(MOLTEN_STILL).color(0xFFB7703A).density(300)
-						.viscosity(300).temperature(400)).bucket(moltenCopper_bucket).block(molten_Copper_block);
-	}
 
 	//public static final RegistryObject<Block> COPPER_ORE = BLOCKS.register("copper_ore", AOreBlock::new);
 	//public static final RegistryObject<Block> OTHER_COPPER_ORE = BLOCKS.register("other_copper_ore", OtherOreBlock::new);
@@ -113,24 +79,6 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 
-	public static final RegistryObject<Source> MOLTEN_LEAD = FLUIDS.register("molten_lead",
-			() -> new ForgeFlowingFluid.Source(makeMoltenLeadProperties()));
-	public static final RegistryObject<Flowing> FLOWING_MOLTEN_LEAD = FLUIDS.register("flowing_molten_lead",
-			() -> new ForgeFlowingFluid.Flowing(makeMoltenLeadProperties()));
-	public static final RegistryObject<FlowingFluidBlock> molten_Lead_block = BLOCKS.register("molten_lead_block",
-			() -> new FluidBlock(MOLTEN_LEAD,
-					Block.Properties.of(Material.LAVA).randomTicks().lightLevel((state) -> {
-						return 15;
-					}).noOcclusion().strength(100.0F).jumpFactor(0.1F).speedFactor(0.01F).noDrops()));
-	public static final RegistryObject<Item> moltenLead_bucket = ITEMS.register("molten_lead_bucket",
-			() -> new BucketItem(MOLTEN_LEAD,
-					new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(Reference.GROUP)));
-
-	private static ForgeFlowingFluid.Properties makeMoltenLeadProperties() {
-		return new ForgeFlowingFluid.Properties(MOLTEN_LEAD, FLOWING_MOLTEN_LEAD,
-				FluidAttributes.builder(MOLTEN_STILL, MOLTEN_FLOW).overlay(MOLTEN_STILL).color(0xFF7C8CC6).density(300)
-						.viscosity(300).temperature(400)).bucket(moltenLead_bucket).block(molten_Lead_block);
-	}
 	public static final RegistryObject<Block> LEAD_SLATE_ORE = BLOCKS.register("lead_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> LEAD_ORE = BLOCKS.register("lead_ore",() -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_LEAD_ORE = BLOCKS.register("other_lead_ore", OtherOreBlock::new);
@@ -155,24 +103,6 @@ public class BlockList {
 	public static final RegistryObject<Item> LEAD_RAW = ITEMS.register("raw_lead",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
-	public static final RegistryObject<Source> MOLTEN_NICKEL = FLUIDS.register("molten_nickel",
-			() -> new ForgeFlowingFluid.Source(makeMoltenNickelProperties()));
-	public static final RegistryObject<Flowing> FLOWING_MOLTEN_NICKEL = FLUIDS.register("flowing_molten_nickel",
-			() -> new ForgeFlowingFluid.Flowing(makeMoltenNickelProperties()));
-	public static final RegistryObject<FlowingFluidBlock> molten_Nickel_block = BLOCKS.register("molten_nickel_block",
-			() -> new FluidBlock(MOLTEN_NICKEL,
-					Block.Properties.of(Material.LAVA).randomTicks().lightLevel((state) -> {
-						return 15;
-					}).noOcclusion().strength(100.0F).jumpFactor(0.1F).speedFactor(0.01F).noDrops()));
-	public static final RegistryObject<Item> moltenNickel_bucket = ITEMS.register("molten_nickel_bucket",
-			() -> new BucketItem(MOLTEN_NICKEL,
-					new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(Reference.GROUP)));
-
-	private static ForgeFlowingFluid.Properties makeMoltenNickelProperties() {
-		return new ForgeFlowingFluid.Properties(MOLTEN_NICKEL, FLOWING_MOLTEN_NICKEL,
-				FluidAttributes.builder(MOLTEN_STILL, MOLTEN_FLOW).overlay(MOLTEN_STILL).color(0xFFA9A984).density(300)
-						.viscosity(300).temperature(400)).bucket(moltenNickel_bucket).block(molten_Nickel_block);
-	}
 	public static final RegistryObject<Block> NICKEL_SLATE_ORE = BLOCKS.register("nickel_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> NICKEL_ORE = BLOCKS.register("nickel_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_NICKEL_ORE = BLOCKS.register("other_nickel_ore", OtherOreBlock::new);
@@ -197,26 +127,7 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> NICKEL_RAW = ITEMS.register("raw_nickel",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-
-	public static final RegistryObject<Source> MOLTEN_OSMIUM = FLUIDS.register("molten_osmium",
-			() -> new ForgeFlowingFluid.Source(makeMoltenOsmiumProperties()));
-	public static final RegistryObject<Flowing> FLOWING_MOLTEN_OSMIUM = FLUIDS.register("flowing_molten_osmium",
-			() -> new ForgeFlowingFluid.Flowing(makeMoltenOsmiumProperties()));
-	public static final RegistryObject<FlowingFluidBlock> molten_Osmium_block = BLOCKS.register("molten_osmium_block",
-			() -> new FluidBlock(MOLTEN_OSMIUM,
-					Block.Properties.of(Material.LAVA).randomTicks().lightLevel((state) -> {
-						return 15;
-					}).noOcclusion().strength(100.0F).jumpFactor(0.1F).speedFactor(0.01F).noDrops()));
-	public static final RegistryObject<Item> moltenOsmium_bucket = ITEMS.register("molten_osmium_bucket",
-			() -> new BucketItem(MOLTEN_OSMIUM,
-					new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(Reference.GROUP)));
-
-	private static ForgeFlowingFluid.Properties makeMoltenOsmiumProperties() {
-		return new ForgeFlowingFluid.Properties(MOLTEN_OSMIUM, FLOWING_MOLTEN_OSMIUM,
-				FluidAttributes.builder(MOLTEN_STILL, MOLTEN_FLOW).overlay(MOLTEN_STILL).color(0xFFC0C9DD).density(300)
-						.viscosity(300).temperature(400)).bucket(moltenOsmium_bucket).block(molten_Osmium_block);
-	}
-	public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("osmium_slate_ore",() -> new AOreBlock(6.0f,6.0f));
+public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("osmium_slate_ore",() -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> OSMIUM_ORE = BLOCKS.register("osmium_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_OSMIUM_ORE = BLOCKS.register("other_osmium_ore", OtherOreBlock::new);
 	public static final RegistryObject<Block> OSMIUM_BLOCK = BLOCKS.register("osmium_block", () -> new Block(Block.Properties.of(Material.METAL).strength(5.0f,6.0f).sound(SoundType.METAL)));
@@ -239,25 +150,6 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OSMIUM_RAW = ITEMS.register("raw_osmium",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-
-	public static final RegistryObject<Source> MOLTEN_PLATINUM = FLUIDS.register("molten_platinum",
-			() -> new ForgeFlowingFluid.Source(makeMoltenPlatinumProperties()));
-	public static final RegistryObject<Flowing> FLOWING_MOLTEN_PLATINUM = FLUIDS.register("flowing_molten_platinum",
-			() -> new ForgeFlowingFluid.Flowing(makeMoltenPlatinumProperties()));
-	public static final RegistryObject<FlowingFluidBlock> molten_Platinum_block = BLOCKS
-			.register("molten_platinum_block", () -> new FluidBlock(MOLTEN_PLATINUM,
-					Block.Properties.of(Material.LAVA).randomTicks().lightLevel((state) -> {
-						return 15;
-					}).noOcclusion().strength(100.0F).jumpFactor(0.1F).speedFactor(0.01F).noDrops()));
-	public static final RegistryObject<Item> moltenPlatinum_bucket = ITEMS.register("molten_platinum_bucket",
-			() -> new BucketItem(MOLTEN_PLATINUM,
-					new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(Reference.GROUP)));
-
-	private static ForgeFlowingFluid.Properties makeMoltenPlatinumProperties() {
-		return new ForgeFlowingFluid.Properties(MOLTEN_PLATINUM, FLOWING_MOLTEN_PLATINUM,
-				FluidAttributes.builder(MOLTEN_STILL, MOLTEN_FLOW).overlay(MOLTEN_STILL).color(0xFFB5B5FF).density(300)
-						.viscosity(300).temperature(400)).bucket(moltenPlatinum_bucket).block(molten_Platinum_block);
-	}
 	public static final RegistryObject<Block> PLATINUM_SLATE_ORE = BLOCKS.register("platinum_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> PLATINUM_ORE = BLOCKS.register("platinum_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_PLATINUM_ORE = BLOCKS.register("other_platinum_ore", OtherOreBlock::new);
@@ -281,25 +173,6 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> PLATINUM_RAW = ITEMS.register("raw_platinum",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-
-	public static final RegistryObject<Source> MOLTEN_SILVER = FLUIDS.register("molten_silver",
-			() -> new ForgeFlowingFluid.Source(makeMoltenSilverProperties()));
-	public static final RegistryObject<Flowing> FLOWING_MOLTEN_SILVER = FLUIDS.register("flowing_molten_silver",
-			() -> new ForgeFlowingFluid.Flowing(makeMoltenSilverProperties()));
-	public static final RegistryObject<FlowingFluidBlock> molten_Silver_block = BLOCKS.register("molten_silver_block",
-			() -> new FluidBlock(MOLTEN_SILVER,
-					Block.Properties.of(Material.LAVA).randomTicks().lightLevel((state) -> {
-						return 15;
-					}).noOcclusion().strength(100.0F).jumpFactor(0.1F).speedFactor(0.01F).noDrops()));
-	public static final RegistryObject<Item> moltenSilver_bucket = ITEMS.register("molten_silver_bucket",
-			() -> new BucketItem(MOLTEN_SILVER,
-					new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(Reference.GROUP)));
-
-	private static ForgeFlowingFluid.Properties makeMoltenSilverProperties() {
-		return new ForgeFlowingFluid.Properties(MOLTEN_SILVER, FLOWING_MOLTEN_SILVER,
-				FluidAttributes.builder(MOLTEN_STILL, MOLTEN_FLOW).overlay(MOLTEN_STILL).color(0xFFA4E0E7).density(300)
-						.viscosity(300).temperature(400)).bucket(moltenSilver_bucket).block(molten_Silver_block);
-	}
 	public static final RegistryObject<Block> SILVER_SLATE_ORE = BLOCKS.register("silver_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> SILVER_ORE = BLOCKS.register("silver_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_SILVER_ORE = BLOCKS.register("other_silver_ore", OtherOreBlock::new);
@@ -323,25 +196,6 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> SILVER_RAW = ITEMS.register("raw_silver",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-
-	public static final RegistryObject<Source> MOLTEN_TIN = FLUIDS.register("molten_tin",
-			() -> new ForgeFlowingFluid.Source(makeMoltenTinProperties()));
-	public static final RegistryObject<Flowing> FLOWING_MOLTEN_TIN = FLUIDS.register("flowing_molten_tin",
-			() -> new ForgeFlowingFluid.Flowing(makeMoltenTinProperties()));
-	public static final RegistryObject<FlowingFluidBlock> molten_Tin_block = BLOCKS.register("molten_tin_block",
-			() -> new FluidBlock(MOLTEN_TIN,
-					Block.Properties.of(Material.LAVA).randomTicks().lightLevel((state) -> {
-						return 15;
-					}).noOcclusion().strength(100.0F).jumpFactor(0.1F).speedFactor(0.01F).noDrops()));
-	public static final RegistryObject<Item> moltenTin_bucket = ITEMS.register("molten_tin_bucket",
-			() -> new BucketItem(MOLTEN_TIN,
-					new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(Reference.GROUP)));
-
-	private static ForgeFlowingFluid.Properties makeMoltenTinProperties() {
-		return new ForgeFlowingFluid.Properties(MOLTEN_TIN, FLOWING_MOLTEN_TIN,
-				FluidAttributes.builder(MOLTEN_STILL, MOLTEN_FLOW).overlay(MOLTEN_STILL).color(0xFF787878).density(300)
-						.viscosity(300).temperature(400)).bucket(moltenTin_bucket).block(molten_Tin_block);
-	}
 	public static final RegistryObject<Block> TIN_SLATE_ORE = BLOCKS.register("tin_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_TIN_ORE = BLOCKS.register("other_tin_ore", OtherOreBlock::new);
@@ -366,25 +220,6 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> TIN_RAW = ITEMS.register("raw_tin",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-
-	public static final RegistryObject<Source> MOLTEN_URANIUM = FLUIDS.register("molten_uranium",
-			() -> new ForgeFlowingFluid.Source(makeMoltenUraniumProperties()));
-	public static final RegistryObject<Flowing> FLOWING_MOLTEN_URANIUM = FLUIDS.register("flowing_molten_uranium",
-			() -> new ForgeFlowingFluid.Flowing(makeMoltenUraniumProperties()));
-	public static final RegistryObject<FlowingFluidBlock> molten_Uranium_block = BLOCKS.register("molten_uranium_block",
-			() -> new FluidBlock(MOLTEN_URANIUM,
-					Block.Properties.of(Material.LAVA).randomTicks().lightLevel((state) -> {
-						return 15;
-					}).noOcclusion().strength(100.0F).jumpFactor(0.1F).speedFactor(0.01F).noDrops()));
-	public static final RegistryObject<Item> moltenUranium_bucket = ITEMS.register("molten_uranium_bucket",
-			() -> new BucketItem(MOLTEN_URANIUM,
-					new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(Reference.GROUP)));
-
-	private static ForgeFlowingFluid.Properties makeMoltenUraniumProperties() {
-		return new ForgeFlowingFluid.Properties(MOLTEN_URANIUM, FLOWING_MOLTEN_URANIUM,
-				FluidAttributes.builder(MOLTEN_STILL, MOLTEN_FLOW).overlay(MOLTEN_STILL).color(0xFF7EE778).density(300)
-						.viscosity(300).temperature(400)).bucket(moltenUranium_bucket).block(molten_Uranium_block);
-	}
 	public static final RegistryObject<Block> URANIUM_SLATE_ORE = BLOCKS.register("uranium_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> URANIUM_ORE = BLOCKS.register("uranium_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_URANIUM_ORE = BLOCKS.register("other_uranium_ore", OtherOreBlock::new);
@@ -408,25 +243,6 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> URANIUM_RAW = ITEMS.register("raw_uranium",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-
-	public static final RegistryObject<Source> MOLTEN_ZINC = FLUIDS.register("molten_zinc",
-			() -> new ForgeFlowingFluid.Source(makeMoltenZincProperties()));
-	public static final RegistryObject<Flowing> FLOWING_MOLTEN_ZINC = FLUIDS.register("flowing_molten_zinc",
-			() -> new ForgeFlowingFluid.Flowing(makeMoltenZincProperties()));
-	public static final RegistryObject<FlowingFluidBlock> molten_Zinc_block = BLOCKS.register("molten_zinc_block",
-			() -> new FluidBlock(MOLTEN_ZINC,
-					Block.Properties.of(Material.LAVA).randomTicks().lightLevel((state) -> {
-						return 15;
-					}).noOcclusion().strength(100.0F).jumpFactor(0.1F).speedFactor(0.01F).noDrops()));
-	public static final RegistryObject<Item> moltenZinc_bucket = ITEMS.register("molten_zinc_bucket",
-			() -> new BucketItem(MOLTEN_ZINC,
-					new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(Reference.GROUP)));
-
-	private static ForgeFlowingFluid.Properties makeMoltenZincProperties() {
-		return new ForgeFlowingFluid.Properties(MOLTEN_ZINC, FLOWING_MOLTEN_ZINC,
-				FluidAttributes.builder(MOLTEN_STILL, MOLTEN_FLOW).overlay(MOLTEN_STILL).color(0xFFB5B5B5).density(300)
-						.viscosity(300).temperature(400)).bucket(moltenZinc_bucket).block(molten_Zinc_block);
-	}
 	public static final RegistryObject<Block> ZINC_SLATE_ORE = BLOCKS.register("zinc_slate_ore", () -> new AOreBlock(6.0f,6.0f));
 	public static final RegistryObject<Block> ZINC_ORE = BLOCKS.register("zinc_ore", () -> new AOreBlock(3.0f,3.0f));
 	public static final RegistryObject<Block> OTHER_ZINC_ORE = BLOCKS.register("other_zinc_ore", OtherOreBlock::new);
