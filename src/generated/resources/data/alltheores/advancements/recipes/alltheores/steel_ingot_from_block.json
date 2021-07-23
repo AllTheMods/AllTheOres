@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "alltheores:steel_block"
+            "items": [
+              "alltheores:steel_block"
+            ]
           }
         ]
       }

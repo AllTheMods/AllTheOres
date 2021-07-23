@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "alltheores:osmium_block"
+            "items": [
+              "alltheores:osmium_block"
+            ]
           }
         ]
       }

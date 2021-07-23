@@ -31,7 +31,7 @@ public final class DataGenerators {
             generator.addProvider(new ShapelessCrafting(generator));
             generator.addProvider(new BlastingRecipes(generator));
             generator.addProvider(new SmeltingRecipes(generator));
-            generator.addProvider(new LootTables(generator));
+            //generator.addProvider(new LootTables(generator));
         }
         if (event.includeClient()) {
             generator.addProvider(new BlockStates(generator, fileHelper));

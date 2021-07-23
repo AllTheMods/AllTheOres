@@ -6,6 +6,7 @@ import net.allthemods.alltheores.infos.Reference;
 import net.allthemods.alltheores.worldgen.features.OreVein;
 import net.minecraft.core.MappedRegistry;
 import net.minecraft.core.Registry;
+import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.WorldGenLevel;
@@ -26,8 +27,6 @@ public class ATOConfiguredFeature {
 	public static Feature<NoneFeatureConfiguration> ALUMINUM = registerFeature("aluminum_ore",new OreVein(NoneFeatureConfiguration.CODEC,BlockList.ALUMINUM_ORE.get(),BlockList.ALUMINUM_SLATE_ORE.get()));
 	public static ConfiguredFeature<?,?> ORE_ALUMINUM = newConfiguredFeature("aluminum_ore", ALUMINUM.configured(FeatureConfiguration.NONE));
 
-	//to-do remove :D
-	public static ConfiguredFeature<?,?> ORE_COPPER = newConfiguredFeature("copper_ore", ALUMINUM.configured(FeatureConfiguration.NONE));
 
 	public static Feature<NoneFeatureConfiguration> URANIUM = registerFeature("uranium_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.URANIUM_ORE.get(),BlockList.URANIUM_SLATE_ORE.get()));
 	public static ConfiguredFeature<?, ?> ORE_URANIUM = newConfiguredFeature("uranium_ore", URANIUM.configured(FeatureConfiguration.NONE));
@@ -56,6 +55,10 @@ public class ATOConfiguredFeature {
 	
 	public static ConfiguredFeature<?, ?> newConfiguredFeature(String registryName,
 			ConfiguredFeature<?, ?> configuredFeature) {
+
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(Reference.MOD_ID, registryName),
+				configuredFeature);
+
 		return configuredFeature;
 	}
 

@@ -84,7 +84,7 @@ public class Configuration {
 	}
 
 
-	public static void onModConfigEvent(final IConfigEvent.ConfigConfig configEvent) {
+	public static void onModConfigEvent(final IConfigEvent configEvent) {
 		bakeConfigs();
 	}
 

@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "alltheores:signalum_block"
+            "items": [
+              "alltheores:signalum_block"
+            ]
           }
         ]
       }

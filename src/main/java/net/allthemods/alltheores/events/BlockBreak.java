@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 public class BlockBreak {
 
     @SubscribeEvent
-    public static void on(BlockEvent.BreakEvent event) {
+    public static void BreakEvent(BlockEvent.BreakEvent event) {
         AllTheOres.LOGGER.debug("BlockBreak!!!");
         if(event.getPlayer().isCreative()) { return; }
         if((event.getState().getBlock() instanceof OtherOreBlock) && ((event.getPlayer() instanceof FakePlayer) || (event.getPlayer() == null) || (event.getPlayer().getMainHandItem().isEmpty()))) {

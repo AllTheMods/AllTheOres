@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "alltheores:platinum_block"
+            "items": [
+              "alltheores:platinum_block"
+            ]
           }
         ]
       }

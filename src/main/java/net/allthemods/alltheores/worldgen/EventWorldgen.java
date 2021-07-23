@@ -1,19 +1,15 @@
 package net.allthemods.alltheores.worldgen;
 
-import net.allthemods.alltheores.AllTheOres;
 import net.allthemods.alltheores.infos.Configuration;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
 @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.FORGE)
 public class EventWorldgen {
-    @SubscribeEvent(priority=EventPriority.LOW)
-    public static void onBiomeLoad(final BiomeLoadingEvent event) {
-        AllTheOres.LOGGER.debug("Loading " + event.getName());
+    @SubscribeEvent
+    public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
         if ((event.getCategory() != Biome.BiomeCategory.NETHER) && (event.getCategory() != Biome.BiomeCategory.THEEND)
                 && (event.getCategory() != Biome.BiomeCategory.NONE)) {
             if (Configuration.aluminumGen) {
