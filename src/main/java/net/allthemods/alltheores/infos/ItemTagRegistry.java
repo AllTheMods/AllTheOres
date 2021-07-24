@@ -1,6 +1,7 @@
 package net.allthemods.alltheores.infos;
 
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
@@ -88,7 +89,16 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> SIGNALUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("signalum"));
     public static final Tag.Named<Item> STEEL_BLOCK_ITEM = ItemTags.createOptional(Reference.block("steel"));
 
-
+    // DUST
+    public static final Tag.Named<Item> PLATINUM_DUST = forge("dusts/platinum");
+    public static final Tag.Named<Item> ALUMINUM_DUST = forge("dusts/aluminum");
+    public static final Tag.Named<Item> URANIUM_DUST = forge("dusts/uranium");
+    public static final Tag.Named<Item> NICKEL_DUST = forge("dusts/nickel");
+    public static final Tag.Named<Item> SILVER_DUST = forge("dusts/silver");
+    public static final Tag.Named<Item> OSMIUM_DUST = forge("dusts/osmium");
+    public static final Tag.Named<Item> ZINC_DUST = forge("dusts/zinc");
+    public static final Tag.Named<Item> LEAD_DUST = forge("dusts/lead");
+    public static final Tag.Named<Item> TIN_DUST = forge("dusts/tin");
     //ORE
 
 
@@ -102,4 +112,10 @@ public class ItemTagRegistry {
     public static final Tag.Named<Block> OSMIUM_ORE = BlockTags.createOptional(Reference.ore("osmium"));
     public static final Tag.Named<Block> ZINC_ORE = BlockTags.createOptional(Reference.ore("zinc"));
     public static final Tag.Named<Block> TIN_ORE = BlockTags.createOptional(Reference.ore("tin"));
+
+
+    private static Tags.IOptionalNamedTag<Item> forge(String name)
+    {
+        return net.minecraft.tags.ItemTags.createOptional(new ResourceLocation("forge", name));
+    }
 }

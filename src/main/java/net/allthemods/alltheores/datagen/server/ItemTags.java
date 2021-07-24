@@ -68,5 +68,15 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.LUMIUM_BLOCK_ITEM).add(BlockList.LUMIUM_BLOCK_ITEM.get());
         tag(ItemTagRegistry.SIGNALUM_BLOCK_ITEM).add(BlockList.SIGNALUM_BLOCK_ITEM.get());
         tag(ItemTagRegistry.STEEL_BLOCK_ITEM).add(BlockList.STEEL_BLOCK_ITEM.get());
+
+        tag(ItemTagRegistry.PLATINUM_DUST).add(BlockList.PLATINUM_DUST.get());
+        tag(ItemTagRegistry.ALUMINUM_DUST).add(BlockList.ALUMINUM_DUST.get());
+        tag(ItemTagRegistry.URANIUM_DUST).add(BlockList.URANIUM_DUST.get());
+        tag(ItemTagRegistry.NICKEL_DUST).add(BlockList.NICKEL_DUST.get());
+        tag(ItemTagRegistry.SILVER_DUST).add(BlockList.SILVER_DUST.get());
+        tag(ItemTagRegistry.OSMIUM_DUST).add(BlockList.OSMIUM_DUST.get());
+        tag(ItemTagRegistry.ZINC_DUST).add(BlockList.ZINC_DUST.get());
+        tag(ItemTagRegistry.LEAD_DUST).add(BlockList.LEAD_DUST.get());
+        tag(ItemTagRegistry.TIN_DUST).add(BlockList.TIN_DUST.get());
     }
 }
