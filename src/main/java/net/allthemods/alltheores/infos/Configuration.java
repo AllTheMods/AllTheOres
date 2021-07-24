@@ -5,6 +5,7 @@ import net.allthemods.alltheores.AllTheOres;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.fml.config.ConfigTracker;
 import net.minecraftforge.fml.config.IConfigEvent;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import org.apache.commons.lang3.tuple.Pair;
 
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -83,13 +84,14 @@ public class Configuration {
 		COMMON = specPair.getLeft();
 	}
 
-
-	public static void onModConfigEvent(final IConfigEvent configEvent) {
+	@SubscribeEvent
+	public static void onModConfigEvent(final ModConfigEvent configEvent) {
+		AllTheOres.LOGGER.info("AllTheOres: loading config");
 		bakeConfigs();
 	}
 
 	private static void bakeConfigs() {
-		AllTheOres.LOGGER.debug("Loading Configs....");
+
 		aluminumGen = Configuration.COMMON.aluminumGen.get();
 		copperGen = Configuration.COMMON.aluminumGen.get();
 		leadGen = Configuration.COMMON.aluminumGen.get();

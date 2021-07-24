@@ -5,11 +5,15 @@ import net.allthemods.alltheores.meka.Clump;
 import net.allthemods.alltheores.meka.Crystal;
 import net.allthemods.alltheores.meka.DirtyDust;
 import net.allthemods.alltheores.meka.Shard;
+import net.allthemods.alltheores.worldgen.features.OreVein;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Material;
@@ -29,6 +33,9 @@ public class BlockList {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
 	public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS,
 			Reference.MOD_ID);
+	public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES,
+			Reference.MOD_ID);
+
 
 	public static final ResourceLocation MOLTEN_STILL = new ResourceLocation(Reference.MOD_ID,
 			"block/fluid/molten_metal");
@@ -62,19 +69,6 @@ public class BlockList {
 	public static final RegistryObject<Item> ALUMINUM_RAW = ITEMS.register("raw_aluminum",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
-
-	//public static final RegistryObject<Block> COPPER_ORE = BLOCKS.register("copper_ore", AOreBlock::new);
-	//public static final RegistryObject<Block> OTHER_COPPER_ORE = BLOCKS.register("other_copper_ore", OtherOreBlock::new);
-	//public static final RegistryObject<Block> COPPER_BLOCK = BLOCKS.register("copper_block", AOreBlock::new);
-	//public static final RegistryObject<Item> COPPER_ORE_ITEM = ITEMS.register("copper_ore",
-	//		() -> new ToolTipBlockItem(COPPER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-	//public static final RegistryObject<Item> OTHER_COPPER_ORE_ITEM = ITEMS.register("other_copper_ore",
-	//		() -> new BlockItem(OTHER_COPPER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
-
-	//public static final RegistryObject<Item> COPPER_BLOCK_ITEM = ITEMS.register("copper_block",
-	//		() -> new BlockItem(COPPER_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
-	//public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot",
-	//		() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
@@ -462,5 +456,16 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Item> LUMIUM_BLOCK_ITEM = ITEMS.register("lumium_block", () -> new BlockItem(LUMIUM_BLOCK.get() ,new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> SIGNALUM_BLOCK_ITEM = ITEMS.register("signalum_block", () -> new BlockItem(SIGNALUM_BLOCK.get() ,new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> CONSTANTAN_BLOCK_ITEM = ITEMS.register("constantan_block", () -> new BlockItem(CONSTANTAN_BLOCK.get(),new Item.Properties().tab(Reference.GROUP)));
+
+	// *************** FEATURES
+	public static final RegistryObject<Feature<?>> ALUMINUM = FEATURES.register("aluminum_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.ALUMINUM_ORE.get(),BlockList.ALUMINUM_SLATE_ORE.get()));
+	public static final RegistryObject<Feature<?>> LEAD = FEATURES.register("lead_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.LEAD_ORE.get(),BlockList.LEAD_SLATE_ORE.get()));
+	public static final RegistryObject<Feature<?>> NICKEL = FEATURES.register("nickel_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.NICKEL_ORE.get(),BlockList.NICKEL_SLATE_ORE.get()));
+	public static final RegistryObject<Feature<?>> OSMIUM = FEATURES.register("osmium_ore", () -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.OSMIUM_ORE.get(),BlockList.OSMIUM_SLATE_ORE.get()));
+	public static final RegistryObject<Feature<?>> PLATINUM = FEATURES.register("platinum_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.PLATINUM_ORE.get(),BlockList.PLATINUM_SLATE_ORE.get()));
+	public static final RegistryObject<Feature<?>> SILVER = FEATURES.register("silver_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.SILVER_ORE.get(),BlockList.SILVER_SLATE_ORE.get()));
+	public static final RegistryObject<Feature<?>> TIN = FEATURES.register("tin_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.TIN_ORE.get(),BlockList.TIN_SLATE_ORE.get()));
+	public static final RegistryObject<Feature<?>> URANIUM = FEATURES.register("uranium_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.URANIUM_ORE.get(),BlockList.URANIUM_SLATE_ORE.get()));
+	public static final RegistryObject<Feature<?>> ZINC = FEATURES.register("zinc_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.ZINC_ORE.get(),BlockList.ZINC_SLATE_ORE.get()));
 
 }

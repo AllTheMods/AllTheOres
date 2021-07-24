@@ -13,6 +13,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.NoOpFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraftforge.server.permission.context.WorldContext;
 
@@ -28,7 +29,9 @@ private Direction[] directions = { Direction.UP,Direction.DOWN,Direction.NORTH,D
         super(p_i231953_1_);
         this.oreType = oretype;
         this.deepSlate_oreType = deepSlate_oretype;
+
     }
+
     private BlockPos getPreviousLocation() {
         return this.genLocation;
     }

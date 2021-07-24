@@ -32,9 +32,11 @@ public class AllTheOres {
 		BlockList.FLUIDS.register(modEventBus);
 		BlockList.BLOCKS.register(modEventBus);
 		BlockList.ITEMS.register(modEventBus);
+		BlockList.FEATURES.register(modEventBus);
 		MinecraftForge.EVENT_BUS.register(this);
-		MinecraftForge.EVENT_BUS.register(EventWorldgen.class);
-		MinecraftForge.EVENT_BUS.register(BlockBreak.class);
+		modEventBus.register(Configuration.class);
+		MinecraftForge.EVENT_BUS.addListener(EventWorldgen::biomeLoadingEvent);
+		MinecraftForge.EVENT_BUS.addListener(BlockBreak::BreakEvent);
 
 	}
 	private void setupBlackList() {
