@@ -37,7 +37,7 @@ public class AllTheOres {
 		modEventBus.register(Configuration.class);
 		MinecraftForge.EVENT_BUS.addListener(EventWorldgen::biomeLoadingEvent);
 		MinecraftForge.EVENT_BUS.addListener(BlockBreak::BreakEvent);
-
+		setupLogFilter();
 	}
 	private void setupBlackList() {
 		Reference.WORLDGEN_BLACKLIST.add(Blocks.VOID_AIR);
@@ -47,6 +47,12 @@ public class AllTheOres {
 		Reference.WORLDGEN_BLACKLIST.add(Blocks.CAVE_AIR);
 	}
 
-
-
+	private static void setupLogFilter() {
+		var rootLogger = LogManager.getRootLogger();
+		if (rootLogger instanceof org.apache.logging.log4j.core.Logger logger) {
+			logger.addFilter(new SetBlockMessageFilter());
+		} else {
+			LOGGER.error("Registration failed with unexpected class: {}", rootLogger.getClass());
+		}
+	}
 }
