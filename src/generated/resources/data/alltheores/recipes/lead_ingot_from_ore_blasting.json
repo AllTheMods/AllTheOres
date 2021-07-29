@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "alltheores:lead_ore"
+  },
+  "result": "alltheores:lead_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}

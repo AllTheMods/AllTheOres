@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "alltheores:aluminum_ore"
+  },
+  "result": "alltheores:aluminum_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}

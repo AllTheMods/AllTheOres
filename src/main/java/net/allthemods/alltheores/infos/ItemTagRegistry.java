@@ -103,7 +103,6 @@ public class ItemTagRegistry {
 
 
     public static final Tag.Named<Block> LEAD_ORE = BlockTags.createOptional(Reference.ore("lead"));
-    public static final Tag.Named<Block> COPPER_ORE = BlockTags.createOptional(Reference.ore("copper"));
     public static final Tag.Named<Block> SILVER_ORE = BlockTags.createOptional(Reference.ore("silver"));
     public static final Tag.Named<Block> PLATINUM_ORE = BlockTags.createOptional(Reference.ore("platinum"));
     public static final Tag.Named<Block> ALUMINUM_ORE = BlockTags.createOptional(Reference.ore("aluminum"));
@@ -113,6 +112,15 @@ public class ItemTagRegistry {
     public static final Tag.Named<Block> ZINC_ORE = BlockTags.createOptional(Reference.ore("zinc"));
     public static final Tag.Named<Block> TIN_ORE = BlockTags.createOptional(Reference.ore("tin"));
 
+    public static final Tag.Named<Item> LEAD_ORE_ITEM = ItemTags.createOptional(Reference.ore("lead"));
+    public static final Tag.Named<Item> SILVER_ORE_ITEM = ItemTags.createOptional(Reference.ore("silver"));
+    public static final Tag.Named<Item> PLATINUM_ORE_ITEM = ItemTags.createOptional(Reference.ore("platinum"));
+    public static final Tag.Named<Item> ALUMINUM_ORE_ITEM = ItemTags.createOptional(Reference.ore("aluminum"));
+    public static final Tag.Named<Item> NICKEL_ORE_ITEM = ItemTags.createOptional(Reference.ore("nickel"));
+    public static final Tag.Named<Item> URANIUM_ORE_ITEM = ItemTags.createOptional(Reference.ore("uranium"));
+    public static final Tag.Named<Item> OSMIUM_ORE_ITEM = ItemTags.createOptional(Reference.ore("osmium"));
+    public static final Tag.Named<Item> ZINC_ORE_ITEM = ItemTags.createOptional(Reference.ore("zinc"));
+    public static final Tag.Named<Item> TIN_ORE_ITEM = ItemTags.createOptional(Reference.ore("tin"));
 
     private static Tags.IOptionalNamedTag<Item> forge(String name)
     {

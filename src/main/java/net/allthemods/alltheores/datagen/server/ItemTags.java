@@ -78,5 +78,16 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.ZINC_DUST).add(BlockList.ZINC_DUST.get());
         tag(ItemTagRegistry.LEAD_DUST).add(BlockList.LEAD_DUST.get());
         tag(ItemTagRegistry.TIN_DUST).add(BlockList.TIN_DUST.get());
+
+        tag(ItemTagRegistry.ALUMINUM_ORE_ITEM).add(BlockList.ALUMINUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.LEAD_ORE_ITEM).add(BlockList.LEAD_ORE_ITEM.get());
+        tag(ItemTagRegistry.OSMIUM_ORE_ITEM).add(BlockList.OSMIUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.NICKEL_ORE_ITEM).add(BlockList.NICKEL_ORE_ITEM.get());
+        tag(ItemTagRegistry.PLATINUM_ORE_ITEM).add(BlockList.PLATINUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.SILVER_ORE_ITEM).add(BlockList.SILVER_ORE_ITEM.get());
+        tag(ItemTagRegistry.TIN_ORE_ITEM).add(BlockList.TIN_ORE_ITEM.get());
+        tag(ItemTagRegistry.URANIUM_ORE_ITEM).add(BlockList.URANIUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.ZINC_ORE_ITEM).add(BlockList.ZINC_ORE_ITEM.get());
+
     }
 }

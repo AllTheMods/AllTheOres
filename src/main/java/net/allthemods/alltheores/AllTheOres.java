@@ -37,6 +37,7 @@ public class AllTheOres {
 		modEventBus.register(Configuration.class);
 		MinecraftForge.EVENT_BUS.addListener(EventWorldgen::biomeLoadingEvent);
 		MinecraftForge.EVENT_BUS.addListener(BlockBreak::BreakEvent);
+
 		setupLogFilter();
 	}
 	private void setupBlackList() {

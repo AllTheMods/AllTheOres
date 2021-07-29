@@ -25,15 +25,15 @@ import net.minecraftforge.registries.RegistryManager;
 
 public class ATOConfiguredFeature {
 	//Orevein(codec, regular, deepslate)
-	public static ConfiguredFeature<?,?> ORE_ALUMINUM = newConfiguredFeature("aluminum_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.ALUMINUM_ORE.get(),BlockList.ALUMINUM_SLATE_ORE.get()).configured(FeatureConfiguration.NONE));
-	public static ConfiguredFeature<?,?> ORE_URANIUM = newConfiguredFeature("uranium_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.URANIUM_ORE.get(),BlockList.URANIUM_SLATE_ORE.get()).configured(FeatureConfiguration.NONE));
-	public static ConfiguredFeature<?,?> ORE_TIN = newConfiguredFeature("tin_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.TIN_ORE.get(),BlockList.TIN_SLATE_ORE.get()).configured(FeatureConfiguration.NONE));
-	public static ConfiguredFeature<?,?> ORE_SILVER = newConfiguredFeature("silver_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.SILVER_ORE.get(),BlockList.SILVER_SLATE_ORE.get()).configured(FeatureConfiguration.NONE));
-	public static ConfiguredFeature<?,?> ORE_LEAD = newConfiguredFeature("lead_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.LEAD_ORE.get(),BlockList.LEAD_SLATE_ORE.get()).configured(FeatureConfiguration.NONE));
-	public static ConfiguredFeature<?,?> ORE_ZINC = newConfiguredFeature("zinc_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.ZINC_ORE.get(),BlockList.ZINC_SLATE_ORE.get()).configured(FeatureConfiguration.NONE));
-	public static ConfiguredFeature<?,?> ORE_NICKEL = newConfiguredFeature("nickel_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.NICKEL_ORE.get(),BlockList.NICKEL_SLATE_ORE.get()).configured(FeatureConfiguration.NONE));
-	public static ConfiguredFeature<?,?> ORE_PLATINUM = newConfiguredFeature("platinum_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.PLATINUM_ORE.get(),BlockList.PLATINUM_SLATE_ORE.get()).configured(FeatureConfiguration.NONE));
-	public static ConfiguredFeature<?,?> ORE_OSMIUM = newConfiguredFeature("osmium_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.OSMIUM_ORE.get(),BlockList.OSMIUM_SLATE_ORE.get()).configured(FeatureConfiguration.NONE));
+	public static ConfiguredFeature<?,?> ORE_ALUMINUM = newConfiguredFeature("aluminum_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.ALUMINUM_ORE.get(),BlockList.ALUMINUM_SLATE_ORE.get(),BlockList.RAW_ALUMINUM_BLOCK.get()).configured(FeatureConfiguration.NONE));
+	public static ConfiguredFeature<?,?> ORE_URANIUM = newConfiguredFeature("uranium_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.URANIUM_ORE.get(),BlockList.URANIUM_SLATE_ORE.get(),BlockList.RAW_URANIUM_BLOCK.get()).configured(FeatureConfiguration.NONE));
+	public static ConfiguredFeature<?,?> ORE_TIN = newConfiguredFeature("tin_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.TIN_ORE.get(),BlockList.TIN_SLATE_ORE.get(),BlockList.RAW_TIN_BLOCK.get()).configured(FeatureConfiguration.NONE));
+	public static ConfiguredFeature<?,?> ORE_SILVER = newConfiguredFeature("silver_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.SILVER_ORE.get(),BlockList.SILVER_SLATE_ORE.get(),BlockList.RAW_SILVER_BLOCK.get()).configured(FeatureConfiguration.NONE));
+	public static ConfiguredFeature<?,?> ORE_LEAD = newConfiguredFeature("lead_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.LEAD_ORE.get(),BlockList.LEAD_SLATE_ORE.get(),BlockList.RAW_LEAD_BLOCK.get()).configured(FeatureConfiguration.NONE));
+	public static ConfiguredFeature<?,?> ORE_ZINC = newConfiguredFeature("zinc_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.ZINC_ORE.get(),BlockList.ZINC_SLATE_ORE.get(),BlockList.RAW_ZINC_BLOCK.get()).configured(FeatureConfiguration.NONE));
+	public static ConfiguredFeature<?,?> ORE_NICKEL = newConfiguredFeature("nickel_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.NICKEL_ORE.get(),BlockList.NICKEL_SLATE_ORE.get(),BlockList.RAW_NICKEL_BLOCK.get()).configured(FeatureConfiguration.NONE));
+	public static ConfiguredFeature<?,?> ORE_PLATINUM = newConfiguredFeature("platinum_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.PLATINUM_ORE.get(),BlockList.PLATINUM_SLATE_ORE.get(),BlockList.RAW_PLATINUM_BLOCK.get()).configured(FeatureConfiguration.NONE));
+	public static ConfiguredFeature<?,?> ORE_OSMIUM = newConfiguredFeature("osmium_ore", new OreVein(NoneFeatureConfiguration.CODEC,BlockList.OSMIUM_ORE.get(),BlockList.OSMIUM_SLATE_ORE.get(),BlockList.RAW_OSMIUM_BLOCK.get()).configured(FeatureConfiguration.NONE));
 	
 	
 

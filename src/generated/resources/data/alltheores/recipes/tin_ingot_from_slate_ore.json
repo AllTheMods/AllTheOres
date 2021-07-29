@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "alltheores:tin_slate_ore"
+  },
+  "result": "alltheores:tin_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}
