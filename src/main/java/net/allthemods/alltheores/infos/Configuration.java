@@ -192,7 +192,7 @@ public class Configuration {
 
 			BUILDER.push("aluminum");
 			aluminum_MinY = BUILDER.comment("Aluminum bottom Y level for spawn").defineInRange("aluminum_min_y",
-					-20, -64, 320);
+					-60, -64, 320);
 			aluminum_MaxY = BUILDER.comment("Aluminum top Y level for spawn").defineInRange("aluminum_max_y", 80,
 					-64, 320);
 			aluminum_SpawnSize = BUILDER.comment("Aluminum deposit size(number of ores)").defineInRange("aluminum_deposit_size",
@@ -201,19 +201,19 @@ public class Configuration {
 
 			BUILDER.push("zinc");
 
-			zinc_MinY = BUILDER.comment("Zinc bottom Y level for spawn").defineInRange("zinc_min_y", 1, -64, 320);
+			zinc_MinY = BUILDER.comment("Zinc bottom Y level for spawn").defineInRange("zinc_min_y", -5, -64, 320);
 			zinc_MaxY = BUILDER.comment("Zinc top Y level for spawn").defineInRange("zinc_max_y", 60, -64, 320);
 			zinc_SpawnSize = BUILDER.comment("Zinc deposit size(number of ores)").defineInRange("zinc_deposit_size", 7, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("lead");
-			lead_MinY = BUILDER.comment("Lead bottom Y level for spawn").defineInRange("lead_min_y", -10, -64, 320);
-			lead_MaxY = BUILDER.comment("Lead top Y level for spawn").defineInRange("lead_max_y", 40, -64, 320);
+			lead_MinY = BUILDER.comment("Lead bottom Y level for spawn").defineInRange("lead_min_y", -60, -64, 320);
+			lead_MaxY = BUILDER.comment("Lead top Y level for spawn").defineInRange("lead_max_y", 10, -64, 320);
 			lead_SpawnSize = BUILDER.comment("Lead deposit size(number of ores)").defineInRange("lead_deposit_size", 7, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("nickel");
-			nickel_MinY = BUILDER.comment("Nickel bottom Y level for spawn").defineInRange("nickel_min_y", -50, -64,
+			nickel_MinY = BUILDER.comment("Nickel bottom Y level for spawn").defineInRange("nickel_min_y", -60, -64,
 					320);
 			nickel_MaxY = BUILDER.comment("Nickel top Y level for spawn").defineInRange("nickel_max_y", 25, -64,
 					320);
@@ -222,7 +222,7 @@ public class Configuration {
 			BUILDER.pop();
 
 			BUILDER.push("osmium");
-			osmium_MinY = BUILDER.comment("Osmium bottom Y level for spawn").defineInRange("osmium_min_y", -25, -64,
+			osmium_MinY = BUILDER.comment("Osmium bottom Y level for spawn").defineInRange("osmium_min_y", -60, -64,
 					320);
 			osmium_MaxY = BUILDER.comment("Osmium top Y level for spawn").defineInRange("osmium_max_y", 40, -64,
 					320);
@@ -240,7 +240,7 @@ public class Configuration {
 			BUILDER.pop();
 
 			BUILDER.push("silver");
-			silver_MinY = BUILDER.comment("Silver bottom Y level for spawn").defineInRange("silver_min_y", -40, -64,
+			silver_MinY = BUILDER.comment("Silver bottom Y level for spawn").defineInRange("silver_min_y", -60, -64,
 					320);
 			silver_MaxY = BUILDER.comment("Silver top Y level for spawn").defineInRange("silver_max_y", 45, -64,
 					320);
@@ -249,7 +249,7 @@ public class Configuration {
 			BUILDER.pop();
 
 			BUILDER.push("tin");
-			tin_MinY = BUILDER.comment("Tin bottom Y level for spawn").defineInRange("tin_min_y", -10, -64, 320);
+			tin_MinY = BUILDER.comment("Tin bottom Y level for spawn").defineInRange("tin_min_y", -50, -64, 320);
 			tin_MaxY = BUILDER.comment("Tin top Y level for spawn").defineInRange("tin_max_y", 80, -64, 320);
 			tin_SpawnSize = BUILDER.comment("Tin deposit size(number of ores)").defineInRange("tin_deposit_size", 7, 1, 64);
 			BUILDER.pop();

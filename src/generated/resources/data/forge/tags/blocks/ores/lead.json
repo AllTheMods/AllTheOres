@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "alltheores:lead_ore"
+    "alltheores:lead_ore",
+    "alltheores:lead_slate_ore"
   ]
 }

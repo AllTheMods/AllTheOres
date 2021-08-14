@@ -17,6 +17,16 @@ public class BlockTags extends BlockTagsProvider {
 
     @Override
     protected void addTags() {
+        tag(ItemTagRegistry.RAW_ALUMINUM_BLOCK).add(BlockList.RAW_ALUMINUM_BLOCK.get());
+        tag(ItemTagRegistry.RAW_LEAD_BLOCK).add(BlockList.RAW_LEAD_BLOCK.get());
+        tag(ItemTagRegistry.RAW_OSMIUM_BLOCK).add(BlockList.RAW_OSMIUM_BLOCK.get());
+        tag(ItemTagRegistry.RAW_NICKEL_BLOCK).add(BlockList.RAW_NICKEL_BLOCK.get());
+        tag(ItemTagRegistry.RAW_PLATINUM_BLOCK).add(BlockList.RAW_PLATINUM_BLOCK.get());
+        tag(ItemTagRegistry.RAW_SILVER_BLOCK).add(BlockList.RAW_SILVER_BLOCK.get());
+        tag(ItemTagRegistry.RAW_TIN_BLOCK).add(BlockList.RAW_TIN_BLOCK.get());
+        tag(ItemTagRegistry.RAW_URANIUM_BLOCK).add(BlockList.RAW_URANIUM_BLOCK.get());
+        tag(ItemTagRegistry.RAW_ZINC_BLOCK).add(BlockList.RAW_ZINC_BLOCK.get());
+
         tag(ItemTagRegistry.ALUMINUM_BLOCK).add(BlockList.ALUMINUM_BLOCK.get());
         tag(ItemTagRegistry.LEAD_BLOCK).add(BlockList.LEAD_BLOCK.get());
         tag(ItemTagRegistry.OSMIUM_BLOCK).add(BlockList.OSMIUM_BLOCK.get());
@@ -45,5 +55,15 @@ public class BlockTags extends BlockTagsProvider {
         tag(ItemTagRegistry.TIN_ORE).add(BlockList.TIN_ORE.get());
         tag(ItemTagRegistry.URANIUM_ORE).add(BlockList.URANIUM_ORE.get());
         tag(ItemTagRegistry.ZINC_ORE).add(BlockList.ZINC_ORE.get());
+
+        tag(ItemTagRegistry.ALUMINUM_ORE).add(BlockList.ALUMINUM_SLATE_ORE.get());
+        tag(ItemTagRegistry.LEAD_ORE).add(BlockList.LEAD_SLATE_ORE.get());
+        tag(ItemTagRegistry.OSMIUM_ORE).add(BlockList.OSMIUM_SLATE_ORE.get());
+        tag(ItemTagRegistry.NICKEL_ORE).add(BlockList.NICKEL_SLATE_ORE.get());
+        tag(ItemTagRegistry.PLATINUM_ORE).add(BlockList.PLATINUM_SLATE_ORE.get());
+        tag(ItemTagRegistry.SILVER_ORE).add(BlockList.SILVER_SLATE_ORE.get());
+        tag(ItemTagRegistry.TIN_ORE).add(BlockList.TIN_SLATE_ORE.get());
+        tag(ItemTagRegistry.URANIUM_ORE).add(BlockList.URANIUM_SLATE_ORE.get());
+        tag(ItemTagRegistry.ZINC_ORE).add(BlockList.ZINC_SLATE_ORE.get());
     }
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "alltheores:constantan_dust"
+  },
+  "result": "alltheores:constantan_ingot",
+  "experience": 0.15,
+  "cookingtime": 100
+}

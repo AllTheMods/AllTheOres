@@ -8,6 +8,8 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
+import net.minecraftforge.common.Tags;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -24,7 +26,203 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
         final String hasCondition = "has_item";
 
 
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ELECTRUM_DUST.get(),2)
+                .requires(BlockList.GOLD_DUST.get())
+                .requires(ItemTagRegistry.SILVER_DUST)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("electrum_dust","alloy_blending"));
 
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.BRONZE_DUST.get(),4)
+                .requires(BlockList.COPPER_DUST.get(),3)
+                .requires(ItemTagRegistry.TIN_DUST)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("bronze_dust","alloy_blending"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.LUMIUM_DUST.get(),4)
+                .requires(Items.GLOWSTONE_DUST,4)
+                .requires(ItemTagRegistry.SILVER_DUST)
+                .requires(BlockList.TIN_DUST.get(),3)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("lumium_dust","alloy_blending"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.CONSTANTAN_DUST.get(),2)
+                .requires(BlockList.COPPER_DUST.get())
+                .requires(ItemTagRegistry.NICKEL_DUST)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("constantan_dust","alloy_blending"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.SIGNALUM_DUST.get(),4)
+                .requires(BlockList.COPPER_DUST.get(),3)
+                .requires(ItemTagRegistry.SILVER_DUST)
+                .requires(Items.REDSTONE,4)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("signalum_dust","alloy_blending"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ENDERIUM_DUST.get(),4)
+                .requires(BlockList.LEAD_DUST.get(),3)
+                .requires(ItemTagRegistry.PLATINUM_DUST)
+                .requires(Items.ENDER_PEARL,4)
+                .requires(BlockList.ORE_HAMMER.get())
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("enderium_dust","alloy_blending"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.NETHERITE_DUST.get(),2)
+                .requires(Items.NETHERITE_INGOT)
+                .requires(BlockList.ORE_HAMMER.get())
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("netherite_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.DIAMOND_DUST.get(),2)
+                .requires(Items.DIAMOND)
+                .requires(BlockList.ORE_HAMMER.get())
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("diamond_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ALUMINUM_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(ItemTagRegistry.RAW_ALUMINUM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("aluminum_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.COPPER_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(Items.RAW_COPPER)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("copper_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.LEAD_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(ItemTagRegistry.RAW_LEAD)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("lead_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.NICKEL_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(ItemTagRegistry.RAW_NICKEL)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("nickel_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.OSMIUM_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(ItemTagRegistry.RAW_OSMIUM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("osmium_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.PLATINUM_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(ItemTagRegistry.RAW_PLATINUM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("platinum_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.SILVER_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(ItemTagRegistry.RAW_SILVER)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("silver_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.TIN_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(ItemTagRegistry.RAW_TIN)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("tin_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.URANIUM_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(ItemTagRegistry.RAW_URANIUM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("uranium_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ZINC_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(ItemTagRegistry.RAW_ZINC)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("zinc_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.IRON_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(Items.RAW_IRON)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("iron_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.GOLD_DUST.get(),2)
+                .requires(BlockList.ORE_HAMMER.get())
+                .requires(Items.RAW_GOLD)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("gold_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ALUMINUM_RAW.get(),9)
+                .requires(ItemTagRegistry.RAW_ALUMINUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RAW_ALUMINUM_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("raw_aluminum","block"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.NICKEL_RAW.get(),9)
+                .requires(ItemTagRegistry.RAW_NICKEL_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RAW_NICKEL_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("raw_nickel","block"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.LEAD_RAW.get(),9)
+                .requires(ItemTagRegistry.RAW_LEAD_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RAW_LEAD_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("raw_lead","block"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.OSMIUM_RAW.get(),9)
+                .requires(ItemTagRegistry.RAW_OSMIUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RAW_OSMIUM_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("raw_osmium","block"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.PLATINUM_RAW.get(),9)
+                .requires(ItemTagRegistry.RAW_PLATINUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RAW_PLATINUM_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("raw_platinum","block"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.SILVER_RAW.get(),9)
+                .requires(ItemTagRegistry.RAW_SILVER_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RAW_SILVER_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("raw_silver","block"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.TIN_RAW.get(),9)
+                .requires(ItemTagRegistry.RAW_TIN_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RAW_TIN_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("raw_tin","block"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.URANIUM_RAW.get(),9)
+                .requires(ItemTagRegistry.RAW_URANIUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RAW_URANIUM_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("raw_uranium","block"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.ZINC_RAW.get(),9)
+                .requires(ItemTagRegistry.RAW_ZINC_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RAW_ZINC_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("raw_zinc","block"));
 
         ShapelessRecipeBuilder
                 .shapeless(BlockList.ALUMINUM_INGOT.get(),9)

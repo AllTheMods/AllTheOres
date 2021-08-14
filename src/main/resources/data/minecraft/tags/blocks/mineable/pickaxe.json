@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:raw_aluminum_block",
+    "alltheores:raw_lead_block",
+    "alltheores:raw_nickel_block",
+    "alltheores:raw_osmium_block",
+    "alltheores:raw_silver_block",
+    "alltheores:raw_tin_block",
+    "alltheores:raw_zinc_block",
+    "alltheores:aluminum_ore",
+    "alltheores:lead_ore",
+    "alltheores:nickel_ore",
+    "alltheores:osmium_ore",
+    "alltheores:silver_ore",
+    "alltheores:tin_ore",
+    "alltheores:zinc_ore",
+    "alltheores:aluminum_slate_ore",
+    "alltheores:lead_slate_ore",
+    "alltheores:nickel_slate_ore",
+    "alltheores:osmium_slate_ore",
+    "alltheores:silver_slate_ore",
+    "alltheores:tin_slate_ore",
+    "alltheores:zinc_slate_ore",
+    "alltheores:raw_platinum_block",
+    "alltheores:raw_uranium_block",
+    "alltheores:platinum_slate_ore",
+    "alltheores:uranium_slate_ore",
+    "alltheores:platinum_ore",
+    "alltheores:uranium_ore"
+  ]
+}

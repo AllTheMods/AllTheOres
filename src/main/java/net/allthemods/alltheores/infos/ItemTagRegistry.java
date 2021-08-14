@@ -70,6 +70,27 @@ public class ItemTagRegistry {
     public static final Tag.Named<Block> SIGNALUM_BLOCK = BlockTags.createOptional(Reference.block("signalum"));
     public static final Tag.Named<Block> STEEL_BLOCK = BlockTags.createOptional(Reference.block("steel"));
 
+    public static final Tag.Named<Block> RAW_LEAD_BLOCK = BlockTags.createOptional(Reference.block("raw_lead"));
+    public static final Tag.Named<Block> RAW_SILVER_BLOCK = BlockTags.createOptional(Reference.block("raw_silver"));
+    public static final Tag.Named<Block> RAW_PLATINUM_BLOCK = BlockTags.createOptional(Reference.block("raw_platinum"));
+    public static final Tag.Named<Block> RAW_ALUMINUM_BLOCK = BlockTags.createOptional(Reference.block("raw_aluminum"));
+    public static final Tag.Named<Block> RAW_NICKEL_BLOCK = BlockTags.createOptional(Reference.block("raw_nickel"));
+    public static final Tag.Named<Block> RAW_URANIUM_BLOCK = BlockTags.createOptional(Reference.block("raw_uranium"));
+    public static final Tag.Named<Block> RAW_OSMIUM_BLOCK = BlockTags.createOptional(Reference.block("raw_osmium"));
+    public static final Tag.Named<Block> RAW_ZINC_BLOCK = BlockTags.createOptional(Reference.block("raw_zinc"));
+    public static final Tag.Named<Block> RAW_TIN_BLOCK = BlockTags.createOptional(Reference.block("raw_tin"));
+
+    public static final Tag.Named<Item> RAW_LEAD_BLOCK_ITEM = ItemTags.createOptional(Reference.block("raw_lead"));
+    public static final Tag.Named<Item> RAW_SILVER_BLOCK_ITEM = ItemTags.createOptional(Reference.block("raw_silver"));
+    public static final Tag.Named<Item> RAW_PLATINUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("raw_platinum"));
+    public static final Tag.Named<Item> RAW_ALUMINUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("raw_aluminum"));
+    public static final Tag.Named<Item> RAW_NICKEL_BLOCK_ITEM = ItemTags.createOptional(Reference.block("raw_nickel"));
+    public static final Tag.Named<Item> RAW_URANIUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("raw_uranium"));
+    public static final Tag.Named<Item> RAW_OSMIUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("raw_osmium"));
+    public static final Tag.Named<Item> RAW_ZINC_BLOCK_ITEM = ItemTags.createOptional(Reference.block("raw_zinc"));
+    public static final Tag.Named<Item> RAW_TIN_BLOCK_ITEM = ItemTags.createOptional(Reference.block("raw_tin"));
+
+
     public static final Tag.Named<Item> LEAD_BLOCK_ITEM = ItemTags.createOptional(Reference.block("lead"));
     public static final Tag.Named<Item> COPPER_BLOCK_ITEM = ItemTags.createOptional(Reference.block("copper"));
     public static final Tag.Named<Item> SILVER_BLOCK_ITEM = ItemTags.createOptional(Reference.block("silver"));
@@ -121,6 +142,17 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> OSMIUM_ORE_ITEM = ItemTags.createOptional(Reference.ore("osmium"));
     public static final Tag.Named<Item> ZINC_ORE_ITEM = ItemTags.createOptional(Reference.ore("zinc"));
     public static final Tag.Named<Item> TIN_ORE_ITEM = ItemTags.createOptional(Reference.ore("tin"));
+
+    public static final Tag.Named<Item> RAW_LEAD = ItemTags.createOptional(Reference.raw("raw_lead"));
+    public static final Tag.Named<Item> RAW_SILVER = ItemTags.createOptional(Reference.raw("raw_silver"));
+    public static final Tag.Named<Item> RAW_PLATINUM = ItemTags.createOptional(Reference.raw("raw_platinum"));
+    public static final Tag.Named<Item> RAW_ALUMINUM = ItemTags.createOptional(Reference.raw("raw_aluminum"));
+    public static final Tag.Named<Item> RAW_NICKEL = ItemTags.createOptional(Reference.raw("raw_nickel"));
+    public static final Tag.Named<Item> RAW_URANIUM = ItemTags.createOptional(Reference.raw("raw_uranium"));
+    public static final Tag.Named<Item> RAW_OSMIUM = ItemTags.createOptional(Reference.raw("raw_osmium"));
+    public static final Tag.Named<Item> RAW_ZINC = ItemTags.createOptional(Reference.raw("raw_zinc"));
+    public static final Tag.Named<Item> RAW_TIN = ItemTags.createOptional(Reference.raw("raw_tin"));
+
 
     private static Tags.IOptionalNamedTag<Item> forge(String name)
     {

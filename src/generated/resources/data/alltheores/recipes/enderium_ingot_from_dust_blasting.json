@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "alltheores:enderium_dust"
+  },
+  "result": "alltheores:enderium_ingot",
+  "experience": 0.15,
+  "cookingtime": 100
+}

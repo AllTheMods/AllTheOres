@@ -51,6 +51,16 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.SIGNALUM_NUGGET).add(BlockList.SIGNALUM_NUGGET.get());
         tag(ItemTagRegistry.STEEL_NUGGET).add(BlockList.STEEL_NUGGET.get());
 
+        tag(ItemTagRegistry.RAW_ALUMINUM_BLOCK_ITEM).add(BlockList.RAW_ALUMINUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.RAW_LEAD_BLOCK_ITEM).add(BlockList.RAW_LEAD_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.RAW_OSMIUM_BLOCK_ITEM).add(BlockList.RAW_OSMIUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.RAW_NICKEL_BLOCK_ITEM).add(BlockList.RAW_NICKEL_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.RAW_PLATINUM_BLOCK_ITEM).add(BlockList.RAW_PLATINUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.RAW_SILVER_BLOCK_ITEM).add(BlockList.RAW_SILVER_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.RAW_TIN_BLOCK_ITEM).add(BlockList.RAW_TIN_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.RAW_URANIUM_BLOCK_ITEM).add(BlockList.RAW_URANIUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.RAW_ZINC_BLOCK_ITEM).add(BlockList.RAW_ZINC_BLOCK_ITEM.get());
+
         tag(ItemTagRegistry.ALUMINUM_BLOCK_ITEM).add(BlockList.ALUMINUM_BLOCK_ITEM.get());
         tag(ItemTagRegistry.LEAD_BLOCK_ITEM).add(BlockList.LEAD_BLOCK_ITEM.get());
         tag(ItemTagRegistry.OSMIUM_BLOCK_ITEM).add(BlockList.OSMIUM_BLOCK_ITEM.get());
@@ -89,5 +99,14 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.URANIUM_ORE_ITEM).add(BlockList.URANIUM_ORE_ITEM.get());
         tag(ItemTagRegistry.ZINC_ORE_ITEM).add(BlockList.ZINC_ORE_ITEM.get());
 
+        tag(ItemTagRegistry.RAW_ALUMINUM).add(BlockList.ALUMINUM_RAW.get());
+        tag(ItemTagRegistry.RAW_LEAD).add(BlockList.LEAD_RAW.get());
+        tag(ItemTagRegistry.RAW_NICKEL).add(BlockList.NICKEL_RAW.get());
+        tag(ItemTagRegistry.RAW_OSMIUM).add(BlockList.OSMIUM_RAW.get());
+        tag(ItemTagRegistry.RAW_PLATINUM).add(BlockList.PLATINUM_RAW.get());
+        tag(ItemTagRegistry.RAW_SILVER).add(BlockList.SILVER_RAW.get());
+        tag(ItemTagRegistry.RAW_TIN).add(BlockList.TIN_RAW.get());
+        tag(ItemTagRegistry.RAW_URANIUM).add(BlockList.URANIUM_RAW.get());
+        tag(ItemTagRegistry.RAW_ZINC).add(BlockList.ZINC_RAW.get());
     }
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "alltheores:signalum_dust"
+  },
+  "result": "alltheores:signalum_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}

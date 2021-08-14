@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraftforge.common.ToolType;
+
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.common.util.FakePlayerFactory;
 import net.minecraftforge.server.permission.context.PlayerContext;
@@ -33,35 +33,11 @@ public class OtherOreBlock extends Block {
     }
 
     @Override
-    public ToolType getHarvestTool(BlockState state) {
-        return ToolType.PICKAXE;
-    }
-
-    @Override
     public PushReaction getPistonPushReaction(BlockState state) {
 
         return PushReaction.BLOCK;
     }
 
-    @Override
-    public int getHarvestLevel(BlockState state) {
-        if (state.getBlock() == BlockList.OTHER_PLATINUM_ORE.get()) {
-            return 7;
-        }
-        if (state.getBlock() == BlockList.OTHER_URANIUM_ORE.get()) {
-            return 7;
-        }
-        if (state.getBlock() == BlockList.OTHER_REDSTONE_ORE.get()) {
-            return 7;
-        }
-        if (state.getBlock() == BlockList.OTHER_LAPIS_ORE.get()) {
-            return 7;
-        }
-        if (state.getBlock() == BlockList.OTHER_DIAMOND_ORE.get()) {
-            return 7;
-        }
-        return 6;
-    }
 /*
     @Deprecated
     @Override

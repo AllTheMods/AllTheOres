@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "alltheores:bronze_dust"
+  },
+  "result": "alltheores:bronze_ingot",
+  "experience": 0.15,
+  "cookingtime": 100
+}

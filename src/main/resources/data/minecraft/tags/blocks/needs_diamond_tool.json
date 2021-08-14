@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:raw_platinum_block",
+    "alltheores:raw_uranium_block",
+    "alltheores:platinum_slate_ore",
+    "alltheores:uranium_slate_ore",
+    "alltheores:platinum_ore",
+    "alltheores:uranium_ore"
+  ]
+}

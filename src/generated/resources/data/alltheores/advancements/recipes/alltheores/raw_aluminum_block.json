@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:raw_aluminum_block"
+    ]
+  },
+  "criteria": {
+    "has_raw_raw_aluminum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:raw_ores/raw_aluminum"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:raw_aluminum_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_raw_aluminum",
+      "has_the_recipe"
+    ]
+  ]
+}

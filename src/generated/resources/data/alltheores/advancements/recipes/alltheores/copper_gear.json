@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:copper_gear"
+    ]
+  },
+  "criteria": {
+    "has_ingots/copper_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/copper"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:copper_gear"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ingots/copper_ingot",
+      "has_the_recipe"
+    ]
+  ]
+}

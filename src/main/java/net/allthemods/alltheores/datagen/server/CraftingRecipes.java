@@ -3,12 +3,14 @@ package net.allthemods.alltheores.datagen.server;
 import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.datagen.builder.ShapedBlockBuilder;
 import net.allthemods.alltheores.datagen.builder.ShapedIngotBuilder;
+import net.allthemods.alltheores.datagen.builder.ShapedRawBuilder;
 import net.allthemods.alltheores.infos.ItemTagRegistry;
 import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.data.*;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.Tags;
 
@@ -39,12 +41,64 @@ public class CraftingRecipes extends RecipeProvider {
 */
         final String hasCondition = "has_item";
 
+        shaped(BlockList.ORE_HAMMER.get())
+                .pattern(" gt")
+                .pattern(" tg")
+                .pattern("t  ")
+                .define('g', BlockList.IRON_PLATE.get())
+                .define('t', BlockList.IRON_ROD.get())
+                .unlockedBy("has_iron_rod", has(BlockList.IRON_ROD.get()))
+                .save(consumer);
+
+        ShapedRawBuilder.builder(ItemTagRegistry.RAW_ALUMINUM)
+                .setRaw(BlockList.RAW_ALUMINUM_BLOCK_ITEM)
+                .build(consumer);
+
+        ShapedRawBuilder.builder(ItemTagRegistry.RAW_LEAD)
+                .setRaw(BlockList.RAW_LEAD_BLOCK_ITEM)
+                .build(consumer);
+
+        ShapedRawBuilder.builder(ItemTagRegistry.RAW_NICKEL)
+                .setRaw(BlockList.RAW_NICKEL_BLOCK_ITEM)
+                .build(consumer);
+
+        ShapedRawBuilder.builder(ItemTagRegistry.RAW_OSMIUM)
+                .setRaw(BlockList.RAW_OSMIUM_BLOCK_ITEM)
+                .build(consumer);
+
+        ShapedRawBuilder.builder(ItemTagRegistry.RAW_PLATINUM)
+                .setRaw(BlockList.RAW_PLATINUM_BLOCK_ITEM)
+                .build(consumer);
+
+        ShapedRawBuilder.builder(ItemTagRegistry.RAW_SILVER)
+                .setRaw(BlockList.RAW_SILVER_BLOCK_ITEM)
+                .build(consumer);
+
+        ShapedRawBuilder.builder(ItemTagRegistry.RAW_TIN)
+                .setRaw(BlockList.RAW_TIN_BLOCK_ITEM)
+                .build(consumer);
+
+        ShapedRawBuilder.builder(ItemTagRegistry.RAW_URANIUM)
+                .setRaw(BlockList.RAW_URANIUM_BLOCK_ITEM)
+                .build(consumer);
+
+        ShapedRawBuilder.builder(ItemTagRegistry.RAW_ZINC)
+                .setRaw(BlockList.RAW_ZINC_BLOCK_ITEM)
+                .build(consumer);
+
+        ShapedBlockBuilder.builder(ItemTagRegistry.COPPER_INGOT)
+                .setGear(BlockList.COPPER_GEAR)
+                .setPlate(BlockList.COPPER_PLATE)
+                .setRod(BlockList.COPPER_ROD)
+                .build(consumer);
+
         ShapedBlockBuilder.builder(ItemTagRegistry.ALUMINUM_INGOT)
                 .setBlock(BlockList.ALUMINUM_BLOCK_ITEM)
                 .setGear(BlockList.ALUMINUM_GEAR)
                 .setPlate(BlockList.ALUMINUM_PLATE)
                 .setRod(BlockList.ALUMINUM_ROD)
                 .build(consumer);
+
         ShapedBlockBuilder.builder(ItemTagRegistry.LEAD_INGOT)
                 .setBlock(BlockList.LEAD_BLOCK_ITEM)
                 .setGear(BlockList.LEAD_GEAR)

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "alltheores:platinum_ore"
+    "alltheores:platinum_ore",
+    "alltheores:platinum_slate_ore"
   ]
 }

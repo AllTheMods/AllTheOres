@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "alltheores:ore_hammer"
+    },
+    {
+      "tag": "forge:raw_ores/raw_aluminum"
+    }
+  ],
+  "result": {
+    "item": "alltheores:aluminum_dust",
+    "count": 2
+  }
+}

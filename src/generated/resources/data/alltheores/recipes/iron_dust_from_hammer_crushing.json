@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "alltheores:ore_hammer"
+    },
+    {
+      "item": "minecraft:raw_iron"
+    }
+  ],
+  "result": {
+    "item": "alltheores:iron_dust",
+    "count": 2
+  }
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "alltheores:osmium_ore"
+    "alltheores:osmium_ore",
+    "alltheores:osmium_slate_ore"
   ]
 }

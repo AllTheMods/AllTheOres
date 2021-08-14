@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "alltheores:aluminum_ore"
+    "alltheores:aluminum_ore",
+    "alltheores:aluminum_slate_ore"
   ]
 }

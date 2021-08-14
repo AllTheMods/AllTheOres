@@ -1,6 +1,7 @@
 package net.allthemods.alltheores.blocks;
 
 import net.allthemods.alltheores.infos.Reference;
+import net.allthemods.alltheores.items.OreHammer;
 import net.allthemods.alltheores.meka.Clump;
 import net.allthemods.alltheores.meka.Crystal;
 import net.allthemods.alltheores.meka.DirtyDust;
@@ -283,7 +284,9 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 
 
 
+	// ********************* MISC STUFF
 
+	public static final RegistryObject<Item> ORE_HAMMER = ITEMS.register("ore_hammer", () -> new OreHammer(new Item.Properties().tab(Reference.GROUP)));
 
 
 	// ********************** MEK PROCESSING

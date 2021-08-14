@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "alltheores",
+  "pattern": [
+    " gt",
+    " tg",
+    "t  "
+  ],
+  "key": {
+    "g": {
+      "item": "alltheores:iron_plate"
+    },
+    "t": {
+      "item": "alltheores:iron_rod"
+    }
+  },
+  "result": {
+    "item": "alltheores:ore_hammer"
+  }
+}

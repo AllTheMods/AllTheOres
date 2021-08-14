@@ -39,8 +39,7 @@ public class ATOConfiguredFeature {
 
 	public static ConfiguredFeature<?, ?> newConfiguredFeature(String registryName,
 			ConfiguredFeature<?, ?> configuredFeature) {
-
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(Reference.MOD_ID, registryName),
+				Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(Reference.MOD_ID, registryName),
 				configuredFeature);
 
 		return configuredFeature;

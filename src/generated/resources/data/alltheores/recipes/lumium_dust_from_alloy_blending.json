@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "tag": "forge:dusts/silver"
+    },
+    {
+      "item": "alltheores:tin_dust"
+    },
+    {
+      "item": "alltheores:tin_dust"
+    },
+    {
+      "item": "alltheores:tin_dust"
+    }
+  ],
+  "result": {
+    "item": "alltheores:lumium_dust",
+    "count": 4
+  }
+}

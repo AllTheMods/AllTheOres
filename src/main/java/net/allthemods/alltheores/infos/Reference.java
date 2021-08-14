@@ -37,4 +37,7 @@ public class Reference {
 	public static ResourceLocation block(String path) {
 		return forge("storage_blocks/" + path);
 	}
+	public static ResourceLocation raw(String path) {
+		return forge("raw_ores/" + path);
+	}
 }
