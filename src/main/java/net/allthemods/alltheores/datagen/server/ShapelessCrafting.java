@@ -25,6 +25,21 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
 
         final String hasCondition = "has_item";
 
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.INVAR_DUST.get(),3)
+                .requires(BlockList.IRON_DUST.get(),2)
+                .requires(ItemTagRegistry.NICKEL_DUST)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("invar_dust","alloy_blending"));
+
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.STEEL_DUST.get(),1)
+                .requires(BlockList.IRON_DUST.get(),1)
+                .requires(Items.COAL,4)
+                .requires(BlockList.ORE_HAMMER.get())
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ORE_HAMMER.get()))
+                .save(consumer,recipeDir("steel_dust","alloy_blending"));
 
         ShapelessRecipeBuilder
                 .shapeless(BlockList.ELECTRUM_DUST.get(),2)

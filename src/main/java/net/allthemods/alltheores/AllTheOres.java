@@ -41,6 +41,8 @@ public class AllTheOres {
 		setupLogFilter();
 	}
 	private void setupBlackList() {
+		Reference.WORLDGEN_BLACKLIST.add(Blocks.DIRT);
+		Reference.WORLDGEN_BLACKLIST.add(Blocks.GRASS_BLOCK);
 		Reference.WORLDGEN_BLACKLIST.add(Blocks.VOID_AIR);
 		Reference.WORLDGEN_BLACKLIST.add(Blocks.WATER);
 		Reference.WORLDGEN_BLACKLIST.add(Blocks.BEDROCK);

@@ -35,6 +35,16 @@ public class SmeltingRecipes extends RecipeProvider {
                 .save(consumer,recipeDir("constantan_ingot","dust"));
 
         SimpleCookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.INVAR_DUST.get()),BlockList.INVAR_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.INVAR_DUST.get()))
+                .save(consumer,recipeDir("invar_ingot","dust"));
+
+        SimpleCookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.STEEL_DUST.get()),BlockList.STEEL_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.STEEL_DUST.get()))
+                .save(consumer,recipeDir("steel_ingot","dust"));
+
+        SimpleCookingRecipeBuilder
                 .smelting(Ingredient.of(BlockList.LUMIUM_DUST.get()),BlockList.LUMIUM_INGOT.get(),0.15f,200)
                 .unlockedBy(hasCondition,RecipeProvider.has(BlockList.LUMIUM_DUST.get()))
                 .save(consumer,recipeDir("lumium_ingot","dust"));

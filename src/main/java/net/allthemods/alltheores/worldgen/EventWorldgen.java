@@ -21,38 +21,47 @@ public class EventWorldgen {
             if (Configuration.COMMON.aluminumGen.get()) {
                 AllTheOres.LOGGER.info("Aluminum feature added to: " + event.getName());
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_ALUMINUM);
+
             }
             if (Configuration.COMMON.leadGen.get()) {
                 AllTheOres.LOGGER.info("Lead feature added to: " + event.getName());
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_LEAD);
+
             }
             if (Configuration.COMMON.nickelGen.get()) {
                 AllTheOres.LOGGER.info("Nickel feature added to: " + event.getName());
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_NICKEL);
+
             }
             if (Configuration.COMMON.osmiumGen.get()) {
                 AllTheOres.LOGGER.info("Osmium feature added to: " + event.getName());
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_OSMIUM);
+
             }
             if (Configuration.COMMON.platinumGen.get()) {
                 AllTheOres.LOGGER.info("Platinum feature added to: " + event.getName());
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_PLATINUM);
+
             }
             if (Configuration.COMMON.silverGen.get()) {
                 AllTheOres.LOGGER.info("Silver feature added to: " + event.getName());
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_SILVER);
+
             }
             if (Configuration.COMMON.tinGen.get()) {
                 AllTheOres.LOGGER.info("Tin feature added to: " + event.getName());
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_TIN);
+
             }
             if (Configuration.COMMON.uraniumGen.get()) {
                 AllTheOres.LOGGER.info("Uranium feature added to: " + event.getName());
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_URANIUM);
+
             }
             if (Configuration.COMMON.zincGen.get()) {
                 AllTheOres.LOGGER.info("Zinc feature added to: " + event.getName());
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_ZINC);
+
             }
             //VANILLA+ Featureset
             ResourceLocation biome = event.getName();

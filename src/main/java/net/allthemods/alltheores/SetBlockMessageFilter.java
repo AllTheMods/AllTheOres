@@ -22,6 +22,9 @@ public class SetBlockMessageFilter extends AbstractFilter {
         var message = event.getMessage();
         if (StringUtils.startsWith(message.getFormat(), "Detected setBlock in a far chunk")) {
             return Result.DENY;
+        }
+        if (StringUtils.startsWith(message.getFormat(), "Empty height range:")) {
+            return Result.DENY;
         } else {
             return Result.NEUTRAL;
         }

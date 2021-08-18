@@ -25,6 +25,16 @@ public class BlastingRecipes extends RecipeProvider {
         final String hasCondition = "has_item";
 
         SimpleCookingRecipeBuilder
+                .blasting(Ingredient.of(BlockList.INVAR_DUST.get()),BlockList.INVAR_INGOT.get(),0.15f,100)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.INVAR_DUST.get()))
+                .save(consumer,recipeDir("invar_ingot","dust"));
+
+        SimpleCookingRecipeBuilder
+                .blasting(Ingredient.of(BlockList.STEEL_DUST.get()),BlockList.STEEL_INGOT.get(),0.15f,100)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.STEEL_DUST.get()))
+                .save(consumer,recipeDir("steel_ingot","dust"));
+
+        SimpleCookingRecipeBuilder
                 .blasting(Ingredient.of(BlockList.BRONZE_DUST.get()),BlockList.BRONZE_INGOT.get(),0.15f,100)
                 .unlockedBy(hasCondition,RecipeProvider.has(BlockList.BRONZE_DUST.get()))
                 .save(consumer,recipeDir("bronze_ingot","dust"));

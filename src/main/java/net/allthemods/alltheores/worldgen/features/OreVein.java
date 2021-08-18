@@ -142,6 +142,7 @@ private int process(WorldGenLevel world,BlockPos pos, int veinSize, int directio
                     if (Reference.WORLDGEN_BLACKLIST.contains(state.getBlock())) {
                         break;
                     }
+
                     world.setBlock(pos.above(), pos.above().getY() > 16 ? this.oreType.defaultBlockState() : this.deepSlate_oreType.defaultBlockState(), 2, 512);
                     processed++;
                     if (processed == veinSize) {

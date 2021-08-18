@@ -304,6 +304,8 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Item> ENDERIUM_DUST = ITEMS.register("enderium_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> LUMIUM_DUST = ITEMS.register("lumium_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> SIGNALUM_DUST = ITEMS.register("signalum_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> STEEL_DUST = ITEMS.register("steel_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> INVAR_DUST = ITEMS.register("invar_dust",() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	//  ***********************DIRTY DUSTS
 	public static final RegistryObject<Item> ALUM_DIRTY = ITEMS.register("dirty_aluminum_dust", () -> new DirtyDust(new Item.Properties().tab(Reference.GROUP)));

@@ -191,73 +191,73 @@ public class Configuration {
 			BUILDER.push("spawntuning");
 
 			BUILDER.push("aluminum");
-			aluminum_MinY = BUILDER.comment("Aluminum bottom Y level for spawn").defineInRange("aluminum_min_y",
-					-60, -64, 320);
-			aluminum_MaxY = BUILDER.comment("Aluminum top Y level for spawn").defineInRange("aluminum_max_y", 80,
-					-64, 320);
+			aluminum_MinY = BUILDER.comment("Aluminum generates no lower than X blocks above world BOTTOM").defineInRange("aluminum_min_y",
+					50, -64, 320);
+			aluminum_MaxY = BUILDER.comment("Aluminum generates no higher than X blocks above world BOTTOM").defineInRange("aluminum_max_y", 120,
+					0, 320);
 			aluminum_SpawnSize = BUILDER.comment("Aluminum deposit size(number of ores)").defineInRange("aluminum_deposit_size",
 					7, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("zinc");
 
-			zinc_MinY = BUILDER.comment("Zinc bottom Y level for spawn").defineInRange("zinc_min_y", -5, -64, 320);
-			zinc_MaxY = BUILDER.comment("Zinc top Y level for spawn").defineInRange("zinc_max_y", 60, -64, 320);
+			zinc_MinY = BUILDER.comment("Zinc generates no lower than X blocks above world BOTTOM").defineInRange("zinc_min_y", 5, -64, 320);
+			zinc_MaxY = BUILDER.comment("Zinc generates no higher than X blocks above world BOTTOM").defineInRange("zinc_max_y", 100, 0, 320);
 			zinc_SpawnSize = BUILDER.comment("Zinc deposit size(number of ores)").defineInRange("zinc_deposit_size", 7, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("lead");
-			lead_MinY = BUILDER.comment("Lead bottom Y level for spawn").defineInRange("lead_min_y", -60, -64, 320);
-			lead_MaxY = BUILDER.comment("Lead top Y level for spawn").defineInRange("lead_max_y", 10, -64, 320);
+			lead_MinY = BUILDER.comment("Lead generates no lower than X blocks above world BOTTOM").defineInRange("lead_min_y", 5, -64, 320);
+			lead_MaxY = BUILDER.comment("Lead generates no higher than X blocks above world BOTTOM").defineInRange("lead_max_y", 95, 0, 320);
 			lead_SpawnSize = BUILDER.comment("Lead deposit size(number of ores)").defineInRange("lead_deposit_size", 7, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("nickel");
-			nickel_MinY = BUILDER.comment("Nickel bottom Y level for spawn").defineInRange("nickel_min_y", -60, -64,
+			nickel_MinY = BUILDER.comment("Nickel generates no lower than X blocks above world BOTTOM").defineInRange("nickel_min_y", 1, -64,
 					320);
-			nickel_MaxY = BUILDER.comment("Nickel top Y level for spawn").defineInRange("nickel_max_y", 25, -64,
+			nickel_MaxY = BUILDER.comment("Nickel generates no higher than X blocks above world BOTTOM").defineInRange("nickel_max_y", 85, 0,
 					320);
 			nickel_SpawnSize = BUILDER.comment("Nickel deposit size(number of ores)").defineInRange("nickel_deposit_size", 7, 1,
 					64);
 			BUILDER.pop();
 
 			BUILDER.push("osmium");
-			osmium_MinY = BUILDER.comment("Osmium bottom Y level for spawn").defineInRange("osmium_min_y", -60, -64,
+			osmium_MinY = BUILDER.comment("Osmium generates no lower than X blocks above world BOTTOM").defineInRange("osmium_min_y", 10, -64,
 					320);
-			osmium_MaxY = BUILDER.comment("Osmium top Y level for spawn").defineInRange("osmium_max_y", 40, -64,
+			osmium_MaxY = BUILDER.comment("Osmium generates no higher than X blocks above world BOTTOM").defineInRange("osmium_max_y", 100, 0,
 					320);
 			osmium_SpawnSize = BUILDER.comment("Osmium deposit size(number of ores)").defineInRange("osmium_deposit_size", 7, 1,
 					64);
 			BUILDER.pop();
 
 			BUILDER.push("platinum");
-			platinum_MinY = BUILDER.comment("Platinum bottom Y level for spawn").defineInRange("platinum_min_y",
-					-63, -64, 320);
-			platinum_MaxY = BUILDER.comment("Platinum top Y level for spawn").defineInRange("platinum_max_y", 25,
-					-64, 320);
+			platinum_MinY = BUILDER.comment("Platinum generates no lower than X blocks above world BOTTOM").defineInRange("platinum_min_y",
+					1, -64, 320);
+			platinum_MaxY = BUILDER.comment("Platinum generates no higher than X blocks above world BOTTOM").defineInRange("platinum_max_y", 70,
+					0, 320);
 			platinum_SpawnSize = BUILDER.comment("Platinum deposit size(number of ores)").defineInRange("platinum_deposit_size",
 					3, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("silver");
-			silver_MinY = BUILDER.comment("Silver bottom Y level for spawn").defineInRange("silver_min_y", -60, -64,
+			silver_MinY = BUILDER.comment("Silver generates no lower than X blocks above world BOTTOM").defineInRange("silver_min_y", 50, -64,
 					320);
-			silver_MaxY = BUILDER.comment("Silver top Y level for spawn").defineInRange("silver_max_y", 45, -64,
+			silver_MaxY = BUILDER.comment("Silver generates no higher than X blocks above world BOTTOM").defineInRange("silver_max_y", 120, 0,
 					320);
 			silver_SpawnSize = BUILDER.comment("Silver deposit size(number of ores)").defineInRange("silver_deposit_size", 5, 1,
 					64);
 			BUILDER.pop();
 
 			BUILDER.push("tin");
-			tin_MinY = BUILDER.comment("Tin bottom Y level for spawn").defineInRange("tin_min_y", -50, -64, 320);
-			tin_MaxY = BUILDER.comment("Tin top Y level for spawn").defineInRange("tin_max_y", 80, -64, 320);
+			tin_MinY = BUILDER.comment("Tin generates no lower than X blocks above world BOTTOM").defineInRange("tin_min_y", 55, -64, 320);
+			tin_MaxY = BUILDER.comment("Tin generates no higher than X blocks above world BOTTOM").defineInRange("tin_max_y", 180, 0, 320);
 			tin_SpawnSize = BUILDER.comment("Tin deposit size(number of ores)").defineInRange("tin_deposit_size", 7, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("uranium");
-			uranium_MinY = BUILDER.comment("Uranium bottom Y level for spawn").defineInRange("uranium_min_y", -63,
+			uranium_MinY = BUILDER.comment("Uranium generates no lower than X blocks above world BOTTOM").defineInRange("uranium_min_y", 1,
 					-64, 320);
-			uranium_MaxY = BUILDER.comment("Uranium top Y level for spawn").defineInRange("uranium_max_y", 0, -64,
+			uranium_MaxY = BUILDER.comment("Uranium generates no higher than X blocks above world BOTTOM").defineInRange("uranium_max_y", 70, 0,
 					320);
 			uranium_SpawnSize = BUILDER.comment("Uranium deposit size(number of ores)").defineInRange("uranium_deposit_size", 4,
 					1, 64);
