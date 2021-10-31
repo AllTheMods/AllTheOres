@@ -13,6 +13,7 @@ public class ItemTagRegistry {
     private ItemTagRegistry() {
     }
 
+    public static final Tag.Named<Item> ORE_HAMMERS = ItemTags.createOptional(Reference.ato("ore_hammers"));
     public static final Tag.Named<Item> LEAD_INGOT = ItemTags.createOptional(Reference.ingot("lead"));
     public static final Tag.Named<Item> COPPER_INGOT = ItemTags.createOptional(Reference.ingot("copper"));
     public static final Tag.Named<Item> SILVER_INGOT = ItemTags.createOptional(Reference.ingot("silver"));
@@ -110,8 +111,78 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> SIGNALUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("signalum"));
     public static final Tag.Named<Item> STEEL_BLOCK_ITEM = ItemTags.createOptional(Reference.block("steel"));
 
+    // RODS
+
+    public static final Tag.Named<Item> ALUMINUM_ROD = forge("rods/aluminum");
+    public static final Tag.Named<Item> COPPER_ROD = forge("rods/copper");
+    public static final Tag.Named<Item> LEAD_ROD = forge("rods/lead");
+    public static final Tag.Named<Item> NICKEL_ROD = forge("rods/nickel");
+    public static final Tag.Named<Item> OSMIUM_ROD = forge("rods/osmium");
+    public static final Tag.Named<Item> PLATINUM_ROD = forge("rods/platinum");
+    public static final Tag.Named<Item> SILVER_ROD = forge("rods/silver");
+    public static final Tag.Named<Item> TIN_ROD = forge("rods/tin");
+    public static final Tag.Named<Item> URANIUM_ROD = forge("rods/uranium");
+    public static final Tag.Named<Item> ZINC_ROD = forge("rods/zinc");
+    public static final Tag.Named<Item> BRONZE_ROD = forge("rods/bronze");
+    public static final Tag.Named<Item> CONSTANTAN_ROD = forge("rods/constantan");
+    public static final Tag.Named<Item> ELECTRUM_ROD = forge("rods/electrum");
+    public static final Tag.Named<Item> ENDERIUM_ROD = forge("rods/enderium");
+    public static final Tag.Named<Item> INVAR_ROD = forge("rods/invar");
+    public static final Tag.Named<Item> LUMIUM_ROD = forge("rods/lumium");
+    public static final Tag.Named<Item> SIGNALUM_ROD = forge("rods/signalum");
+    public static final Tag.Named<Item> STEEL_ROD = forge("rods/steel");
+    public static final Tag.Named<Item> IRON_ROD = forge("rods/iron");
+    public static final Tag.Named<Item> GOLD_ROD = forge("rods/gold");
+    public static final Tag.Named<Item> DIAMOND_ROD = forge("rods/diamond");
+    // GEARS
+
+    public static final Tag.Named<Item> ALUMINUM_GEAR = forge("gears/aluminum");
+    public static final Tag.Named<Item> COPPER_GEAR = forge("gears/copper");
+    public static final Tag.Named<Item> LEAD_GEAR = forge("gears/lead");
+    public static final Tag.Named<Item> NICKEL_GEAR = forge("gears/nickel");
+    public static final Tag.Named<Item> OSMIUM_GEAR = forge("gears/osmium");
+    public static final Tag.Named<Item> PLATINUM_GEAR = forge("gears/platinum");
+    public static final Tag.Named<Item> SILVER_GEAR = forge("gears/silver");
+    public static final Tag.Named<Item> TIN_GEAR = forge("gears/tin");
+    public static final Tag.Named<Item> URANIUM_GEAR = forge("gears/uranium");
+    public static final Tag.Named<Item> ZINC_GEAR = forge("gears/zinc");
+    public static final Tag.Named<Item> BRONZE_GEAR = forge("gears/bronze");
+    public static final Tag.Named<Item> CONSTANTAN_GEAR = forge("gears/constantan");
+    public static final Tag.Named<Item> ELECTRUM_GEAR = forge("gears/electrum");
+    public static final Tag.Named<Item> ENDERIUM_GEAR = forge("gears/enderium");
+    public static final Tag.Named<Item> INVAR_GEAR = forge("gears/invar");
+    public static final Tag.Named<Item> LUMIUM_GEAR = forge("gears/lumium");
+    public static final Tag.Named<Item> SIGNALUM_GEAR = forge("gears/signalum");
+    public static final Tag.Named<Item> STEEL_GEAR = forge("gears/steel");
+    public static final Tag.Named<Item> IRON_GEAR = forge("gears/iron");
+    public static final Tag.Named<Item> GOLD_GEAR = forge("gears/gold");
+    public static final Tag.Named<Item> DIAMOND_GEAR = forge("gears/diamond");
+    // PLATES
+
+    public static final Tag.Named<Item> ALUMINUM_PLATE = forge("plates/aluminum");
+    public static final Tag.Named<Item> COPPER_PLATE = forge("plates/copper");
+    public static final Tag.Named<Item> LEAD_PLATE = forge("plates/lead");
+    public static final Tag.Named<Item> NICKEL_PLATE = forge("plates/nickel");
+    public static final Tag.Named<Item> OSMIUM_PLATE = forge("plates/osmium");
+    public static final Tag.Named<Item> PLATINUM_PLATE = forge("plates/platinum");
+    public static final Tag.Named<Item> SILVER_PLATE = forge("plates/silver");
+    public static final Tag.Named<Item> TIN_PLATE = forge("plates/tin");
+    public static final Tag.Named<Item> URANIUM_PLATE = forge("plates/uranium");
+    public static final Tag.Named<Item> ZINC_PLATE = forge("plates/zinc");
+    public static final Tag.Named<Item> BRONZE_PLATE = forge("plates/bronze");
+    public static final Tag.Named<Item> CONSTANTAN_PLATE = forge("plates/constantan");
+    public static final Tag.Named<Item> ELECTRUM_PLATE = forge("plates/electrum");
+    public static final Tag.Named<Item> ENDERIUM_PLATE = forge("plates/enderium");
+    public static final Tag.Named<Item> INVAR_PLATE = forge("plates/invar");
+    public static final Tag.Named<Item> LUMIUM_PLATE = forge("plates/lumium");
+    public static final Tag.Named<Item> SIGNALUM_PLATE = forge("plates/signalum");
+    public static final Tag.Named<Item> STEEL_PLATE = forge("plates/steel");
+    public static final Tag.Named<Item> IRON_PLATE = forge("plates/iron");
+    public static final Tag.Named<Item> GOLD_PLATE = forge("plates/gold");
+    public static final Tag.Named<Item> DIAMOND_PLATE = forge("plates/diamond");
     // DUST
     public static final Tag.Named<Item> PLATINUM_DUST = forge("dusts/platinum");
+    public static final Tag.Named<Item> COPPER_DUST = forge("dusts/copper");
     public static final Tag.Named<Item> ALUMINUM_DUST = forge("dusts/aluminum");
     public static final Tag.Named<Item> URANIUM_DUST = forge("dusts/uranium");
     public static final Tag.Named<Item> NICKEL_DUST = forge("dusts/nickel");
@@ -120,6 +191,17 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> ZINC_DUST = forge("dusts/zinc");
     public static final Tag.Named<Item> LEAD_DUST = forge("dusts/lead");
     public static final Tag.Named<Item> TIN_DUST = forge("dusts/tin");
+    public static final Tag.Named<Item> BRONZE_DUST = forge("dusts/bronze");
+    public static final Tag.Named<Item> CONSTANTAN_DUST = forge("dusts/constantan");
+    public static final Tag.Named<Item> ELECTRUM_DUST = forge("dusts/electrum");
+    public static final Tag.Named<Item> ENDERIUM_DUST = forge("dusts/enderium");
+    public static final Tag.Named<Item> INVAR_DUST = forge("dusts/invar");
+    public static final Tag.Named<Item> LUMIUM_DUST = forge("dusts/lumium");
+    public static final Tag.Named<Item> SIGNALUM_DUST = forge("dusts/signalum");
+    public static final Tag.Named<Item> STEEL_DUST = forge("dusts/steel");
+    public static final Tag.Named<Item> IRON_DUST = forge("dusts/iron");
+    public static final Tag.Named<Item> GOLD_DUST = forge("dusts/gold");
+    public static final Tag.Named<Item> DIAMOND_DUST = forge("dusts/diamond");
     //ORE
 
 

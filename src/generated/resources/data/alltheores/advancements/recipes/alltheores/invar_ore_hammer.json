@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:invar_ore_hammer"
+    ]
+  },
+  "criteria": {
+    "has_invar_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "alltheores:invar_block"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:invar_ore_hammer"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_invar_block",
+      "has_the_recipe"
+    ]
+  ]
+}

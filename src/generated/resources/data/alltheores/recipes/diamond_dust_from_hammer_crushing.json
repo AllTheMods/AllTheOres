@@ -5,7 +5,7 @@
       "item": "minecraft:diamond"
     },
     {
-      "item": "alltheores:ore_hammer"
+      "tag": "alltheores:ore_hammers"
     }
   ],
   "result": {

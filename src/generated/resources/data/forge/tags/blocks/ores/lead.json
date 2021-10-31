@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "alltheores:lead_ore",
-    "alltheores:lead_slate_ore"
+    "alltheores:lead_slate_ore",
+    "alltheores:lead_nether_ore",
+    "alltheores:lead_end_ore"
   ]
 }

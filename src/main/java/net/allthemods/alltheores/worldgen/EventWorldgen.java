@@ -16,55 +16,125 @@ import net.minecraftforge.fml.common.Mod;
 public class EventWorldgen {
 
     public static void biomeLoadingEvent(BiomeLoadingEvent event) {
-        if ((event.getCategory() != Biome.BiomeCategory.NETHER) && (event.getCategory() != Biome.BiomeCategory.THEEND)
-                && (event.getCategory() != Biome.BiomeCategory.NONE)) {
-            if (Configuration.COMMON.aluminumGen.get()) {
-                AllTheOres.LOGGER.info("Aluminum feature added to: " + event.getName());
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_ALUMINUM);
+        if (event.getCategory() != Biome.BiomeCategory.NONE) {
+            if (event.getCategory() == Biome.BiomeCategory.NETHER) {
+                if (Configuration.COMMON.aluminumNetherGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_ALUMINUM);
 
-            }
-            if (Configuration.COMMON.leadGen.get()) {
-                AllTheOres.LOGGER.info("Lead feature added to: " + event.getName());
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_LEAD);
+                }
+                if (Configuration.COMMON.leadNetherGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_LEAD);
 
-            }
-            if (Configuration.COMMON.nickelGen.get()) {
-                AllTheOres.LOGGER.info("Nickel feature added to: " + event.getName());
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_NICKEL);
+                }
+                if (Configuration.COMMON.nickelNetherGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_NICKEL);
 
-            }
-            if (Configuration.COMMON.osmiumGen.get()) {
-                AllTheOres.LOGGER.info("Osmium feature added to: " + event.getName());
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_OSMIUM);
+                }
+                if (Configuration.COMMON.osmiumNetherGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_OSMIUM);
 
-            }
-            if (Configuration.COMMON.platinumGen.get()) {
-                AllTheOres.LOGGER.info("Platinum feature added to: " + event.getName());
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_PLATINUM);
+                }
+                if (Configuration.COMMON.platinumNetherGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_PLATINUM);
 
-            }
-            if (Configuration.COMMON.silverGen.get()) {
-                AllTheOres.LOGGER.info("Silver feature added to: " + event.getName());
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_SILVER);
+                }
+                if (Configuration.COMMON.silverNetherGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_SILVER);
 
-            }
-            if (Configuration.COMMON.tinGen.get()) {
-                AllTheOres.LOGGER.info("Tin feature added to: " + event.getName());
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_TIN);
+                }
+                if (Configuration.COMMON.tinNetherGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_TIN);
 
-            }
-            if (Configuration.COMMON.uraniumGen.get()) {
-                AllTheOres.LOGGER.info("Uranium feature added to: " + event.getName());
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_URANIUM);
+                }
+                if (Configuration.COMMON.uraniumNetherGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_URANIUM);
 
-            }
-            if (Configuration.COMMON.zincGen.get()) {
-                AllTheOres.LOGGER.info("Zinc feature added to: " + event.getName());
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_ZINC);
+                }
+                if (Configuration.COMMON.zincNetherGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_ZINC);
 
+                }
             }
+            if (event.getCategory() == Biome.BiomeCategory.THEEND) {
+                if (Configuration.COMMON.aluminumEndGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_ALUMINUM);
+
+                }
+                if (Configuration.COMMON.leadEndGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_LEAD);
+
+                }
+                if (Configuration.COMMON.nickelEndGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_NICKEL);
+
+                }
+                if (Configuration.COMMON.osmiumEndGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_OSMIUM);
+
+                }
+                if (Configuration.COMMON.platinumEndGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_PLATINUM);
+
+                }
+                if (Configuration.COMMON.silverEndGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_SILVER);
+
+                }
+                if (Configuration.COMMON.tinEndGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_TIN);
+
+                }
+                if (Configuration.COMMON.uraniumEndGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_URANIUM);
+
+                }
+                if (Configuration.COMMON.zincEndGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_ZINC);
+
+                }
+            }
+            if ((event.getCategory() != Biome.BiomeCategory.THEEND) && (event.getCategory() != Biome.BiomeCategory.NETHER) && (event.getCategory() != Biome.BiomeCategory.NONE)) {
+                if (Configuration.COMMON.aluminumGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_ALUMINUM);
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.RAW_ALUMINUM);
+                }
+                if (Configuration.COMMON.leadGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_LEAD);
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.RAW_LEAD);
+                }
+                if (Configuration.COMMON.nickelGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_NICKEL);
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.RAW_NICKEL);
+                }
+                if (Configuration.COMMON.osmiumGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_OSMIUM);
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.RAW_OSMIUM);
+                }
+                if (Configuration.COMMON.platinumGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_PLATINUM);
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.RAW_PLATINUM);
+                }
+                if (Configuration.COMMON.silverGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_SILVER);
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.RAW_SILVER);
+                }
+                if (Configuration.COMMON.tinGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_TIN);
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.RAW_TIN);
+                }
+                if (Configuration.COMMON.uraniumGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_URANIUM);
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.RAW_URANIUM);
+                }
+                if (Configuration.COMMON.zincGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.ORE_ZINC);
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ATOConfiguredFeature.RAW_ZINC);
+                }
+            }
+
+
             //VANILLA+ Featureset
-            ResourceLocation biome = event.getName();
+
             if(event.getCategory() == Biome.BiomeCategory.JUNGLE) { addLushCaves(event); }
             if(event.getCategory() == Biome.BiomeCategory.DESERT) { addDripStoneCaverns(event); }
         }

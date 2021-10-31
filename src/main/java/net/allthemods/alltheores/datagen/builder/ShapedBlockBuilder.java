@@ -1,6 +1,7 @@
 package net.allthemods.alltheores.datagen.builder;
 
 import net.allthemods.alltheores.datagen.RecipeException;
+import net.allthemods.alltheores.infos.ItemTagRegistry;
 import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
@@ -32,6 +33,7 @@ public class ShapedBlockBuilder {
     private final InventoryChangeTrigger.TriggerInstance criterion;
     private final EnumMap<Slot, Item> pieces = new EnumMap<>(Slot.class);
     private final Tag<Item> ingot;
+    private final Tag<Item> hammer = ItemTagRegistry.ORE_HAMMERS;
 
 
     public ShapedBlockBuilder(Tag<Item> ingot) {
@@ -89,10 +91,12 @@ public class ShapedBlockBuilder {
             Optional.ofNullable(pieces.get(Slot.ROD))
                 .map(this::rod)
                 .map(this::addCriterionIngot)
+                .map(this::addCriterionHammer)
                 .ifPresent(register);
             Optional.ofNullable(pieces.get(Slot.PLATE))
                 .map(this::plate)
                 .map(this::addCriterionIngot)
+                .map(this::addCriterionHammer)
                 .ifPresent(register);
 
     }
@@ -107,7 +111,10 @@ public class ShapedBlockBuilder {
             .define('a', ingot)
             .unlockedBy(criteriaName, criterion);
     }
-
+    private ShapedRecipeBuilder addCriterionHammer(ShapedRecipeBuilder builder) {
+        return builder
+                .define('h', hammer);
+    }
 
     private ShapedRecipeBuilder block(ItemLike provider) {
         return shaped(provider)
@@ -134,8 +141,8 @@ public class ShapedBlockBuilder {
     }
     private ShapedRecipeBuilder rod(ItemLike provider) {
         return shaped(provider)
-                .pattern("a  ")
-                .pattern("a  ")
+                .pattern("  a")
+                .pattern("ha ")
                 .pattern("a  ");
 
     }
@@ -143,7 +150,7 @@ public class ShapedBlockBuilder {
         return shaped(provider)
                 .pattern("aa ")
                 .pattern("aa ")
-                .pattern("   ");
+                .pattern("h  ");
 
     }
 

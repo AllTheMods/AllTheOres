@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "alltheores:ore_hammer"
-            ]
+            "tag": "alltheores:ore_hammers"
           }
         ]
       }

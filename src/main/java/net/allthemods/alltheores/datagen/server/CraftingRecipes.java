@@ -41,13 +41,49 @@ public class CraftingRecipes extends RecipeProvider {
 */
         final String hasCondition = "has_item";
 
-        shaped(BlockList.ORE_HAMMER.get())
+        shaped(BlockList.COPPER_ORE_HAMMER.get())
                 .pattern(" gt")
                 .pattern(" tg")
                 .pattern("t  ")
-                .define('g', BlockList.IRON_PLATE.get())
-                .define('t', BlockList.IRON_ROD.get())
-                .unlockedBy("has_iron_rod", has(BlockList.IRON_ROD.get()))
+                .define('g', Items.COPPER_BLOCK)
+                .define('t', Items.STICK)
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_BLOCK))
+                .save(consumer);
+
+        shaped(BlockList.BRONZE_ORE_HAMMER.get())
+                .pattern(" gt")
+                .pattern(" tg")
+                .pattern("t  ")
+                .define('g', BlockList.BRONZE_BLOCK_ITEM.get())
+                .define('t', Items.STICK)
+                .unlockedBy("has_bronze_block", has(BlockList.BRONZE_BLOCK_ITEM.get()))
+                .save(consumer);
+
+        shaped(BlockList.IRON_ORE_HAMMER.get())
+                .pattern(" gt")
+                .pattern(" tg")
+                .pattern("t  ")
+                .define('g', Items.IRON_BLOCK)
+                .define('t', Items.STICK)
+                .unlockedBy("has_iron_block", has(Items.IRON_BLOCK))
+                .save(consumer);
+
+        shaped(BlockList.INVAR_ORE_HAMMER.get())
+                .pattern(" gt")
+                .pattern(" tg")
+                .pattern("t  ")
+                .define('g', BlockList.INVAR_BLOCK_ITEM.get())
+                .define('t', Items.STICK)
+                .unlockedBy("has_invar_block", has(BlockList.INVAR_BLOCK_ITEM.get()))
+                .save(consumer);
+
+        shaped(BlockList.PLATINUM_ORE_HAMMER.get())
+                .pattern(" gt")
+                .pattern(" tg")
+                .pattern("t  ")
+                .define('g', BlockList.PLATINUM_BLOCK_ITEM.get())
+                .define('t', Items.STICK)
+                .unlockedBy("has_platinum_block", has(BlockList.PLATINUM_BLOCK_ITEM.get()))
                 .save(consumer);
 
         ShapedRawBuilder.builder(ItemTagRegistry.RAW_ALUMINUM)

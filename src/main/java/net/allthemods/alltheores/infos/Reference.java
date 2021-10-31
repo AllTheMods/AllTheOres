@@ -21,13 +21,13 @@ public class Reference {
 			}
 		};
 		public static List<Block> WORLDGEN_BLACKLIST = new ArrayList<Block>();
-
+	public static ResourceLocation ato (String path) { return new ResourceLocation("alltheores",path); }
+	public static ResourceLocation vanilla(String path) { return new ResourceLocation("minecraft",path); }
 	public static ResourceLocation forge(String path) {
 		return new ResourceLocation("forge", path);
 	}
-	public static ResourceLocation ingot(String path) {
-		return forge("ingots/" + path);
-	}
+	public static ResourceLocation ingot(String path) {	return forge("ingots/" + path); }
+	public static ResourceLocation vanillaIngot(String path) {	return vanilla("ingots/" + path); }
 	public static ResourceLocation nugget(String path) {
 		return forge("nuggets/" + path);
 	}

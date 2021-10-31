@@ -65,5 +65,25 @@ public class BlockTags extends BlockTagsProvider {
         tag(ItemTagRegistry.TIN_ORE).add(BlockList.TIN_SLATE_ORE.get());
         tag(ItemTagRegistry.URANIUM_ORE).add(BlockList.URANIUM_SLATE_ORE.get());
         tag(ItemTagRegistry.ZINC_ORE).add(BlockList.ZINC_SLATE_ORE.get());
+
+        tag(ItemTagRegistry.ALUMINUM_ORE).add(BlockList.ALUMINUM_NETHER_ORE.get());
+        tag(ItemTagRegistry.LEAD_ORE).add(BlockList.LEAD_NETHER_ORE.get());
+        tag(ItemTagRegistry.OSMIUM_ORE).add(BlockList.OSMIUM_NETHER_ORE.get());
+        tag(ItemTagRegistry.NICKEL_ORE).add(BlockList.NICKEL_NETHER_ORE.get());
+        tag(ItemTagRegistry.PLATINUM_ORE).add(BlockList.PLATINUM_NETHER_ORE.get());
+        tag(ItemTagRegistry.SILVER_ORE).add(BlockList.SILVER_NETHER_ORE.get());
+        tag(ItemTagRegistry.TIN_ORE).add(BlockList.TIN_NETHER_ORE.get());
+        tag(ItemTagRegistry.URANIUM_ORE).add(BlockList.URANIUM_NETHER_ORE.get());
+        tag(ItemTagRegistry.ZINC_ORE).add(BlockList.ZINC_NETHER_ORE.get());
+
+        tag(ItemTagRegistry.ALUMINUM_ORE).add(BlockList.ALUMINUM_END_ORE.get());
+        tag(ItemTagRegistry.LEAD_ORE).add(BlockList.LEAD_END_ORE.get());
+        tag(ItemTagRegistry.OSMIUM_ORE).add(BlockList.OSMIUM_END_ORE.get());
+        tag(ItemTagRegistry.NICKEL_ORE).add(BlockList.NICKEL_END_ORE.get());
+        tag(ItemTagRegistry.PLATINUM_ORE).add(BlockList.PLATINUM_END_ORE.get());
+        tag(ItemTagRegistry.SILVER_ORE).add(BlockList.SILVER_END_ORE.get());
+        tag(ItemTagRegistry.TIN_ORE).add(BlockList.TIN_END_ORE.get());
+        tag(ItemTagRegistry.URANIUM_ORE).add(BlockList.URANIUM_END_ORE.get());
+        tag(ItemTagRegistry.ZINC_ORE).add(BlockList.ZINC_END_ORE.get());
     }
 }

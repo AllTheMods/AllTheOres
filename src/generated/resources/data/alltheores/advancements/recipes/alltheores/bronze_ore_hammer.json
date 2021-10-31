@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:bronze_ore_hammer"
+    ]
+  },
+  "criteria": {
+    "has_bronze_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "alltheores:bronze_block"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:bronze_ore_hammer"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bronze_block",
+      "has_the_recipe"
+    ]
+  ]
+}

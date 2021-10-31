@@ -17,7 +17,7 @@
       "item": "minecraft:coal"
     },
     {
-      "item": "alltheores:ore_hammer"
+      "tag": "alltheores:ore_hammers"
     }
   ],
   "result": {

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "alltheores:ore_hammer"
+      "tag": "alltheores:ore_hammers"
     },
     {
       "item": "minecraft:raw_iron"

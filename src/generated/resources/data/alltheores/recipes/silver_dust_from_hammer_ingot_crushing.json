@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "alltheores:ore_hammers"
+    },
+    {
+      "tag": "forge:ingots/silver"
+    }
+  ],
+  "result": {
+    "item": "alltheores:silver_dust"
+  }
+}

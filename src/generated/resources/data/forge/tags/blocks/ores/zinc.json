@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "alltheores:zinc_ore",
-    "alltheores:zinc_slate_ore"
+    "alltheores:zinc_slate_ore",
+    "alltheores:zinc_nether_ore",
+    "alltheores:zinc_end_ore"
   ]
 }

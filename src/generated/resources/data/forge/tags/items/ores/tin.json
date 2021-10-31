@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "alltheores:tin_ore"
+    "alltheores:tin_ore",
+    "alltheores:tin_slate_ore",
+    "alltheores:tin_nether_ore",
+    "alltheores:tin_end_ore"
   ]
 }

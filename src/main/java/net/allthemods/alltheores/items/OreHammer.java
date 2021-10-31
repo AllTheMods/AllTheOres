@@ -1,19 +1,21 @@
 package net.allthemods.alltheores.items;
 
 import net.allthemods.alltheores.blocks.BlockList;
+import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 public class OreHammer extends Item {
-    public OreHammer(Item.Properties properties) {
 
-        super(properties.defaultDurability(64));
+    public OreHammer(Item.Properties properties,int durability) {
+
+        super(properties.defaultDurability(durability));
 
     }
 
     @Override
     public boolean hasContainerItem(ItemStack stack) {
-        return (stack.getItem() == BlockList.ORE_HAMMER.get());
+        return (stack.getItem() instanceof OreHammer);
     }
 
     @Override
@@ -25,4 +27,5 @@ public class OreHammer extends Item {
 
         return returnstack;
     }
+
 }

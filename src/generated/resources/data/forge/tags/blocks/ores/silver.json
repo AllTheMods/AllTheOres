@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "alltheores:silver_ore",
-    "alltheores:silver_slate_ore"
+    "alltheores:silver_slate_ore",
+    "alltheores:silver_nether_ore",
+    "alltheores:silver_end_ore"
   ]
 }

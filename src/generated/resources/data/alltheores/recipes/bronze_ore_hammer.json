@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "alltheores",
+  "pattern": [
+    " gt",
+    " tg",
+    "t  "
+  ],
+  "key": {
+    "g": {
+      "item": "alltheores:bronze_block"
+    },
+    "t": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "alltheores:bronze_ore_hammer"
+  }
+}
