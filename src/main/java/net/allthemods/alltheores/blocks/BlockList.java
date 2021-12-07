@@ -19,12 +19,10 @@ import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.fluids.FluidAttributes;
-import net.minecraftforge.fluids.ForgeFlowingFluid;
-import net.minecraftforge.fluids.ForgeFlowingFluid.Flowing;
-import net.minecraftforge.fluids.ForgeFlowingFluid.Source;
-import net.minecraftforge.fmllegacy.RegistryObject;
+
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class BlockList {
 
@@ -70,8 +68,6 @@ public class BlockList {
 	public static final RegistryObject<Item> ALUMINUM_RAW = ITEMS.register("raw_aluminum",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
-	public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget",
-			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 
 	public static final RegistryObject<Block> LEAD_SLATE_ORE = BLOCKS.register("lead_slate_ore", () -> new AOreBlock(1.0f,1.0f));
@@ -434,6 +430,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Item> INVAR_NUGGET = ITEMS.register("invar_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> ELECTRUM_NUGGET = ITEMS.register("electrum_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> BRONZE_NUGGET = ITEMS.register("bronze_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> ENDERIUM_NUGGET = ITEMS.register("enderium_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> LUMIUM_NUGGET = ITEMS.register("lumium_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> SIGNALUM_NUGGET = ITEMS.register("signalum_nugget", () -> new Item(new Item.Properties().tab(Reference.GROUP)));

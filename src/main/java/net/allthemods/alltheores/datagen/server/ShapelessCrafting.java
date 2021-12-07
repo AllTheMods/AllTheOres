@@ -472,6 +472,12 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
                 .save(consumer,recipeDir("electrum_nugget","ingot"));
 
         ShapelessRecipeBuilder
+                .shapeless(BlockList.COPPER_NUGGET.get(),9)
+                .requires(ItemTagRegistry.COPPER_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(Items.COPPER_INGOT))
+                .save(consumer,recipeDir("copper_nugget","ingot"));
+
+        ShapelessRecipeBuilder
                 .shapeless(BlockList.ENDERIUM_INGOT.get(),9)
                 .requires(ItemTagRegistry.ENDERIUM_BLOCK_ITEM)
                 .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ENDERIUM_BLOCK_ITEM.get()))
@@ -531,6 +537,11 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
                 .unlockedBy(hasCondition,RecipeProvider.has(BlockList.STEEL_INGOT.get()))
                 .save(consumer,recipeDir("steel_nugget","ingot"));
 
+        ShapelessRecipeBuilder
+                .shapeless(Items.COPPER_INGOT,9)
+                .requires(ItemTagRegistry.COPPER_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(Items.COPPER_BLOCK))
+                .save(consumer,recipeDir("copper_ingot","block"));
     }
 
     public ShapelessCrafting(DataGenerator generatorIn) {

@@ -41,6 +41,14 @@ public class CraftingRecipes extends RecipeProvider {
 */
         final String hasCondition = "has_item";
 
+        shaped(Items.COPPER_INGOT)
+                .pattern("nnn")
+                .pattern("nnn")
+                .pattern("nnn")
+                .define('n',ItemTagRegistry.COPPER_NUGGET)
+                .unlockedBy("has_copper_nugget",has(BlockList.COPPER_NUGGET.get()))
+                .save(consumer);
+
         shaped(BlockList.COPPER_ORE_HAMMER.get())
                 .pattern(" gt")
                 .pattern(" tg")

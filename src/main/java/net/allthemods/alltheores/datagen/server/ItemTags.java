@@ -6,6 +6,8 @@ import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ItemTags extends ItemTagsProvider {
@@ -61,6 +63,8 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.RAW_TIN_BLOCK_ITEM).add(BlockList.RAW_TIN_BLOCK_ITEM.get());
         tag(ItemTagRegistry.RAW_URANIUM_BLOCK_ITEM).add(BlockList.RAW_URANIUM_BLOCK_ITEM.get());
         tag(ItemTagRegistry.RAW_ZINC_BLOCK_ITEM).add(BlockList.RAW_ZINC_BLOCK_ITEM.get());
+
+        tag(ItemTagRegistry.COPPER_BLOCK_ITEM).add(Blocks.COPPER_BLOCK.asItem());
 
         tag(ItemTagRegistry.ALUMINUM_BLOCK_ITEM).add(BlockList.ALUMINUM_BLOCK_ITEM.get());
         tag(ItemTagRegistry.LEAD_BLOCK_ITEM).add(BlockList.LEAD_BLOCK_ITEM.get());

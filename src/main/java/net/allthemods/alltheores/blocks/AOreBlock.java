@@ -23,7 +23,7 @@ public class AOreBlock extends OreBlock {
 
 	public AOreBlock(float strength1, float strength2) {
 		super(Block.Properties.of(Material.METAL).requiresCorrectToolForDrops().sound((strength1 == 1.0f) ? SoundType.DEEPSLATE : SoundType.STONE)
-				.strength(strength1,strength2));
+					.strength(strength1,strength2));
 
 	}
 
