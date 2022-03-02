@@ -9,7 +9,7 @@ public class OreHammer extends Item {
 
     public OreHammer(Item.Properties properties,int durability) {
 
-        super(properties.defaultDurability(durability));
+        super(properties.defaultDurability(durability).setNoRepair());
 
     }
 

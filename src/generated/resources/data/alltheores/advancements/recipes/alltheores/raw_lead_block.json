@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_raw_raw_lead": {
+    "has_raw_lead": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:raw_ores/raw_lead"
+            "tag": "forge:raw_ores/lead"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_raw_raw_lead",
+      "has_raw_lead",
       "has_the_recipe"
     ]
   ]

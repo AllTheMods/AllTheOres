@@ -56,6 +56,13 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
                 .save(consumer,recipeDir("bronze_dust","alloy_blending"));
 
         ShapelessRecipeBuilder
+                .shapeless(BlockList.BRASS_DUST.get(),4)
+                .requires(BlockList.COPPER_DUST.get(),3)
+                .requires(ItemTagRegistry.ZINC_DUST)
+                .unlockedBy(hasCondition,RecipeProvider.has(ItemTagRegistry.ORE_HAMMERS))
+                .save(consumer,recipeDir("brass_dust","alloy_blending"));
+
+        ShapelessRecipeBuilder
                 .shapeless(BlockList.LUMIUM_DUST.get(),4)
                 .requires(Items.GLOWSTONE_DUST,4)
                 .requires(ItemTagRegistry.SILVER_DUST)
@@ -88,7 +95,7 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
                 .save(consumer,recipeDir("enderium_dust","alloy_blending"));
 
         ShapelessRecipeBuilder
-                .shapeless(BlockList.NETHERITE_DUST.get(),2)
+                .shapeless(BlockList.NETHERITE_DUST.get(),1)
                 .requires(Items.NETHERITE_INGOT)
                 .requires(ItemTagRegistry.ORE_HAMMERS)
                 .unlockedBy(hasCondition,RecipeProvider.has(ItemTagRegistry.ORE_HAMMERS))

@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:platinum_gear",
+    "alltheores:copper_gear",
+    "alltheores:aluminum_gear",
+    "alltheores:uranium_gear",
+    "alltheores:nickel_gear",
+    "alltheores:silver_gear",
+    "alltheores:osmium_gear",
+    "alltheores:zinc_gear",
+    "alltheores:lead_gear",
+    "alltheores:tin_gear",
+    "alltheores:bronze_gear",
+    "alltheores:constantan_gear",
+    "alltheores:electrum_gear",
+    "alltheores:enderium_gear",
+    "alltheores:invar_gear",
+    "alltheores:lumium_gear",
+    "alltheores:signalum_gear",
+    "alltheores:steel_gear",
+    "alltheores:iron_gear",
+    "alltheores:gold_gear",
+    "alltheores:diamond_gear",
+    "alltheores:brass_gear"
+  ]
+}

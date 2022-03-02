@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "alltheores:brass_dust"
+  },
+  "result": "alltheores:brass_ingot",
+  "experience": 0.15,
+  "cookingtime": 100
+}

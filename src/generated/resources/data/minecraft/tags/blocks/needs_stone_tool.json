@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:aluminum_ore",
+    "alltheores:nickel_ore",
+    "alltheores:tin_ore",
+    "alltheores:zinc_ore",
+    "alltheores:aluminum_slate_ore",
+    "alltheores:nickel_slate_ore",
+    "alltheores:tin_slate_ore",
+    "alltheores:zinc_slate_ore",
+    "alltheores:aluminum_nether_ore",
+    "alltheores:nickel_nether_ore",
+    "alltheores:tin_nether_ore",
+    "alltheores:zinc_nether_ore",
+    "alltheores:aluminum_end_ore",
+    "alltheores:nickel_end_ore",
+    "alltheores:tin_end_ore",
+    "alltheores:zinc_end_ore",
+    "alltheores:aluminum_other_ore",
+    "alltheores:nickel_other_ore",
+    "alltheores:tin_other_ore",
+    "alltheores:zinc_other_ore",
+    "alltheores:coal_other_ore",
+    "alltheores:copper_other_ore",
+    "alltheores:gold_other_ore",
+    "alltheores:iron_other_ore"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "alltheores",
+  "pattern": [
+    "  a",
+    "ha ",
+    "   "
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:ingots/brass"
+    },
+    "h": {
+      "tag": "alltheores:ore_hammers"
+    }
+  },
+  "result": {
+    "item": "alltheores:brass_rod"
+  }
+}

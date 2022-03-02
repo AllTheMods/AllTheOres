@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:aluminum_nugget",
+    "alltheores:copper_nugget",
+    "alltheores:lead_nugget",
+    "alltheores:osmium_nugget",
+    "alltheores:nickel_nugget",
+    "alltheores:platinum_nugget",
+    "alltheores:silver_nugget",
+    "alltheores:tin_nugget",
+    "alltheores:uranium_nugget",
+    "alltheores:zinc_nugget",
+    "alltheores:bronze_nugget",
+    "alltheores:constantan_nugget",
+    "alltheores:electrum_nugget",
+    "alltheores:enderium_nugget",
+    "alltheores:invar_nugget",
+    "alltheores:lumium_nugget",
+    "alltheores:signalum_nugget",
+    "alltheores:steel_nugget",
+    "alltheores:brass_nugget"
+  ]
+}

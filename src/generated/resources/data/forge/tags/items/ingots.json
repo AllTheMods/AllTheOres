@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:aluminum_ingot",
+    "alltheores:lead_ingot",
+    "alltheores:osmium_ingot",
+    "alltheores:nickel_ingot",
+    "alltheores:platinum_ingot",
+    "alltheores:silver_ingot",
+    "alltheores:tin_ingot",
+    "alltheores:uranium_ingot",
+    "alltheores:zinc_ingot",
+    "alltheores:bronze_ingot",
+    "alltheores:constantan_ingot",
+    "alltheores:electrum_ingot",
+    "alltheores:enderium_ingot",
+    "alltheores:invar_ingot",
+    "alltheores:lumium_ingot",
+    "alltheores:signalum_ingot",
+    "alltheores:steel_ingot",
+    "alltheores:brass_ingot"
+  ]
+}

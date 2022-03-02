@@ -117,7 +117,7 @@ public class ShapedBlockBuilder {
     }
 
     private ShapedRecipeBuilder block(ItemLike provider) {
-        return shaped(provider)
+        return shaped((ItemLike) provider)
             .pattern("aaa")
             .pattern("aaa")
             .pattern("aaa");
@@ -125,7 +125,7 @@ public class ShapedBlockBuilder {
     }
 
     private ShapedRecipeBuilder ingot(ItemLike provider) {
-        return shaped(provider)
+        return shaped((ItemLike) provider)
                 .pattern("aaa")
                 .pattern("aaa")
                 .pattern("aaa");
@@ -143,14 +143,14 @@ public class ShapedBlockBuilder {
         return shaped(provider)
                 .pattern("  a")
                 .pattern("ha ")
-                .pattern("a  ");
+                .pattern("   ");
 
     }
     private ShapedRecipeBuilder plate(ItemLike provider) {
-        return shaped(provider)
-                .pattern("aa ")
-                .pattern("aa ")
-                .pattern("h  ");
+        return shaped((ItemLike) provider)
+                .pattern("ha ")
+                .pattern("a  ")
+                .pattern("   ");
 
     }
 

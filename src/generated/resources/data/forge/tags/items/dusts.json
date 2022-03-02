@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:platinum_dust",
+    "alltheores:copper_dust",
+    "alltheores:aluminum_dust",
+    "alltheores:uranium_dust",
+    "alltheores:nickel_dust",
+    "alltheores:silver_dust",
+    "alltheores:osmium_dust",
+    "alltheores:zinc_dust",
+    "alltheores:lead_dust",
+    "alltheores:tin_dust",
+    "alltheores:bronze_dust",
+    "alltheores:constantan_dust",
+    "alltheores:electrum_dust",
+    "alltheores:enderium_dust",
+    "alltheores:invar_dust",
+    "alltheores:lumium_dust",
+    "alltheores:signalum_dust",
+    "alltheores:steel_dust",
+    "alltheores:iron_dust",
+    "alltheores:gold_dust",
+    "alltheores:diamond_dust",
+    "alltheores:brass_dust"
+  ]
+}

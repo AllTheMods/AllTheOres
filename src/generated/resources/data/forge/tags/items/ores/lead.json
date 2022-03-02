@@ -4,6 +4,7 @@
     "alltheores:lead_ore",
     "alltheores:lead_slate_ore",
     "alltheores:lead_nether_ore",
-    "alltheores:lead_end_ore"
+    "alltheores:lead_end_ore",
+    "alltheores:lead_other_ore"
   ]
 }

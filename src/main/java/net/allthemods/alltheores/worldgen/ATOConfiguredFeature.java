@@ -121,7 +121,6 @@ public class ATOConfiguredFeature {
 			ConfiguredFeature<?, ?> configuredFeature) {
 				Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(Reference.MOD_ID, registryName),
 				configuredFeature);
-
 		return configuredFeature;
 	}
 

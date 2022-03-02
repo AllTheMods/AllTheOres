@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:platinum_rod",
+    "alltheores:copper_rod",
+    "alltheores:aluminum_rod",
+    "alltheores:uranium_rod",
+    "alltheores:nickel_rod",
+    "alltheores:silver_rod",
+    "alltheores:osmium_rod",
+    "alltheores:zinc_rod",
+    "alltheores:lead_rod",
+    "alltheores:tin_rod",
+    "alltheores:bronze_rod",
+    "alltheores:constantan_rod",
+    "alltheores:electrum_rod",
+    "alltheores:enderium_rod",
+    "alltheores:invar_rod",
+    "alltheores:lumium_rod",
+    "alltheores:signalum_rod",
+    "alltheores:steel_rod",
+    "alltheores:iron_rod",
+    "alltheores:gold_rod",
+    "alltheores:diamond_rod",
+    "alltheores:brass_rod"
+  ]
+}

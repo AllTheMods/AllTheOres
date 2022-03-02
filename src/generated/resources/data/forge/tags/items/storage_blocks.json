@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:raw_aluminum_block",
+    "alltheores:raw_lead_block",
+    "alltheores:raw_osmium_block",
+    "alltheores:raw_nickel_block",
+    "alltheores:raw_platinum_block",
+    "alltheores:raw_silver_block",
+    "alltheores:raw_tin_block",
+    "alltheores:raw_uranium_block",
+    "alltheores:raw_zinc_block",
+    "alltheores:aluminum_block",
+    "alltheores:lead_block",
+    "alltheores:osmium_block",
+    "alltheores:nickel_block",
+    "alltheores:platinum_block",
+    "alltheores:silver_block",
+    "alltheores:tin_block",
+    "alltheores:uranium_block",
+    "alltheores:zinc_block",
+    "alltheores:bronze_block",
+    "alltheores:constantan_block",
+    "alltheores:electrum_block",
+    "alltheores:enderium_block",
+    "alltheores:invar_block",
+    "alltheores:lumium_block",
+    "alltheores:signalum_block",
+    "alltheores:steel_block",
+    "alltheores:brass_block"
+  ]
+}

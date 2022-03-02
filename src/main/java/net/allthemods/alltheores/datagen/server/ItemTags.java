@@ -6,6 +6,7 @@ import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.worldgen.placement.OrePlacements;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -34,6 +35,26 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.LUMIUM_INGOT).add(BlockList.LUMIUM_INGOT.get());
         tag(ItemTagRegistry.SIGNALUM_INGOT).add(BlockList.SIGNALUM_INGOT.get());
         tag(ItemTagRegistry.STEEL_INGOT).add(BlockList.STEEL_INGOT.get());
+        tag(ItemTagRegistry.BRASS_INGOT).add(BlockList.BRASS_INGOT.get());
+
+        tag(ItemTagRegistry.INGOTS).add(BlockList.ALUMINUM_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.LEAD_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.OSMIUM_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.NICKEL_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.PLATINUM_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.SILVER_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.TIN_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.URANIUM_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.ZINC_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.BRONZE_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.CONSTANTAN_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.ELECTRUM_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.ENDERIUM_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.INVAR_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.LUMIUM_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.SIGNALUM_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.STEEL_INGOT.get());
+        tag(ItemTagRegistry.INGOTS).add(BlockList.BRASS_INGOT.get());
 
         tag(ItemTagRegistry.ALUMINUM_NUGGET).add(BlockList.ALUMINUM_NUGGET.get());
         tag(ItemTagRegistry.COPPER_NUGGET).add(BlockList.COPPER_NUGGET.get());
@@ -53,6 +74,27 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.LUMIUM_NUGGET).add(BlockList.LUMIUM_NUGGET.get());
         tag(ItemTagRegistry.SIGNALUM_NUGGET).add(BlockList.SIGNALUM_NUGGET.get());
         tag(ItemTagRegistry.STEEL_NUGGET).add(BlockList.STEEL_NUGGET.get());
+        tag(ItemTagRegistry.BRASS_NUGGET).add(BlockList.BRASS_NUGGET.get());
+
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.ALUMINUM_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.COPPER_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.LEAD_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.OSMIUM_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.NICKEL_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.PLATINUM_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.SILVER_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.TIN_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.URANIUM_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.ZINC_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.BRONZE_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.CONSTANTAN_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.ELECTRUM_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.ENDERIUM_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.INVAR_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.LUMIUM_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.SIGNALUM_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.STEEL_NUGGET.get());
+        tag(ItemTagRegistry.NUGGETS).add(BlockList.BRASS_NUGGET.get());
 
         tag(ItemTagRegistry.RAW_ALUMINUM_BLOCK_ITEM).add(BlockList.RAW_ALUMINUM_BLOCK_ITEM.get());
         tag(ItemTagRegistry.RAW_LEAD_BLOCK_ITEM).add(BlockList.RAW_LEAD_BLOCK_ITEM.get());
@@ -63,6 +105,16 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.RAW_TIN_BLOCK_ITEM).add(BlockList.RAW_TIN_BLOCK_ITEM.get());
         tag(ItemTagRegistry.RAW_URANIUM_BLOCK_ITEM).add(BlockList.RAW_URANIUM_BLOCK_ITEM.get());
         tag(ItemTagRegistry.RAW_ZINC_BLOCK_ITEM).add(BlockList.RAW_ZINC_BLOCK_ITEM.get());
+
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.RAW_ALUMINUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.RAW_LEAD_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.RAW_OSMIUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.RAW_NICKEL_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.RAW_PLATINUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.RAW_SILVER_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.RAW_TIN_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.RAW_URANIUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.RAW_ZINC_BLOCK_ITEM.get());
 
         tag(ItemTagRegistry.COPPER_BLOCK_ITEM).add(Blocks.COPPER_BLOCK.asItem());
 
@@ -83,6 +135,26 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.LUMIUM_BLOCK_ITEM).add(BlockList.LUMIUM_BLOCK_ITEM.get());
         tag(ItemTagRegistry.SIGNALUM_BLOCK_ITEM).add(BlockList.SIGNALUM_BLOCK_ITEM.get());
         tag(ItemTagRegistry.STEEL_BLOCK_ITEM).add(BlockList.STEEL_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.BRASS_BLOCK_ITEM).add(BlockList.BRASS_BLOCK_ITEM.get());
+
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.ALUMINUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.LEAD_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.OSMIUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.NICKEL_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.PLATINUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.SILVER_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.TIN_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.URANIUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.ZINC_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.BRONZE_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.CONSTANTAN_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.ELECTRUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.ENDERIUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.INVAR_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.LUMIUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.SIGNALUM_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.STEEL_BLOCK_ITEM.get());
+        tag(ItemTagRegistry.STORAGE_BLOCKS).add(BlockList.BRASS_BLOCK_ITEM.get());
 
         tag(ItemTagRegistry.PLATINUM_DUST).add(BlockList.PLATINUM_DUST.get());
         tag(ItemTagRegistry.COPPER_DUST).add(BlockList.COPPER_DUST.get());
@@ -105,7 +177,30 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.IRON_DUST).add(BlockList.IRON_DUST.get());
         tag(ItemTagRegistry.GOLD_DUST).add(BlockList.GOLD_DUST.get());
         tag(ItemTagRegistry.DIAMOND_DUST).add(BlockList.DIAMOND_DUST.get());
+        tag(ItemTagRegistry.BRASS_DUST).add(BlockList.BRASS_DUST.get());
 
+        tag(ItemTagRegistry.DUSTS).add(BlockList.PLATINUM_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.COPPER_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.ALUMINUM_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.URANIUM_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.NICKEL_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.SILVER_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.OSMIUM_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.ZINC_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.LEAD_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.TIN_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.BRONZE_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.CONSTANTAN_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.ELECTRUM_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.ENDERIUM_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.INVAR_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.LUMIUM_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.SIGNALUM_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.STEEL_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.IRON_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.GOLD_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.DIAMOND_DUST.get());
+        tag(ItemTagRegistry.DUSTS).add(BlockList.BRASS_DUST.get());
 
         tag(ItemTagRegistry.PLATINUM_ROD).add(BlockList.PLATINUM_ROD.get());
         tag(ItemTagRegistry.COPPER_ROD).add(BlockList.COPPER_ROD.get());
@@ -128,6 +223,30 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.IRON_ROD).add(BlockList.IRON_ROD.get());
         tag(ItemTagRegistry.GOLD_ROD).add(BlockList.GOLD_ROD.get());
         tag(ItemTagRegistry.DIAMOND_ROD).add(BlockList.DIAMOND_ROD.get());
+        tag(ItemTagRegistry.BRASS_ROD).add(BlockList.BRASS_ROD.get());
+
+        tag(ItemTagRegistry.RODS).add(BlockList.PLATINUM_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.COPPER_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.ALUMINUM_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.URANIUM_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.NICKEL_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.SILVER_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.OSMIUM_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.ZINC_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.LEAD_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.TIN_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.BRONZE_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.CONSTANTAN_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.ELECTRUM_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.ENDERIUM_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.INVAR_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.LUMIUM_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.SIGNALUM_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.STEEL_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.IRON_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.GOLD_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.DIAMOND_ROD.get());
+        tag(ItemTagRegistry.RODS).add(BlockList.BRASS_ROD.get());
 
         tag(ItemTagRegistry.PLATINUM_GEAR).add(BlockList.PLATINUM_GEAR.get());
         tag(ItemTagRegistry.COPPER_GEAR).add(BlockList.COPPER_GEAR.get());
@@ -150,6 +269,30 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.IRON_GEAR).add(BlockList.IRON_GEAR.get());
         tag(ItemTagRegistry.GOLD_GEAR).add(BlockList.GOLD_GEAR.get());
         tag(ItemTagRegistry.DIAMOND_GEAR).add(BlockList.DIAMOND_GEAR.get());
+        tag(ItemTagRegistry.BRASS_GEAR).add(BlockList.BRASS_GEAR.get());
+
+        tag(ItemTagRegistry.GEARS).add(BlockList.PLATINUM_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.COPPER_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.ALUMINUM_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.URANIUM_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.NICKEL_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.SILVER_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.OSMIUM_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.ZINC_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.LEAD_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.TIN_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.BRONZE_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.CONSTANTAN_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.ELECTRUM_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.ENDERIUM_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.INVAR_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.LUMIUM_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.SIGNALUM_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.STEEL_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.IRON_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.GOLD_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.DIAMOND_GEAR.get());
+        tag(ItemTagRegistry.GEARS).add(BlockList.BRASS_GEAR.get());
 
         tag(ItemTagRegistry.PLATINUM_PLATE).add(BlockList.PLATINUM_PLATE.get());
         tag(ItemTagRegistry.COPPER_PLATE).add(BlockList.COPPER_PLATE.get());
@@ -172,6 +315,30 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.IRON_PLATE).add(BlockList.IRON_PLATE.get());
         tag(ItemTagRegistry.GOLD_PLATE).add(BlockList.GOLD_PLATE.get());
         tag(ItemTagRegistry.DIAMOND_PLATE).add(BlockList.DIAMOND_PLATE.get());
+        tag(ItemTagRegistry.BRASS_PLATE).add(BlockList.BRASS_PLATE.get());
+
+        tag(ItemTagRegistry.PLATES).add(BlockList.PLATINUM_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.COPPER_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.ALUMINUM_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.URANIUM_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.NICKEL_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.SILVER_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.OSMIUM_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.ZINC_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.LEAD_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.TIN_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.BRONZE_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.CONSTANTAN_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.ELECTRUM_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.ENDERIUM_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.INVAR_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.LUMIUM_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.SIGNALUM_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.STEEL_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.IRON_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.GOLD_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.DIAMOND_PLATE.get());
+        tag(ItemTagRegistry.PLATES).add(BlockList.BRASS_PLATE.get());
 
         tag(ItemTagRegistry.ALUMINUM_ORE_ITEM).add(BlockList.ALUMINUM_ORE_ITEM.get());
         tag(ItemTagRegistry.LEAD_ORE_ITEM).add(BlockList.LEAD_ORE_ITEM.get());
@@ -215,6 +382,71 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.URANIUM_ORE_ITEM).add(BlockList.URANIUM_END_ORE_ITEM.get());
         tag(ItemTagRegistry.ZINC_ORE_ITEM).add(BlockList.ZINC_END_ORE_ITEM.get());
 
+        tag(ItemTagRegistry.ALUMINUM_ORE_ITEM).add(BlockList.OTHER_ALUMINUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.LEAD_ORE_ITEM).add(BlockList.OTHER_LEAD_ORE_ITEM.get());
+        tag(ItemTagRegistry.OSMIUM_ORE_ITEM).add(BlockList.OTHER_OSMIUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.NICKEL_ORE_ITEM).add(BlockList.OTHER_NICKEL_ORE_ITEM.get());
+        tag(ItemTagRegistry.PLATINUM_ORE_ITEM).add(BlockList.OTHER_PLATINUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.SILVER_ORE_ITEM).add(BlockList.OTHER_SILVER_ORE_ITEM.get());
+        tag(ItemTagRegistry.TIN_ORE_ITEM).add(BlockList.OTHER_TIN_ORE_ITEM.get());
+        tag(ItemTagRegistry.URANIUM_ORE_ITEM).add(BlockList.OTHER_URANIUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.ZINC_ORE_ITEM).add(BlockList.OTHER_ZINC_ORE_ITEM.get());
+
+        ////
+        tag(ItemTagRegistry.ORES).add(BlockList.ALUMINUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.LEAD_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OSMIUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.NICKEL_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.PLATINUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.SILVER_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.TIN_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.URANIUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.ZINC_ORE_ITEM.get());
+
+        tag(ItemTagRegistry.ORES).add(BlockList.ALUMINUM_SLATE_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.LEAD_SLATE_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OSMIUM_SLATE_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.NICKEL_SLATE_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.PLATINUM_SLATE_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.SILVER_SLATE_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.TIN_SLATE_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.URANIUM_SLATE_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.ZINC_SLATE_ORE_ITEM.get());
+
+
+        tag(ItemTagRegistry.ORES).add(BlockList.ALUMINUM_NETHER_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.LEAD_NETHER_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OSMIUM_NETHER_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.NICKEL_NETHER_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.PLATINUM_NETHER_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.SILVER_NETHER_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.TIN_NETHER_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.URANIUM_NETHER_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.ZINC_NETHER_ORE_ITEM.get());
+
+
+        tag(ItemTagRegistry.ORES).add(BlockList.ALUMINUM_END_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.LEAD_END_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OSMIUM_END_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.NICKEL_END_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.PLATINUM_END_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.SILVER_END_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.TIN_END_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.URANIUM_END_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.ZINC_END_ORE_ITEM.get());
+        ////
+
+        tag(ItemTagRegistry.ORES).add(BlockList.OTHER_ALUMINUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OTHER_LEAD_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OTHER_OSMIUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OTHER_NICKEL_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OTHER_PLATINUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OTHER_SILVER_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OTHER_TIN_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OTHER_URANIUM_ORE_ITEM.get());
+        tag(ItemTagRegistry.ORES).add(BlockList.OTHER_ZINC_ORE_ITEM.get());
+        ////
+
         tag(ItemTagRegistry.RAW_ALUMINUM).add(BlockList.ALUMINUM_RAW.get());
         tag(ItemTagRegistry.RAW_LEAD).add(BlockList.LEAD_RAW.get());
         tag(ItemTagRegistry.RAW_NICKEL).add(BlockList.NICKEL_RAW.get());
@@ -224,6 +456,17 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.RAW_TIN).add(BlockList.TIN_RAW.get());
         tag(ItemTagRegistry.RAW_URANIUM).add(BlockList.URANIUM_RAW.get());
         tag(ItemTagRegistry.RAW_ZINC).add(BlockList.ZINC_RAW.get());
+
+        tag(ItemTagRegistry.RAW_ALUMINUM_MATERIAL).add(BlockList.ALUMINUM_RAW.get());
+        tag(ItemTagRegistry.RAW_LEAD_MATERIAL).add(BlockList.LEAD_RAW.get());
+        tag(ItemTagRegistry.RAW_NICKEL_MATERIAL).add(BlockList.NICKEL_RAW.get());
+        tag(ItemTagRegistry.RAW_OSMIUM_MATERIAL).add(BlockList.OSMIUM_RAW.get());
+        tag(ItemTagRegistry.RAW_PLATINUM_MATERIAL).add(BlockList.PLATINUM_RAW.get());
+        tag(ItemTagRegistry.RAW_SILVER_MATERIAL).add(BlockList.SILVER_RAW.get());
+        tag(ItemTagRegistry.RAW_TIN_MATERIAL).add(BlockList.TIN_RAW.get());
+        tag(ItemTagRegistry.RAW_URANIUM_MATERIAL).add(BlockList.URANIUM_RAW.get());
+        tag(ItemTagRegistry.RAW_ZINC_MATERIAL).add(BlockList.ZINC_RAW.get());
+
 
         tag(ItemTagRegistry.ORE_HAMMERS).add(BlockList.COPPER_ORE_HAMMER.get());
         tag(ItemTagRegistry.ORE_HAMMERS).add(BlockList.BRONZE_ORE_HAMMER.get());

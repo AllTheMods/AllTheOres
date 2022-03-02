@@ -334,6 +334,12 @@ public class CraftingRecipes extends RecipeProvider {
                 .setIngot(BlockList.STEEL_INGOT)
                 .build(consumer);
 
+        ShapedBlockBuilder.builder(ItemTagRegistry.BRASS_INGOT)
+                .setBlock(BlockList.BRASS_BLOCK_ITEM)
+                .setGear(BlockList.BRASS_GEAR)
+                .setPlate(BlockList.BRASS_PLATE)
+                .setRod(BlockList.BRASS_ROD)
+                .build(consumer);
 
 
     }

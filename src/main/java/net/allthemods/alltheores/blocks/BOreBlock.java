@@ -22,7 +22,7 @@ import net.minecraftforge.common.ToolActions;
 public class BOreBlock extends OreBlock {
 
 	public BOreBlock(float strength1, float strength2) {
-		super(Block.Properties.of(Material.METAL).requiresCorrectToolForDrops().sound((strength1 == 0.85f) ? SoundType.NETHER_ORE : SoundType.ANCIENT_DEBRIS)
+		super(Block.Properties.of(Material.METAL).requiresCorrectToolForDrops().sound((strength1 == 4.0f) ? SoundType.NETHER_ORE : SoundType.ANCIENT_DEBRIS)
 				.strength(strength1,strength2));
 
 	}

@@ -5,10 +5,12 @@ import com.mojang.datafixers.util.Pair;
 import net.allthemods.alltheores.blocks.AOreBlock;
 import net.allthemods.alltheores.blocks.BOreBlock;
 import net.allthemods.alltheores.blocks.BlockList;
+import net.allthemods.alltheores.blocks.OtherOreBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -46,7 +48,7 @@ public class LootTables extends LootTableProvider {
         }
 
         private void dropRaw(Block block) {
-            if((block instanceof AOreBlock) || (block instanceof BOreBlock)) {
+            if((block instanceof AOreBlock) || (block instanceof BOreBlock) || (block instanceof OtherOreBlock)) {
                 String oretype = block.getRegistryName().getPath().toString();
                 if(oretype.contains("aluminum")) { this.add(block, (block1) -> {
                     return createOreDrop(block1, BlockList.ALUMINUM_RAW.get());
@@ -74,6 +76,34 @@ public class LootTables extends LootTableProvider {
                 }); }
                 if(oretype.contains("zinc")) { this.add(block, (block1) -> {
                     return createOreDrop(block1, BlockList.ZINC_RAW.get());
+                }); }
+                //
+                if(oretype.contains("coal")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, Items.COAL);
+                }); }
+                if(oretype.contains("copper")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, Items.RAW_COPPER);
+                }); }
+                if(oretype.contains("diamond")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, Items.DIAMOND);
+                }); }
+                if(oretype.contains("emerald")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, Items.EMERALD);
+                }); }
+                if(oretype.contains("gold")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, Items.RAW_GOLD);
+                }); }
+                if(oretype.contains("iron")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, Items.RAW_IRON);
+                }); }
+                if(oretype.contains("lapis")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, Items.LAPIS_LAZULI);
+                }); }
+                if(oretype.contains("quartz")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, Items.QUARTZ);
+                }); }
+                if(oretype.contains("redstone")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, Items.REDSTONE);
                 }); }
             } else {
                 this.dropSelf(block);

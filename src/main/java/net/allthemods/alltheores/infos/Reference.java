@@ -21,6 +21,9 @@ public class Reference {
 			}
 		};
 		public static List<Block> WORLDGEN_BLACKLIST = new ArrayList<Block>();
+	public static ResourceLocation location(String pathIn) {
+		return new ResourceLocation(pathIn);
+	}
 	public static ResourceLocation ato (String path) { return new ResourceLocation("alltheores",path); }
 	public static ResourceLocation vanilla(String path) { return new ResourceLocation("minecraft",path); }
 	public static ResourceLocation forge(String path) {
@@ -37,7 +40,10 @@ public class Reference {
 	public static ResourceLocation block(String path) {
 		return forge("storage_blocks/" + path);
 	}
-	public static ResourceLocation raw(String path) {
+	public static ResourceLocation raw_ores(String path) {
 		return forge("raw_ores/" + path);
+	}
+	public static ResourceLocation raw_materials(String path) {
+		return forge("raw_materials/" + path);
 	}
 }

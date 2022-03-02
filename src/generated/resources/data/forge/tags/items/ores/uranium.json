@@ -4,6 +4,7 @@
     "alltheores:uranium_ore",
     "alltheores:uranium_slate_ore",
     "alltheores:uranium_nether_ore",
-    "alltheores:uranium_end_ore"
+    "alltheores:uranium_end_ore",
+    "alltheores:uranium_other_ore"
   ]
 }

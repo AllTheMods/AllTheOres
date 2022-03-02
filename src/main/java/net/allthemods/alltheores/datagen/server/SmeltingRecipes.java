@@ -30,6 +30,11 @@ public class SmeltingRecipes extends RecipeProvider {
                 .save(consumer,recipeDir("bronze_ingot","dust"));
 
         SimpleCookingRecipeBuilder
+                .smelting(Ingredient.of(BlockList.BRASS_DUST.get()),BlockList.BRASS_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.BRASS_DUST.get()))
+                .save(consumer,recipeDir("brass_ingot","dust"));
+
+        SimpleCookingRecipeBuilder
                 .smelting(Ingredient.of(BlockList.CONSTANTAN_DUST.get()),BlockList.CONSTANTAN_INGOT.get(),0.15f,200)
                 .unlockedBy(hasCondition,RecipeProvider.has(BlockList.CONSTANTAN_DUST.get()))
                 .save(consumer,recipeDir("constantan_ingot","dust"));

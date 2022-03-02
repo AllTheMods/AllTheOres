@@ -26,7 +26,6 @@ public class AllTheOres {
 	public static final Logger LOGGER = LogManager.getLogger(Reference.MOD_ID);
 
 	public AllTheOres() {
-		setupBlackList();
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_SPEC);
 		BlockList.FLUIDS.register(modEventBus);
@@ -40,15 +39,7 @@ public class AllTheOres {
 
 		setupLogFilter();
 	}
-	private void setupBlackList() {
-		Reference.WORLDGEN_BLACKLIST.add(Blocks.DIRT);
-		Reference.WORLDGEN_BLACKLIST.add(Blocks.GRASS_BLOCK);
-		Reference.WORLDGEN_BLACKLIST.add(Blocks.VOID_AIR);
-		Reference.WORLDGEN_BLACKLIST.add(Blocks.WATER);
-		Reference.WORLDGEN_BLACKLIST.add(Blocks.BEDROCK);
-		Reference.WORLDGEN_BLACKLIST.add(Blocks.AIR);
-		Reference.WORLDGEN_BLACKLIST.add(Blocks.CAVE_AIR);
-	}
+
 
 	private static void setupLogFilter() {
 		var rootLogger = LogManager.getRootLogger();

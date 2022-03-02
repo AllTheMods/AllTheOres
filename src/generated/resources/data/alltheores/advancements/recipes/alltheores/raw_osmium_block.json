@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_raw_raw_osmium": {
+    "has_raw_osmium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:raw_ores/raw_osmium"
+            "tag": "forge:raw_ores/osmium"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_raw_raw_osmium",
+      "has_raw_osmium",
       "has_the_recipe"
     ]
   ]

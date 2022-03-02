@@ -13,7 +13,20 @@ public class ItemTagRegistry {
     private ItemTagRegistry() {
     }
 
+    //ATM Compat
+    public static final Tag.Named<Block> ANCIENT_STONE = BlockTags.createOptional(Reference.location("allthemodium:ancient_stone"));
+    //
     public static final Tag.Named<Item> ORE_HAMMERS = ItemTags.createOptional(Reference.ato("ore_hammers"));
+    public static final Tag.Named<Item> INGOTS = ItemTags.createOptional(Reference.forge("ingots"));
+    public static final Tag.Named<Item> NUGGETS = ItemTags.createOptional(Reference.forge("nuggets"));
+    public static final Tag.Named<Item> STORAGE_BLOCKS = ItemTags.createOptional(Reference.forge("storage_blocks"));
+    public static final Tag.Named<Item> DUSTS = ItemTags.createOptional(Reference.forge("dusts"));
+    public static final Tag.Named<Item> GEARS = ItemTags.createOptional(Reference.forge("gears"));
+    public static final Tag.Named<Item> PLATES = ItemTags.createOptional(Reference.forge("plates"));
+    public static final Tag.Named<Item> RODS = ItemTags.createOptional(Reference.forge("rods"));
+
+    public static final Tag.Named<Item> ORES = ItemTags.createOptional(Reference.forge("ores"));
+
     public static final Tag.Named<Item> LEAD_INGOT = ItemTags.createOptional(Reference.ingot("lead"));
     public static final Tag.Named<Item> COPPER_INGOT = ItemTags.createOptional(Reference.ingot("copper"));
     public static final Tag.Named<Item> SILVER_INGOT = ItemTags.createOptional(Reference.ingot("silver"));
@@ -32,6 +45,7 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> LUMIUM_INGOT = ItemTags.createOptional(Reference.ingot("lumium"));
     public static final Tag.Named<Item> SIGNALUM_INGOT = ItemTags.createOptional(Reference.ingot("signalum"));
     public static final Tag.Named<Item> STEEL_INGOT = ItemTags.createOptional(Reference.ingot("steel"));
+    public static final Tag.Named<Item> BRASS_INGOT = ItemTags.createOptional(Reference.ingot("brass"));
 
     public static final Tag.Named<Item> LEAD_NUGGET = ItemTags.createOptional(Reference.nugget("lead"));
     public static final Tag.Named<Item> COPPER_NUGGET = ItemTags.createOptional(Reference.nugget("copper"));
@@ -51,6 +65,7 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> LUMIUM_NUGGET = ItemTags.createOptional(Reference.nugget("lumium"));
     public static final Tag.Named<Item> SIGNALUM_NUGGET = ItemTags.createOptional(Reference.nugget("signalum"));
     public static final Tag.Named<Item> STEEL_NUGGET = ItemTags.createOptional(Reference.nugget("steel"));
+    public static final Tag.Named<Item> BRASS_NUGGET = ItemTags.createOptional(Reference.nugget("brass"));
 
     public static final Tag.Named<Block> LEAD_BLOCK = BlockTags.createOptional(Reference.block("lead"));
     public static final Tag.Named<Block> COPPER_BLOCK = BlockTags.createOptional(Reference.block("copper"));
@@ -70,6 +85,7 @@ public class ItemTagRegistry {
     public static final Tag.Named<Block> LUMIUM_BLOCK = BlockTags.createOptional(Reference.block("lumium"));
     public static final Tag.Named<Block> SIGNALUM_BLOCK = BlockTags.createOptional(Reference.block("signalum"));
     public static final Tag.Named<Block> STEEL_BLOCK = BlockTags.createOptional(Reference.block("steel"));
+    public static final Tag.Named<Block> BRASS_BLOCK = BlockTags.createOptional(Reference.block("brass"));
 
     public static final Tag.Named<Block> RAW_LEAD_BLOCK = BlockTags.createOptional(Reference.block("raw_lead"));
     public static final Tag.Named<Block> RAW_SILVER_BLOCK = BlockTags.createOptional(Reference.block("raw_silver"));
@@ -110,6 +126,7 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> LUMIUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("lumium"));
     public static final Tag.Named<Item> SIGNALUM_BLOCK_ITEM = ItemTags.createOptional(Reference.block("signalum"));
     public static final Tag.Named<Item> STEEL_BLOCK_ITEM = ItemTags.createOptional(Reference.block("steel"));
+    public static final Tag.Named<Item> BRASS_BLOCK_ITEM = ItemTags.createOptional(Reference.block("brass"));
 
     // RODS
 
@@ -134,6 +151,7 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> IRON_ROD = forge("rods/iron");
     public static final Tag.Named<Item> GOLD_ROD = forge("rods/gold");
     public static final Tag.Named<Item> DIAMOND_ROD = forge("rods/diamond");
+    public static final Tag.Named<Item> BRASS_ROD = forge("rods/brass");
     // GEARS
 
     public static final Tag.Named<Item> ALUMINUM_GEAR = forge("gears/aluminum");
@@ -157,6 +175,7 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> IRON_GEAR = forge("gears/iron");
     public static final Tag.Named<Item> GOLD_GEAR = forge("gears/gold");
     public static final Tag.Named<Item> DIAMOND_GEAR = forge("gears/diamond");
+    public static final Tag.Named<Item> BRASS_GEAR = forge("gears/brass");
     // PLATES
 
     public static final Tag.Named<Item> ALUMINUM_PLATE = forge("plates/aluminum");
@@ -180,6 +199,7 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> IRON_PLATE = forge("plates/iron");
     public static final Tag.Named<Item> GOLD_PLATE = forge("plates/gold");
     public static final Tag.Named<Item> DIAMOND_PLATE = forge("plates/diamond");
+    public static final Tag.Named<Item> BRASS_PLATE = forge("plates/brass");
     // DUST
     public static final Tag.Named<Item> PLATINUM_DUST = forge("dusts/platinum");
     public static final Tag.Named<Item> COPPER_DUST = forge("dusts/copper");
@@ -202,6 +222,7 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> IRON_DUST = forge("dusts/iron");
     public static final Tag.Named<Item> GOLD_DUST = forge("dusts/gold");
     public static final Tag.Named<Item> DIAMOND_DUST = forge("dusts/diamond");
+    public static final Tag.Named<Item> BRASS_DUST = forge("dusts/brass");
     //ORE
 
 
@@ -225,15 +246,25 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> ZINC_ORE_ITEM = ItemTags.createOptional(Reference.ore("zinc"));
     public static final Tag.Named<Item> TIN_ORE_ITEM = ItemTags.createOptional(Reference.ore("tin"));
 
-    public static final Tag.Named<Item> RAW_LEAD = ItemTags.createOptional(Reference.raw("raw_lead"));
-    public static final Tag.Named<Item> RAW_SILVER = ItemTags.createOptional(Reference.raw("raw_silver"));
-    public static final Tag.Named<Item> RAW_PLATINUM = ItemTags.createOptional(Reference.raw("raw_platinum"));
-    public static final Tag.Named<Item> RAW_ALUMINUM = ItemTags.createOptional(Reference.raw("raw_aluminum"));
-    public static final Tag.Named<Item> RAW_NICKEL = ItemTags.createOptional(Reference.raw("raw_nickel"));
-    public static final Tag.Named<Item> RAW_URANIUM = ItemTags.createOptional(Reference.raw("raw_uranium"));
-    public static final Tag.Named<Item> RAW_OSMIUM = ItemTags.createOptional(Reference.raw("raw_osmium"));
-    public static final Tag.Named<Item> RAW_ZINC = ItemTags.createOptional(Reference.raw("raw_zinc"));
-    public static final Tag.Named<Item> RAW_TIN = ItemTags.createOptional(Reference.raw("raw_tin"));
+    public static final Tag.Named<Item> RAW_LEAD = ItemTags.createOptional(Reference.raw_ores("lead"));
+    public static final Tag.Named<Item> RAW_SILVER = ItemTags.createOptional(Reference.raw_ores("silver"));
+    public static final Tag.Named<Item> RAW_PLATINUM = ItemTags.createOptional(Reference.raw_ores("platinum"));
+    public static final Tag.Named<Item> RAW_ALUMINUM = ItemTags.createOptional(Reference.raw_ores("aluminum"));
+    public static final Tag.Named<Item> RAW_NICKEL = ItemTags.createOptional(Reference.raw_ores("nickel"));
+    public static final Tag.Named<Item> RAW_URANIUM = ItemTags.createOptional(Reference.raw_ores("uranium"));
+    public static final Tag.Named<Item> RAW_OSMIUM = ItemTags.createOptional(Reference.raw_ores("osmium"));
+    public static final Tag.Named<Item> RAW_ZINC = ItemTags.createOptional(Reference.raw_ores("zinc"));
+    public static final Tag.Named<Item> RAW_TIN = ItemTags.createOptional(Reference.raw_ores("tin"));
+
+    public static final Tag.Named<Item> RAW_LEAD_MATERIAL = ItemTags.createOptional(Reference.raw_materials("lead"));
+    public static final Tag.Named<Item> RAW_SILVER_MATERIAL = ItemTags.createOptional(Reference.raw_materials("silver"));
+    public static final Tag.Named<Item> RAW_PLATINUM_MATERIAL = ItemTags.createOptional(Reference.raw_materials("platinum"));
+    public static final Tag.Named<Item> RAW_ALUMINUM_MATERIAL = ItemTags.createOptional(Reference.raw_materials("aluminum"));
+    public static final Tag.Named<Item> RAW_NICKEL_MATERIAL = ItemTags.createOptional(Reference.raw_materials("nickel"));
+    public static final Tag.Named<Item> RAW_URANIUM_MATERIAL = ItemTags.createOptional(Reference.raw_materials("uranium"));
+    public static final Tag.Named<Item> RAW_OSMIUM_MATERIAL = ItemTags.createOptional(Reference.raw_materials("osmium"));
+    public static final Tag.Named<Item> RAW_ZINC_MATERIAL = ItemTags.createOptional(Reference.raw_materials("zinc"));
+    public static final Tag.Named<Item> RAW_TIN_MATERIAL = ItemTags.createOptional(Reference.raw_materials("tin"));
 
 
     private static Tags.IOptionalNamedTag<Item> forge(String name)

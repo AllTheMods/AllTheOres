@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:lead_ore",
+    "alltheores:osmium_ore",
+    "alltheores:silver_ore",
+    "alltheores:lead_slate_ore",
+    "alltheores:osmium_slate_ore",
+    "alltheores:silver_slate_ore",
+    "alltheores:lead_nether_ore",
+    "alltheores:osmium_nether_ore",
+    "alltheores:silver_nether_ore",
+    "alltheores:lead_end_ore",
+    "alltheores:osmium_end_ore",
+    "alltheores:silver_end_ore",
+    "alltheores:lead_other_ore",
+    "alltheores:osmium_other_ore",
+    "alltheores:silver_other_ore",
+    "alltheores:diamond_other_ore",
+    "alltheores:emerald_other_ore",
+    "alltheores:lapis_other_ore",
+    "alltheores:quartz_other_ore",
+    "alltheores:redstone_other_ore"
+  ]
+}

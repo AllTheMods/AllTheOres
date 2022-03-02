@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_raw_raw_uranium": {
+    "has_raw_uranium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:raw_ores/raw_uranium"
+            "tag": "forge:raw_ores/uranium"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_raw_raw_uranium",
+      "has_raw_uranium",
       "has_the_recipe"
     ]
   ]
