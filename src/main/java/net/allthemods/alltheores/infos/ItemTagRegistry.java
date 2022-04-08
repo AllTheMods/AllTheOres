@@ -24,6 +24,7 @@ public class ItemTagRegistry {
     public static final Tag.Named<Item> GEARS = ItemTags.createOptional(Reference.forge("gears"));
     public static final Tag.Named<Item> PLATES = ItemTags.createOptional(Reference.forge("plates"));
     public static final Tag.Named<Item> RODS = ItemTags.createOptional(Reference.forge("rods"));
+    public static final Tag.Named<Item> RODS_METAL = ItemTags.createOptional(Reference.forge("rods/metal"));
 
     public static final Tag.Named<Item> ORES = ItemTags.createOptional(Reference.forge("ores"));
 
