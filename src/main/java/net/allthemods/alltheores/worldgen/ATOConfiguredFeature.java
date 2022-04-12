@@ -3,46 +3,28 @@ package net.allthemods.alltheores.worldgen;
 import com.google.common.collect.ImmutableList;
 import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.infos.Configuration;
-import net.allthemods.alltheores.infos.Reference;
-import net.allthemods.alltheores.worldgen.features.OreVein;
-import net.minecraft.core.MappedRegistry;
-import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
+import net.allthemods.alltheores.infos.ItemTagRegistry;
+import net.minecraft.core.Holder;
+import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
-import net.minecraft.data.worldgen.placement.OrePlacements;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
-import net.minecraft.world.level.levelgen.WorldGenSettings;
-import net.minecraft.world.level.levelgen.WorldGenerationContext;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.NoOpFeature;
-import net.minecraft.world.level.levelgen.feature.OreFeature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryManager;
-
-import java.io.ObjectInputFilter;
-import java.util.List;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 public class ATOConfiguredFeature {
 
-	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_ALUMINUM_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.ALUMINUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.ALUMINUM_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.ALUMINUM_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.ALUMINUM_END_ORE.get().defaultBlockState()));
-	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_LEAD_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.LEAD_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.LEAD_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.LEAD_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.LEAD_END_ORE.get().defaultBlockState()));
-	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_NICKEL_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.NICKEL_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.NICKEL_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.NICKEL_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.NICKEL_END_ORE.get().defaultBlockState()));
-	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_OSMIUM_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.OSMIUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.OSMIUM_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.OSMIUM_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.OSMIUM_END_ORE.get().defaultBlockState()));
-	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_PLATINUM_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.PLATINUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.PLATINUM_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.PLATINUM_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.PLATINUM_END_ORE.get().defaultBlockState()));
-	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_SILVER_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.SILVER_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.SILVER_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.SILVER_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.SILVER_END_ORE.get().defaultBlockState()));
-	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TIN_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.TIN_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.TIN_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.TIN_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.TIN_END_ORE.get().defaultBlockState()));
-	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_URANIUM_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.URANIUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.URANIUM_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.URANIUM_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.URANIUM_END_ORE.get().defaultBlockState()));
-	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_ZINC_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.ZINC_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.ZINC_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.ZINC_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.ZINC_END_ORE.get().defaultBlockState()));
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_ALUMINUM_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.ALUMINUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.ALUMINUM_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.ALUMINUM_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.ALUMINUM_END_ORE.get().defaultBlockState()),OreConfiguration.target(new TagMatchTest(ItemTagRegistry.ANCIENT_STONE), BlockList.OTHER_ALUMINUM_ORE.get().defaultBlockState()));
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_LEAD_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.LEAD_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.LEAD_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.LEAD_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.LEAD_END_ORE.get().defaultBlockState()),OreConfiguration.target(new TagMatchTest(ItemTagRegistry.ANCIENT_STONE), BlockList.OTHER_LEAD_ORE.get().defaultBlockState()));
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_NICKEL_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.NICKEL_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.NICKEL_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.NICKEL_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.NICKEL_END_ORE.get().defaultBlockState()),OreConfiguration.target(new TagMatchTest(ItemTagRegistry.ANCIENT_STONE), BlockList.OTHER_NICKEL_ORE.get().defaultBlockState()));
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_OSMIUM_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.OSMIUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.OSMIUM_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.OSMIUM_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.OSMIUM_END_ORE.get().defaultBlockState()),OreConfiguration.target(new TagMatchTest(ItemTagRegistry.ANCIENT_STONE), BlockList.OTHER_OSMIUM_ORE.get().defaultBlockState()));
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_PLATINUM_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.PLATINUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.PLATINUM_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.PLATINUM_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.PLATINUM_END_ORE.get().defaultBlockState()),OreConfiguration.target(new TagMatchTest(ItemTagRegistry.ANCIENT_STONE), BlockList.OTHER_PLATINUM_ORE.get().defaultBlockState()));
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_SILVER_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.SILVER_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.SILVER_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.SILVER_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.SILVER_END_ORE.get().defaultBlockState()),OreConfiguration.target(new TagMatchTest(ItemTagRegistry.ANCIENT_STONE), BlockList.OTHER_SILVER_ORE.get().defaultBlockState()));
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TIN_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.TIN_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.TIN_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.TIN_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.TIN_END_ORE.get().defaultBlockState()),OreConfiguration.target(new TagMatchTest(ItemTagRegistry.ANCIENT_STONE), BlockList.OTHER_TIN_ORE.get().defaultBlockState()));
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_URANIUM_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.URANIUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.URANIUM_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.URANIUM_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.URANIUM_END_ORE.get().defaultBlockState()),OreConfiguration.target(new TagMatchTest(ItemTagRegistry.ANCIENT_STONE), BlockList.OTHER_URANIUM_ORE.get().defaultBlockState()));
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_ZINC_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.ZINC_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.ZINC_SLATE_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.NETHERRACK,BlockList.ZINC_NETHER_ORE.get().defaultBlockState()),OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),BlockList.ZINC_END_ORE.get().defaultBlockState()),OreConfiguration.target(new TagMatchTest(ItemTagRegistry.ANCIENT_STONE), BlockList.OTHER_ZINC_ORE.get().defaultBlockState()));
 
 	public static final ImmutableList<OreConfiguration.TargetBlockState> RAW_ALUMINUM_TARGET_LIST = ImmutableList.of(OreConfiguration.target(new BlockMatchTest(BlockList.ALUMINUM_SLATE_ORE.get()),BlockList.RAW_ALUMINUM_BLOCK.get().defaultBlockState()));
 	public static final ImmutableList<OreConfiguration.TargetBlockState> RAW_LEAD_TARGET_LIST = ImmutableList.of(OreConfiguration.target(new BlockMatchTest(BlockList.LEAD_SLATE_ORE.get()),BlockList.RAW_LEAD_BLOCK.get().defaultBlockState()));
@@ -75,53 +57,24 @@ public class ATOConfiguredFeature {
 	public static final OreConfiguration RAW_ZINC_CONFIG = new OreConfiguration(RAW_ZINC_TARGET_LIST, 1);
 
 
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ALUMINUM = FeatureUtils.register("aluminum_ore",Feature.ORE,ORE_ALUMINUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_LEAD = FeatureUtils.register("lead_ore",Feature.ORE,ORE_LEAD_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_NICKEL = FeatureUtils.register("nickel_ore",Feature.ORE,ORE_NICKEL_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_OSMIUM = FeatureUtils.register("osmium_ore",Feature.ORE,ORE_OSMIUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_PLATINUM = FeatureUtils.register("platinum_ore",Feature.ORE,ORE_PLATINUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_SILVER = FeatureUtils.register("silver_ore",Feature.ORE,ORE_SILVER_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_TIN = FeatureUtils.register("tin_ore",Feature.ORE,ORE_TIN_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_URANIUM = FeatureUtils.register("uranium_ore",Feature.ORE,ORE_URANIUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ZINC = FeatureUtils.register("zinc_ore",Feature.ORE,ORE_ZINC_CONFIG);
 
-	public static ConfiguredFeature<?, ?> ORE_ALUMINUM = newConfiguredFeature("aluminum_ore",Feature.ORE.configured(ORE_ALUMINUM_CONFIG));
-	public static ConfiguredFeature<?, ?> ORE_LEAD = newConfiguredFeature("lead_ore",Feature.ORE.configured(ORE_LEAD_CONFIG));
-	public static ConfiguredFeature<?, ?> ORE_NICKEL = newConfiguredFeature("nickel_ore",Feature.ORE.configured(ORE_NICKEL_CONFIG));
-	public static ConfiguredFeature<?, ?> ORE_OSMIUM = newConfiguredFeature("osmium_ore",Feature.ORE.configured(ORE_OSMIUM_CONFIG));
-	public static ConfiguredFeature<?, ?> ORE_PLATINUM = newConfiguredFeature("platinum_ore",Feature.ORE.configured(ORE_PLATINUM_CONFIG));
-	public static ConfiguredFeature<?, ?> ORE_SILVER = newConfiguredFeature("silver_ore",Feature.ORE.configured(ORE_SILVER_CONFIG));
-	public static ConfiguredFeature<?, ?> ORE_TIN = newConfiguredFeature("tin_ore",Feature.ORE.configured(ORE_TIN_CONFIG));
-	public static ConfiguredFeature<?, ?> ORE_URANIUM = newConfiguredFeature("uranium_ore",Feature.ORE.configured(ORE_URANIUM_CONFIG));
-	public static ConfiguredFeature<?, ?> ORE_ZINC = newConfiguredFeature("zinc_ore",Feature.ORE.configured(ORE_ZINC_CONFIG));
-
-	public static ConfiguredFeature<?, ?> NETHER_ORE_ALUMINUM = newConfiguredFeature("nether_aluminum_ore",Feature.ORE.configured(ORE_ALUMINUM_CONFIG));
-	public static ConfiguredFeature<?, ?> NETHER_ORE_LEAD = newConfiguredFeature("nether_lead_ore",Feature.ORE.configured(ORE_LEAD_CONFIG));
-	public static ConfiguredFeature<?, ?> NETHER_ORE_NICKEL = newConfiguredFeature("nether_nickel_ore",Feature.ORE.configured(ORE_NICKEL_CONFIG));
-	public static ConfiguredFeature<?, ?> NETHER_ORE_OSMIUM = newConfiguredFeature("nether_osmium_ore",Feature.ORE.configured(ORE_OSMIUM_CONFIG));
-	public static ConfiguredFeature<?, ?> NETHER_ORE_PLATINUM = newConfiguredFeature("nether_platinum_ore",Feature.ORE.configured(ORE_PLATINUM_CONFIG));
-	public static ConfiguredFeature<?, ?> NETHER_ORE_SILVER = newConfiguredFeature("nether_silver_ore",Feature.ORE.configured(ORE_SILVER_CONFIG));
-	public static ConfiguredFeature<?, ?> NETHER_ORE_TIN = newConfiguredFeature("nether_tin_ore",Feature.ORE.configured(ORE_TIN_CONFIG));
-	public static ConfiguredFeature<?, ?> NETHER_ORE_URANIUM = newConfiguredFeature("nether_uranium_ore",Feature.ORE.configured(ORE_URANIUM_CONFIG));
-	public static ConfiguredFeature<?, ?> NETHER_ORE_ZINC = newConfiguredFeature("nether_zinc_ore",Feature.ORE.configured(ORE_ZINC_CONFIG));
-
-	public static ConfiguredFeature<?, ?> END_ORE_ALUMINUM = newConfiguredFeature("end_aluminum_ore",Feature.ORE.configured(ORE_ALUMINUM_CONFIG));
-	public static ConfiguredFeature<?, ?> END_ORE_LEAD = newConfiguredFeature("end_lead_ore",Feature.ORE.configured(ORE_LEAD_CONFIG));
-	public static ConfiguredFeature<?, ?> END_ORE_NICKEL = newConfiguredFeature("end_nickel_ore",Feature.ORE.configured(ORE_NICKEL_CONFIG));
-	public static ConfiguredFeature<?, ?> END_ORE_OSMIUM = newConfiguredFeature("end_osmium_ore",Feature.ORE.configured(ORE_OSMIUM_CONFIG));
-	public static ConfiguredFeature<?, ?> END_ORE_PLATINUM = newConfiguredFeature("end_platinum_ore",Feature.ORE.configured(ORE_PLATINUM_CONFIG));
-	public static ConfiguredFeature<?, ?> END_ORE_SILVER = newConfiguredFeature("end_silver_ore",Feature.ORE.configured(ORE_SILVER_CONFIG));
-	public static ConfiguredFeature<?, ?> END_ORE_TIN = newConfiguredFeature("end_tin_ore",Feature.ORE.configured(ORE_TIN_CONFIG));
-	public static ConfiguredFeature<?, ?> END_ORE_URANIUM = newConfiguredFeature("end_uranium_ore",Feature.ORE.configured(ORE_URANIUM_CONFIG));
-	public static ConfiguredFeature<?, ?> END_ORE_ZINC = newConfiguredFeature("end_zinc_ore",Feature.ORE.configured(ORE_ZINC_CONFIG));
-
-	public static ConfiguredFeature<?, ?> RAW_ALUMINUM = newConfiguredFeature("raw_aluminum_ore",Feature.ORE.configured(RAW_ALUMINUM_CONFIG));
-	public static ConfiguredFeature<?, ?> RAW_LEAD = newConfiguredFeature("raw_lead_ore",Feature.ORE.configured(RAW_LEAD_CONFIG));
-	public static ConfiguredFeature<?, ?> RAW_NICKEL = newConfiguredFeature("raw_nickel_ore",Feature.ORE.configured(RAW_NICKEL_CONFIG));
-	public static ConfiguredFeature<?, ?> RAW_OSMIUM = newConfiguredFeature("raw_osmium_ore",Feature.ORE.configured(RAW_OSMIUM_CONFIG));
-	public static ConfiguredFeature<?, ?> RAW_PLATINUM = newConfiguredFeature("raw_platinum_ore",Feature.ORE.configured(RAW_PLATINUM_CONFIG));
-	public static ConfiguredFeature<?, ?> RAW_SILVER = newConfiguredFeature("raw_silver_ore",Feature.ORE.configured(RAW_SILVER_CONFIG));
-	public static ConfiguredFeature<?, ?> RAW_TIN = newConfiguredFeature("raw_tin_ore",Feature.ORE.configured(RAW_TIN_CONFIG));
-	public static ConfiguredFeature<?, ?> RAW_URANIUM = newConfiguredFeature("raw_uranium_ore",Feature.ORE.configured(RAW_URANIUM_CONFIG));
-	public static ConfiguredFeature<?, ?> RAW_ZINC = newConfiguredFeature("raw_zinc_ore",Feature.ORE.configured(RAW_ZINC_CONFIG));
-
-
-	public static ConfiguredFeature<?, ?> newConfiguredFeature(String registryName,
-			ConfiguredFeature<?, ?> configuredFeature) {
-				Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(Reference.MOD_ID, registryName),
-				configuredFeature);
-		return configuredFeature;
-	}
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_ALUMINUM = FeatureUtils.register("raw_aluminum_ore",Feature.ORE,RAW_ALUMINUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_LEAD = FeatureUtils.register("raw_lead_ore",Feature.ORE,RAW_LEAD_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_NICKEL = FeatureUtils.register("raw_nickel_ore",Feature.ORE,RAW_NICKEL_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_OSMIUM = FeatureUtils.register("raw_osmium_ore",Feature.ORE,RAW_OSMIUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_PLATINUM = FeatureUtils.register("raw_platinum_ore",Feature.ORE,RAW_PLATINUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_SILVER = FeatureUtils.register("raw_silver_ore",Feature.ORE,RAW_SILVER_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_TIN = FeatureUtils.register("raw_tin_ore",Feature.ORE,RAW_TIN_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_URANIUM = FeatureUtils.register("raw_uranium_ore",Feature.ORE,RAW_URANIUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_ZINC = FeatureUtils.register("raw_zinc_ore",Feature.ORE,RAW_ZINC_CONFIG);
 
 }

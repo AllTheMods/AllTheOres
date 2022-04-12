@@ -6,7 +6,6 @@ import net.allthemods.alltheores.meka.Clump;
 import net.allthemods.alltheores.meka.Crystal;
 import net.allthemods.alltheores.meka.DirtyDust;
 import net.allthemods.alltheores.meka.Shard;
-import net.allthemods.alltheores.worldgen.features.OreVein;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -449,16 +448,6 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Item> CONSTANTAN_BLOCK_ITEM = ITEMS.register("constantan_block", () -> new BlockItem(CONSTANTAN_BLOCK.get(),new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> BRASS_BLOCK_ITEM = ITEMS.register("brass_block", () -> new BlockItem(BRASS_BLOCK.get(),new Item.Properties().tab(Reference.GROUP)));
 
-	// *************** FEATURES
-	public static final RegistryObject<Feature<?>> ALUMINUM = FEATURES.register("aluminum_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.ALUMINUM_ORE.get(),BlockList.ALUMINUM_SLATE_ORE.get(),BlockList.RAW_ALUMINUM_BLOCK.get()));
-	public static final RegistryObject<Feature<?>> LEAD = FEATURES.register("lead_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.LEAD_ORE.get(),BlockList.LEAD_SLATE_ORE.get(),BlockList.RAW_LEAD_BLOCK.get()));
-	public static final RegistryObject<Feature<?>> NICKEL = FEATURES.register("nickel_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.NICKEL_ORE.get(),BlockList.NICKEL_SLATE_ORE.get(),BlockList.RAW_NICKEL_BLOCK.get()));
-	public static final RegistryObject<Feature<?>> OSMIUM = FEATURES.register("osmium_ore", () -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.OSMIUM_ORE.get(),BlockList.OSMIUM_SLATE_ORE.get(),BlockList.RAW_OSMIUM_BLOCK.get()));
-	public static final RegistryObject<Feature<?>> PLATINUM = FEATURES.register("platinum_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.PLATINUM_ORE.get(),BlockList.PLATINUM_SLATE_ORE.get(),BlockList.RAW_PLATINUM_BLOCK.get()));
-	public static final RegistryObject<Feature<?>> SILVER = FEATURES.register("silver_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.SILVER_ORE.get(),BlockList.SILVER_SLATE_ORE.get(),BlockList.RAW_SILVER_BLOCK.get()));
-	public static final RegistryObject<Feature<?>> TIN = FEATURES.register("tin_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.TIN_ORE.get(),BlockList.TIN_SLATE_ORE.get(),BlockList.RAW_TIN_BLOCK.get()));
-	public static final RegistryObject<Feature<?>> URANIUM = FEATURES.register("uranium_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.URANIUM_ORE.get(),BlockList.URANIUM_SLATE_ORE.get(),BlockList.RAW_URANIUM_BLOCK.get()));
-	public static final RegistryObject<Feature<?>> ZINC = FEATURES.register("zinc_ore",() -> new OreVein(NoneFeatureConfiguration.CODEC,BlockList.ZINC_ORE.get(),BlockList.ZINC_SLATE_ORE.get(),BlockList.RAW_ZINC_BLOCK.get()));
 
 	// ye of weak heart read no further
 	// MORE ORES lie ahead

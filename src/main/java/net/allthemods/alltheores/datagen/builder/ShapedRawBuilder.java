@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.registries.RegistryObject;
@@ -31,20 +32,20 @@ public class ShapedRawBuilder {
     private final String criteriaName;
     private final InventoryChangeTrigger.TriggerInstance criterion;
     private final EnumMap<Slot, Item> pieces = new EnumMap<>(Slot.class);
-    private final Tag<Item> raw;
+    private final TagKey<Item> raw;
 
 
-    public ShapedRawBuilder(Tag<Item> raw) {
+    public ShapedRawBuilder(TagKey<Item> raw) {
         this.raw = raw;
 
-        ResourceLocation tagLocation = Objects.requireNonNull(ItemTags.getAllTags().getId(raw));
-        this.criteriaName = String.format("has_raw_%s", tagLocation.getPath().replace("raw_ores/", ""));
+
+        this.criteriaName = String.format("has_raw_%s", raw);
 
         ItemPredicate predicate = ItemPredicate.Builder.item().of(raw).build();
         this.criterion = InventoryChangeTrigger.TriggerInstance.hasItems(predicate);
     }
 
-    public static ShapedRawBuilder builder(Tag<Item> raw) {
+    public static ShapedRawBuilder builder(TagKey<Item> raw) {
         return new ShapedRawBuilder(raw);
     }
 

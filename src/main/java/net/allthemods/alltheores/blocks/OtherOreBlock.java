@@ -12,9 +12,6 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.PushReaction;
 
 import net.minecraftforge.common.util.FakePlayer;
-import net.minecraftforge.common.util.FakePlayerFactory;
-import net.minecraftforge.server.permission.context.PlayerContext;
-import net.minecraftforge.server.permission.context.WorldContext;
 
 public class OtherOreBlock extends Block {
 

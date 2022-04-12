@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
+        maven { url = 'https://maven.minecraftforge.net' }
         jcenter()
         mavenCentral()
     }
@@ -25,7 +25,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 
 minecraft {
-    mappings channel: 'official', version: '1.18.1'
+    mappings channel: 'official', version: '1.18.2'
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     runs {
         client {
@@ -62,9 +62,9 @@ minecraft {
     }
 }
 dependencies {
-    implementation 'org.jetbrains:annotations:20.1.0'
+    compileOnly 'org.jetbrains:annotations:20.1.0'
     minecraft "net.minecraftforge:forge:${forge}"
-    implementation('cpw.mods:securejarhandler') { version { strictly '0.9.45' } }
+    //implementation('cpw.mods:securejarhandler') { version { strictly '0.9.45' } }
     //implementation fg.deobf("curse.maven:${mekanism}")
     //implementation fg.deobf("curse.maven:${jei}")
 }
