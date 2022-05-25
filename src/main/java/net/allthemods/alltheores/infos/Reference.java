@@ -25,6 +25,7 @@ public class Reference {
 		return new ResourceLocation(pathIn);
 	}
 	public static ResourceLocation ato (String path) { return new ResourceLocation("alltheores",path); }
+	public static ResourceLocation mek (String path) { return new ResourceLocation("mekanism",path); }
 	public static ResourceLocation vanilla(String path) { return new ResourceLocation("minecraft",path); }
 	public static ResourceLocation forge(String path) {
 		return new ResourceLocation("forge", path);
@@ -37,6 +38,10 @@ public class Reference {
 	public static ResourceLocation ore(String path) {
 		return forge("ores/" + path);
 	}
+	public static ResourceLocation gem(String path) {
+		return forge("gems/" + path);
+	}
+
 	public static ResourceLocation block(String path) {
 		return forge("storage_blocks/" + path);
 	}

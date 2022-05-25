@@ -21,11 +21,10 @@ public class OreHammer extends Item {
     @Override
     public ItemStack getContainerItem(ItemStack itemStack) {
         int durability = itemStack.getDamageValue();
-        ItemStack returnstack = new ItemStack(this);
-        returnstack.setDamageValue(durability+1);
-        if(returnstack.getDamageValue()==returnstack.getMaxDamage()) { return ItemStack.EMPTY; }
+        itemStack.setDamageValue(durability+1);
+        if(itemStack.getDamageValue()==itemStack.getMaxDamage()) { return ItemStack.EMPTY; }
 
-        return returnstack;
+        return itemStack.copy();
     }
 
 }

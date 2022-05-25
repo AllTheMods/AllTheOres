@@ -15,6 +15,10 @@ public class EventWorldgen {
                     event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_ALUMINIUM);
 
                 }
+                if (Configuration.COMMON.iridiumNetherGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_IRIDIUM);
+
+                }
                 if (Configuration.COMMON.leadNetherGen.get()) {
                     event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_LEAD);
 
@@ -51,6 +55,10 @@ public class EventWorldgen {
             if (event.getCategory() == Biome.BiomeCategory.THEEND) {
                 if (Configuration.COMMON.aluminumEndGen.get()) {
                     event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_ALUMINIUM);
+
+                }
+                if (Configuration.COMMON.iridiumEndGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_IRIDIUM);
 
                 }
                 if (Configuration.COMMON.leadEndGen.get()) {
@@ -91,6 +99,9 @@ public class EventWorldgen {
                     event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_ALUMINIUM);
                     event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.RAW_ALUMINIUM);
                 }
+                if (Configuration.COMMON.iridiumGen.get()) {
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_IRIDIUM);
+                }
                 if (Configuration.COMMON.leadGen.get()) {
                     event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_LEAD);
                     event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.RAW_LEAD);
@@ -123,6 +134,19 @@ public class EventWorldgen {
                     event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_ZINC);
                     event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.RAW_ZINC);
                 }
+
+            }
+            if((event.getCategory() == Biome.BiomeCategory.PLAINS) && (Configuration.COMMON.rubyGen.get())) {
+                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_RUBY);
+
+            }
+            if((event.getCategory() == Biome.BiomeCategory.OCEAN) && (Configuration.COMMON.sapphireGen.get())) {
+                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_SAPPHIRE);
+
+            }
+            if((event.getCategory() == Biome.BiomeCategory.DESERT) && (Configuration.COMMON.peridotGen.get())) {
+                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(ATOPlacedFeatures.ORE_PERIDOT);
+
             }
 
 

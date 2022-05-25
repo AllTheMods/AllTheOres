@@ -6,8 +6,8 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.fml.config.ConfigTracker;
 import net.minecraftforge.fml.config.IConfigEvent;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
-import org.apache.commons.lang3.tuple.Pair;
 
+import org.apache.commons.lang3.tuple.Pair;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -16,6 +16,7 @@ import net.minecraftforge.fml.config.ModConfig;
 @EventBusSubscriber(modid = Reference.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class Configuration {
 	public static boolean aluminumGen;
+	public static boolean iridiumGen;
 	public static boolean leadGen;
 	public static boolean nickelGen;
 	public static boolean osmiumGen;
@@ -25,7 +26,12 @@ public class Configuration {
 	public static boolean uraniumGen;
 	public static boolean zincGen;
 
+	public static boolean rubyGen;
+	public static boolean peridotGen;
+	public static boolean sapphireGen;
+
 	public static boolean aluminumNetherGen;
+	public static boolean iridiumNetherGen;
 	public static boolean leadNetherGen;
 	public static boolean nickelNetherGen;
 	public static boolean osmiumNetherGen;
@@ -36,6 +42,7 @@ public class Configuration {
 	public static boolean zincNetherGen;
 
 	public static boolean aluminumEndGen;
+	public static boolean iridiumEndGen;
 	public static boolean leadEndGen;
 	public static boolean nickelEndGen;
 	public static boolean osmiumEndGen;
@@ -46,10 +53,32 @@ public class Configuration {
 	public static boolean zincEndGen;
 
 
+	public static int ruby_MinY;
+	public static int ruby_MaxY;
+	public static int ruby_SpawnSize;
+	public static int ruby_SpawnCount;
+
+	public static int peridot_MinY;
+	public static int peridot_MaxY;
+	public static int peridot_SpawnSize;
+	public static int peridot_SpawnCount;
+
+	public static int sapphire_MinY;
+	public static int sapphire_MaxY;
+	public static int sapphire_SpawnSize;
+	public static int sapphire_SpawnCount;
+
+
 	public static int aluminum_MinY;
 	public static int aluminum_MaxY;
 	public static int aluminum_SpawnSize;
 	public static int aluminum_SpawnCount;
+
+
+	public static int iridium_MinY;
+	public static int iridium_MaxY;
+	public static int iridium_SpawnSize;
+	public static int iridium_SpawnCount;
 
 	public static int lead_MinY;
 	public static int lead_MaxY;
@@ -108,6 +137,7 @@ public class Configuration {
 	private static void bakeConfigs() {
 
 		aluminumGen = Configuration.COMMON.aluminumGen.get();
+		iridiumGen = Configuration.COMMON.iridiumGen.get();
 		leadGen = Configuration.COMMON.leadGen.get();
 		nickelGen = Configuration.COMMON.nickelGen.get();
 		osmiumGen = Configuration.COMMON.osmiumGen.get();
@@ -117,7 +147,12 @@ public class Configuration {
 		uraniumGen = Configuration.COMMON.uraniumGen.get();
 		zincGen = Configuration.COMMON.zincGen.get();
 
+		rubyGen = Configuration.COMMON.rubyGen.get();
+		sapphireGen = Configuration.COMMON.sapphireGen.get();
+		peridotGen =  Configuration.COMMON.peridotGen.get();
+
 		aluminumNetherGen = Configuration.COMMON.aluminumNetherGen.get();
+		iridiumNetherGen = Configuration.COMMON.iridiumNetherGen.get();
 		leadNetherGen = Configuration.COMMON.leadNetherGen.get();
 		nickelNetherGen = Configuration.COMMON.nickelNetherGen.get();
 		osmiumNetherGen = Configuration.COMMON.osmiumNetherGen.get();
@@ -128,6 +163,7 @@ public class Configuration {
 		zincNetherGen = Configuration.COMMON.zincNetherGen.get();
 
 		aluminumEndGen = Configuration.COMMON.aluminumEndGen.get();
+		iridiumEndGen = Configuration.COMMON.iridiumEndGen.get();
 		leadEndGen = Configuration.COMMON.leadEndGen.get();
 		nickelEndGen = Configuration.COMMON.nickelEndGen.get();
 		osmiumEndGen = Configuration.COMMON.osmiumEndGen.get();
@@ -141,6 +177,11 @@ public class Configuration {
 		aluminum_MaxY = Configuration.COMMON.aluminum_MaxY.get();
 		aluminum_SpawnSize = Configuration.COMMON.aluminum_SpawnSize.get();
 		aluminum_SpawnCount = Configuration.COMMON.aluminum_SpawnCount.get();
+
+		iridium_MinY = Configuration.COMMON.iridium_MinY.get();
+		iridium_MaxY = Configuration.COMMON.iridium_MaxY.get();
+		iridium_SpawnSize = Configuration.COMMON.iridium_SpawnSize.get();
+		iridium_SpawnCount = Configuration.COMMON.iridium_SpawnCount.get();
 
 		lead_MinY = Configuration.COMMON.lead_MinY.get();
 		lead_MaxY = Configuration.COMMON.lead_MaxY.get();
@@ -182,10 +223,26 @@ public class Configuration {
 		uranium_SpawnSize = Configuration.COMMON.uranium_SpawnSize.get();
 		uranium_SpawnCount = Configuration.COMMON.uranium_SpawnCount.get();
 
+		ruby_MinY = Configuration.COMMON.ruby_MinY.get();
+		ruby_MaxY = Configuration.COMMON.ruby_MaxY.get();
+		ruby_SpawnSize = Configuration.COMMON.ruby_SpawnSize.get();
+		ruby_SpawnCount = Configuration.COMMON.ruby_SpawnCount.get();
+
+		sapphire_MinY = Configuration.COMMON.sapphire_MinY.get();
+		sapphire_MaxY = Configuration.COMMON.sapphire_MaxY.get();
+		sapphire_SpawnSize = Configuration.COMMON.sapphire_SpawnSize.get();
+		sapphire_SpawnCount = Configuration.COMMON.sapphire_SpawnCount.get();
+
+		peridot_MinY = Configuration.COMMON.peridot_MinY.get();
+		peridot_MaxY = Configuration.COMMON.peridot_MaxY.get();
+		peridot_SpawnSize = Configuration.COMMON.peridot_SpawnSize.get();
+		peridot_SpawnCount = Configuration.COMMON.peridot_SpawnCount.get();
+
 	}
 
 	public static class Common {
 		public final ForgeConfigSpec.BooleanValue aluminumGen;
+		public final ForgeConfigSpec.BooleanValue iridiumGen;
 		public final ForgeConfigSpec.BooleanValue leadGen;
 		public final ForgeConfigSpec.BooleanValue nickelGen;
 		public final ForgeConfigSpec.BooleanValue osmiumGen;
@@ -195,7 +252,12 @@ public class Configuration {
 		public final ForgeConfigSpec.BooleanValue uraniumGen;
 		public final ForgeConfigSpec.BooleanValue zincGen;
 
+		public final ForgeConfigSpec.BooleanValue rubyGen;
+		public final ForgeConfigSpec.BooleanValue sapphireGen;
+		public final ForgeConfigSpec.BooleanValue peridotGen;
+
 		public final ForgeConfigSpec.BooleanValue aluminumNetherGen;
+		public final ForgeConfigSpec.BooleanValue iridiumNetherGen;
 		public final ForgeConfigSpec.BooleanValue leadNetherGen;
 		public final ForgeConfigSpec.BooleanValue nickelNetherGen;
 		public final ForgeConfigSpec.BooleanValue osmiumNetherGen;
@@ -206,6 +268,7 @@ public class Configuration {
 		public final ForgeConfigSpec.BooleanValue zincNetherGen;
 
 		public final ForgeConfigSpec.BooleanValue aluminumEndGen;
+		public final ForgeConfigSpec.BooleanValue iridiumEndGen;
 		public final ForgeConfigSpec.BooleanValue leadEndGen;
 		public final ForgeConfigSpec.BooleanValue nickelEndGen;
 		public final ForgeConfigSpec.BooleanValue osmiumEndGen;
@@ -219,6 +282,11 @@ public class Configuration {
 		public final ForgeConfigSpec.IntValue aluminum_MaxY;
 		public final ForgeConfigSpec.IntValue aluminum_SpawnSize;
 		public final ForgeConfigSpec.IntValue aluminum_SpawnCount;
+
+		public final ForgeConfigSpec.IntValue iridium_MinY;
+		public final ForgeConfigSpec.IntValue iridium_MaxY;
+		public final ForgeConfigSpec.IntValue iridium_SpawnSize;
+		public final ForgeConfigSpec.IntValue iridium_SpawnCount;
 
 		public final ForgeConfigSpec.IntValue lead_MinY;
 		public final ForgeConfigSpec.IntValue lead_MaxY;
@@ -260,11 +328,27 @@ public class Configuration {
 		public final ForgeConfigSpec.IntValue uranium_SpawnSize;
 		public final ForgeConfigSpec.IntValue uranium_SpawnCount;
 
+		public final ForgeConfigSpec.IntValue ruby_MinY;
+		public final ForgeConfigSpec.IntValue ruby_MaxY;
+		public final ForgeConfigSpec.IntValue ruby_SpawnSize;
+		public final ForgeConfigSpec.IntValue ruby_SpawnCount;
+
+		public final ForgeConfigSpec.IntValue sapphire_MinY;
+		public final ForgeConfigSpec.IntValue sapphire_MaxY;
+		public final ForgeConfigSpec.IntValue sapphire_SpawnSize;
+		public final ForgeConfigSpec.IntValue sapphire_SpawnCount;
+
+		public final ForgeConfigSpec.IntValue peridot_MinY;
+		public final ForgeConfigSpec.IntValue peridot_MaxY;
+		public final ForgeConfigSpec.IntValue peridot_SpawnSize;
+		public final ForgeConfigSpec.IntValue peridot_SpawnCount;
+
 		public Common(ForgeConfigSpec.Builder BUILDER) {
 
 			BUILDER.push("spawncontrol");
 			BUILDER.push("overworld");
 			aluminumGen = BUILDER.comment("Enable Aluminum Worldgen(Overworld)").define("aluminum", true);
+			iridiumGen = BUILDER.comment("Enable Iridium Worldgen(Overworld)").define("iridium", true);
 			leadGen = BUILDER.comment("Enable Lead Worldgen(Overworld)").define("lead", true);
 			nickelGen = BUILDER.comment("Enable Nickel Worldgen(Overworld)").define("nickel", true);
 			osmiumGen = BUILDER.comment("Enable Osmium Worldgen(Overworld)").define("osmium", true);
@@ -273,9 +357,15 @@ public class Configuration {
 			tinGen = BUILDER.comment("Enable Tin Worldgen(Overworld)").define("tin", true);
 			uraniumGen = BUILDER.comment("Enable Uranium Worldgen(Overworld)").define("uranium", true);
 			zincGen = BUILDER.comment("Enable Zinc Worldgen(Overworld)").define("zinc", true);
+
+			rubyGen = BUILDER.comment("Enable Ruby Worldgen(Overworld-Plains)").define("ruby", true);
+			sapphireGen = BUILDER.comment("Enable Sapphire Worldgen(Overworld-Ocean)").define("sapphire", true);
+			peridotGen = BUILDER.comment("Enable Peridot Worldgen(Overworld-Desert)").define("peridot", true);
+
 			BUILDER.pop();
 			BUILDER.push("nether");
 			aluminumNetherGen = BUILDER.comment("Enable Aluminum Worldgen(Nether)").define("aluminum_nether", true);
+			iridiumNetherGen = BUILDER.comment("Enable Iridium Worldgen(Nether)").define("iridium_nether", true);
 			leadNetherGen = BUILDER.comment("Enable Lead Worldgen(Nether)").define("lead_nether", true);
 			nickelNetherGen = BUILDER.comment("Enable Nickel Worldgen(Nether)").define("nickel_nether", true);
 			osmiumNetherGen = BUILDER.comment("Enable Osmium Worldgen(Nether)").define("osmium_nether", true);
@@ -287,6 +377,7 @@ public class Configuration {
 			BUILDER.pop();
 			BUILDER.push("end");
 			aluminumEndGen = BUILDER.comment("Enable Aluminum Worldgen(The End)").define("aluminum_end", true);
+			iridiumEndGen = BUILDER.comment("Enable Iridium Worldgen(The End)").define("iridium_end", true);
 			leadEndGen = BUILDER.comment("Enable Lead Worldgen(The End)").define("lead_end", true);
 			nickelEndGen = BUILDER.comment("Enable Nickel Worldgen(The End)").define("nickel_end", true);
 			osmiumEndGen = BUILDER.comment("Enable Osmium Worldgen(The End)").define("osmium_end", true);
@@ -307,6 +398,18 @@ public class Configuration {
 					7, 1, 64);
 			aluminum_SpawnCount = BUILDER.comment("Aluminum deposit count(number of veins)").defineInRange("aluminum_deposit_count",
 					20, 1, 64);
+
+			BUILDER.pop();
+
+			BUILDER.push("iridium");
+			iridium_MinY = BUILDER.comment("Iridium generates no lower than X blocks above world BOTTOM").defineInRange("iridium_min_y",
+					5, -64, 320);
+			iridium_MaxY = BUILDER.comment("Iridium generates no higher than X blocks above world BOTTOM").defineInRange("iridium_max_y", 69,
+					0, 320);
+			iridium_SpawnSize = BUILDER.comment("Iridium deposit size(number of ores)").defineInRange("iridium_deposit_size",
+					2, 1, 64);
+			iridium_SpawnCount = BUILDER.comment("Iridium rarity, lower = more common").defineInRange("iridium_deposit_count",
+					1, 1, 64);
 
 			BUILDER.pop();
 
@@ -377,6 +480,30 @@ public class Configuration {
 			tin_SpawnSize = BUILDER.comment("Tin deposit size(number of ores)").defineInRange("tin_deposit_size", 7, 1, 64);
 			tin_SpawnCount = BUILDER.comment("Tin deposit count(number of veins)").defineInRange("tin_deposit_count",
 					20, 1, 64);
+			BUILDER.pop();
+
+			BUILDER.push("ruby");
+			ruby_MinY = BUILDER.comment("Ruby generates no lower than").defineInRange("ruby_min_y", -62, -64, 320);
+			ruby_MaxY = BUILDER.comment("Ruby generates no higher than").defineInRange("ruby_max_y", 16, -64, 320);
+			ruby_SpawnSize = BUILDER.comment("Ruby deposit size(number of ores)").defineInRange("ruby_deposit_size", 2, 1, 64);
+			ruby_SpawnCount = BUILDER.comment("Ruby deposit count(number of veins)").defineInRange("ruby_deposit_count",
+					3, 1, 64);
+			BUILDER.pop();
+
+			BUILDER.push("sapphire");
+			sapphire_MinY = BUILDER.comment("Sapphire generates no lower than").defineInRange("sapphire_min_y", -62, -64, 320);
+			sapphire_MaxY = BUILDER.comment("Sapphire generates no higher than").defineInRange("sapphire_max_y", 16, -64, 320);
+			sapphire_SpawnSize = BUILDER.comment("Sapphire deposit size(number of ores)").defineInRange("sapphire_deposit_size", 2, 1, 64);
+			sapphire_SpawnCount = BUILDER.comment("Sapphire deposit count(number of veins)").defineInRange("sapphire_deposit_count",
+					3, 1, 64);
+			BUILDER.pop();
+
+			BUILDER.push("peridot");
+			peridot_MinY = BUILDER.comment("Peridot generates no lower than").defineInRange("peridot_min_y", -62, -64, 320);
+			peridot_MaxY = BUILDER.comment("Peridot generates no higher than").defineInRange("peridot_max_y", 16, -64, 320);
+			peridot_SpawnSize = BUILDER.comment("Peridot deposit size(number of ores)").defineInRange("peridot_deposit_size", 2, 1, 64);
+			peridot_SpawnCount = BUILDER.comment("Peridot deposit count(number of veins)").defineInRange("peridot_deposit_count",
+					3, 1, 64);
 			BUILDER.pop();
 
 			BUILDER.push("uranium");

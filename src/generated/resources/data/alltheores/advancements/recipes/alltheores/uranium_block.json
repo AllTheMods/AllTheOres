@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_ingots/uranium_ingot": {
+    "has_TagKey[minecraft:item / forge:ingots/uranium]_ingot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_ingots/uranium_ingot",
+      "has_TagKey[minecraft:item / forge:ingots/uranium]_ingot",
       "has_the_recipe"
     ]
   ]

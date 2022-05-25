@@ -18,6 +18,7 @@ public class BlockTags extends BlockTagsProvider {
     @Override
     protected void addTags() {
         tag(ItemTagRegistry.RAW_ALUMINUM_BLOCK).add(BlockList.RAW_ALUMINUM_BLOCK.get());
+        tag(ItemTagRegistry.RAW_IRIDIUM_BLOCK).add(BlockList.RAW_IRIDIUM_BLOCK.get());
         tag(ItemTagRegistry.RAW_LEAD_BLOCK).add(BlockList.RAW_LEAD_BLOCK.get());
         tag(ItemTagRegistry.RAW_OSMIUM_BLOCK).add(BlockList.RAW_OSMIUM_BLOCK.get());
         tag(ItemTagRegistry.RAW_NICKEL_BLOCK).add(BlockList.RAW_NICKEL_BLOCK.get());
@@ -28,6 +29,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(ItemTagRegistry.RAW_ZINC_BLOCK).add(BlockList.RAW_ZINC_BLOCK.get());
 
         tag(ItemTagRegistry.ALUMINUM_BLOCK).add(BlockList.ALUMINUM_BLOCK.get());
+        tag(ItemTagRegistry.IRIDIUM_BLOCK).add(BlockList.IRIDIUM_BLOCK.get());
         tag(ItemTagRegistry.LEAD_BLOCK).add(BlockList.LEAD_BLOCK.get());
         tag(ItemTagRegistry.OSMIUM_BLOCK).add(BlockList.OSMIUM_BLOCK.get());
         tag(ItemTagRegistry.NICKEL_BLOCK).add(BlockList.NICKEL_BLOCK.get());
@@ -45,9 +47,12 @@ public class BlockTags extends BlockTagsProvider {
         tag(ItemTagRegistry.SIGNALUM_BLOCK).add(BlockList.SIGNALUM_BLOCK.get());
         tag(ItemTagRegistry.STEEL_BLOCK).add(BlockList.STEEL_BLOCK.get());
         tag(ItemTagRegistry.BRASS_BLOCK).add(BlockList.BRASS_BLOCK.get());
-
+        tag(ItemTagRegistry.RUBY_BLOCK).add(BlockList.RUBY_BLOCK.get());
+        tag(ItemTagRegistry.SAPPHIRE_BLOCK).add(BlockList.SAPPHIRE_BLOCK.get());
+        tag(ItemTagRegistry.PERIDOT_BLOCK).add(BlockList.PERIDOT_BLOCK.get());
 
         tag(ItemTagRegistry.ALUMINUM_ORE).add(BlockList.ALUMINUM_ORE.get());
+        tag(ItemTagRegistry.IRIDIUM_ORE).add(BlockList.IRIDIUM_ORE.get());
         tag(ItemTagRegistry.LEAD_ORE).add(BlockList.LEAD_ORE.get());
         tag(ItemTagRegistry.OSMIUM_ORE).add(BlockList.OSMIUM_ORE.get());
         tag(ItemTagRegistry.NICKEL_ORE).add(BlockList.NICKEL_ORE.get());
@@ -56,8 +61,15 @@ public class BlockTags extends BlockTagsProvider {
         tag(ItemTagRegistry.TIN_ORE).add(BlockList.TIN_ORE.get());
         tag(ItemTagRegistry.URANIUM_ORE).add(BlockList.URANIUM_ORE.get());
         tag(ItemTagRegistry.ZINC_ORE).add(BlockList.ZINC_ORE.get());
+        tag(ItemTagRegistry.RUBY_ORE).add(BlockList.RUBY_ORE.get());
+        tag(ItemTagRegistry.SAPPHIRE_ORE).add(BlockList.SAPPHIRE_ORE.get());
+        tag(ItemTagRegistry.PERIDOT_ORE).add(BlockList.PERIDOT_ORE.get());
+        tag(ItemTagRegistry.RUBY_ORE).add(BlockList.RUBY_SLATE_ORE.get());
+        tag(ItemTagRegistry.SAPPHIRE_ORE).add(BlockList.SAPPHIRE_SLATE_ORE.get());
+        tag(ItemTagRegistry.PERIDOT_ORE).add(BlockList.PERIDOT_SLATE_ORE.get());
 
         tag(ItemTagRegistry.ALUMINUM_ORE).add(BlockList.ALUMINUM_SLATE_ORE.get());
+        tag(ItemTagRegistry.IRIDIUM_ORE).add(BlockList.IRIDIUM_SLATE_ORE.get());
         tag(ItemTagRegistry.LEAD_ORE).add(BlockList.LEAD_SLATE_ORE.get());
         tag(ItemTagRegistry.OSMIUM_ORE).add(BlockList.OSMIUM_SLATE_ORE.get());
         tag(ItemTagRegistry.NICKEL_ORE).add(BlockList.NICKEL_SLATE_ORE.get());
@@ -68,6 +80,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(ItemTagRegistry.ZINC_ORE).add(BlockList.ZINC_SLATE_ORE.get());
 
         tag(ItemTagRegistry.ALUMINUM_ORE).add(BlockList.ALUMINUM_NETHER_ORE.get());
+        tag(ItemTagRegistry.IRIDIUM_ORE).add(BlockList.IRIDIUM_NETHER_ORE.get());
         tag(ItemTagRegistry.LEAD_ORE).add(BlockList.LEAD_NETHER_ORE.get());
         tag(ItemTagRegistry.OSMIUM_ORE).add(BlockList.OSMIUM_NETHER_ORE.get());
         tag(ItemTagRegistry.NICKEL_ORE).add(BlockList.NICKEL_NETHER_ORE.get());
@@ -78,6 +91,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(ItemTagRegistry.ZINC_ORE).add(BlockList.ZINC_NETHER_ORE.get());
 
         tag(ItemTagRegistry.ALUMINUM_ORE).add(BlockList.ALUMINUM_END_ORE.get());
+        tag(ItemTagRegistry.IRIDIUM_ORE).add(BlockList.IRIDIUM_END_ORE.get());
         tag(ItemTagRegistry.LEAD_ORE).add(BlockList.LEAD_END_ORE.get());
         tag(ItemTagRegistry.OSMIUM_ORE).add(BlockList.OSMIUM_END_ORE.get());
         tag(ItemTagRegistry.NICKEL_ORE).add(BlockList.NICKEL_END_ORE.get());
@@ -88,6 +102,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(ItemTagRegistry.ZINC_ORE).add(BlockList.ZINC_END_ORE.get());
 
         tag(ItemTagRegistry.ALUMINUM_ORE).add(BlockList.OTHER_ALUMINUM_ORE.get());
+        tag(ItemTagRegistry.IRIDIUM_ORE).add(BlockList.OTHER_IRIDIUM_ORE.get());
         tag(ItemTagRegistry.LEAD_ORE).add(BlockList.OTHER_LEAD_ORE.get());
         tag(ItemTagRegistry.OSMIUM_ORE).add(BlockList.OTHER_OSMIUM_ORE.get());
         tag(ItemTagRegistry.NICKEL_ORE).add(BlockList.OTHER_NICKEL_ORE.get());
@@ -99,6 +114,7 @@ public class BlockTags extends BlockTagsProvider {
 
        ////
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ALUMINUM_BLOCK.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.IRIDIUM_BLOCK.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.LEAD_BLOCK.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OSMIUM_BLOCK.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.NICKEL_BLOCK.get());
@@ -119,6 +135,7 @@ public class BlockTags extends BlockTagsProvider {
 
 
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ALUMINUM_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.IRIDIUM_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.LEAD_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OSMIUM_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.NICKEL_ORE.get());
@@ -129,6 +146,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ZINC_ORE.get());
 
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ALUMINUM_SLATE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.IRIDIUM_SLATE_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.LEAD_SLATE_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OSMIUM_SLATE_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.NICKEL_SLATE_ORE.get());
@@ -139,6 +157,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ZINC_SLATE_ORE.get());
 
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ALUMINUM_NETHER_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.IRIDIUM_NETHER_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.LEAD_NETHER_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OSMIUM_NETHER_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.NICKEL_NETHER_ORE.get());
@@ -149,6 +168,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ZINC_NETHER_ORE.get());
 
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ALUMINUM_END_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.IRIDIUM_END_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.LEAD_END_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OSMIUM_END_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.NICKEL_END_ORE.get());
@@ -159,6 +179,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ZINC_END_ORE.get());
 
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OTHER_ALUMINUM_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OTHER_IRIDIUM_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OTHER_LEAD_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OTHER_OSMIUM_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OTHER_NICKEL_ORE.get());
@@ -175,6 +196,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.OSMIUM_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.NICKEL_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.PLATINUM_ORE.get());
+        tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.IRIDIUM_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.SILVER_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.TIN_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.URANIUM_ORE.get());
@@ -185,6 +207,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.OSMIUM_SLATE_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.NICKEL_SLATE_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.PLATINUM_SLATE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.IRIDIUM_SLATE_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.SILVER_SLATE_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.TIN_SLATE_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.URANIUM_SLATE_ORE.get());
@@ -195,6 +218,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.OSMIUM_NETHER_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.NICKEL_NETHER_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.PLATINUM_NETHER_ORE.get());
+        tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.IRIDIUM_NETHER_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.SILVER_NETHER_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.TIN_NETHER_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.URANIUM_NETHER_ORE.get());
@@ -205,6 +229,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.OSMIUM_END_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.NICKEL_END_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.PLATINUM_END_ORE.get());
+        tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.IRIDIUM_END_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.SILVER_END_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.TIN_END_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.URANIUM_END_ORE.get());
@@ -215,6 +240,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.OTHER_OSMIUM_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.OTHER_NICKEL_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.OTHER_PLATINUM_ORE.get());
+        tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.OTHER_IRIDIUM_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.OTHER_SILVER_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.OTHER_TIN_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(BlockList.OTHER_URANIUM_ORE.get());

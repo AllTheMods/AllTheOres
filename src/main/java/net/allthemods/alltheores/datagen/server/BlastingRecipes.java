@@ -55,6 +55,11 @@ public class BlastingRecipes extends RecipeProvider {
                 .save(consumer,recipeDir("lumium_ingot","dust"));
 
         SimpleCookingRecipeBuilder
+                .blasting(Ingredient.of(BlockList.IRIDIUM_DUST.get()),BlockList.IRIDIUM_INGOT.get(),0.15f,100)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.IRIDIUM_DUST.get()))
+                .save(consumer,recipeDir("iridium_ingot","dust"));
+
+        SimpleCookingRecipeBuilder
                 .blasting(Ingredient.of(BlockList.ENDERIUM_DUST.get()),BlockList.ENDERIUM_INGOT.get(),0.15f,100)
                 .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ENDERIUM_DUST.get()))
                 .save(consumer,recipeDir("enderium_ingot","dust"));
@@ -88,6 +93,11 @@ public class BlastingRecipes extends RecipeProvider {
                 .blasting(Ingredient.of(BlockList.ALUMINUM_RAW.get()),BlockList.ALUMINUM_INGOT.get(),0.15f,100)
                 .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ALUMINUM_RAW.get()))
                 .save(consumer,recipeDir("aluminum_ingot","raw"));
+
+        SimpleCookingRecipeBuilder
+                .blasting(Ingredient.of(BlockList.IRIDIUM_RAW.get()),BlockList.IRIDIUM_INGOT.get(),0.15f,100)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.IRIDIUM_RAW.get()))
+                .save(consumer,recipeDir("iridium_ingot","raw"));
 
         SimpleCookingRecipeBuilder
                 .blasting(Ingredient.of(BlockList.LEAD_RAW.get()),BlockList.LEAD_INGOT.get(),0.15f,100)
@@ -135,6 +145,11 @@ public class BlastingRecipes extends RecipeProvider {
                 .save(consumer,recipeDir("aluminum_ingot","ore"));
 
         SimpleCookingRecipeBuilder
+                .blasting(Ingredient.of(BlockList.IRIDIUM_ORE.get()),BlockList.IRIDIUM_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.IRIDIUM_ORE.get()))
+                .save(consumer,recipeDir("iridium_ingot","ore"));
+
+        SimpleCookingRecipeBuilder
                 .blasting(Ingredient.of(BlockList.LEAD_ORE.get()),BlockList.LEAD_INGOT.get(),0.15f,200)
                 .unlockedBy(hasCondition,RecipeProvider.has(BlockList.LEAD_ORE.get()))
                 .save(consumer,recipeDir("lead_ingot","ore"));
@@ -179,6 +194,12 @@ public class BlastingRecipes extends RecipeProvider {
                 .blasting(Ingredient.of(BlockList.ALUMINUM_SLATE_ORE.get()),BlockList.ALUMINUM_INGOT.get(),0.15f,200)
                 .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ALUMINUM_SLATE_ORE.get()))
                 .save(consumer,recipeDir("aluminum_ingot","slate_ore"));
+
+
+        SimpleCookingRecipeBuilder
+                .blasting(Ingredient.of(BlockList.IRIDIUM_SLATE_ORE.get()),BlockList.IRIDIUM_INGOT.get(),0.15f,200)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.IRIDIUM_SLATE_ORE.get()))
+                .save(consumer,recipeDir("iridium_ingot","slate_ore"));
 
         SimpleCookingRecipeBuilder
                 .blasting(Ingredient.of(BlockList.LEAD_SLATE_ORE.get()),BlockList.LEAD_INGOT.get(),0.15f,200)

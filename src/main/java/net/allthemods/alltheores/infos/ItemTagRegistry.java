@@ -17,17 +17,7 @@ public class ItemTagRegistry {
     //ATM Compat
     public static final TagKey<Block> ANCIENT_STONE = BlockTags.create(Reference.location("allthemodium:ancient_stone"));
     //
-<<<<<<< Updated upstream
-    public static final Tag.Named<Item> ORE_HAMMERS = ItemTags.createOptional(Reference.ato("ore_hammers"));
-    public static final Tag.Named<Item> INGOTS = ItemTags.createOptional(Reference.forge("ingots"));
-    public static final Tag.Named<Item> NUGGETS = ItemTags.createOptional(Reference.forge("nuggets"));
-    public static final Tag.Named<Item> STORAGE_BLOCKS = ItemTags.createOptional(Reference.forge("storage_blocks"));
-    public static final Tag.Named<Item> DUSTS = ItemTags.createOptional(Reference.forge("dusts"));
-    public static final Tag.Named<Item> GEARS = ItemTags.createOptional(Reference.forge("gears"));
-    public static final Tag.Named<Item> PLATES = ItemTags.createOptional(Reference.forge("plates"));
-    public static final Tag.Named<Item> RODS = ItemTags.createOptional(Reference.forge("rods"));
-    public static final Tag.Named<Item> RODS_METAL = ItemTags.createOptional(Reference.forge("rods/metal"));
-=======
+
     public static final TagKey<Item> ORE_HAMMERS = ItemTags.create(Reference.ato("ore_hammers"));
     public static final TagKey<Item> INGOTS = ItemTags.create(Reference.forge("ingots"));
     public static final TagKey<Item> NUGGETS = ItemTags.create(Reference.forge("nuggets"));
@@ -36,11 +26,13 @@ public class ItemTagRegistry {
     public static final TagKey<Item> GEARS = ItemTags.create(Reference.forge("gears"));
     public static final TagKey<Item> PLATES = ItemTags.create(Reference.forge("plates"));
     public static final TagKey<Item> RODS = ItemTags.create(Reference.forge("rods"));
->>>>>>> Stashed changes
+    public static final TagKey<Item> RODS_METAL = ItemTags.create(Reference.forge("rods/metal"));
 
     public static final TagKey<Item> ORES = ItemTags.create(Reference.forge("ores"));
+    public static final TagKey<Item> GEMS = ItemTags.create(Reference.forge("gems"));
 
     public static final TagKey<Item> LEAD_INGOT = ItemTags.create(Reference.ingot("lead"));
+    public static final TagKey<Item> IRIDIUM_INGOT = ItemTags.create(Reference.ingot("iridium"));
     public static final TagKey<Item> COPPER_INGOT = ItemTags.create(Reference.ingot("copper"));
     public static final TagKey<Item> SILVER_INGOT = ItemTags.create(Reference.ingot("silver"));
     public static final TagKey<Item> PLATINUM_INGOT = ItemTags.create(Reference.ingot("platinum"));
@@ -61,6 +53,7 @@ public class ItemTagRegistry {
     public static final TagKey<Item> BRASS_INGOT = ItemTags.create(Reference.ingot("brass"));
 
     public static final TagKey<Item> LEAD_NUGGET = ItemTags.create(Reference.nugget("lead"));
+    public static final TagKey<Item> IRIDIUM_NUGGET = ItemTags.create(Reference.nugget("iridium"));
     public static final TagKey<Item> COPPER_NUGGET = ItemTags.create(Reference.nugget("copper"));
     public static final TagKey<Item> SILVER_NUGGET = ItemTags.create(Reference.nugget("silver"));
     public static final TagKey<Item> PLATINUM_NUGGET = ItemTags.create(Reference.nugget("platinum"));
@@ -81,6 +74,7 @@ public class ItemTagRegistry {
     public static final TagKey<Item> BRASS_NUGGET = ItemTags.create(Reference.nugget("brass"));
 
     public static final TagKey<Block> LEAD_BLOCK = BlockTags.create(Reference.block("lead"));
+    public static final TagKey<Block> IRIDIUM_BLOCK = BlockTags.create(Reference.block("iridium"));
     public static final TagKey<Block> COPPER_BLOCK = BlockTags.create(Reference.block("copper"));
     public static final TagKey<Block> SILVER_BLOCK = BlockTags.create(Reference.block("silver"));
     public static final TagKey<Block> PLATINUM_BLOCK = BlockTags.create(Reference.block("platinum"));
@@ -99,7 +93,12 @@ public class ItemTagRegistry {
     public static final TagKey<Block> SIGNALUM_BLOCK = BlockTags.create(Reference.block("signalum"));
     public static final TagKey<Block> STEEL_BLOCK = BlockTags.create(Reference.block("steel"));
     public static final TagKey<Block> BRASS_BLOCK = BlockTags.create(Reference.block("brass"));
+    public static final TagKey<Block> PERIDOT_BLOCK = BlockTags.create(Reference.block("peridot"));
+    public static final TagKey<Block> RUBY_BLOCK = BlockTags.create(Reference.block("ruby"));
+    public static final TagKey<Block> SAPPHIRE_BLOCK = BlockTags.create(Reference.block("sapphire"));
 
+
+    public static final TagKey<Block> RAW_IRIDIUM_BLOCK = BlockTags.create(Reference.block("raw_iridium"));
     public static final TagKey<Block> RAW_LEAD_BLOCK = BlockTags.create(Reference.block("raw_lead"));
     public static final TagKey<Block> RAW_SILVER_BLOCK = BlockTags.create(Reference.block("raw_silver"));
     public static final TagKey<Block> RAW_PLATINUM_BLOCK = BlockTags.create(Reference.block("raw_platinum"));
@@ -110,6 +109,7 @@ public class ItemTagRegistry {
     public static final TagKey<Block> RAW_ZINC_BLOCK = BlockTags.create(Reference.block("raw_zinc"));
     public static final TagKey<Block> RAW_TIN_BLOCK = BlockTags.create(Reference.block("raw_tin"));
 
+    public static final TagKey<Item> RAW_IRIDIUM_BLOCK_ITEM = ItemTags.create(Reference.block("raw_iridium"));
     public static final TagKey<Item> RAW_LEAD_BLOCK_ITEM = ItemTags.create(Reference.block("raw_lead"));
     public static final TagKey<Item> RAW_SILVER_BLOCK_ITEM = ItemTags.create(Reference.block("raw_silver"));
     public static final TagKey<Item> RAW_PLATINUM_BLOCK_ITEM = ItemTags.create(Reference.block("raw_platinum"));
@@ -120,7 +120,7 @@ public class ItemTagRegistry {
     public static final TagKey<Item> RAW_ZINC_BLOCK_ITEM = ItemTags.create(Reference.block("raw_zinc"));
     public static final TagKey<Item> RAW_TIN_BLOCK_ITEM = ItemTags.create(Reference.block("raw_tin"));
 
-
+    public static final TagKey<Item> IRIDIUM_BLOCK_ITEM = ItemTags.create(Reference.block("iridium"));
     public static final TagKey<Item> LEAD_BLOCK_ITEM = ItemTags.create(Reference.block("lead"));
     public static final TagKey<Item> COPPER_BLOCK_ITEM = ItemTags.create(Reference.block("copper"));
     public static final TagKey<Item> SILVER_BLOCK_ITEM = ItemTags.create(Reference.block("silver"));
@@ -140,11 +140,15 @@ public class ItemTagRegistry {
     public static final TagKey<Item> SIGNALUM_BLOCK_ITEM = ItemTags.create(Reference.block("signalum"));
     public static final TagKey<Item> STEEL_BLOCK_ITEM = ItemTags.create(Reference.block("steel"));
     public static final TagKey<Item> BRASS_BLOCK_ITEM = ItemTags.create(Reference.block("brass"));
+    public static final TagKey<Item> PERIDOT_BLOCK_ITEM = ItemTags.create(Reference.block("peridot"));
+    public static final TagKey<Item> RUBY_BLOCK_ITEM = ItemTags.create(Reference.block("ruby"));
+    public static final TagKey<Item> SAPPHIRE_BLOCK_ITEM = ItemTags.create(Reference.block("sapphire"));
 
     // RODS
 
     public static final TagKey<Item> ALUMINUM_ROD = forge("rods/aluminum");
     public static final TagKey<Item> COPPER_ROD = forge("rods/copper");
+    public static final TagKey<Item> IRIDIUM_ROD = forge("rods/iridium");
     public static final TagKey<Item> LEAD_ROD = forge("rods/lead");
     public static final TagKey<Item> NICKEL_ROD = forge("rods/nickel");
     public static final TagKey<Item> OSMIUM_ROD = forge("rods/osmium");
@@ -169,6 +173,7 @@ public class ItemTagRegistry {
 
     public static final TagKey<Item> ALUMINUM_GEAR = forge("gears/aluminum");
     public static final TagKey<Item> COPPER_GEAR = forge("gears/copper");
+    public static final TagKey<Item> IRIDIUM_GEAR = forge("gears/iridium");
     public static final TagKey<Item> LEAD_GEAR = forge("gears/lead");
     public static final TagKey<Item> NICKEL_GEAR = forge("gears/nickel");
     public static final TagKey<Item> OSMIUM_GEAR = forge("gears/osmium");
@@ -193,6 +198,7 @@ public class ItemTagRegistry {
 
     public static final TagKey<Item> ALUMINUM_PLATE = forge("plates/aluminum");
     public static final TagKey<Item> COPPER_PLATE = forge("plates/copper");
+    public static final TagKey<Item> IRIDIUM_PLATE = forge("plates/iridium");
     public static final TagKey<Item> LEAD_PLATE = forge("plates/lead");
     public static final TagKey<Item> NICKEL_PLATE = forge("plates/nickel");
     public static final TagKey<Item> OSMIUM_PLATE = forge("plates/osmium");
@@ -215,6 +221,7 @@ public class ItemTagRegistry {
     public static final TagKey<Item> BRASS_PLATE = forge("plates/brass");
     // DUST
     public static final TagKey<Item> PLATINUM_DUST = forge("dusts/platinum");
+    public static final TagKey<Item> IRIDIUM_DUST = forge("dusts/iridium");
     public static final TagKey<Item> COPPER_DUST = forge("dusts/copper");
     public static final TagKey<Item> ALUMINUM_DUST = forge("dusts/aluminum");
     public static final TagKey<Item> URANIUM_DUST = forge("dusts/uranium");
@@ -236,10 +243,14 @@ public class ItemTagRegistry {
     public static final TagKey<Item> GOLD_DUST = forge("dusts/gold");
     public static final TagKey<Item> DIAMOND_DUST = forge("dusts/diamond");
     public static final TagKey<Item> BRASS_DUST = forge("dusts/brass");
+    public static final TagKey<Item> RUBY_DUST = forge("dusts/ruby");
+    public static final TagKey<Item> SAPPHIRE_DUST = forge("dusts/sapphire");
+    public static final TagKey<Item> PERIDOT_DUST = forge("dusts/peridot");
     //ORE
 
 
     public static final TagKey<Block> LEAD_ORE = BlockTags.create(Reference.ore("lead"));
+    public static final TagKey<Block> IRIDIUM_ORE = BlockTags.create(Reference.ore("iridium"));
     public static final TagKey<Block> SILVER_ORE = BlockTags.create(Reference.ore("silver"));
     public static final TagKey<Block> PLATINUM_ORE = BlockTags.create(Reference.ore("platinum"));
     public static final TagKey<Block> ALUMINUM_ORE = BlockTags.create(Reference.ore("aluminum"));
@@ -248,7 +259,11 @@ public class ItemTagRegistry {
     public static final TagKey<Block> OSMIUM_ORE = BlockTags.create(Reference.ore("osmium"));
     public static final TagKey<Block> ZINC_ORE = BlockTags.create(Reference.ore("zinc"));
     public static final TagKey<Block> TIN_ORE = BlockTags.create(Reference.ore("tin"));
+    public static final TagKey<Block> PERIDOT_ORE = BlockTags.create(Reference.ore("peridot"));
+    public static final TagKey<Block> RUBY_ORE = BlockTags.create(Reference.ore("ruby"));
+    public static final TagKey<Block> SAPPHIRE_ORE = BlockTags.create(Reference.ore("sapphire"));
 
+    public static final TagKey<Item> IRIDIUM_ORE_ITEM = ItemTags.create(Reference.ore("iridium"));
     public static final TagKey<Item> LEAD_ORE_ITEM = ItemTags.create(Reference.ore("lead"));
     public static final TagKey<Item> SILVER_ORE_ITEM = ItemTags.create(Reference.ore("silver"));
     public static final TagKey<Item> PLATINUM_ORE_ITEM = ItemTags.create(Reference.ore("platinum"));
@@ -258,7 +273,11 @@ public class ItemTagRegistry {
     public static final TagKey<Item> OSMIUM_ORE_ITEM = ItemTags.create(Reference.ore("osmium"));
     public static final TagKey<Item> ZINC_ORE_ITEM = ItemTags.create(Reference.ore("zinc"));
     public static final TagKey<Item> TIN_ORE_ITEM = ItemTags.create(Reference.ore("tin"));
+    public static final TagKey<Item> PERIDOT_ORE_ITEM = ItemTags.create(Reference.ore("peridot"));
+    public static final TagKey<Item> RUBY_ORE_ITEM = ItemTags.create(Reference.ore("ruby"));
+    public static final TagKey<Item> SAPPHIRE_ORE_ITEM = ItemTags.create(Reference.ore("sapphire"));
 
+    public static final TagKey<Item> RAW_IRIDIUM = ItemTags.create(Reference.raw_ores("iridium"));
     public static final TagKey<Item> RAW_LEAD = ItemTags.create(Reference.raw_ores("lead"));
     public static final TagKey<Item> RAW_SILVER = ItemTags.create(Reference.raw_ores("silver"));
     public static final TagKey<Item> RAW_PLATINUM = ItemTags.create(Reference.raw_ores("platinum"));
@@ -268,7 +287,11 @@ public class ItemTagRegistry {
     public static final TagKey<Item> RAW_OSMIUM = ItemTags.create(Reference.raw_ores("osmium"));
     public static final TagKey<Item> RAW_ZINC = ItemTags.create(Reference.raw_ores("zinc"));
     public static final TagKey<Item> RAW_TIN = ItemTags.create(Reference.raw_ores("tin"));
+    public static final TagKey<Item> PERIDOT = ItemTags.create(Reference.gem("peridot"));
+    public static final TagKey<Item> RUBY = ItemTags.create(Reference.gem("ruby"));
+    public static final TagKey<Item> SAPPHIRE = ItemTags.create(Reference.gem("sapphire"));
 
+    public static final TagKey<Item> RAW_IRIDIUM_MATERIAL = ItemTags.create(Reference.raw_materials("iridium"));
     public static final TagKey<Item> RAW_LEAD_MATERIAL = ItemTags.create(Reference.raw_materials("lead"));
     public static final TagKey<Item> RAW_SILVER_MATERIAL = ItemTags.create(Reference.raw_materials("silver"));
     public static final TagKey<Item> RAW_PLATINUM_MATERIAL = ItemTags.create(Reference.raw_materials("platinum"));
@@ -278,6 +301,36 @@ public class ItemTagRegistry {
     public static final TagKey<Item> RAW_OSMIUM_MATERIAL = ItemTags.create(Reference.raw_materials("osmium"));
     public static final TagKey<Item> RAW_ZINC_MATERIAL = ItemTags.create(Reference.raw_materials("zinc"));
     public static final TagKey<Item> RAW_TIN_MATERIAL = ItemTags.create(Reference.raw_materials("tin"));
+
+    //MEK COMPAT
+
+    public static final TagKey<Item> CLUMPS_MEK = ItemTags.create(Reference.mek("clumps"));
+    public static final TagKey<Item> CLUMPS_MEK_ALU = ItemTags.create(Reference.mek("clumps/aluminum"));
+    public static final TagKey<Item> CLUMPS_MEK_NIC = ItemTags.create(Reference.mek("clumps/nickel"));
+    public static final TagKey<Item> CLUMPS_MEK_PLA = ItemTags.create(Reference.mek("clumps/platinum"));
+    public static final TagKey<Item> CLUMPS_MEK_SIL = ItemTags.create(Reference.mek("clumps/silver"));
+    public static final TagKey<Item> CLUMPS_MEK_ZIN = ItemTags.create(Reference.mek("clumps/zinc"));
+
+    public static final TagKey<Item> CRYSTAL_MEK = ItemTags.create(Reference.mek("crystals"));
+    public static final TagKey<Item> CRYSTAL_MEK_ALU = ItemTags.create(Reference.mek("crystals/aluminum"));
+    public static final TagKey<Item> CRYSTAL_MEK_NIC = ItemTags.create(Reference.mek("crystals/nickel"));
+    public static final TagKey<Item> CRYSTAL_MEK_PLA = ItemTags.create(Reference.mek("crystals/platinum"));
+    public static final TagKey<Item> CRYSTAL_MEK_SIL = ItemTags.create(Reference.mek("crystals/silver"));
+    public static final TagKey<Item> CRYSTAL_MEK_ZIN = ItemTags.create(Reference.mek("crystals/zinc"));
+
+    public static final TagKey<Item> DIRTY_MEK = ItemTags.create(Reference.mek("dirty_dusts"));
+    public static final TagKey<Item> DIRTY_MEK_ALU = ItemTags.create(Reference.mek("dirty_dusts/aluminum"));
+    public static final TagKey<Item> DIRTY_MEK_NIC = ItemTags.create(Reference.mek("dirty_dusts/nickel"));
+    public static final TagKey<Item> DIRTY_MEK_PLA = ItemTags.create(Reference.mek("dirty_dusts/platinum"));
+    public static final TagKey<Item> DIRTY_MEK_SIL = ItemTags.create(Reference.mek("dirty_dusts/silver"));
+    public static final TagKey<Item> DIRTY_MEK_ZIN = ItemTags.create(Reference.mek("dirty_dusts/zinc"));
+
+    public static final TagKey<Item> SHARD_MEK = ItemTags.create(Reference.mek("shards"));
+    public static final TagKey<Item> SHARD_MEK_ALU = ItemTags.create(Reference.mek("shards/aluminum"));
+    public static final TagKey<Item> SHARD_MEK_NIC = ItemTags.create(Reference.mek("shards/nickel"));
+    public static final TagKey<Item> SHARD_MEK_PLA = ItemTags.create(Reference.mek("shards/platinum"));
+    public static final TagKey<Item> SHARD_MEK_SIL = ItemTags.create(Reference.mek("shards/silver"));
+    public static final TagKey<Item> SHARD_MEK_ZIN = ItemTags.create(Reference.mek("shards/zinc"));
 
 
     private static TagKey<Item> forge(String name)

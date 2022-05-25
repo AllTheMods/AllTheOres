@@ -56,6 +56,9 @@ public class LootTables extends LootTableProvider {
                 if(oretype.contains("lead")) { this.add(block, (block1) -> {
                     return createOreDrop(block1, BlockList.LEAD_RAW.get());
                 }); }
+                if(oretype.contains("iridium")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.IRIDIUM_RAW.get());
+                }); }
                 if(oretype.contains("nickel")) { this.add(block, (block1) -> {
                     return createOreDrop(block1, BlockList.NICKEL_RAW.get());
                 }); }
@@ -104,6 +107,15 @@ public class LootTables extends LootTableProvider {
                 }); }
                 if(oretype.contains("redstone")) { this.add(block, (block1) -> {
                     return createOreDrop(block1, Items.REDSTONE);
+                }); }
+                if(oretype.contains("ruby")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.RUBY.get());
+                }); }
+                if(oretype.contains("sapphire")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.SAPPHIRE.get());
+                }); }
+                if(oretype.contains("peridot")) { this.add(block, (block1) -> {
+                    return createOreDrop(block1, BlockList.PERIDOT.get());
                 }); }
             } else {
                 this.dropSelf(block);

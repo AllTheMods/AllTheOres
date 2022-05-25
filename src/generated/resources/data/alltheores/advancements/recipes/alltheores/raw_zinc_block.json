@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_raw_zinc": {
+    "has_raw_TagKey[minecraft:item / forge:raw_ores/zinc]": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_raw_zinc",
+      "has_raw_TagKey[minecraft:item / forge:raw_ores/zinc]",
       "has_the_recipe"
     ]
   ]

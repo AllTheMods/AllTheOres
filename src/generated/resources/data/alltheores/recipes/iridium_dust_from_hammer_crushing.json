@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "alltheores:ore_hammers"
+    },
+    {
+      "tag": "forge:raw_ores/iridium"
+    }
+  ],
+  "result": {
+    "item": "alltheores:iridium_dust",
+    "count": 2
+  }
+}

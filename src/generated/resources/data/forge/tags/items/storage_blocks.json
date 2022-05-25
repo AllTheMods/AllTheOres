@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "alltheores:raw_aluminum_block",
+    "alltheores:raw_iridium_block",
     "alltheores:raw_lead_block",
     "alltheores:raw_osmium_block",
     "alltheores:raw_nickel_block",
@@ -11,6 +12,7 @@
     "alltheores:raw_uranium_block",
     "alltheores:raw_zinc_block",
     "alltheores:aluminum_block",
+    "alltheores:iridium_block",
     "alltheores:lead_block",
     "alltheores:osmium_block",
     "alltheores:nickel_block",
@@ -27,6 +29,9 @@
     "alltheores:lumium_block",
     "alltheores:signalum_block",
     "alltheores:steel_block",
-    "alltheores:brass_block"
+    "alltheores:brass_block",
+    "alltheores:ruby_block",
+    "alltheores:sapphire_block",
+    "alltheores:peridot_block"
   ]
 }

@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_nuggets/osmium_nugget": {
+    "has_TagKey[minecraft:item / forge:nuggets/osmium]_nugget": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_nuggets/osmium_nugget",
+      "has_TagKey[minecraft:item / forge:nuggets/osmium]_nugget",
       "has_the_recipe"
     ]
   ]

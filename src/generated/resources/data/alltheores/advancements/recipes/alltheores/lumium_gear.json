@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_ingots/lumium_ingot": {
+    "has_TagKey[minecraft:item / forge:ingots/lumium]_ingot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_ingots/lumium_ingot",
+      "has_TagKey[minecraft:item / forge:ingots/lumium]_ingot",
       "has_the_recipe"
     ]
   ]

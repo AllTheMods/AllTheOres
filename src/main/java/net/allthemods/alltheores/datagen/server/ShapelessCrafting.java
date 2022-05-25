@@ -27,6 +27,45 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
         final String hasCondition = "has_item";
 
         ShapelessRecipeBuilder
+                .shapeless(BlockList.RUBY.get(),3)
+                .requires(ItemTagRegistry.ORE_HAMMERS)
+                .requires(ItemTagRegistry.RUBY_ORE_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.inventoryTrigger(ItemPredicate.Builder.item().of(ItemTagRegistry.ORE_HAMMERS).build()))
+                .save(consumer,recipeDir("ruby","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.SAPPHIRE.get(),3)
+                .requires(ItemTagRegistry.ORE_HAMMERS)
+                .requires(ItemTagRegistry.SAPPHIRE_ORE_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.inventoryTrigger(ItemPredicate.Builder.item().of(ItemTagRegistry.ORE_HAMMERS).build()))
+                .save(consumer,recipeDir("sapphire","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.PERIDOT.get(),3)
+                .requires(ItemTagRegistry.ORE_HAMMERS)
+                .requires(ItemTagRegistry.PERIDOT_ORE_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.inventoryTrigger(ItemPredicate.Builder.item().of(ItemTagRegistry.ORE_HAMMERS).build()))
+                .save(consumer,recipeDir("peridot","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.RUBY.get(),9)
+                .requires(ItemTagRegistry.RUBY_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RUBY_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("ruby","block"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.SAPPHIRE.get(),9)
+                .requires(ItemTagRegistry.SAPPHIRE_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.SAPPHIRE_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("sapphire","block"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.PERIDOT.get(),9)
+                .requires(ItemTagRegistry.PERIDOT_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.PERIDOT_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("peridot","block"));
+
+        ShapelessRecipeBuilder
                 .shapeless(BlockList.INVAR_DUST.get(),3)
                 .requires(BlockList.IRON_DUST.get(),2)
                 .requires(ItemTagRegistry.NICKEL_DUST)
@@ -103,11 +142,32 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
                 .save(consumer,recipeDir("netherite_dust","hammer_crushing"));
 
         ShapelessRecipeBuilder
-                .shapeless(BlockList.DIAMOND_DUST.get(),2)
+                .shapeless(BlockList.DIAMOND_DUST.get(),1)
                 .requires(Items.DIAMOND)
                 .requires(ItemTagRegistry.ORE_HAMMERS)
                 .unlockedBy(hasCondition,RecipeProvider.inventoryTrigger(ItemPredicate.Builder.item().of(ItemTagRegistry.ORE_HAMMERS).build()))
                 .save(consumer,recipeDir("diamond_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.RUBY_DUST.get(),1)
+                .requires(BlockList.RUBY.get())
+                .requires(ItemTagRegistry.ORE_HAMMERS)
+                .unlockedBy(hasCondition,RecipeProvider.inventoryTrigger(ItemPredicate.Builder.item().of(ItemTagRegistry.ORE_HAMMERS).build()))
+                .save(consumer,recipeDir("ruby_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.PERIDOT_DUST.get(),1)
+                .requires(BlockList.PERIDOT.get())
+                .requires(ItemTagRegistry.ORE_HAMMERS)
+                .unlockedBy(hasCondition,RecipeProvider.inventoryTrigger(ItemPredicate.Builder.item().of(ItemTagRegistry.ORE_HAMMERS).build()))
+                .save(consumer,recipeDir("peridot_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.SAPPHIRE_DUST.get(),1)
+                .requires(BlockList.SAPPHIRE.get())
+                .requires(ItemTagRegistry.ORE_HAMMERS)
+                .unlockedBy(hasCondition,RecipeProvider.inventoryTrigger(ItemPredicate.Builder.item().of(ItemTagRegistry.ORE_HAMMERS).build()))
+                .save(consumer,recipeDir("sapphire_dust","hammer_crushing"));
 
         ShapelessRecipeBuilder
                 .shapeless(BlockList.ALUMINUM_DUST.get(),2)
@@ -136,6 +196,13 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
                 .requires(ItemTagRegistry.RAW_NICKEL)
                 .unlockedBy(hasCondition,RecipeProvider.inventoryTrigger(ItemPredicate.Builder.item().of(ItemTagRegistry.ORE_HAMMERS).build()))
                 .save(consumer,recipeDir("nickel_dust","hammer_crushing"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.IRIDIUM_DUST.get(),2)
+                .requires(ItemTagRegistry.ORE_HAMMERS)
+                .requires(ItemTagRegistry.RAW_IRIDIUM)
+                .unlockedBy(hasCondition,RecipeProvider.inventoryTrigger(ItemPredicate.Builder.item().of(ItemTagRegistry.ORE_HAMMERS).build()))
+                .save(consumer,recipeDir("iridium_dust","hammer_crushing"));
 
         ShapelessRecipeBuilder
                 .shapeless(BlockList.OSMIUM_DUST.get(),2)
@@ -300,6 +367,12 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
                 .save(consumer,recipeDir("raw_lead","block"));
 
         ShapelessRecipeBuilder
+                .shapeless(BlockList.IRIDIUM_RAW.get(),9)
+                .requires(ItemTagRegistry.RAW_IRIDIUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RAW_IRIDIUM_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("raw_iridium","block"));
+
+        ShapelessRecipeBuilder
                 .shapeless(BlockList.OSMIUM_RAW.get(),9)
                 .requires(ItemTagRegistry.RAW_OSMIUM_BLOCK_ITEM)
                 .unlockedBy(hasCondition,RecipeProvider.has(BlockList.RAW_OSMIUM_BLOCK_ITEM.get()))
@@ -342,10 +415,28 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
                 .save(consumer,recipeDir("aluminum_ingot","block"));
 
         ShapelessRecipeBuilder
+                .shapeless(BlockList.IRIDIUM_INGOT.get(),9)
+                .requires(ItemTagRegistry.IRIDIUM_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.IRIDIUM_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("iridium_ingot","block"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.BRASS_NUGGET.get(),9)
+                .requires(ItemTagRegistry.BRASS_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.BRASS_INGOT.get()))
+                .save(consumer,recipeDir("brass_nugget","ingot"));
+
+        ShapelessRecipeBuilder
                 .shapeless(BlockList.ALUMINUM_NUGGET.get(),9)
                 .requires(ItemTagRegistry.ALUMINUM_INGOT)
                 .unlockedBy(hasCondition,RecipeProvider.has(BlockList.ALUMINUM_INGOT.get()))
                 .save(consumer,recipeDir("aluminum_nugget","ingot"));
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.IRIDIUM_NUGGET.get(),9)
+                .requires(ItemTagRegistry.IRIDIUM_INGOT)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.IRIDIUM_INGOT.get()))
+                .save(consumer,recipeDir("iridium_nugget","ingot"));
 
         ShapelessRecipeBuilder
                 .shapeless(BlockList.LEAD_INGOT.get(),9)

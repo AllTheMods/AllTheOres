@@ -56,7 +56,7 @@ public class BlockList {
 	public static final RegistryObject<Item> ALUMINUM_ORE_ITEM = ITEMS.register("aluminum_ore",
 			() -> new ToolTipBlockItem(ALUMINUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OTHER_ALUMINUM_ORE_ITEM = ITEMS.register("aluminum_other_ore",
-			() -> new BlockItem(OTHER_ALUMINUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+			() -> new ToolTipBlockItem(OTHER_ALUMINUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> ALUMINUM_BLOCK_ITEM = ITEMS.register("aluminum_block",
 			() -> new BlockItem(ALUMINUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> ALUMINUM_INGOT = ITEMS.register("aluminum_ingot",
@@ -67,8 +67,6 @@ public class BlockList {
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> ALUMINUM_RAW = ITEMS.register("raw_aluminum",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
-
-
 
 	public static final RegistryObject<Block> LEAD_SLATE_ORE = BLOCKS.register("lead_slate_ore", () -> new AOreBlock(4.5f,4.5f));
 	public static final RegistryObject<Block> LEAD_ORE = BLOCKS.register("lead_ore",() -> new AOreBlock(3.0f,3.0f));
@@ -82,7 +80,7 @@ public class BlockList {
 	public static final RegistryObject<Item> LEAD_ORE_ITEM = ITEMS.register("lead_ore",
 			() -> new ToolTipBlockItem(LEAD_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OTHER_LEAD_ORE_ITEM = ITEMS.register("lead_other_ore",
-			() -> new BlockItem(OTHER_LEAD_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+			() -> new ToolTipBlockItem(OTHER_LEAD_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> LEAD_BLOCK_ITEM = ITEMS.register("lead_block",
 			() -> new BlockItem(LEAD_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> LEAD_INGOT = ITEMS.register("lead_ingot",
@@ -107,7 +105,7 @@ public class BlockList {
 	public static final RegistryObject<Item> NICKEL_ORE_ITEM = ITEMS.register("nickel_ore",
 			() -> new ToolTipBlockItem(NICKEL_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OTHER_NICKEL_ORE_ITEM = ITEMS.register("nickel_other_ore",
-			() -> new BlockItem(OTHER_NICKEL_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+			() -> new ToolTipBlockItem(OTHER_NICKEL_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> NICKEL_BLOCK_ITEM = ITEMS.register("nickel_block",
 			() -> new BlockItem(NICKEL_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> NICKEL_INGOT = ITEMS.register("nickel_ingot",
@@ -130,7 +128,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Item> OSMIUM_SLATE_ORE_ITEM = ITEMS.register("osmium_slate_ore",
 			() -> new ToolTipBlockItem(OSMIUM_SLATE_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OTHER_OSMIUM_ORE_ITEM = ITEMS.register("osmium_other_ore",
-			() -> new BlockItem(OTHER_OSMIUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+			() -> new ToolTipBlockItem(OTHER_OSMIUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OSMIUM_BLOCK_ITEM = ITEMS.register("osmium_block",
 			() -> new BlockItem(OSMIUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OSMIUM_INGOT = ITEMS.register("osmium_ingot",
@@ -153,7 +151,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Item> PLATINUM_ORE_ITEM = ITEMS.register("platinum_ore",
 			() -> new ToolTipBlockItem(PLATINUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OTHER_PLATINUM_ORE_ITEM = ITEMS.register("platinum_other_ore",
-			() -> new BlockItem(OTHER_PLATINUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+			() -> new ToolTipBlockItem(OTHER_PLATINUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> PLATINUM_BLOCK_ITEM = ITEMS.register("platinum_block",
 			() -> new BlockItem(PLATINUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> PLATINUM_INGOT = ITEMS.register("platinum_ingot",
@@ -176,7 +174,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Item> SILVER_ORE_ITEM = ITEMS.register("silver_ore",
 			() -> new ToolTipBlockItem(SILVER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OTHER_SILVER_ORE_ITEM = ITEMS.register("silver_other_ore",
-			() -> new BlockItem(OTHER_SILVER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+			() -> new ToolTipBlockItem(OTHER_SILVER_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> SILVER_BLOCK_ITEM = ITEMS.register("silver_block",
 			() -> new BlockItem(SILVER_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> SILVER_INGOT = ITEMS.register("silver_ingot",
@@ -200,7 +198,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 			() -> new ToolTipBlockItem(TIN_SLATE_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 
 	public static final RegistryObject<Item> OTHER_TIN_ORE_ITEM = ITEMS.register("tin_other_ore",
-			() -> new BlockItem(OTHER_TIN_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+			() -> new ToolTipBlockItem(OTHER_TIN_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> TIN_BLOCK_ITEM = ITEMS.register("tin_block",
 			() -> new BlockItem(TIN_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot",
@@ -223,7 +221,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Item> URANIUM_SLATE_ORE_ITEM = ITEMS.register("uranium_slate_ore",
 			() -> new ToolTipBlockItem(URANIUM_SLATE_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OTHER_URANIUM_ORE_ITEM = ITEMS.register("uranium_other_ore",
-			() -> new BlockItem(OTHER_URANIUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+			() -> new ToolTipBlockItem(OTHER_URANIUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> URANIUM_BLOCK_ITEM = ITEMS.register("uranium_block",
 			() -> new BlockItem(URANIUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot",
@@ -246,7 +244,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Item> ZINC_SLATE_ORE_ITEM = ITEMS.register("zinc_slate_ore",
 			() -> new ToolTipBlockItem(ZINC_SLATE_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OTHER_ZINC_ORE_ITEM = ITEMS.register("zinc_other_ore",
-			() -> new BlockItem(OTHER_ZINC_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+			() -> new ToolTipBlockItem(OTHER_ZINC_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> ZINC_BLOCK_ITEM = ITEMS.register("zinc_block",
 			() -> new BlockItem(ZINC_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> ZINC_INGOT = ITEMS.register("zinc_ingot",
@@ -258,13 +256,29 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Item> ZINC_RAW = ITEMS.register("raw_zinc",
 			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
-
-
-
-
-
-
-
+	public static final RegistryObject<Block> IRIDIUM_SLATE_ORE = BLOCKS.register("iridium_slate_ore", () -> new AOreBlock(4.5f,4.5f));
+	public static final RegistryObject<Block> IRIDIUM_ORE = BLOCKS.register("iridium_ore", () -> new AOreBlock(3.0f,3.0f));
+	public static final RegistryObject<Block> OTHER_IRIDIUM_ORE = BLOCKS.register("iridium_other_ore", OtherOreBlock::new);
+	public static final RegistryObject<Block> IRIDIUM_BLOCK = BLOCKS.register("iridium_block", () -> new Block(Block.Properties.of(Material.METAL).strength(3.0f,3.0f).sound(SoundType.METAL)));
+	public static final RegistryObject<Block> RAW_IRIDIUM_BLOCK = BLOCKS.register("raw_iridium_block",() -> new Block(Block.Properties.of(Material.STONE).strength(3.0f,3.0f)));
+	public static final RegistryObject<Item> RAW_IRIDIUM_BLOCK_ITEM = ITEMS.register("raw_iridium_block",
+			() -> new BlockItem(RAW_IRIDIUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_SLATE_ORE_ITEM = ITEMS.register("iridium_slate_ore",
+			() -> new ToolTipBlockItem(IRIDIUM_SLATE_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_ORE_ITEM = ITEMS.register("iridium_ore",
+			() -> new ToolTipBlockItem(IRIDIUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> OTHER_IRIDIUM_ORE_ITEM = ITEMS.register("iridium_other_ore",
+			() -> new ToolTipBlockItem(OTHER_IRIDIUM_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_BLOCK_ITEM = ITEMS.register("iridium_block",
+			() -> new BlockItem(IRIDIUM_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_INGOT = ITEMS.register("iridium_ingot",
+			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_NUGGET = ITEMS.register("iridium_nugget",
+			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_DUST = ITEMS.register("iridium_dust",
+			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_RAW = ITEMS.register("raw_iridium",
+			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 	// ********************** MEK PROCESSING
 
@@ -337,6 +351,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	// ALLTHERODS, ALLTHEGEARS, ALLTHEPLATES
 
 	public static final RegistryObject<Item> ALUMINUM_ROD = ITEMS.register("aluminum_rod", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_ROD = ITEMS.register("iridium_rod", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> LEAD_ROD = ITEMS.register("lead_rod", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> NICKEL_ROD = ITEMS.register("nickel_rod", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OSMIUM_ROD = ITEMS.register("osmium_rod", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
@@ -361,6 +376,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 
 
 	public static final RegistryObject<Item> ALUMINUM_GEAR = ITEMS.register("aluminum_gear", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_GEAR = ITEMS.register("iridium_gear", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> LEAD_GEAR = ITEMS.register("lead_gear", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> NICKEL_GEAR = ITEMS.register("nickel_gear", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OSMIUM_GEAR = ITEMS.register("osmium_gear", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
@@ -385,6 +401,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 
 
 	public static final RegistryObject<Item> ALUMINUM_PLATE = ITEMS.register("aluminum_plate", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_PLATE = ITEMS.register("iridium_plate", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> LEAD_PLATE = ITEMS.register("lead_plate", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> NICKEL_PLATE = ITEMS.register("nickel_plate", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OSMIUM_PLATE = ITEMS.register("osmium_plate", () -> new Item(new Item.Properties().tab(Reference.GROUP)));
@@ -453,6 +470,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	// MORE ORES lie ahead
 
 	public static final RegistryObject<Block> ALUMINUM_NETHER_ORE = BLOCKS.register("aluminum_nether_ore", () -> new BOreBlock(4.0f,4.0f));
+	public static final RegistryObject<Block> IRIDIUM_NETHER_ORE = BLOCKS.register("iridium_nether_ore", () -> new BOreBlock(4.0f,4.0f));
 	public static final RegistryObject<Block> LEAD_NETHER_ORE = BLOCKS.register("lead_nether_ore", () -> new BOreBlock(4.0f,4.0f));
 	public static final RegistryObject<Block> NICKEL_NETHER_ORE = BLOCKS.register("nickel_nether_ore", () -> new BOreBlock(4.0f,4.0f));
 	public static final RegistryObject<Block> OSMIUM_NETHER_ORE = BLOCKS.register("osmium_nether_ore", () -> new BOreBlock(4.0f,4.0f));
@@ -463,6 +481,7 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Block> ZINC_NETHER_ORE = BLOCKS.register("zinc_nether_ore", () -> new BOreBlock(4.0f,4.0f));
 
 	public static final RegistryObject<Block> ALUMINUM_END_ORE = BLOCKS.register("aluminum_end_ore", () -> new BOreBlock(4.5f,4.5f));
+	public static final RegistryObject<Block> IRIDIUM_END_ORE = BLOCKS.register("iridium_end_ore", () -> new BOreBlock(4.5f,4.5f));
 	public static final RegistryObject<Block> LEAD_END_ORE = BLOCKS.register("lead_end_ore", () -> new BOreBlock(4.5f,4.5f));
 	public static final RegistryObject<Block> NICKEL_END_ORE = BLOCKS.register("nickel_end_ore", () -> new BOreBlock(4.5f,4.5f));
 	public static final RegistryObject<Block> OSMIUM_END_ORE = BLOCKS.register("osmium_end_ore", () -> new BOreBlock(4.5f,4.5f));
@@ -472,25 +491,27 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 	public static final RegistryObject<Block> URANIUM_END_ORE = BLOCKS.register("uranium_end_ore", () -> new BOreBlock(4.5f,4.5f));
 	public static final RegistryObject<Block> ZINC_END_ORE = BLOCKS.register("zinc_end_ore", () -> new BOreBlock(4.5f,4.5f));
 
-	public static final RegistryObject<Item> ALUMINUM_NETHER_ORE_ITEM = ITEMS.register("aluminum_nether_ore", () -> new BlockItem(ALUMINUM_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> LEAD_NETHER_ORE_ITEM = ITEMS.register("lead_nether_ore", () -> new BlockItem(LEAD_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> NICKEL_NETHER_ORE_ITEM = ITEMS.register("nickel_nether_ore", () -> new BlockItem(NICKEL_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OSMIUM_NETHER_ORE_ITEM = ITEMS.register("osmium_nether_ore", () -> new BlockItem(OSMIUM_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> PLATINUM_NETHER_ORE_ITEM = ITEMS.register("platinum_nether_ore", () -> new BlockItem(PLATINUM_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> SILVER_NETHER_ORE_ITEM = ITEMS.register("silver_nether_ore", () -> new BlockItem(SILVER_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> TIN_NETHER_ORE_ITEM = ITEMS.register("tin_nether_ore", () -> new BlockItem(TIN_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> URANIUM_NETHER_ORE_ITEM = ITEMS.register("uranium_nether_ore", () -> new BlockItem(URANIUM_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> ZINC_NETHER_ORE_ITEM = ITEMS.register("zinc_nether_ore", () -> new BlockItem(ZINC_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ALUMINUM_NETHER_ORE_ITEM = ITEMS.register("aluminum_nether_ore", () -> new ToolTipBlockItem(ALUMINUM_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_NETHER_ORE_ITEM = ITEMS.register("iridium_nether_ore", () -> new ToolTipBlockItem(IRIDIUM_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> LEAD_NETHER_ORE_ITEM = ITEMS.register("lead_nether_ore", () -> new ToolTipBlockItem(LEAD_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> NICKEL_NETHER_ORE_ITEM = ITEMS.register("nickel_nether_ore", () -> new ToolTipBlockItem(NICKEL_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> OSMIUM_NETHER_ORE_ITEM = ITEMS.register("osmium_nether_ore", () -> new ToolTipBlockItem(OSMIUM_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> PLATINUM_NETHER_ORE_ITEM = ITEMS.register("platinum_nether_ore", () -> new ToolTipBlockItem(PLATINUM_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> SILVER_NETHER_ORE_ITEM = ITEMS.register("silver_nether_ore", () -> new ToolTipBlockItem(SILVER_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> TIN_NETHER_ORE_ITEM = ITEMS.register("tin_nether_ore", () -> new ToolTipBlockItem(TIN_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> URANIUM_NETHER_ORE_ITEM = ITEMS.register("uranium_nether_ore", () -> new ToolTipBlockItem(URANIUM_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ZINC_NETHER_ORE_ITEM = ITEMS.register("zinc_nether_ore", () -> new ToolTipBlockItem(ZINC_NETHER_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
 
-	public static final RegistryObject<Item> ALUMINUM_END_ORE_ITEM = ITEMS.register("aluminum_end_ore", () -> new BlockItem(ALUMINUM_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> LEAD_END_ORE_ITEM = ITEMS.register("lead_end_ore", () -> new BlockItem(LEAD_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> NICKEL_END_ORE_ITEM = ITEMS.register("nickel_end_ore", () -> new BlockItem(NICKEL_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> OSMIUM_END_ORE_ITEM = ITEMS.register("osmium_end_ore", () -> new BlockItem(OSMIUM_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> PLATINUM_END_ORE_ITEM = ITEMS.register("platinum_end_ore", () -> new BlockItem(PLATINUM_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> SILVER_END_ORE_ITEM = ITEMS.register("silver_end_ore", () -> new BlockItem(SILVER_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> TIN_END_ORE_ITEM = ITEMS.register("tin_end_ore", () -> new BlockItem(TIN_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> URANIUM_END_ORE_ITEM = ITEMS.register("uranium_end_ore", () -> new BlockItem(URANIUM_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
-	public static final RegistryObject<Item> ZINC_END_ORE_ITEM = ITEMS.register("zinc_end_ore", () -> new BlockItem(ZINC_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ALUMINUM_END_ORE_ITEM = ITEMS.register("aluminum_end_ore", () -> new ToolTipBlockItem(ALUMINUM_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> IRIDIUM_END_ORE_ITEM = ITEMS.register("iridium_end_ore", () -> new ToolTipBlockItem(IRIDIUM_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> LEAD_END_ORE_ITEM = ITEMS.register("lead_end_ore", () -> new ToolTipBlockItem(LEAD_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> NICKEL_END_ORE_ITEM = ITEMS.register("nickel_end_ore", () -> new ToolTipBlockItem(NICKEL_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> OSMIUM_END_ORE_ITEM = ITEMS.register("osmium_end_ore", () -> new ToolTipBlockItem(OSMIUM_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> PLATINUM_END_ORE_ITEM = ITEMS.register("platinum_end_ore", () -> new ToolTipBlockItem(PLATINUM_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> SILVER_END_ORE_ITEM = ITEMS.register("silver_end_ore", () -> new ToolTipBlockItem(SILVER_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> TIN_END_ORE_ITEM = ITEMS.register("tin_end_ore", () -> new ToolTipBlockItem(TIN_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> URANIUM_END_ORE_ITEM = ITEMS.register("uranium_end_ore", () -> new ToolTipBlockItem(URANIUM_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> ZINC_END_ORE_ITEM = ITEMS.register("zinc_end_ore", () -> new ToolTipBlockItem(ZINC_END_ORE.get(),new Item.Properties().tab(Reference.GROUP)));
 
 	// ********************* MISC STUFF
 	public static final RegistryObject<Item> COPPER_ORE_HAMMER = ITEMS.register("copper_ore_hammer", () -> new OreHammer(new Item.Properties().tab(Reference.GROUP),64));
@@ -529,5 +550,48 @@ public static final RegistryObject<Block> OSMIUM_SLATE_ORE = BLOCKS.register("os
 			() -> new BlockItem(OTHER_DIAMOND_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
 	public static final RegistryObject<Item> OTHER_LAPIS_ORE_ITEM = ITEMS.register("lapis_other_ore",
 			() -> new BlockItem(OTHER_LAPIS_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+
+
+	public static final RegistryObject<Block> RUBY_SLATE_ORE = BLOCKS.register("ruby_slate_ore", () -> new AOreBlock(4.5f,4.5f));
+	public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", () -> new AOreBlock(3.0f,3.0f));
+	public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", () -> new Block(Block.Properties.of(Material.GLASS).strength(3.0f,3.0f).sound(SoundType.METAL)));
+	public static final RegistryObject<Item> RUBY_SLATE_ORE_ITEM = ITEMS.register("ruby_slate_ore",
+			() -> new ToolTipBlockItem(RUBY_SLATE_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore",
+			() -> new ToolTipBlockItem(RUBY_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block",
+			() -> new BlockItem(RUBY_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> RUBY_DUST = ITEMS.register("ruby_dust",
+			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
+			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+
+	public static final RegistryObject<Block> PERIDOT_SLATE_ORE = BLOCKS.register("peridot_slate_ore", () -> new AOreBlock(4.5f,4.5f));
+	public static final RegistryObject<Block> PERIDOT_ORE = BLOCKS.register("peridot_ore", () -> new AOreBlock(3.0f,3.0f));
+	public static final RegistryObject<Block> PERIDOT_BLOCK = BLOCKS.register("peridot_block", () -> new Block(Block.Properties.of(Material.GLASS).strength(3.0f,3.0f).sound(SoundType.METAL)));
+	public static final RegistryObject<Item> PERIDOT_SLATE_ORE_ITEM = ITEMS.register("peridot_slate_ore",
+			() -> new ToolTipBlockItem(PERIDOT_SLATE_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> PERIDOT_ORE_ITEM = ITEMS.register("peridot_ore",
+			() -> new ToolTipBlockItem(PERIDOT_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> PERIDOT_BLOCK_ITEM = ITEMS.register("peridot_block",
+			() -> new BlockItem(PERIDOT_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> PERIDOT_DUST = ITEMS.register("peridot_dust",
+			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> PERIDOT = ITEMS.register("peridot",
+			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+
+	public static final RegistryObject<Block> SAPPHIRE_SLATE_ORE = BLOCKS.register("sapphire_slate_ore", () -> new AOreBlock(4.5f,4.5f));
+	public static final RegistryObject<Block> SAPPHIRE_ORE = BLOCKS.register("sapphire_ore", () -> new AOreBlock(3.0f,3.0f));
+	public static final RegistryObject<Block> SAPPHIRE_BLOCK = BLOCKS.register("sapphire_block", () -> new Block(Block.Properties.of(Material.GLASS).strength(3.0f,3.0f).sound(SoundType.METAL)));
+	public static final RegistryObject<Item> SAPPHIRE_SLATE_ORE_ITEM = ITEMS.register("sapphire_slate_ore",
+			() -> new ToolTipBlockItem(SAPPHIRE_SLATE_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> SAPPHIRE_ORE_ITEM = ITEMS.register("sapphire_ore",
+			() -> new ToolTipBlockItem(SAPPHIRE_ORE.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> SAPPHIRE_BLOCK_ITEM = ITEMS.register("sapphire_block",
+			() -> new BlockItem(SAPPHIRE_BLOCK.get(), new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> SAPPHIRE_DUST = ITEMS.register("sapphire_dust",
+			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
+	public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
+			() -> new Item(new Item.Properties().tab(Reference.GROUP)));
 
 }

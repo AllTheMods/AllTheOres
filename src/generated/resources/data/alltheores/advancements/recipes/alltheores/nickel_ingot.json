@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_nuggets/nickel_nugget": {
+    "has_TagKey[minecraft:item / forge:nuggets/nickel]_nugget": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_nuggets/nickel_nugget",
+      "has_TagKey[minecraft:item / forge:nuggets/nickel]_nugget",
       "has_the_recipe"
     ]
   ]

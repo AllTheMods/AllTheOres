@@ -5,7 +5,7 @@
       "tag": "mekanism:shards/platinum"
     }
   },
-  "gasInput": {
+  "chemicalInput": {
     "amount": 1,
     "gas": "mekanism:oxygen"
   },

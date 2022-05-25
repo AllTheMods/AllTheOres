@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "alltheores:ore_hammers"
+    },
+    {
+      "tag": "forge:ores/sapphire"
+    }
+  ],
+  "result": {
+    "item": "alltheores:sapphire",
+    "count": 3
+  }
+}

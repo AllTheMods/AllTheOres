@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "alltheores:platinum_dust",
+    "alltheores:iridium_dust",
     "alltheores:copper_dust",
     "alltheores:aluminum_dust",
     "alltheores:uranium_dust",
@@ -22,6 +23,9 @@
     "alltheores:iron_dust",
     "alltheores:gold_dust",
     "alltheores:diamond_dust",
-    "alltheores:brass_dust"
+    "alltheores:brass_dust",
+    "alltheores:ruby_dust",
+    "alltheores:sapphire_dust",
+    "alltheores:peridot_dust"
   ]
 }

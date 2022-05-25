@@ -2,14 +2,19 @@
   "replace": false,
   "values": [
     "alltheores:platinum_ore",
+    "alltheores:iridium_ore",
     "alltheores:uranium_ore",
     "alltheores:platinum_slate_ore",
+    "alltheores:iridium_slate_ore",
     "alltheores:uranium_slate_ore",
     "alltheores:platinum_nether_ore",
+    "alltheores:iridium_nether_ore",
     "alltheores:uranium_nether_ore",
     "alltheores:platinum_end_ore",
+    "alltheores:iridium_end_ore",
     "alltheores:uranium_end_ore",
     "alltheores:platinum_other_ore",
+    "alltheores:iridium_other_ore",
     "alltheores:uranium_other_ore"
   ]
 }

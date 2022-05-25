@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "alltheores:raw_iridium_block"
+    ]
+  },
+  "criteria": {
+    "has_raw_TagKey[minecraft:item / forge:raw_ores/iridium]": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:raw_ores/iridium"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "alltheores:raw_iridium_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_TagKey[minecraft:item / forge:raw_ores/iridium]",
+      "has_the_recipe"
+    ]
+  ]
+}

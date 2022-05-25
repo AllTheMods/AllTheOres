@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:aluminum_clump",
+    "alltheores:nickel_clump",
+    "alltheores:platinum_clump",
+    "alltheores:silver_clump",
+    "alltheores:zinc_clump"
+  ]
+}

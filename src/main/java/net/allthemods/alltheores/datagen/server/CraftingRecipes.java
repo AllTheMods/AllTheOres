@@ -98,6 +98,10 @@ public class CraftingRecipes extends RecipeProvider {
                 .setRaw(BlockList.RAW_ALUMINUM_BLOCK_ITEM)
                 .build(consumer);
 
+        ShapedRawBuilder.builder(ItemTagRegistry.RAW_IRIDIUM)
+                .setRaw(BlockList.RAW_IRIDIUM_BLOCK_ITEM)
+                .build(consumer);
+
         ShapedRawBuilder.builder(ItemTagRegistry.RAW_LEAD)
                 .setRaw(BlockList.RAW_LEAD_BLOCK_ITEM)
                 .build(consumer);
@@ -136,11 +140,34 @@ public class CraftingRecipes extends RecipeProvider {
                 .setRod(BlockList.COPPER_ROD)
                 .build(consumer);
 
+
+
+        ShapedBlockBuilder.builder(ItemTagRegistry.RUBY)
+                .setBlock(BlockList.RUBY_BLOCK_ITEM)
+                .build(consumer);
+
+
+        ShapedBlockBuilder.builder(ItemTagRegistry.SAPPHIRE)
+                .setBlock(BlockList.SAPPHIRE_BLOCK_ITEM)
+                .build(consumer);
+
+
+        ShapedBlockBuilder.builder(ItemTagRegistry.PERIDOT)
+                .setBlock(BlockList.PERIDOT_BLOCK_ITEM)
+                .build(consumer);
+
         ShapedBlockBuilder.builder(ItemTagRegistry.ALUMINUM_INGOT)
                 .setBlock(BlockList.ALUMINUM_BLOCK_ITEM)
                 .setGear(BlockList.ALUMINUM_GEAR)
                 .setPlate(BlockList.ALUMINUM_PLATE)
                 .setRod(BlockList.ALUMINUM_ROD)
+                .build(consumer);
+
+        ShapedBlockBuilder.builder(ItemTagRegistry.IRIDIUM_INGOT)
+                .setBlock(BlockList.IRIDIUM_BLOCK_ITEM)
+                .setGear(BlockList.IRIDIUM_GEAR)
+                .setPlate(BlockList.IRIDIUM_PLATE)
+                .setRod(BlockList.IRIDIUM_ROD)
                 .build(consumer);
 
         ShapedBlockBuilder.builder(ItemTagRegistry.LEAD_INGOT)
@@ -149,30 +176,35 @@ public class CraftingRecipes extends RecipeProvider {
                 .setPlate(BlockList.LEAD_PLATE)
                 .setRod(BlockList.LEAD_ROD)
                 .build(consumer);
+
         ShapedBlockBuilder.builder(ItemTagRegistry.NICKEL_INGOT)
                 .setBlock(BlockList.NICKEL_BLOCK_ITEM)
                 .setGear(BlockList.NICKEL_GEAR)
                 .setPlate(BlockList.NICKEL_PLATE)
                 .setRod(BlockList.NICKEL_ROD)
                 .build(consumer);
+
         ShapedBlockBuilder.builder(ItemTagRegistry.OSMIUM_INGOT)
                 .setBlock(BlockList.OSMIUM_BLOCK_ITEM)
                 .setGear(BlockList.OSMIUM_GEAR)
                 .setPlate(BlockList.OSMIUM_PLATE)
                 .setRod(BlockList.OSMIUM_ROD)
                 .build(consumer);
+
         ShapedBlockBuilder.builder(ItemTagRegistry.PLATINUM_INGOT)
                 .setBlock(BlockList.PLATINUM_BLOCK_ITEM)
                 .setGear(BlockList.PLATINUM_GEAR)
                 .setPlate(BlockList.PLATINUM_PLATE)
                 .setRod(BlockList.PLATINUM_ROD)
                 .build(consumer);
+
         ShapedBlockBuilder.builder(ItemTagRegistry.SILVER_INGOT)
                 .setBlock(BlockList.SILVER_BLOCK_ITEM)
                 .setGear(BlockList.SILVER_GEAR)
                 .setPlate(BlockList.SILVER_PLATE)
                 .setRod(BlockList.SILVER_ROD)
                 .build(consumer);
+
         ShapedBlockBuilder.builder(ItemTagRegistry.TIN_INGOT)
                 .setBlock(BlockList.TIN_BLOCK_ITEM)
                 .setGear(BlockList.TIN_GEAR)
@@ -286,6 +318,10 @@ public class CraftingRecipes extends RecipeProvider {
                 .setIngot(BlockList.PLATINUM_INGOT)
                 .build(consumer);
 
+        ShapedIngotBuilder.builder(ItemTagRegistry.IRIDIUM_NUGGET)
+                .setIngot(BlockList.IRIDIUM_INGOT)
+                .build(consumer);
+
         ShapedIngotBuilder.builder(ItemTagRegistry.SILVER_NUGGET)
                 .setIngot(BlockList.SILVER_INGOT)
                 .build(consumer);
@@ -332,6 +368,10 @@ public class CraftingRecipes extends RecipeProvider {
 
         ShapedIngotBuilder.builder(ItemTagRegistry.STEEL_NUGGET)
                 .setIngot(BlockList.STEEL_INGOT)
+                .build(consumer);
+
+        ShapedIngotBuilder.builder(ItemTagRegistry.BRASS_NUGGET)
+                .setIngot(BlockList.BRASS_INGOT)
                 .build(consumer);
 
         ShapedBlockBuilder.builder(ItemTagRegistry.BRASS_INGOT)

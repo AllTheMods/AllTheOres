@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_raw_silver": {
+    "has_raw_TagKey[minecraft:item / forge:raw_ores/silver]": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_raw_silver",
+      "has_raw_TagKey[minecraft:item / forge:raw_ores/silver]",
       "has_the_recipe"
     ]
   ]
