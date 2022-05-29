@@ -49,15 +49,15 @@ public class ATOOtherFeatures {
     public static final OreConfiguration ORE_QUARTZ_CONFIG = new OreConfiguration(ORE_QUARTZ_TARGET_LIST, 14);
     public static final OreConfiguration ORE_REDSTONE_CONFIG = new OreConfiguration(ORE_REDSTONE_TARGET_LIST, 8);
 
-    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_COAL = FeatureUtils.register("coal_ore", Feature.ORE,ORE_COAL_CONFIG);
-    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_COPPER = FeatureUtils.register("copper_ore",Feature.ORE,ORE_COPPER_CONFIG);
-    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_DIAMOND = FeatureUtils.register("diamond_ore",Feature.ORE,ORE_DIAMOND_CONFIG);
-    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_EMERALD = FeatureUtils.register("emerald_ore",Feature.ORE,ORE_EMERALD_CONFIG);
-    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_GOLD = FeatureUtils.register("gold_ore",Feature.ORE,ORE_GOLD_CONFIG);
-    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_IRON = FeatureUtils.register("iron_ore",Feature.ORE,ORE_IRON_CONFIG);
-    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_LAPIS = FeatureUtils.register("lapis_ore",Feature.ORE,ORE_LAPIS_CONFIG);
-    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_QUARTZ = FeatureUtils.register("quartz_ore",Feature.ORE,ORE_QUARTZ_CONFIG);
-    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_REDSTONE = FeatureUtils.register("redstone_ore",Feature.ORE,ORE_REDSTONE_CONFIG);
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_COAL = FeatureUtils.register("alltheores:other_coal_ore", Feature.ORE,ORE_COAL_CONFIG);
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_COPPER = FeatureUtils.register("alltheores:other_copper_ore",Feature.ORE,ORE_COPPER_CONFIG);
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_DIAMOND = FeatureUtils.register("alltheores:other_diamond_ore",Feature.ORE,ORE_DIAMOND_CONFIG);
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_EMERALD = FeatureUtils.register("alltheores:other_emerald_ore",Feature.ORE,ORE_EMERALD_CONFIG);
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_GOLD = FeatureUtils.register("alltheores:other_gold_ore",Feature.ORE,ORE_GOLD_CONFIG);
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_IRON = FeatureUtils.register("alltheores:other_iron_ore",Feature.ORE,ORE_IRON_CONFIG);
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_LAPIS = FeatureUtils.register("alltheores:other_lapis_ore",Feature.ORE,ORE_LAPIS_CONFIG);
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_QUARTZ = FeatureUtils.register("alltheores:other_quartz_ore",Feature.ORE,ORE_QUARTZ_CONFIG);
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> OTHER_ORE_REDSTONE = FeatureUtils.register("alltheores:other_redstone_ore",Feature.ORE,ORE_REDSTONE_CONFIG);
 
 
 }
