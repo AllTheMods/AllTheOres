@@ -66,29 +66,29 @@ public class ATOConfiguredFeature {
 	public static final OreConfiguration RAW_ZINC_CONFIG = new OreConfiguration(RAW_ZINC_TARGET_LIST, 1);
 
 
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ALUMINUM = FeatureUtils.register("aluminum_ore",Feature.ORE,ORE_ALUMINUM_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_IRIDIUM = FeatureUtils.register("iridium_ore",Feature.ORE,ORE_IRIDIUM_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_LEAD = FeatureUtils.register("lead_ore",Feature.ORE,ORE_LEAD_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_NICKEL = FeatureUtils.register("nickel_ore",Feature.ORE,ORE_NICKEL_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_OSMIUM = FeatureUtils.register("osmium_ore",Feature.ORE,ORE_OSMIUM_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_PLATINUM = FeatureUtils.register("platinum_ore",Feature.ORE,ORE_PLATINUM_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_SILVER = FeatureUtils.register("silver_ore",Feature.ORE,ORE_SILVER_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_TIN = FeatureUtils.register("tin_ore",Feature.ORE,ORE_TIN_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_URANIUM = FeatureUtils.register("uranium_ore",Feature.ORE,ORE_URANIUM_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ZINC = FeatureUtils.register("zinc_ore",Feature.ORE,ORE_ZINC_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ALUMINUM = FeatureUtils.register("alltheores:aluminum_ore",Feature.ORE,ORE_ALUMINUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_IRIDIUM = FeatureUtils.register("alltheores:iridium_ore",Feature.ORE,ORE_IRIDIUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_LEAD = FeatureUtils.register("alltheores:lead_ore",Feature.ORE,ORE_LEAD_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_NICKEL = FeatureUtils.register("alltheores:nickel_ore",Feature.ORE,ORE_NICKEL_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_OSMIUM = FeatureUtils.register("alltheores:osmium_ore",Feature.ORE,ORE_OSMIUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_PLATINUM = FeatureUtils.register("alltheores:platinum_ore",Feature.ORE,ORE_PLATINUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_SILVER = FeatureUtils.register("alltheores:silver_ore",Feature.ORE,ORE_SILVER_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_TIN = FeatureUtils.register("alltheores:tin_ore",Feature.ORE,ORE_TIN_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_URANIUM = FeatureUtils.register("alltheores:uranium_ore",Feature.ORE,ORE_URANIUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ZINC = FeatureUtils.register("alltheores:zinc_ore",Feature.ORE,ORE_ZINC_CONFIG);
 
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_RUBY = FeatureUtils.register("ruby_ore",Feature.ORE,ORE_RUBY_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_SAPPHIRE = FeatureUtils.register("sapphire_ore",Feature.ORE,ORE_SAPPHIRE_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_PERIDOT = FeatureUtils.register("peridot_ore",Feature.ORE,ORE_PERIDOT_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_RUBY = FeatureUtils.register("alltheores:ruby_ore",Feature.ORE,ORE_RUBY_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_SAPPHIRE = FeatureUtils.register("alltheores:sapphire_ore",Feature.ORE,ORE_SAPPHIRE_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_PERIDOT = FeatureUtils.register("alltheores:peridot_ore",Feature.ORE,ORE_PERIDOT_CONFIG);
 
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_ALUMINUM = FeatureUtils.register("raw_aluminum_ore",Feature.ORE,RAW_ALUMINUM_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_LEAD = FeatureUtils.register("raw_lead_ore",Feature.ORE,RAW_LEAD_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_NICKEL = FeatureUtils.register("raw_nickel_ore",Feature.ORE,RAW_NICKEL_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_OSMIUM = FeatureUtils.register("raw_osmium_ore",Feature.ORE,RAW_OSMIUM_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_PLATINUM = FeatureUtils.register("raw_platinum_ore",Feature.ORE,RAW_PLATINUM_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_SILVER = FeatureUtils.register("raw_silver_ore",Feature.ORE,RAW_SILVER_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_TIN = FeatureUtils.register("raw_tin_ore",Feature.ORE,RAW_TIN_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_URANIUM = FeatureUtils.register("raw_uranium_ore",Feature.ORE,RAW_URANIUM_CONFIG);
-	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_ZINC = FeatureUtils.register("raw_zinc_ore",Feature.ORE,RAW_ZINC_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_ALUMINUM = FeatureUtils.register("alltheores:raw_aluminum_ore",Feature.ORE,RAW_ALUMINUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_LEAD = FeatureUtils.register("alltheores:raw_lead_ore",Feature.ORE,RAW_LEAD_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_NICKEL = FeatureUtils.register("alltheores:raw_nickel_ore",Feature.ORE,RAW_NICKEL_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_OSMIUM = FeatureUtils.register("alltheores:raw_osmium_ore",Feature.ORE,RAW_OSMIUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_PLATINUM = FeatureUtils.register("alltheores:raw_platinum_ore",Feature.ORE,RAW_PLATINUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_SILVER = FeatureUtils.register("alltheores:raw_silver_ore",Feature.ORE,RAW_SILVER_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_TIN = FeatureUtils.register("alltheores:raw_tin_ore",Feature.ORE,RAW_TIN_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_URANIUM = FeatureUtils.register("alltheores:raw_uranium_ore",Feature.ORE,RAW_URANIUM_CONFIG);
+	public static Holder<ConfiguredFeature<OreConfiguration, ?>> RAW_ZINC = FeatureUtils.register("alltheores:raw_zinc_ore",Feature.ORE,RAW_ZINC_CONFIG);
 
 }
