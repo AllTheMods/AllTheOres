@@ -262,6 +262,7 @@ public class ItemTagRegistry {
     public static final TagKey<Block> PERIDOT_ORE = BlockTags.create(Reference.ore("peridot"));
     public static final TagKey<Block> RUBY_ORE = BlockTags.create(Reference.ore("ruby"));
     public static final TagKey<Block> SAPPHIRE_ORE = BlockTags.create(Reference.ore("sapphire"));
+    public static final TagKey<Block> QUARTZ_ORE = BlockTags.create(Reference.ore("quartz"));
 
     public static final TagKey<Item> IRIDIUM_ORE_ITEM = ItemTags.create(Reference.ore("iridium"));
     public static final TagKey<Item> LEAD_ORE_ITEM = ItemTags.create(Reference.ore("lead"));
@@ -276,6 +277,29 @@ public class ItemTagRegistry {
     public static final TagKey<Item> PERIDOT_ORE_ITEM = ItemTags.create(Reference.ore("peridot"));
     public static final TagKey<Item> RUBY_ORE_ITEM = ItemTags.create(Reference.ore("ruby"));
     public static final TagKey<Item> SAPPHIRE_ORE_ITEM = ItemTags.create(Reference.ore("sapphire"));
+    public static final TagKey<Item> COAL_ORE_ITEM = ItemTags.create(Reference.ore("coal"));
+    public static final TagKey<Item> COPPER_ORE_ITEM = ItemTags.create(Reference.ore("copper"));
+    public static final TagKey<Item> DIAMOND_ORE_ITEM = ItemTags.create(Reference.ore("diamond"));
+    public static final TagKey<Item> EMERALD_ORE_ITEM = ItemTags.create(Reference.ore("emerald"));
+    public static final TagKey<Item> GOLD_ORE_ITEM = ItemTags.create(Reference.ore("gold"));
+    public static final TagKey<Item> IRON_ORE_ITEM = ItemTags.create(Reference.ore("iron"));
+    public static final TagKey<Item> LAPIS_ORE_ITEM = ItemTags.create(Reference.ore("lapis"));
+    public static final TagKey<Item> QUARTZ_ORE_ITEM = ItemTags.create(Reference.ore("quartz"));
+    public static final TagKey<Item> REDSTONE_ORE_ITEM = ItemTags.create(Reference.ore("redstone"));
+
+    // ORE BLOCK BASE
+    public static final TagKey<Block> IN_STONE = BlockTags.create(Reference.ores_in_ground("stone"));
+    public static final TagKey<Block> IN_DEEPSLATE = BlockTags.create(Reference.ores_in_ground("deepslate"));
+    public static final TagKey<Block> IN_NETHERRACK = BlockTags.create(Reference.ores_in_ground("netherrack"));
+    public static final TagKey<Block> IN_END_STONE = BlockTags.create(Reference.ores_in_ground("end_stone"));
+    public static final TagKey<Block> IN_ANCIENT_STONE = BlockTags.create(Reference.ores_in_ground("ancient_stone"));
+
+    public static final TagKey<Item> IN_STONE_ITEM = ItemTags.create(Reference.ores_in_ground("stone"));
+    public static final TagKey<Item> IN_DEEPSLATE_ITEM = ItemTags.create(Reference.ores_in_ground("deepslate"));
+    public static final TagKey<Item> IN_NETHERRACK_ITEM = ItemTags.create(Reference.ores_in_ground("netherrack"));
+    public static final TagKey<Item> IN_END_STONE_ITEM = ItemTags.create(Reference.ores_in_ground("end_stone"));
+    public static final TagKey<Item> IN_ANCIENT_STONE_ITEM = ItemTags.create(Reference.ores_in_ground("ancient_stone"));
+
 
     public static final TagKey<Item> RAW_IRIDIUM = ItemTags.create(Reference.raw_ores("iridium"));
     public static final TagKey<Item> RAW_LEAD = ItemTags.create(Reference.raw_ores("lead"));

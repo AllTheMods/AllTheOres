@@ -64,9 +64,6 @@ public class BlockTags extends BlockTagsProvider {
         tag(ItemTagRegistry.RUBY_ORE).add(BlockList.RUBY_ORE.get());
         tag(ItemTagRegistry.SAPPHIRE_ORE).add(BlockList.SAPPHIRE_ORE.get());
         tag(ItemTagRegistry.PERIDOT_ORE).add(BlockList.PERIDOT_ORE.get());
-        tag(ItemTagRegistry.RUBY_ORE).add(BlockList.RUBY_SLATE_ORE.get());
-        tag(ItemTagRegistry.SAPPHIRE_ORE).add(BlockList.SAPPHIRE_SLATE_ORE.get());
-        tag(ItemTagRegistry.PERIDOT_ORE).add(BlockList.PERIDOT_SLATE_ORE.get());
 
         tag(ItemTagRegistry.ALUMINUM_ORE).add(BlockList.ALUMINUM_SLATE_ORE.get());
         tag(ItemTagRegistry.IRIDIUM_ORE).add(BlockList.IRIDIUM_SLATE_ORE.get());
@@ -78,6 +75,9 @@ public class BlockTags extends BlockTagsProvider {
         tag(ItemTagRegistry.TIN_ORE).add(BlockList.TIN_SLATE_ORE.get());
         tag(ItemTagRegistry.URANIUM_ORE).add(BlockList.URANIUM_SLATE_ORE.get());
         tag(ItemTagRegistry.ZINC_ORE).add(BlockList.ZINC_SLATE_ORE.get());
+        tag(ItemTagRegistry.RUBY_ORE).add(BlockList.RUBY_SLATE_ORE.get());
+        tag(ItemTagRegistry.SAPPHIRE_ORE).add(BlockList.SAPPHIRE_SLATE_ORE.get());
+        tag(ItemTagRegistry.PERIDOT_ORE).add(BlockList.PERIDOT_SLATE_ORE.get());
 
         tag(ItemTagRegistry.ALUMINUM_ORE).add(BlockList.ALUMINUM_NETHER_ORE.get());
         tag(ItemTagRegistry.IRIDIUM_ORE).add(BlockList.IRIDIUM_NETHER_ORE.get());
@@ -191,6 +191,63 @@ public class BlockTags extends BlockTagsProvider {
 
         ////
 
+        tag(ItemTagRegistry.IN_STONE).add(BlockList.ALUMINUM_ORE.get());
+        tag(ItemTagRegistry.IN_STONE).add(BlockList.IRIDIUM_ORE.get());
+        tag(ItemTagRegistry.IN_STONE).add(BlockList.LEAD_ORE.get());
+        tag(ItemTagRegistry.IN_STONE).add(BlockList.OSMIUM_ORE.get());
+        tag(ItemTagRegistry.IN_STONE).add(BlockList.NICKEL_ORE.get());
+        tag(ItemTagRegistry.IN_STONE).add(BlockList.PLATINUM_ORE.get());
+        tag(ItemTagRegistry.IN_STONE).add(BlockList.SILVER_ORE.get());
+        tag(ItemTagRegistry.IN_STONE).add(BlockList.TIN_ORE.get());
+        tag(ItemTagRegistry.IN_STONE).add(BlockList.URANIUM_ORE.get());
+        tag(ItemTagRegistry.IN_STONE).add(BlockList.ZINC_ORE.get());
+
+        tag(ItemTagRegistry.IN_DEEPSLATE).add(BlockList.ALUMINUM_SLATE_ORE.get());
+        tag(ItemTagRegistry.IN_DEEPSLATE).add(BlockList.IRIDIUM_SLATE_ORE.get());
+        tag(ItemTagRegistry.IN_DEEPSLATE).add(BlockList.LEAD_SLATE_ORE.get());
+        tag(ItemTagRegistry.IN_DEEPSLATE).add(BlockList.OSMIUM_SLATE_ORE.get());
+        tag(ItemTagRegistry.IN_DEEPSLATE).add(BlockList.NICKEL_SLATE_ORE.get());
+        tag(ItemTagRegistry.IN_DEEPSLATE).add(BlockList.PLATINUM_SLATE_ORE.get());
+        tag(ItemTagRegistry.IN_DEEPSLATE).add(BlockList.SILVER_SLATE_ORE.get());
+        tag(ItemTagRegistry.IN_DEEPSLATE).add(BlockList.TIN_SLATE_ORE.get());
+        tag(ItemTagRegistry.IN_DEEPSLATE).add(BlockList.URANIUM_SLATE_ORE.get());
+        tag(ItemTagRegistry.IN_DEEPSLATE).add(BlockList.ZINC_SLATE_ORE.get());
+
+        tag(ItemTagRegistry.IN_NETHERRACK).add(BlockList.ALUMINUM_NETHER_ORE.get());
+        tag(ItemTagRegistry.IN_NETHERRACK).add(BlockList.IRIDIUM_NETHER_ORE.get());
+        tag(ItemTagRegistry.IN_NETHERRACK).add(BlockList.LEAD_NETHER_ORE.get());
+        tag(ItemTagRegistry.IN_NETHERRACK).add(BlockList.OSMIUM_NETHER_ORE.get());
+        tag(ItemTagRegistry.IN_NETHERRACK).add(BlockList.NICKEL_NETHER_ORE.get());
+        tag(ItemTagRegistry.IN_NETHERRACK).add(BlockList.PLATINUM_NETHER_ORE.get());
+        tag(ItemTagRegistry.IN_NETHERRACK).add(BlockList.SILVER_NETHER_ORE.get());
+        tag(ItemTagRegistry.IN_NETHERRACK).add(BlockList.TIN_NETHER_ORE.get());
+        tag(ItemTagRegistry.IN_NETHERRACK).add(BlockList.URANIUM_NETHER_ORE.get());
+        tag(ItemTagRegistry.IN_NETHERRACK).add(BlockList.ZINC_NETHER_ORE.get());
+
+        tag(ItemTagRegistry.IN_END_STONE).add(BlockList.ALUMINUM_END_ORE.get());
+        tag(ItemTagRegistry.IN_END_STONE).add(BlockList.IRIDIUM_END_ORE.get());
+        tag(ItemTagRegistry.IN_END_STONE).add(BlockList.LEAD_END_ORE.get());
+        tag(ItemTagRegistry.IN_END_STONE).add(BlockList.OSMIUM_END_ORE.get());
+        tag(ItemTagRegistry.IN_END_STONE).add(BlockList.NICKEL_END_ORE.get());
+        tag(ItemTagRegistry.IN_END_STONE).add(BlockList.PLATINUM_END_ORE.get());
+        tag(ItemTagRegistry.IN_END_STONE).add(BlockList.SILVER_END_ORE.get());
+        tag(ItemTagRegistry.IN_END_STONE).add(BlockList.TIN_END_ORE.get());
+        tag(ItemTagRegistry.IN_END_STONE).add(BlockList.URANIUM_END_ORE.get());
+        tag(ItemTagRegistry.IN_END_STONE).add(BlockList.ZINC_END_ORE.get());
+
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_ALUMINUM_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_IRIDIUM_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_LEAD_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_OSMIUM_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_NICKEL_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_PLATINUM_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_SILVER_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_TIN_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_URANIUM_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_ZINC_ORE.get());
+
+        ////
+
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.ALUMINUM_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.LEAD_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.OSMIUM_ORE.get());
@@ -253,7 +310,7 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.GOLD_ORES).add(BlockList.OTHER_GOLD_ORE.get());
         tag(net.minecraft.tags.BlockTags.IRON_ORES).add(BlockList.OTHER_IRON_ORE.get());
         tag(net.minecraft.tags.BlockTags.LAPIS_ORES).add(BlockList.OTHER_LAPIS_ORE.get());
-
+        tag(ItemTagRegistry.QUARTZ_ORE).add(BlockList.OTHER_QUARTZ_ORE.get());
         tag(net.minecraft.tags.BlockTags.REDSTONE_ORES).add(BlockList.OTHER_REDSTONE_ORE.get());
 
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OTHER_COAL_ORE.get());
@@ -265,6 +322,16 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OTHER_LAPIS_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OTHER_QUARTZ_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.OTHER_REDSTONE_ORE.get());
+
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_COAL_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_COPPER_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_DIAMOND_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_EMERALD_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_GOLD_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_IRON_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_LAPIS_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_QUARTZ_ORE.get());
+        tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_REDSTONE_ORE.get());
 
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.OTHER_COAL_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(BlockList.OTHER_COPPER_ORE.get());
