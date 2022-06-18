@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:aluminum_nether_ore",
+    "alltheores:iridium_nether_ore",
+    "alltheores:lead_nether_ore",
+    "alltheores:osmium_nether_ore",
+    "alltheores:nickel_nether_ore",
+    "alltheores:platinum_nether_ore",
+    "alltheores:silver_nether_ore",
+    "alltheores:tin_nether_ore",
+    "alltheores:uranium_nether_ore",
+    "alltheores:zinc_nether_ore"
+  ]
+}

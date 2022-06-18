@@ -51,4 +51,7 @@ public class Reference {
 	public static ResourceLocation raw_materials(String path) {
 		return forge("raw_materials/" + path);
 	}
+	public static ResourceLocation ores_in_ground(String path) {
+		return forge("ores_in_ground/" + path);
+	}
 }

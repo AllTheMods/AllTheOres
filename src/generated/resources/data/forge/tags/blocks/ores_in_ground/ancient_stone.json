@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:aluminum_other_ore",
+    "alltheores:iridium_other_ore",
+    "alltheores:lead_other_ore",
+    "alltheores:osmium_other_ore",
+    "alltheores:nickel_other_ore",
+    "alltheores:platinum_other_ore",
+    "alltheores:silver_other_ore",
+    "alltheores:tin_other_ore",
+    "alltheores:uranium_other_ore",
+    "alltheores:zinc_other_ore",
+    "alltheores:coal_other_ore",
+    "alltheores:copper_other_ore",
+    "alltheores:diamond_other_ore",
+    "alltheores:emerald_other_ore",
+    "alltheores:gold_other_ore",
+    "alltheores:iron_other_ore",
+    "alltheores:lapis_other_ore",
+    "alltheores:quartz_other_ore",
+    "alltheores:redstone_other_ore"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:aluminum_slate_ore",
+    "alltheores:iridium_slate_ore",
+    "alltheores:lead_slate_ore",
+    "alltheores:osmium_slate_ore",
+    "alltheores:nickel_slate_ore",
+    "alltheores:platinum_slate_ore",
+    "alltheores:silver_slate_ore",
+    "alltheores:tin_slate_ore",
+    "alltheores:uranium_slate_ore",
+    "alltheores:zinc_slate_ore",
+    "alltheores:ruby_slate_ore",
+    "alltheores:sapphire_slate_ore",
+    "alltheores:peridot_slate_ore"
+  ]
+}

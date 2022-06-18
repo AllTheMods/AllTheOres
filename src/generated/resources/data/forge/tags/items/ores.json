@@ -14,9 +14,6 @@
     "alltheores:ruby_ore",
     "alltheores:sapphire_ore",
     "alltheores:peridot_ore",
-    "alltheores:ruby_slate_ore",
-    "alltheores:sapphire_slate_ore",
-    "alltheores:peridot_slate_ore",
     "alltheores:aluminum_slate_ore",
     "alltheores:iridium_slate_ore",
     "alltheores:lead_slate_ore",
@@ -27,6 +24,9 @@
     "alltheores:tin_slate_ore",
     "alltheores:uranium_slate_ore",
     "alltheores:zinc_slate_ore",
+    "alltheores:ruby_slate_ore",
+    "alltheores:sapphire_slate_ore",
+    "alltheores:peridot_slate_ore",
     "alltheores:aluminum_nether_ore",
     "alltheores:iridium_nether_ore",
     "alltheores:lead_nether_ore",
@@ -56,6 +56,15 @@
     "alltheores:silver_other_ore",
     "alltheores:tin_other_ore",
     "alltheores:uranium_other_ore",
-    "alltheores:zinc_other_ore"
+    "alltheores:zinc_other_ore",
+    "alltheores:coal_other_ore",
+    "alltheores:copper_other_ore",
+    "alltheores:diamond_other_ore",
+    "alltheores:emerald_other_ore",
+    "alltheores:gold_other_ore",
+    "alltheores:iron_other_ore",
+    "alltheores:lapis_other_ore",
+    "alltheores:quartz_other_ore",
+    "alltheores:redstone_other_ore"
   ]
 }
