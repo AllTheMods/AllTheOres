@@ -78,6 +78,16 @@
     "alltheores:iron_other_ore",
     "alltheores:lapis_other_ore",
     "alltheores:quartz_other_ore",
-    "alltheores:redstone_other_ore"
+    "alltheores:redstone_other_ore",
+    "alltheores:raw_aluminum_block",
+    "alltheores:raw_lead_block",
+    "alltheores:raw_nickel_block",
+    "alltheores:raw_osmium_block",
+    "alltheores:raw_platinum_block",
+    "alltheores:raw_silver_block",
+    "alltheores:raw_tin_block",
+    "alltheores:raw_uranium_block",
+    "alltheores:raw_zinc_block",
+    "alltheores:raw_iridium_block"
   ]
 }
