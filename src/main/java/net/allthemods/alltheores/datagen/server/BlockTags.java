@@ -334,6 +334,20 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.RAW_ZINC_BLOCK.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.RAW_IRIDIUM_BLOCK.get());
 
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.RUBY_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.RUBY_SLATE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.PERIDOT_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.PERIDOT_SLATE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.SAPPHIRE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.SAPPHIRE_SLATE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.RUBY_ORE.get());
+        tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.RUBY_SLATE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.PERIDOT_ORE.get());
+        tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.PERIDOT_SLATE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.SAPPHIRE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.SAPPHIRE_SLATE_ORE.get());
+
+
         tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_COAL_ORE.get());
         tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_COPPER_ORE.get());
         tag(ItemTagRegistry.IN_ANCIENT_STONE).add(BlockList.OTHER_DIAMOND_ORE.get());

@@ -88,6 +88,12 @@
     "alltheores:raw_tin_block",
     "alltheores:raw_uranium_block",
     "alltheores:raw_zinc_block",
-    "alltheores:raw_iridium_block"
+    "alltheores:raw_iridium_block",
+    "alltheores:ruby_ore",
+    "alltheores:ruby_slate_ore",
+    "alltheores:peridot_ore",
+    "alltheores:peridot_slate_ore",
+    "alltheores:sapphire_ore",
+    "alltheores:sapphire_slate_ore"
   ]
 }
