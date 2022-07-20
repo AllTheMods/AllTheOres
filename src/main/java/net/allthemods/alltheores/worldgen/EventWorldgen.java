@@ -3,11 +3,10 @@ package net.allthemods.alltheores.worldgen;
 import net.allthemods.alltheores.infos.Configuration;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 
 public class EventWorldgen {
-
+/*
     public static void biomeLoadingEvent(BiomeLoadingEvent event) {
         if (event.getCategory() != Biome.BiomeCategory.NONE) {
             if (event.getCategory() == Biome.BiomeCategory.NETHER) {
@@ -153,5 +152,5 @@ public class EventWorldgen {
 
         }
     }
-
+ */
 }

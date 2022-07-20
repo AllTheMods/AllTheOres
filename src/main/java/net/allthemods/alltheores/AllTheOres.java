@@ -2,13 +2,10 @@ package net.allthemods.alltheores;
 
 import mekanism.api.chemical.slurry.Slurry;
 import net.allthemods.alltheores.events.BlockBreak;
-import net.allthemods.alltheores.meka.MekRegistry;
-import net.allthemods.alltheores.meka.Slurries;
 import net.allthemods.alltheores.worldgen.EventWorldgen;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
@@ -39,11 +36,10 @@ public class AllTheOres {
 		BlockList.FEATURES.register(modEventBus);
 		MinecraftForge.EVENT_BUS.register(this);
 		modEventBus.register(Configuration.class);
-		MinecraftForge.EVENT_BUS.addListener(EventWorldgen::biomeLoadingEvent);
+		//MinecraftForge.EVENT_BUS.addListener(EventWorldgen::biomeLoadingEvent);
 		MinecraftForge.EVENT_BUS.addListener(BlockBreak::BreakEvent);
 		if(ModList.get().isLoaded("mekanism")) {
-			modEventBus.register(MekRegistry.class);
-			modEventBus.register(Slurries.class);
+			//modEventBus.register(Slurries.class);
 		}
 		setupLogFilter();
 	}

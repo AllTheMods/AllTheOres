@@ -4,7 +4,7 @@ import net.allthemods.alltheores.AllTheOres;
 import net.allthemods.alltheores.blocks.OtherOreBlock;
 import net.allthemods.alltheores.infos.Reference;
 import net.minecraftforge.common.util.FakePlayer;
-import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 

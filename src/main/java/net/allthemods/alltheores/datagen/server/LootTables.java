@@ -49,7 +49,7 @@ public class LootTables extends LootTableProvider {
 
         private void dropRaw(Block block) {
             if((block instanceof AOreBlock) || (block instanceof BOreBlock) || (block instanceof OtherOreBlock)) {
-                String oretype = block.getRegistryName().getPath().toString();
+                String oretype = block.getName().toString();
                 if(oretype.contains("aluminum")) { this.add(block, (block1) -> {
                     return createOreDrop(block1, BlockList.ALUMINUM_RAW.get());
                 }); }

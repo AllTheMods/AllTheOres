@@ -4,7 +4,6 @@ import net.allthemods.alltheores.infos.Configuration;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextColor;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -27,9 +26,7 @@ public class ToolTipBlockItem  extends BlockItem {
         if((stack.getItem() == BlockList.ALUMINUM_ORE_ITEM.get()) || (stack.getItem() == BlockList.ALUMINUM_SLATE_ORE_ITEM.get()) || (stack.getItem() == BlockList.ALUMINUM_NETHER_ORE_ITEM.get()) || (stack.getItem() == BlockList.ALUMINUM_END_ORE_ITEM.get()) || (stack.getItem() == BlockList.OTHER_ALUMINUM_ORE_ITEM.get())) {
             tooltip.add(TextComponentHelper.createComponentTranslation(null, "Y: " + Configuration.aluminum_MinY + " to " + Configuration.aluminum_MaxY , new Object()).withStyle(ChatFormatting.YELLOW));
         }
-        /*if(stack.getItem() == BlockList.COPPER_ORE_ITEM.get()) {
-            tooltip.add((ITextComponent) TextComponentHelper.createComponentTranslation(null, "Y: " + Configuration.copper_MinY + " to " + Configuration.copper_MaxY , new Object()).withStyle(TextFormatting.YELLOW));
-        }*/
+
         if((stack.getItem() == BlockList.IRIDIUM_ORE_ITEM.get()) || (stack.getItem() == BlockList.IRIDIUM_SLATE_ORE_ITEM.get()) || (stack.getItem() == BlockList.IRIDIUM_NETHER_ORE_ITEM.get()) || (stack.getItem() == BlockList.IRIDIUM_END_ORE_ITEM.get()) || (stack.getItem() == BlockList.OTHER_IRIDIUM_ORE_ITEM.get())) {
             tooltip.add(TextComponentHelper.createComponentTranslation(null, "Y: " + Configuration.iridium_MinY + " to " + Configuration.iridium_MaxY , new Object()).withStyle(ChatFormatting.YELLOW));
         }
