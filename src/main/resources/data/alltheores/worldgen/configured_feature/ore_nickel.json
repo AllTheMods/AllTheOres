@@ -36,6 +36,16 @@
       },
       {
         "target": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "minecraft:end_stone",
+          "probability": 0.1
+        },
+        "state": {
+          "Name": "alltheores:raw_nickel_block"
+        }
+      },
+      {
+        "target": {
           "predicate_type": "minecraft:tag_match",
           "tag": "minecraft:stone_ore_replaceables"
         },
@@ -54,11 +64,20 @@
       },
       {
         "target": {
-          "predicate_type": "minecraft:tag_match",
-          "tag": "minecraft:nether_ore_replaceables"
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:netherrack"
         },
         "state": {
           "Name": "alltheores:nickel_nether_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:end_stone"
+        },
+        "state": {
+          "Name": "alltheores:nickel_end_ore"
         }
       }
     ]
