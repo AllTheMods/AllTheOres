@@ -37,6 +37,7 @@ public class ATOPlacedFeatures {
     public static final Holder<PlacedFeature> RAW_ZINC = PlacementUtils.register("alltheores:ore_zinc_raw", ATOConfiguredFeature.RAW_ZINC,commonOrePlacement(Configuration.COMMON.zinc_SpawnCount.get(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(Configuration.COMMON.zinc_MinY.get()), VerticalAnchor.aboveBottom(Configuration.COMMON.zinc_MaxY.get()))));
 
 
+
     private static List<PlacementModifier> orePlacement(PlacementModifier placement, PlacementModifier placement2) {
         return List.of(placement, InSquarePlacement.spread(), placement2, BiomeFilter.biome());
     }

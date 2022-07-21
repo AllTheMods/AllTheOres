@@ -4,15 +4,22 @@ import com.google.common.collect.ImmutableList;
 import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.infos.Configuration;
 import net.allthemods.alltheores.infos.ItemTagRegistry;
+import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.core.Holder;
+import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.OreFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ATOConfiguredFeature {
 
@@ -64,6 +71,8 @@ public class ATOConfiguredFeature {
 	public static final OreConfiguration RAW_TIN_CONFIG = new OreConfiguration(RAW_TIN_TARGET_LIST, 1);
 	public static final OreConfiguration RAW_URANIUM_CONFIG = new OreConfiguration(RAW_URANIUM_TARGET_LIST, 1);
 	public static final OreConfiguration RAW_ZINC_CONFIG = new OreConfiguration(RAW_ZINC_TARGET_LIST, 1);
+
+	public static final DeferredRegister<Feature<?>> ORES = DeferredRegister.create(ForgeRegistries.FEATURES,Reference.MOD_ID);
 
 
 	public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ALUMINUM = FeatureUtils.register("alltheores:aluminum_ore",Feature.ORE,ORE_ALUMINUM_CONFIG);

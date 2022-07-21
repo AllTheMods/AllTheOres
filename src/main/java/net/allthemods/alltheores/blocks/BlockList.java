@@ -31,8 +31,6 @@ public class BlockList {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
 	public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS,
 			Reference.MOD_ID);
-	public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES,
-			Reference.MOD_ID);
 
 
 	public static final ResourceLocation MOLTEN_STILL = new ResourceLocation(Reference.MOD_ID,

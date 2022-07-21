@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#minecraft:is_overworld",
+  "biomes": "#minecraft:is_nether",
   "features": "alltheores:ore_silver_placed",
   "step": "underground_ores"
 }
