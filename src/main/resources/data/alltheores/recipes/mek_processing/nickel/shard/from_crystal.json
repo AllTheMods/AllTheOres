@@ -1,0 +1,21 @@
+{
+  "type": "mekanism:injecting",
+  "itemInput": {
+    "ingredient": {
+      "tag": "mekanism:crystals/nickel"
+    }
+  },
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "alltheores:nickel_shard"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
+}
