@@ -1,18 +1,14 @@
 package net.allthemods.alltheores;
 
-import mekanism.api.chemical.slurry.Slurry;
 import net.allthemods.alltheores.events.BlockBreak;
-import net.allthemods.alltheores.worldgen.EventWorldgen;
+import net.allthemods.alltheores.meka.resources.ATOSlurries;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import org.apache.logging.log4j.LogManager;
@@ -33,14 +29,15 @@ public class AllTheOres {
 		BlockList.FLUIDS.register(modEventBus);
 		BlockList.BLOCKS.register(modEventBus);
 		BlockList.ITEMS.register(modEventBus);
+		if(ModList.get().isLoaded("mekanism")) {
+			ATOSlurries.SLURRIES.register(modEventBus);
+		}
 		//BlockList.FEATURES.register(modEventBus);
 		MinecraftForge.EVENT_BUS.register(this);
 		modEventBus.register(Configuration.class);
 		//MinecraftForge.EVENT_BUS.addListener(EventWorldgen::biomeLoadingEvent);
 		MinecraftForge.EVENT_BUS.addListener(BlockBreak::BreakEvent);
-		if(ModList.get().isLoaded("mekanism")) {
-			//modEventBus.register(Slurries.class);
-		}
+
 		setupLogFilter();
 	}
 
