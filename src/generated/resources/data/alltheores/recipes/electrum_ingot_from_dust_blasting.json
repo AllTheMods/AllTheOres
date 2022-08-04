@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "alltheores:electrum_dust"
+    "tag": "forge:dusts/electrum"
   },
   "result": "alltheores:electrum_ingot",
   "experience": 0.15,
-  "cookingtime": 100
+  "cookingtime": 200
 }

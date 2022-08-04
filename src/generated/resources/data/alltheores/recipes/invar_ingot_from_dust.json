@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "alltheores:invar_dust"
+    "tag": "forge:dusts/invar"
   },
   "result": "alltheores:invar_ingot",
   "experience": 0.15,

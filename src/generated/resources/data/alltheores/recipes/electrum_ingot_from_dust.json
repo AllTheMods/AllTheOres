@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "alltheores:electrum_dust"
+    "tag": "forge:dusts/electrum"
   },
   "result": "alltheores:electrum_ingot",
   "experience": 0.15,

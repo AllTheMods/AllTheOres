@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "alltheores:bronze_dust"
+    "tag": "forge:dusts/bronze"
   },
   "result": "alltheores:bronze_ingot",
   "experience": 0.15,

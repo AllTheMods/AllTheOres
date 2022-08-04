@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "alltheores:lead_dust"
+      "tag": "forge:dusts/lead"
     },
     {
-      "item": "alltheores:lead_dust"
+      "tag": "forge:dusts/lead"
     },
     {
-      "item": "alltheores:lead_dust"
+      "tag": "forge:dusts/lead"
     },
     {
       "tag": "forge:dusts/platinum"

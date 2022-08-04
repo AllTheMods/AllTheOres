@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "alltheores:iridium_dust"
+    "tag": "forge:dusts/iridium"
   },
   "result": "alltheores:iridium_ingot",
   "experience": 0.15,
-  "cookingtime": 100
+  "cookingtime": 200
 }

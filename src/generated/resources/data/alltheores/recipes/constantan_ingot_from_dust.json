@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "alltheores:constantan_dust"
+    "tag": "forge:dusts/constantan"
   },
   "result": "alltheores:constantan_ingot",
   "experience": 0.15,

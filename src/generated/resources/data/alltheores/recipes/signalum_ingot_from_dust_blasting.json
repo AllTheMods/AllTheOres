@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "alltheores:signalum_dust"
+    "tag": "forge:dusts/signalum"
   },
   "result": "alltheores:signalum_ingot",
   "experience": 0.15,
-  "cookingtime": 100
+  "cookingtime": 200
 }

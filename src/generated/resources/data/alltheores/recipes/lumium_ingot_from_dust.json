@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "alltheores:lumium_dust"
+    "tag": "forge:dusts/lumium"
   },
   "result": "alltheores:lumium_ingot",
   "experience": 0.15,

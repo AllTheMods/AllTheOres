@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "alltheores:copper_dust"
+      "tag": "forge:dusts/copper"
     },
     {
-      "item": "alltheores:copper_dust"
+      "tag": "forge:dusts/copper"
     },
     {
-      "item": "alltheores:copper_dust"
+      "tag": "forge:dusts/copper"
     },
     {
       "tag": "forge:dusts/silver"
