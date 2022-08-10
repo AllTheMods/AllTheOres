@@ -1,11 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "alltheores",
-  "pattern": [
-    " gt",
-    " tg",
-    "t  "
-  ],
   "key": {
     "g": {
       "item": "minecraft:copper_block"
@@ -14,6 +9,11 @@
       "item": "minecraft:stick"
     }
   },
+  "pattern": [
+    " gt",
+    " tg",
+    "t  "
+  ],
   "result": {
     "item": "alltheores:copper_ore_hammer"
   }

@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "alltheores",
-  "pattern": [
-    "nnn",
-    "nnn",
-    "nnn"
-  ],
   "key": {
     "n": {
       "tag": "forge:nuggets/copper"
     }
   },
+  "pattern": [
+    "nnn",
+    "nnn",
+    "nnn"
+  ],
   "result": {
     "item": "minecraft:copper_ingot"
   }

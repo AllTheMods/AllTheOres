@@ -9,7 +9,7 @@
     }
   ],
   "result": {
-    "item": "alltheores:iron_dust",
-    "count": 2
+    "count": 2,
+    "item": "alltheores:iron_dust"
   }
 }

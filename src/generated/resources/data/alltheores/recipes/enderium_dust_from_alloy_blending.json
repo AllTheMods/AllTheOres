@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "alltheores:enderium_dust",
-    "count": 4
+    "count": 4,
+    "item": "alltheores:enderium_dust"
   }
 }

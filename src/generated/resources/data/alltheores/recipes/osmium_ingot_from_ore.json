@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.15,
   "ingredient": {
     "item": "alltheores:osmium_ore"
   },
-  "result": "alltheores:osmium_ingot",
-  "experience": 0.15,
-  "cookingtime": 200
+  "result": "alltheores:osmium_ingot"
 }

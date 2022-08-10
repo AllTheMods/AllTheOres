@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.15,
   "ingredient": {
     "item": "alltheores:raw_silver"
   },
-  "result": "alltheores:silver_ingot",
-  "experience": 0.15,
-  "cookingtime": 100
+  "result": "alltheores:silver_ingot"
 }

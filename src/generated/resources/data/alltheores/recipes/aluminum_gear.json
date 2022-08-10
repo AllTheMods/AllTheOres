@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "alltheores",
-  "pattern": [
-    "aaa",
-    "a a",
-    "aaa"
-  ],
   "key": {
     "a": {
       "tag": "forge:ingots/aluminum"
     }
   },
+  "pattern": [
+    "aaa",
+    "a a",
+    "aaa"
+  ],
   "result": {
     "item": "alltheores:aluminum_gear"
   }

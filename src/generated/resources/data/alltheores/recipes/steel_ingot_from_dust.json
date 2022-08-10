@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.15,
   "ingredient": {
     "item": "alltheores:steel_dust"
   },
-  "result": "alltheores:steel_ingot",
-  "experience": 0.15,
-  "cookingtime": 200
+  "result": "alltheores:steel_ingot"
 }
