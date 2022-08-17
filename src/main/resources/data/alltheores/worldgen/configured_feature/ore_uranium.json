@@ -47,6 +47,25 @@
       {
         "target": {
           "predicate_type": "minecraft:tag_match",
+          "tag": "allthemodium:ancient_stone",
+          "probability": 0.3
+        },
+        "state": {
+          "Name": "alltheores:raw_uranium_block"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:tag_match",
+          "tag": "allthemodium:ancient_stone"
+        },
+        "state": {
+          "Name": "alltheores:uranium_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:tag_match",
           "tag": "minecraft:stone_ore_replaceables"
         },
         "state": {
