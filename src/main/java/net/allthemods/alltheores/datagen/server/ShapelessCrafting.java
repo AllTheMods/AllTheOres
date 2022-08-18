@@ -642,7 +642,14 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
                 .requires(ItemTagRegistry.COPPER_BLOCK_ITEM)
                 .unlockedBy(hasCondition,RecipeProvider.has(Items.COPPER_BLOCK))
                 .save(consumer,recipeDir("copper_ingot","block"));
-    }
+
+        ShapelessRecipeBuilder
+                .shapeless(BlockList.BRASS_INGOT.get(),9)
+                .requires(ItemTagRegistry.BRASS_BLOCK_ITEM)
+                .unlockedBy(hasCondition,RecipeProvider.has(BlockList.BRASS_BLOCK_ITEM.get()))
+                .save(consumer,recipeDir("brass_ingot","block"));
+
+}
 
     public ShapelessCrafting(DataGenerator generatorIn) {
         super(generatorIn);
