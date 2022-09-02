@@ -8,7 +8,7 @@
         "target": {
           "predicate_type": "minecraft:random_block_match",
           "block": "minecraft:stone",
-          "probability": 0.03
+          "probability": 0.005
         },
         "state": {
           "Name": "alltheores:raw_tin_block"
@@ -18,7 +18,7 @@
         "target": {
           "predicate_type": "minecraft:random_block_match",
           "block": "minecraft:deepslate",
-          "probability": 0.05
+          "probability": 0.03
         },
         "state": {
           "Name": "alltheores:raw_tin_block"
@@ -28,7 +28,7 @@
         "target": {
           "predicate_type": "minecraft:random_block_match",
           "block": "minecraft:netherrack",
-          "probability": 0.08
+          "probability": 0.05
         },
         "state": {
           "Name": "alltheores:raw_tin_block"
@@ -48,7 +48,7 @@
         "target": {
           "predicate_type": "minecraft:tag_match",
           "tag": "allthemodium:ancient_stone",
-          "probability": 0.3
+          "probability": 0.2
         },
         "state": {
           "Name": "alltheores:raw_tin_block"

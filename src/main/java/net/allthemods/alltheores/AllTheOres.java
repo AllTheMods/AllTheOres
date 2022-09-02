@@ -6,16 +6,13 @@ import net.allthemods.alltheores.meka.resources.ATOSlurries;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import net.allthemods.alltheores.blocks.BlockList;
-import net.allthemods.alltheores.infos.Configuration;
 import net.allthemods.alltheores.infos.Reference;
 
 @Mod(Reference.MOD_ID)
@@ -25,7 +22,7 @@ public class AllTheOres {
 
 	public AllTheOres() {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_SPEC);
+		//ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_SPEC);
 		BlockList.FLUIDS.register(modEventBus);
 		BlockList.BLOCKS.register(modEventBus);
 		BlockList.ITEMS.register(modEventBus);
@@ -34,7 +31,7 @@ public class AllTheOres {
 		}
 		//BlockList.FEATURES.register(modEventBus);
 		MinecraftForge.EVENT_BUS.register(this);
-		modEventBus.register(Configuration.class);
+		//modEventBus.register(Configuration.class);
 		//MinecraftForge.EVENT_BUS.addListener(EventWorldgen::biomeLoadingEvent);
 		MinecraftForge.EVENT_BUS.addListener(BlockBreak::BreakEvent);
 

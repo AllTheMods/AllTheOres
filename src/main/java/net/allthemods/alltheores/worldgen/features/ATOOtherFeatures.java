@@ -2,15 +2,10 @@ package net.allthemods.alltheores.worldgen.features;
 
 import com.google.common.collect.ImmutableList;
 import net.allthemods.alltheores.blocks.BlockList;
-import net.allthemods.alltheores.infos.Configuration;
 import net.allthemods.alltheores.infos.ItemTagRegistry;
-import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.core.Holder;
-import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;

@@ -27,6 +27,8 @@ public class ItemTagRegistry {
     public static final TagKey<Item> RODS = ItemTags.create(Reference.forge("rods"));
     public static final TagKey<Item> RODS_METAL = ItemTags.create(Reference.forge("rods/metal"));
 
+    public static final TagKey<Block> FORES = BlockTags.create(Reference.forge("ores"));
+
     public static final TagKey<Item> ORES = ItemTags.create(Reference.forge("ores"));
     public static final TagKey<Item> GEMS = ItemTags.create(Reference.forge("gems"));
 

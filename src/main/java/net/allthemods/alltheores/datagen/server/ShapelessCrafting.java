@@ -129,7 +129,7 @@ private ResourceLocation recipeDir(String typeIn, String typeOut) {
                 .shapeless(BlockList.ENDERIUM_DUST.get(),4)
                 .requires(BlockList.LEAD_DUST.get(),3)
                 .requires(ItemTagRegistry.PLATINUM_DUST)
-                .requires(Items.ENDER_PEARL,4)
+                .requires(Items.ENDER_PEARL,2)
                 .requires(ItemTagRegistry.ORE_HAMMERS)
                 .unlockedBy(hasCondition,RecipeProvider.inventoryTrigger(ItemPredicate.Builder.item().of(ItemTagRegistry.ORE_HAMMERS).build()))
                 .save(consumer,recipeDir("enderium_dust","alloy_blending"));
