@@ -3,7 +3,7 @@
   "cookingtime": 200,
   "experience": 0.15,
   "ingredient": {
-    "item": "alltheores:osmium_slate_ore"
+    "item": "alltheores:deepslate_osmium_ore"
   },
   "result": "alltheores:osmium_ingot"
 }

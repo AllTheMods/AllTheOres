@@ -3,11 +3,13 @@ package net.allthemods.alltheores.datagen.client;
 import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
@@ -33,10 +35,11 @@ public class BlockStates extends BlockStateProvider {
      * @param block the block
      */
     private void simpleBlockAndItem(Block block) {
-        simpleBlock(block);
 
-        String blockName = block.getName().toString();
-        BlockModelBuilder builder = models().getBuilder(blockName);
+
+        ResourceLocation blockName = ForgeRegistries.BLOCKS.getKey(block);
+        simpleBlock(block);
+        BlockModelBuilder builder = models().getBuilder(blockName.toString());
         simpleBlockItem(block, builder);
     }
 }

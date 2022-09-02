@@ -1,9 +1,9 @@
 {
   "values": [
     "alltheores:uranium_ore",
-    "alltheores:uranium_slate_ore",
-    "alltheores:uranium_nether_ore",
-    "alltheores:uranium_end_ore",
-    "alltheores:uranium_other_ore"
+    "alltheores:deepslate_uranium_ore",
+    "alltheores:nether_uranium_ore",
+    "alltheores:end_uranium_ore",
+    "alltheores:other_uranium_ore"
   ]
 }

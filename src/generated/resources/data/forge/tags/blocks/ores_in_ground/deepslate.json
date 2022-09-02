@@ -1,14 +1,14 @@
 {
   "values": [
-    "alltheores:aluminum_slate_ore",
-    "alltheores:iridium_slate_ore",
-    "alltheores:lead_slate_ore",
-    "alltheores:osmium_slate_ore",
-    "alltheores:nickel_slate_ore",
-    "alltheores:platinum_slate_ore",
-    "alltheores:silver_slate_ore",
-    "alltheores:tin_slate_ore",
-    "alltheores:uranium_slate_ore",
-    "alltheores:zinc_slate_ore"
+    "alltheores:deepslate_aluminum_ore",
+    "alltheores:deepslate_iridium_ore",
+    "alltheores:deepslate_lead_ore",
+    "alltheores:deepslate_osmium_ore",
+    "alltheores:deepslate_nickel_ore",
+    "alltheores:deepslate_platinum_ore",
+    "alltheores:deepslate_silver_ore",
+    "alltheores:deepslate_tin_ore",
+    "alltheores:deepslate_uranium_ore",
+    "alltheores:deepslate_zinc_ore"
   ]
 }

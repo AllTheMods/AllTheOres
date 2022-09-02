@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "alltheores:block/lead_nether_ore"
-  }
-}

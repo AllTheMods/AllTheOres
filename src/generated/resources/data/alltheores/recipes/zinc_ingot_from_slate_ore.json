@@ -3,7 +3,7 @@
   "cookingtime": 200,
   "experience": 0.15,
   "ingredient": {
-    "item": "alltheores:zinc_slate_ore"
+    "item": "alltheores:deepslate_zinc_ore"
   },
   "result": "alltheores:zinc_ingot"
 }

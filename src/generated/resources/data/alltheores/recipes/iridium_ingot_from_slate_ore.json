@@ -3,7 +3,7 @@
   "cookingtime": 200,
   "experience": 0.15,
   "ingredient": {
-    "item": "alltheores:iridium_slate_ore"
+    "item": "alltheores:deepslate_iridium_ore"
   },
   "result": "alltheores:iridium_ingot"
 }

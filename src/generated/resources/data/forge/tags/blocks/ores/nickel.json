@@ -1,9 +1,9 @@
 {
   "values": [
     "alltheores:nickel_ore",
-    "alltheores:nickel_slate_ore",
-    "alltheores:nickel_nether_ore",
-    "alltheores:nickel_end_ore",
-    "alltheores:nickel_other_ore"
+    "alltheores:deepslate_nickel_ore",
+    "alltheores:nether_nickel_ore",
+    "alltheores:end_nickel_ore",
+    "alltheores:other_nickel_ore"
   ]
 }

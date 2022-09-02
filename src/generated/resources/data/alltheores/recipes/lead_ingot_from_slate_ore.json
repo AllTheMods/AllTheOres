@@ -3,7 +3,7 @@
   "cookingtime": 200,
   "experience": 0.15,
   "ingredient": {
-    "item": "alltheores:lead_slate_ore"
+    "item": "alltheores:deepslate_lead_ore"
   },
   "result": "alltheores:lead_ingot"
 }

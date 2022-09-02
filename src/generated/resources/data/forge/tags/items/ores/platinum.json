@@ -1,9 +1,9 @@
 {
   "values": [
     "alltheores:platinum_ore",
-    "alltheores:platinum_slate_ore",
-    "alltheores:platinum_nether_ore",
-    "alltheores:platinum_end_ore",
-    "alltheores:platinum_other_ore"
+    "alltheores:deepslate_platinum_ore",
+    "alltheores:nether_platinum_ore",
+    "alltheores:end_platinum_ore",
+    "alltheores:other_platinum_ore"
   ]
 }

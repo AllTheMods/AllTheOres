@@ -1,9 +1,9 @@
 {
   "values": [
     "alltheores:iridium_ore",
-    "alltheores:iridium_slate_ore",
-    "alltheores:iridium_nether_ore",
-    "alltheores:iridium_end_ore",
-    "alltheores:iridium_other_ore"
+    "alltheores:deepslate_iridium_ore",
+    "alltheores:nether_iridium_ore",
+    "alltheores:end_iridium_ore",
+    "alltheores:other_iridium_ore"
   ]
 }

@@ -1,9 +1,9 @@
 {
   "values": [
     "alltheores:zinc_ore",
-    "alltheores:zinc_slate_ore",
-    "alltheores:zinc_nether_ore",
-    "alltheores:zinc_end_ore",
-    "alltheores:zinc_other_ore"
+    "alltheores:deepslate_zinc_ore",
+    "alltheores:nether_zinc_ore",
+    "alltheores:end_zinc_ore",
+    "alltheores:other_zinc_ore"
   ]
 }

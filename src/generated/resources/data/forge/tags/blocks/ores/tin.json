@@ -1,9 +1,9 @@
 {
   "values": [
     "alltheores:tin_ore",
-    "alltheores:tin_slate_ore",
-    "alltheores:tin_nether_ore",
-    "alltheores:tin_end_ore",
-    "alltheores:tin_other_ore"
+    "alltheores:deepslate_tin_ore",
+    "alltheores:nether_tin_ore",
+    "alltheores:end_tin_ore",
+    "alltheores:other_tin_ore"
   ]
 }

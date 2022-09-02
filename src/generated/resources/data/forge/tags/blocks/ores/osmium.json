@@ -1,9 +1,9 @@
 {
   "values": [
     "alltheores:osmium_ore",
-    "alltheores:osmium_slate_ore",
-    "alltheores:osmium_nether_ore",
-    "alltheores:osmium_end_ore",
-    "alltheores:osmium_other_ore"
+    "alltheores:deepslate_osmium_ore",
+    "alltheores:nether_osmium_ore",
+    "alltheores:end_osmium_ore",
+    "alltheores:other_osmium_ore"
   ]
 }

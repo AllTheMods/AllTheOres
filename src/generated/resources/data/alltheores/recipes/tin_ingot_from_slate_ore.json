@@ -3,7 +3,7 @@
   "cookingtime": 200,
   "experience": 0.15,
   "ingredient": {
-    "item": "alltheores:tin_slate_ore"
+    "item": "alltheores:deepslate_tin_ore"
   },
   "result": "alltheores:tin_ingot"
 }

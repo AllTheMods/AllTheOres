@@ -3,7 +3,7 @@
   "cookingtime": 200,
   "experience": 0.15,
   "ingredient": {
-    "item": "alltheores:silver_slate_ore"
+    "item": "alltheores:deepslate_silver_ore"
   },
   "result": "alltheores:silver_ingot"
 }

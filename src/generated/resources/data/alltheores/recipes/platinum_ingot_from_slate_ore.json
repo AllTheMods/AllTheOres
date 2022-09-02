@@ -3,7 +3,7 @@
   "cookingtime": 200,
   "experience": 0.15,
   "ingredient": {
-    "item": "alltheores:platinum_slate_ore"
+    "item": "alltheores:deepslate_platinum_ore"
   },
   "result": "alltheores:platinum_ingot"
 }
