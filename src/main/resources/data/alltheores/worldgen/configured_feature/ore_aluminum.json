@@ -69,7 +69,7 @@
           "tag": "allthemodium:ancient_stone"
         },
         "state": {
-          "Name": "alltheores:aluminum_ore"
+          "Name": "alltheores:other_aluminum_ore"
         }
       },
       {
@@ -78,7 +78,7 @@
           "tag": "minecraft:deepslate_ore_replaceables"
         },
         "state": {
-          "Name": "alltheores:aluminum_slate_ore"
+          "Name": "alltheores:deepslate_aluminum_ore"
         }
       },
       {
@@ -87,7 +87,7 @@
           "block": "minecraft:netherrack"
         },
         "state": {
-          "Name": "alltheores:aluminum_nether_ore"
+          "Name": "alltheores:nether_aluminum_ore"
         }
       },
       {
@@ -96,7 +96,7 @@
           "block": "minecraft:end_stone"
         },
         "state": {
-          "Name": "alltheores:aluminum_end_ore"
+          "Name": "alltheores:end_aluminum_ore"
         }
       }
     ]

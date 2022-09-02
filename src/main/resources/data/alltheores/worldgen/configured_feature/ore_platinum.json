@@ -60,7 +60,7 @@
           "tag": "allthemodium:ancient_stone"
         },
         "state": {
-          "Name": "alltheores:platinum_ore"
+          "Name": "alltheores:other_platinum_ore"
         }
       },
       {
@@ -78,7 +78,7 @@
           "tag": "minecraft:deepslate_ore_replaceables"
         },
         "state": {
-          "Name": "alltheores:platinum_slate_ore"
+          "Name": "alltheores:deepslate_platinum_ore"
         }
       },
       {
@@ -87,7 +87,7 @@
           "block": "minecraft:netherrack"
         },
         "state": {
-          "Name": "alltheores:platinum_nether_ore"
+          "Name": "alltheores:nether_platinum_ore"
         }
       },
       {
@@ -96,7 +96,7 @@
           "block": "minecraft:end_stone"
         },
         "state": {
-          "Name": "alltheores:platinum_end_ore"
+          "Name": "alltheores:end_platinum_ore"
         }
       }
     ]

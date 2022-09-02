@@ -60,7 +60,7 @@
           "tag": "allthemodium:ancient_stone"
         },
         "state": {
-          "Name": "alltheores:tin_ore"
+          "Name": "alltheores:other_tin_ore"
         }
       },
       {
@@ -78,7 +78,7 @@
           "tag": "minecraft:deepslate_ore_replaceables"
         },
         "state": {
-          "Name": "alltheores:tin_slate_ore"
+          "Name": "alltheores:deepslate_tin_ore"
         }
       },
       {
@@ -87,7 +87,7 @@
           "block": "minecraft:netherrack"
         },
         "state": {
-          "Name": "alltheores:tin_nether_ore"
+          "Name": "alltheores:nether_tin_ore"
         }
       },
       {
@@ -96,7 +96,7 @@
           "block": "minecraft:end_stone"
         },
         "state": {
-          "Name": "alltheores:tin_end_ore"
+          "Name": "alltheores:end_tin_ore"
         }
       }
     ]

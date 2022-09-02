@@ -60,7 +60,7 @@
           "tag": "allthemodium:ancient_stone"
         },
         "state": {
-          "Name": "alltheores:lead_ore"
+          "Name": "alltheores:other_lead_ore"
         }
       },
       {
@@ -78,7 +78,7 @@
           "tag": "minecraft:deepslate_ore_replaceables"
         },
         "state": {
-          "Name": "alltheores:lead_slate_ore"
+          "Name": "alltheores:deepslate_lead_ore"
         }
       },
       {
@@ -87,7 +87,7 @@
           "block": "minecraft:netherrack"
         },
         "state": {
-          "Name": "alltheores:lead_nether_ore"
+          "Name": "alltheores:nether_lead_ore"
         }
       },
       {
@@ -96,7 +96,7 @@
           "block": "minecraft:end_stone"
         },
         "state": {
-          "Name": "alltheores:lead_end_ore"
+          "Name": "alltheores:end_lead_ore"
         }
       }
 
