@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_TagKey[minecraft:item / forge:raw_ores/tin]": {
+    "has_raw_TagKey[minecraft:item / forge:raw_materials/tin]": {
       "conditions": {
         "items": [
           {
-            "tag": "forge:raw_ores/tin"
+            "tag": "forge:raw_materials/tin"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "has_raw_TagKey[minecraft:item / forge:raw_ores/tin]",
+      "has_raw_TagKey[minecraft:item / forge:raw_materials/tin]",
       "has_the_recipe"
     ]
   ],

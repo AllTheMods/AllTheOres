@@ -4,12 +4,15 @@
   "key": {
     "a": {
       "tag": "forge:ingots/electrum"
+    },
+    "i": {
+      "tag": "forge:nuggets/iron"
     }
   },
   "pattern": [
-    "aaa",
-    "a a",
-    "aaa"
+    " a ",
+    "aia",
+    " a "
   ],
   "result": {
     "item": "alltheores:electrum_gear"

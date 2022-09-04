@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_TagKey[minecraft:item / forge:raw_ores/lead]": {
+    "has_raw_TagKey[minecraft:item / forge:raw_materials/lead]": {
       "conditions": {
         "items": [
           {
-            "tag": "forge:raw_ores/lead"
+            "tag": "forge:raw_materials/lead"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "has_raw_TagKey[minecraft:item / forge:raw_ores/lead]",
+      "has_raw_TagKey[minecraft:item / forge:raw_materials/lead]",
       "has_the_recipe"
     ]
   ],

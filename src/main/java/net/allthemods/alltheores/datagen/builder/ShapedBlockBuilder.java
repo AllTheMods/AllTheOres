@@ -35,6 +35,8 @@ public class ShapedBlockBuilder {
     private final TagKey<Item> ingot;
     private final TagKey<Item> hammer = ItemTagRegistry.ORE_HAMMERS;
 
+    private final TagKey<Item> nugget = ItemTagRegistry.IRON_NUGGET;
+
 
     public ShapedBlockBuilder(TagKey<Item> ingot) {
         this.ingot = ingot;
@@ -87,6 +89,7 @@ public class ShapedBlockBuilder {
             Optional.ofNullable(pieces.get(Slot.GEAR))
                 .map(this::gear)
                 .map(this::addCriterionIngot)
+                .map(this::addCriterionNugget)
                 .ifPresent(register);
             Optional.ofNullable(pieces.get(Slot.ROD))
                 .map(this::rod)
@@ -115,6 +118,10 @@ public class ShapedBlockBuilder {
         return builder
                 .define('h', hammer);
     }
+    private ShapedRecipeBuilder addCriterionNugget(ShapedRecipeBuilder builder) {
+        return builder
+                .define('i', nugget);
+    }
 
     private ShapedRecipeBuilder block(ItemLike provider) {
         return shaped((ItemLike) provider)
@@ -134,9 +141,9 @@ public class ShapedBlockBuilder {
 
     private ShapedRecipeBuilder gear(ItemLike provider) {
         return shaped(provider)
-                .pattern("aaa")
-                .pattern("a a")
-                .pattern("aaa");
+                .pattern(" a ")
+                .pattern("aia")
+                .pattern(" a ");
 
     }
     private ShapedRecipeBuilder rod(ItemLike provider) {

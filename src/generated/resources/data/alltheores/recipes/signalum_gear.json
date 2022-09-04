@@ -4,12 +4,15 @@
   "key": {
     "a": {
       "tag": "forge:ingots/signalum"
+    },
+    "i": {
+      "tag": "forge:nuggets/iron"
     }
   },
   "pattern": [
-    "aaa",
-    "a a",
-    "aaa"
+    " a ",
+    "aia",
+    " a "
   ],
   "result": {
     "item": "alltheores:signalum_gear"

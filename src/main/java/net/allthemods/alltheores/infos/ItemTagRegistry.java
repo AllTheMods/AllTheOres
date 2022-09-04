@@ -29,6 +29,7 @@ public class ItemTagRegistry {
 
     public static final TagKey<Block> FORES = BlockTags.create(Reference.forge("ores"));
 
+    public static final TagKey<Item> RAWORES = ItemTags.create(Reference.forge("raw_materials"));
     public static final TagKey<Item> ORES = ItemTags.create(Reference.forge("ores"));
     public static final TagKey<Item> GEMS = ItemTags.create(Reference.forge("gems"));
 
@@ -73,6 +74,8 @@ public class ItemTagRegistry {
     public static final TagKey<Item> SIGNALUM_NUGGET = ItemTags.create(Reference.nugget("signalum"));
     public static final TagKey<Item> STEEL_NUGGET = ItemTags.create(Reference.nugget("steel"));
     public static final TagKey<Item> BRASS_NUGGET = ItemTags.create(Reference.nugget("brass"));
+
+    public static final TagKey<Item> IRON_NUGGET = ItemTags.create(Reference.nugget("iron"));
 
     public static final TagKey<Block> LEAD_BLOCK = BlockTags.create(Reference.block("lead"));
     public static final TagKey<Block> IRIDIUM_BLOCK = BlockTags.create(Reference.block("iridium"));
@@ -302,16 +305,16 @@ public class ItemTagRegistry {
     public static final TagKey<Item> IN_ANCIENT_STONE_ITEM = ItemTags.create(Reference.ores_in_ground("ancient_stone"));
 
 
-    public static final TagKey<Item> RAW_IRIDIUM = ItemTags.create(Reference.raw_ores("iridium"));
-    public static final TagKey<Item> RAW_LEAD = ItemTags.create(Reference.raw_ores("lead"));
-    public static final TagKey<Item> RAW_SILVER = ItemTags.create(Reference.raw_ores("silver"));
-    public static final TagKey<Item> RAW_PLATINUM = ItemTags.create(Reference.raw_ores("platinum"));
-    public static final TagKey<Item> RAW_ALUMINUM = ItemTags.create(Reference.raw_ores("aluminum"));
-    public static final TagKey<Item> RAW_NICKEL = ItemTags.create(Reference.raw_ores("nickel"));
-    public static final TagKey<Item> RAW_URANIUM = ItemTags.create(Reference.raw_ores("uranium"));
-    public static final TagKey<Item> RAW_OSMIUM = ItemTags.create(Reference.raw_ores("osmium"));
-    public static final TagKey<Item> RAW_ZINC = ItemTags.create(Reference.raw_ores("zinc"));
-    public static final TagKey<Item> RAW_TIN = ItemTags.create(Reference.raw_ores("tin"));
+    public static final TagKey<Item> RAW_IRIDIUM = ItemTags.create(Reference.raw_materials("iridium"));
+    public static final TagKey<Item> RAW_LEAD = ItemTags.create(Reference.raw_materials("lead"));
+    public static final TagKey<Item> RAW_SILVER = ItemTags.create(Reference.raw_materials("silver"));
+    public static final TagKey<Item> RAW_PLATINUM = ItemTags.create(Reference.raw_materials("platinum"));
+    public static final TagKey<Item> RAW_ALUMINUM = ItemTags.create(Reference.raw_materials("aluminum"));
+    public static final TagKey<Item> RAW_NICKEL = ItemTags.create(Reference.raw_materials("nickel"));
+    public static final TagKey<Item> RAW_URANIUM = ItemTags.create(Reference.raw_materials("uranium"));
+    public static final TagKey<Item> RAW_OSMIUM = ItemTags.create(Reference.raw_materials("osmium"));
+    public static final TagKey<Item> RAW_ZINC = ItemTags.create(Reference.raw_materials("zinc"));
+    public static final TagKey<Item> RAW_TIN = ItemTags.create(Reference.raw_materials("tin"));
     public static final TagKey<Item> PERIDOT = ItemTags.create(Reference.gem("peridot"));
     public static final TagKey<Item> RUBY = ItemTags.create(Reference.gem("ruby"));
     public static final TagKey<Item> SAPPHIRE = ItemTags.create(Reference.gem("sapphire"));

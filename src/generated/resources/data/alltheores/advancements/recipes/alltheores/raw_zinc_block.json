@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_TagKey[minecraft:item / forge:raw_ores/zinc]": {
+    "has_raw_TagKey[minecraft:item / forge:raw_materials/zinc]": {
       "conditions": {
         "items": [
           {
-            "tag": "forge:raw_ores/zinc"
+            "tag": "forge:raw_materials/zinc"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "has_raw_TagKey[minecraft:item / forge:raw_ores/zinc]",
+      "has_raw_TagKey[minecraft:item / forge:raw_materials/zinc]",
       "has_the_recipe"
     ]
   ],

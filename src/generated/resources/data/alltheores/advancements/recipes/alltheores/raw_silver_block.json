@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_TagKey[minecraft:item / forge:raw_ores/silver]": {
+    "has_raw_TagKey[minecraft:item / forge:raw_materials/silver]": {
       "conditions": {
         "items": [
           {
-            "tag": "forge:raw_ores/silver"
+            "tag": "forge:raw_materials/silver"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "has_raw_TagKey[minecraft:item / forge:raw_ores/silver]",
+      "has_raw_TagKey[minecraft:item / forge:raw_materials/silver]",
       "has_the_recipe"
     ]
   ],
