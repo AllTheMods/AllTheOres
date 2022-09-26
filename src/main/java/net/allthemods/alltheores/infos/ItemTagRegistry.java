@@ -4,7 +4,6 @@ package net.allthemods.alltheores.infos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.Tag;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -31,6 +30,7 @@ public class ItemTagRegistry {
 
     public static final TagKey<Item> ORES = ItemTags.create(Reference.forge("ores"));
     public static final TagKey<Item> GEMS = ItemTags.create(Reference.forge("gems"));
+    public static final TagKey<Item> RAW_MATERIALS = ItemTags.create(Reference.forge("raw_materials"));
 
     public static final TagKey<Item> LEAD_INGOT = ItemTags.create(Reference.ingot("lead"));
     public static final TagKey<Item> IRIDIUM_INGOT = ItemTags.create(Reference.ingot("iridium"));
@@ -53,6 +53,7 @@ public class ItemTagRegistry {
     public static final TagKey<Item> STEEL_INGOT = ItemTags.create(Reference.ingot("steel"));
     public static final TagKey<Item> BRASS_INGOT = ItemTags.create(Reference.ingot("brass"));
 
+    public static final TagKey<Item> IRON_NUGGET = ItemTags.create(Reference.nugget("iron"));
     public static final TagKey<Item> LEAD_NUGGET = ItemTags.create(Reference.nugget("lead"));
     public static final TagKey<Item> IRIDIUM_NUGGET = ItemTags.create(Reference.nugget("iridium"));
     public static final TagKey<Item> COPPER_NUGGET = ItemTags.create(Reference.nugget("copper"));
