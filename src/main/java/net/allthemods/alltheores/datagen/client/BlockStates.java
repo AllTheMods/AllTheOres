@@ -40,6 +40,7 @@ public class BlockStates extends BlockStateProvider {
         ResourceLocation blockName = ForgeRegistries.BLOCKS.getKey(block);
         simpleBlock(block);
         BlockModelBuilder builder = models().getBuilder(blockName.toString());
+
         simpleBlockItem(block, builder);
     }
 }

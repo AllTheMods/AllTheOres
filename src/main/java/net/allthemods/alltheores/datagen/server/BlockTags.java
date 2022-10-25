@@ -209,6 +209,9 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.TIN_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.URANIUM_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ZINC_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.RUBY_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.PERIDOT_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.SAPPHIRE_ORE.get());
 
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ALUMINUM_SLATE_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.IRIDIUM_SLATE_ORE.get());
@@ -220,6 +223,9 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.TIN_SLATE_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.URANIUM_SLATE_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ZINC_SLATE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.RUBY_SLATE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.PERIDOT_SLATE_ORE.get());
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.SAPPHIRE_SLATE_ORE.get());
 
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.ALUMINUM_NETHER_ORE.get());
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.IRIDIUM_NETHER_ORE.get());
