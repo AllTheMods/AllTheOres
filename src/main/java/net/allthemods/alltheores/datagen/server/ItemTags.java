@@ -23,12 +23,22 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.CLUMPS_MEK).add(BlockList.PLAT_CLUMP.get());
         tag(ItemTagRegistry.CLUMPS_MEK).add(BlockList.SILV_CLUMP.get());
         tag(ItemTagRegistry.CLUMPS_MEK).add(BlockList.ZINC_CLUMP.get());
+        tag(ItemTagRegistry.CLUMPS_MEK).add(BlockList.COPP_CLUMP.get());
+        tag(ItemTagRegistry.CLUMPS_MEK).add(BlockList.LEAD_CLUMP.get());
+        tag(ItemTagRegistry.CLUMPS_MEK).add(BlockList.OSMI_CLUMP.get());
+        tag(ItemTagRegistry.CLUMPS_MEK).add(BlockList.TIN_CLUMP.get());
+        tag(ItemTagRegistry.CLUMPS_MEK).add(BlockList.URAN_CLUMP.get());
 
         tag(ItemTagRegistry.CLUMPS_MEK_ALU).add(BlockList.ALUM_CLUMP.get());
         tag(ItemTagRegistry.CLUMPS_MEK_NIC).add(BlockList.NICK_CLUMP.get());
         tag(ItemTagRegistry.CLUMPS_MEK_PLA).add(BlockList.PLAT_CLUMP.get());
         tag(ItemTagRegistry.CLUMPS_MEK_SIL).add(BlockList.SILV_CLUMP.get());
         tag(ItemTagRegistry.CLUMPS_MEK_ZIN).add(BlockList.ZINC_CLUMP.get());
+        tag(ItemTagRegistry.CLUMPS_MEK_COP).add(BlockList.COPP_CLUMP.get());
+        tag(ItemTagRegistry.CLUMPS_MEK_LEA).add(BlockList.LEAD_CLUMP.get());
+        tag(ItemTagRegistry.CLUMPS_MEK_OSM).add(BlockList.OSMI_CLUMP.get());
+        tag(ItemTagRegistry.CLUMPS_MEK_TIN).add(BlockList.TIN_CLUMP.get());
+        tag(ItemTagRegistry.CLUMPS_MEK_URA).add(BlockList.URAN_CLUMP.get());
 
         //
 
@@ -38,12 +48,22 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.CRYSTAL_MEK).add(BlockList.PLAT_CRYSTAL.get());
         tag(ItemTagRegistry.CRYSTAL_MEK).add(BlockList.SILV_CRYSTAL.get());
         tag(ItemTagRegistry.CRYSTAL_MEK).add(BlockList.ZINC_CRYSTAL.get());
+        tag(ItemTagRegistry.CRYSTAL_MEK).add(BlockList.COPP_CRYSTAL.get());
+        tag(ItemTagRegistry.CRYSTAL_MEK).add(BlockList.LEAD_CRYSTAL.get());
+        tag(ItemTagRegistry.CRYSTAL_MEK).add(BlockList.OSMI_CRYSTAL.get());
+        tag(ItemTagRegistry.CRYSTAL_MEK).add(BlockList.TIN_CRYSTAL.get());
+        tag(ItemTagRegistry.CRYSTAL_MEK).add(BlockList.URAN_CRYSTAL.get());
 
         tag(ItemTagRegistry.CRYSTAL_MEK_ALU).add(BlockList.ALUM_CRYSTAL.get());
         tag(ItemTagRegistry.CRYSTAL_MEK_NIC).add(BlockList.NICK_CRYSTAL.get());
         tag(ItemTagRegistry.CRYSTAL_MEK_PLA).add(BlockList.PLAT_CRYSTAL.get());
         tag(ItemTagRegistry.CRYSTAL_MEK_SIL).add(BlockList.SILV_CRYSTAL.get());
         tag(ItemTagRegistry.CRYSTAL_MEK_ZIN).add(BlockList.ZINC_CRYSTAL.get());
+        tag(ItemTagRegistry.CRYSTAL_MEK_COP).add(BlockList.COPP_CRYSTAL.get());
+        tag(ItemTagRegistry.CRYSTAL_MEK_LEA).add(BlockList.LEAD_CRYSTAL.get());
+        tag(ItemTagRegistry.CRYSTAL_MEK_OSM).add(BlockList.OSMI_CRYSTAL.get());
+        tag(ItemTagRegistry.CRYSTAL_MEK_TIN).add(BlockList.TIN_CRYSTAL.get());
+        tag(ItemTagRegistry.CRYSTAL_MEK_URA).add(BlockList.URAN_CRYSTAL.get());
         //
 
         tag(ItemTagRegistry.DIRTY_MEK).add(BlockList.ALUM_DIRTY.get());
@@ -51,12 +71,22 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.DIRTY_MEK).add(BlockList.PLAT_DIRTY.get());
         tag(ItemTagRegistry.DIRTY_MEK).add(BlockList.SILV_DIRTY.get());
         tag(ItemTagRegistry.DIRTY_MEK).add(BlockList.ZINC_DIRTY.get());
+        tag(ItemTagRegistry.DIRTY_MEK).add(BlockList.COPP_DIRTY.get());
+        tag(ItemTagRegistry.DIRTY_MEK).add(BlockList.LEAD_DIRTY.get());
+        tag(ItemTagRegistry.DIRTY_MEK).add(BlockList.OSMI_DIRTY.get());
+        tag(ItemTagRegistry.DIRTY_MEK).add(BlockList.TIN_DIRTY.get());
+        tag(ItemTagRegistry.DIRTY_MEK).add(BlockList.URAN_DIRTY.get());
 
         tag(ItemTagRegistry.DIRTY_MEK_ALU).add(BlockList.ALUM_DIRTY.get());
         tag(ItemTagRegistry.DIRTY_MEK_NIC).add(BlockList.NICK_DIRTY.get());
         tag(ItemTagRegistry.DIRTY_MEK_PLA).add(BlockList.PLAT_DIRTY.get());
         tag(ItemTagRegistry.DIRTY_MEK_SIL).add(BlockList.SILV_DIRTY.get());
         tag(ItemTagRegistry.DIRTY_MEK_ZIN).add(BlockList.ZINC_DIRTY.get());
+        tag(ItemTagRegistry.DIRTY_MEK_COP).add(BlockList.COPP_DIRTY.get());
+        tag(ItemTagRegistry.DIRTY_MEK_LEA).add(BlockList.LEAD_DIRTY.get());
+        tag(ItemTagRegistry.DIRTY_MEK_OSM).add(BlockList.OSMI_DIRTY.get());
+        tag(ItemTagRegistry.DIRTY_MEK_TIN).add(BlockList.TIN_DIRTY.get());
+        tag(ItemTagRegistry.DIRTY_MEK_URA).add(BlockList.URAN_DIRTY.get());
 
         //
 
@@ -65,12 +95,22 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.SHARD_MEK).add(BlockList.PLAT_SHARD.get());
         tag(ItemTagRegistry.SHARD_MEK).add(BlockList.SILV_SHARD.get());
         tag(ItemTagRegistry.SHARD_MEK).add(BlockList.ZINC_SHARD.get());
+        tag(ItemTagRegistry.SHARD_MEK).add(BlockList.COPP_SHARD.get());
+        tag(ItemTagRegistry.SHARD_MEK).add(BlockList.LEAD_SHARD.get());
+        tag(ItemTagRegistry.SHARD_MEK).add(BlockList.OSMI_SHARD.get());
+        tag(ItemTagRegistry.SHARD_MEK).add(BlockList.TIN_SHARD.get());
+        tag(ItemTagRegistry.SHARD_MEK).add(BlockList.URAN_SHARD.get());
 
         tag(ItemTagRegistry.SHARD_MEK_ALU).add(BlockList.ALUM_SHARD.get());
         tag(ItemTagRegistry.SHARD_MEK_NIC).add(BlockList.NICK_SHARD.get());
         tag(ItemTagRegistry.SHARD_MEK_PLA).add(BlockList.PLAT_SHARD.get());
         tag(ItemTagRegistry.SHARD_MEK_SIL).add(BlockList.SILV_SHARD.get());
         tag(ItemTagRegistry.SHARD_MEK_ZIN).add(BlockList.ZINC_SHARD.get());
+        tag(ItemTagRegistry.SHARD_MEK_COP).add(BlockList.COPP_SHARD.get());
+        tag(ItemTagRegistry.SHARD_MEK_LEA).add(BlockList.LEAD_SHARD.get());
+        tag(ItemTagRegistry.SHARD_MEK_OSM).add(BlockList.OSMI_SHARD.get());
+        tag(ItemTagRegistry.SHARD_MEK_TIN).add(BlockList.TIN_SHARD.get());
+        tag(ItemTagRegistry.SHARD_MEK_URA).add(BlockList.URAN_SHARD.get());
 
         //
         tag(ItemTagRegistry.ALUMINUM_INGOT).add(BlockList.ALUMINUM_INGOT.get());

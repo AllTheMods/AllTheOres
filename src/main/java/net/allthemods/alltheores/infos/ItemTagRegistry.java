@@ -335,6 +335,11 @@ public class ItemTagRegistry {
     public static final TagKey<Item> CLUMPS_MEK_PLA = ItemTags.create(Reference.mek("clumps/platinum"));
     public static final TagKey<Item> CLUMPS_MEK_SIL = ItemTags.create(Reference.mek("clumps/silver"));
     public static final TagKey<Item> CLUMPS_MEK_ZIN = ItemTags.create(Reference.mek("clumps/zinc"));
+    public static final TagKey<Item> CLUMPS_MEK_COP = ItemTags.create(Reference.mek("clumps/copper"));
+    public static final TagKey<Item> CLUMPS_MEK_LEA = ItemTags.create(Reference.mek("clumps/lead"));
+    public static final TagKey<Item> CLUMPS_MEK_OSM = ItemTags.create(Reference.mek("clumps/osmium"));
+    public static final TagKey<Item> CLUMPS_MEK_TIN = ItemTags.create(Reference.mek("clumps/tin"));
+    public static final TagKey<Item> CLUMPS_MEK_URA = ItemTags.create(Reference.mek("clumps/uranium"));
 
     public static final TagKey<Item> CRYSTAL_MEK = ItemTags.create(Reference.mek("crystals"));
     public static final TagKey<Item> CRYSTAL_MEK_ALU = ItemTags.create(Reference.mek("crystals/aluminum"));
@@ -342,6 +347,11 @@ public class ItemTagRegistry {
     public static final TagKey<Item> CRYSTAL_MEK_PLA = ItemTags.create(Reference.mek("crystals/platinum"));
     public static final TagKey<Item> CRYSTAL_MEK_SIL = ItemTags.create(Reference.mek("crystals/silver"));
     public static final TagKey<Item> CRYSTAL_MEK_ZIN = ItemTags.create(Reference.mek("crystals/zinc"));
+    public static final TagKey<Item> CRYSTAL_MEK_COP = ItemTags.create(Reference.mek("crystals/copper"));
+    public static final TagKey<Item> CRYSTAL_MEK_LEA = ItemTags.create(Reference.mek("crystals/lead"));
+    public static final TagKey<Item> CRYSTAL_MEK_OSM = ItemTags.create(Reference.mek("crystals/osmium"));
+    public static final TagKey<Item> CRYSTAL_MEK_TIN = ItemTags.create(Reference.mek("crystals/tin"));
+    public static final TagKey<Item> CRYSTAL_MEK_URA = ItemTags.create(Reference.mek("crystals/uranium"));
 
     public static final TagKey<Item> DIRTY_MEK = ItemTags.create(Reference.mek("dirty_dusts"));
     public static final TagKey<Item> DIRTY_MEK_ALU = ItemTags.create(Reference.mek("dirty_dusts/aluminum"));
@@ -349,6 +359,11 @@ public class ItemTagRegistry {
     public static final TagKey<Item> DIRTY_MEK_PLA = ItemTags.create(Reference.mek("dirty_dusts/platinum"));
     public static final TagKey<Item> DIRTY_MEK_SIL = ItemTags.create(Reference.mek("dirty_dusts/silver"));
     public static final TagKey<Item> DIRTY_MEK_ZIN = ItemTags.create(Reference.mek("dirty_dusts/zinc"));
+    public static final TagKey<Item> DIRTY_MEK_COP = ItemTags.create(Reference.mek("dirty_dusts/copper"));
+    public static final TagKey<Item> DIRTY_MEK_LEA = ItemTags.create(Reference.mek("dirty_dusts/lead"));
+    public static final TagKey<Item> DIRTY_MEK_OSM = ItemTags.create(Reference.mek("dirty_dusts/osmium"));
+    public static final TagKey<Item> DIRTY_MEK_TIN = ItemTags.create(Reference.mek("dirty_dusts/tin"));
+    public static final TagKey<Item> DIRTY_MEK_URA = ItemTags.create(Reference.mek("dirty_dusts/uranium"));
 
     public static final TagKey<Item> SHARD_MEK = ItemTags.create(Reference.mek("shards"));
     public static final TagKey<Item> SHARD_MEK_ALU = ItemTags.create(Reference.mek("shards/aluminum"));
@@ -356,6 +371,11 @@ public class ItemTagRegistry {
     public static final TagKey<Item> SHARD_MEK_PLA = ItemTags.create(Reference.mek("shards/platinum"));
     public static final TagKey<Item> SHARD_MEK_SIL = ItemTags.create(Reference.mek("shards/silver"));
     public static final TagKey<Item> SHARD_MEK_ZIN = ItemTags.create(Reference.mek("shards/zinc"));
+    public static final TagKey<Item> SHARD_MEK_COP = ItemTags.create(Reference.mek("shards/copper"));
+    public static final TagKey<Item> SHARD_MEK_LEA = ItemTags.create(Reference.mek("shards/lead"));
+    public static final TagKey<Item> SHARD_MEK_OSM = ItemTags.create(Reference.mek("shards/osmium"));
+    public static final TagKey<Item> SHARD_MEK_TIN = ItemTags.create(Reference.mek("shards/tin"));
+    public static final TagKey<Item> SHARD_MEK_URA = ItemTags.create(Reference.mek("shards/uranium"));
 
 
     private static TagKey<Item> forge(String name)
