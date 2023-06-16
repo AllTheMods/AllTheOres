@@ -5,6 +5,7 @@ import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -74,7 +75,7 @@ public class ShapedRawBuilder {
     }
 
     private ShapedRecipeBuilder shaped(ItemLike provider) {
-        return ShapedRecipeBuilder.shaped(provider)
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC,provider)
             .group(Reference.MOD_ID);
     }
 

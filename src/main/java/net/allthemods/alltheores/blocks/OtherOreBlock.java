@@ -4,12 +4,10 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Position;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.PushReaction;
 
 import net.minecraftforge.common.util.FakePlayer;
@@ -17,7 +15,7 @@ import net.minecraftforge.common.util.FakePlayer;
 public class OtherOreBlock extends DropExperienceBlock {
 
     public OtherOreBlock() {
-        super(Properties.of(Material.HEAVY_METAL).requiresCorrectToolForDrops().sound(SoundType.STONE)
+        super(Properties.of().requiresCorrectToolForDrops().sound(SoundType.STONE)
                 .strength(-1.0f));
     }
 
@@ -40,11 +38,7 @@ public class OtherOreBlock extends DropExperienceBlock {
         return super.canHarvestBlock(state, world, pos, player);
     }
 
-    @Override
-    public PushReaction getPistonPushReaction(BlockState state) {
 
-        return PushReaction.BLOCK;
-    }
 
 }
 

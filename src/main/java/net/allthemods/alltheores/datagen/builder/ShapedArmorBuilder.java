@@ -4,10 +4,7 @@ import net.allthemods.alltheores.datagen.RecipeException;
 import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeBuilder;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -107,7 +104,7 @@ public class ShapedArmorBuilder {
     }
 
     private ShapedRecipeBuilder shaped(ItemLike provider) {
-        return ShapedRecipeBuilder.shaped(provider)
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC,provider)
             .group(Reference.MOD_ID);
     }
 

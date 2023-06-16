@@ -3,20 +3,25 @@ package net.allthemods.alltheores.datagen.server;
 import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.infos.ItemTagRegistry;
 import net.allthemods.alltheores.infos.Reference;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
+import java.util.concurrent.CompletableFuture;
+
 public class ItemTags extends ItemTagsProvider {
-    public ItemTags(DataGenerator generator, BlockTagsProvider blockTagsProvider, ExistingFileHelper existingFileHelper) {
-        super(generator, blockTagsProvider, Reference.MOD_ID, existingFileHelper);
+    public ItemTags(PackOutput packOutPut, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagsProvider.TagLookup<Block>> tagLookup, ExistingFileHelper existingFileHelper) {
+        super(packOutPut, lookupProvider,tagLookup, Reference.MOD_ID, existingFileHelper);
     }
 
     @Override
-    protected void addTags() {
-
+    protected void addTags(HolderLookup.Provider provider) {
+/*
         //Mek Compat
         tag(ItemTagRegistry.CLUMPS_MEK).add(BlockList.ALUM_CLUMP.get());
         tag(ItemTagRegistry.CLUMPS_MEK).add(BlockList.NICK_CLUMP.get());
@@ -71,7 +76,7 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.SHARD_MEK_PLA).add(BlockList.PLAT_SHARD.get());
         tag(ItemTagRegistry.SHARD_MEK_SIL).add(BlockList.SILV_SHARD.get());
         tag(ItemTagRegistry.SHARD_MEK_ZIN).add(BlockList.ZINC_SHARD.get());
-
+*/
         //
         tag(ItemTagRegistry.ALUMINUM_INGOT).add(BlockList.ALUMINUM_INGOT.get());
         tag(ItemTagRegistry.IRIDIUM_INGOT).add(BlockList.IRIDIUM_INGOT.get());
@@ -723,4 +728,6 @@ public class ItemTags extends ItemTagsProvider {
         tag(ItemTagRegistry.ORE_HAMMERS).add(BlockList.PLATINUM_ORE_HAMMER.get());
 
     }
+
+
 }

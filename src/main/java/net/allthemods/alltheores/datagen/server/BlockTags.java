@@ -3,20 +3,22 @@ package net.allthemods.alltheores.datagen.server;
 import net.allthemods.alltheores.blocks.BlockList;
 import net.allthemods.alltheores.infos.ItemTagRegistry;
 import net.allthemods.alltheores.infos.Reference;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import javax.annotation.Nullable;
+import java.util.concurrent.CompletableFuture;
 
 public class BlockTags extends BlockTagsProvider {
 
-    public BlockTags(DataGenerator generator, @Nullable ExistingFileHelper existingFileHelper) {
-        super(generator, Reference.MOD_ID, existingFileHelper);
+    public BlockTags(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+        super(packOutput,lookupProvider, Reference.MOD_ID, existingFileHelper);
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(HolderLookup.Provider provider) {
         tag(ItemTagRegistry.RAW_ALUMINUM_BLOCK).add(BlockList.RAW_ALUMINUM_BLOCK.get());
         tag(ItemTagRegistry.RAW_IRIDIUM_BLOCK).add(BlockList.RAW_IRIDIUM_BLOCK.get());
         tag(ItemTagRegistry.RAW_LEAD_BLOCK).add(BlockList.RAW_LEAD_BLOCK.get());
@@ -436,4 +438,6 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.OTHER_QUARTZ_ORE.get());
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(BlockList.OTHER_REDSTONE_ORE.get());
     }
+
+
 }

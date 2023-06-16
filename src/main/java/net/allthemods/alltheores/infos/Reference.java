@@ -15,11 +15,7 @@ import java.util.List;
 public class Reference {
 
 		public static final String MOD_ID = "alltheores";
-		public static final CreativeModeTab GROUP = new CreativeModeTab(MOD_ID) {
-			public ItemStack makeIcon() {
-				return new ItemStack(Blocks.DIAMOND_ORE);
-			}
-		};
+
 		public static List<Block> WORLDGEN_BLACKLIST = new ArrayList<Block>();
 	public static ResourceLocation location(String pathIn) {
 		return new ResourceLocation(pathIn);

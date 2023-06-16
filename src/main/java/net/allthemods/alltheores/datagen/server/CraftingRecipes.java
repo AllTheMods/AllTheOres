@@ -8,6 +8,7 @@ import net.allthemods.alltheores.infos.ItemTagRegistry;
 import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.data.*;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Items;
@@ -18,17 +19,17 @@ import java.util.function.Consumer;
 
 public class CraftingRecipes extends RecipeProvider {
     public CraftingRecipes(DataGenerator generatorIn) {
-        super(generatorIn);
+        super(generatorIn.getPackOutput());
     }
 
     private ShapedRecipeBuilder shaped(ItemLike provider) {
-        return ShapedRecipeBuilder.shaped(provider)
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC,provider)
             .group(Reference.MOD_ID);
     }
 
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 /*
         shaped(TheGuide.TIER_1_CORE.get())
             .pattern("g g")

@@ -1,7 +1,6 @@
 package net.allthemods.alltheores;
 
 import net.allthemods.alltheores.events.BlockBreak;
-import net.allthemods.alltheores.meka.resources.ATOSlurries;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,10 +24,13 @@ public class AllTheOres {
 		//ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_SPEC);
 		BlockList.FLUIDS.register(modEventBus);
 		BlockList.BLOCKS.register(modEventBus);
+		BlockList.CREATIVE_TABS.register(modEventBus);
 		BlockList.ITEMS.register(modEventBus);
+		/*
 		if(ModList.get().isLoaded("mekanism")) {
 			ATOSlurries.SLURRIES.register(modEventBus);
 		}
+		*/
 		//BlockList.FEATURES.register(modEventBus);
 		MinecraftForge.EVENT_BUS.register(this);
 		//modEventBus.register(Configuration.class);
