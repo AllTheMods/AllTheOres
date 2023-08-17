@@ -3,6 +3,7 @@ package net.allthemods.alltheores.datagen;
 import net.allthemods.alltheores.datagen.client.BlockStates;
 import net.allthemods.alltheores.datagen.client.ItemModels;
 import net.allthemods.alltheores.datagen.server.*;
+import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
@@ -19,13 +20,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = Reference.MOD_ID)
 public final class DataGenerators {
-    private static CompletableFuture<TagsProvider.TagLookup<Block>> blockTags;
-
-    private DataGenerators(CompletableFuture<TagsProvider.TagLookup<Block>> blockTags) {
-        this.blockTags = blockTags;
-    }
+    private DataGenerators() {}
 
       @SubscribeEvent
     public static void gatherData(GatherDataEvent event) throws IOException {
@@ -33,12 +30,10 @@ public final class DataGenerators {
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
         if (event.includeServer()) {
-            generator.addProvider(true, new BlockTags(packOutput,event.getLookupProvider(), fileHelper));
-            generator.addProvider(true,new ItemTags(packOutput,event.getLookupProvider(), blockTags, fileHelper));
-            generator.addProvider(true,new CraftingRecipes(generator));
-            generator.addProvider(true,new ShapelessCrafting(generator));
-            generator.addProvider(true,new BlastingRecipes(generator));
-            generator.addProvider(true,new SmeltingRecipes(generator));
+            BlockTags blockTags = new BlockTags(packOutput,event.getLookupProvider(), fileHelper);
+            generator.addProvider(true, blockTags);
+            generator.addProvider(true,new ItemTags(packOutput,event.getLookupProvider(), blockTags.contentsGetter(), fileHelper));
+            generator.addProvider(true,new CraftingRecipes(packOutput));
             generator.addProvider(true,new LootTableProvider(packOutput, Collections.emptySet(),
                     List.of(new LootTableProvider.SubProviderEntry(LootTables::new, LootContextParamSets.BLOCK))));
         }
