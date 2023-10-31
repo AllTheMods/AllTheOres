@@ -1,0 +1,17 @@
+{
+  "type": "mekanism:combining",
+  "mainInput": {
+    "amount": 8,
+    "ingredient": {
+      "tag": "forge:raw_materials/iridium"
+    }
+  },
+  "extraInput": {
+    "ingredient": {
+      "item": "minecraft:netherrack"
+    }
+  },
+  "output": {
+    "item": "alltheores:nether_iridium_ore"
+  }
+}

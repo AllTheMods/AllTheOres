@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:aluminum_shard",
+    "alltheores:nickel_shard",
+    "alltheores:platinum_shard",
+    "alltheores:silver_shard",
+    "alltheores:zinc_shard",
+    "alltheores:iridium_shard"
+  ]
+}

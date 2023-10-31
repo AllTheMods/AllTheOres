@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:injecting",
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:ores/zinc"
+    }
+  },
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "item": "alltheores:zinc_shard",
+    "count": 4
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
+}

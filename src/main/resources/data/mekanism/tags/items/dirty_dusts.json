@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:dirty_aluminum_dust",
+    "alltheores:dirty_nickel_dust",
+    "alltheores:dirty_platinum_dust",
+    "alltheores:dirty_silver_dust",
+    "alltheores:dirty_zinc_dust",
+    "alltheores:dirty_iridium_dust"
+  ]
+}

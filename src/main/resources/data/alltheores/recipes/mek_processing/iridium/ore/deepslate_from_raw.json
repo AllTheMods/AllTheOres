@@ -1,0 +1,17 @@
+{
+  "type": "mekanism:combining",
+  "mainInput": {
+    "amount": 8,
+    "ingredient": {
+      "tag": "forge:raw_materials/iridium"
+    }
+  },
+  "extraInput": {
+    "ingredient": {
+      "tag": "forge:cobblestone/deepslate"
+    }
+  },
+  "output": {
+    "item": "alltheores:deepslate_iridium_ore"
+  }
+}

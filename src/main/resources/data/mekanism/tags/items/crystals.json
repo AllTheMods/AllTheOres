@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "alltheores:aluminum_crystal",
+    "alltheores:nickel_crystal",
+    "alltheores:platinum_crystal",
+    "alltheores:silver_crystal",
+    "alltheores:zinc_crystal",
+    "alltheores:iridium_crystal"
+  ]
+}

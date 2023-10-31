@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:storage_blocks/raw_iridium"
+    }
+  },
+  "output": {
+    "count": 12,
+    "item": "alltheores:iridium_dust"
+  }
+}
