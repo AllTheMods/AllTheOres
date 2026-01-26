@@ -112,6 +112,10 @@ dependencies {
 
     implementation "curse.maven:${actually_additions}"
     implementation "curse.maven:${adorned}"
+
+    // forbidden-arcanus runtime dependencies
+    runtimeOnly "curse.maven:${forbidden_arcanus}"
+    runtimeOnly "curse.maven:${valhelsia_core}"
 }
 
 tasks.withType(ProcessResources).configureEach {

@@ -20,7 +20,9 @@ public class OreHammer extends Item {
     public ItemStack getCraftingRemainingItem(ItemStack itemStack) {
         int durability = itemStack.getDamageValue();
         itemStack.setDamageValue(durability + 1);
-        if (itemStack.getDamageValue() == itemStack.getMaxDamage()) {
+
+        // replace with `itemStack.isBroken()`, once that becomes available in `1.21.2`
+        if (itemStack.isDamageableItem() && itemStack.getDamageValue() >= itemStack.getMaxDamage()) {
             return ItemStack.EMPTY;
         }
 
