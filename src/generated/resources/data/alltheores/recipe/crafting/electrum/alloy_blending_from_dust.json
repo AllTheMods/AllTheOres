@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "alltheores:gold_dust"
+      "tag": "c:dusts/gold"
     },
     {
       "tag": "c:dusts/silver"

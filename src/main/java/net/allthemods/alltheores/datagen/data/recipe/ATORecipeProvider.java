@@ -398,7 +398,7 @@ public class ATORecipeProvider extends RecipeProvider {
 
         ShapelessRecipeBuilder
                 .shapeless(RecipeCategory.MISC, ATORegistry.INVAR.DUST.get(), 3)
-                .requires(ATORegistry.IRON.DUST.get(), 2)
+                .requires(Ingredient.of(ATORegistry.IRON.DUST_TAG), 2)
                 .requires(ATORegistry.NICKEL.DUST_TAG)
                 .unlockedBy("has_hammer", has(ATOTagRegistry.ORE_HAMMERS))
                 .save(recipeOutput, shapelessIORecipeDir("dust", "invar", "alloy_blending"));
@@ -406,7 +406,7 @@ public class ATORecipeProvider extends RecipeProvider {
 
         ShapelessRecipeBuilder
                 .shapeless(RecipeCategory.MISC, ATORegistry.STEEL.DUST.get(), 1)
-                .requires(ATORegistry.IRON.DUST.get(), 1)
+                .requires(Ingredient.of(ATORegistry.IRON.DUST_TAG), 1)
                 .requires(Items.COAL, 4)
                 .requires(ATOTagRegistry.ORE_HAMMERS)
                 .unlockedBy("has_hammer", has(ATOTagRegistry.ORE_HAMMERS))
@@ -414,21 +414,21 @@ public class ATORecipeProvider extends RecipeProvider {
 
         ShapelessRecipeBuilder
                 .shapeless(RecipeCategory.MISC, ATORegistry.ELECTRUM.DUST.get(), 2)
-                .requires(ATORegistry.GOLD.DUST.get())
+                .requires(ATORegistry.GOLD.DUST_TAG)
                 .requires(ATORegistry.SILVER.DUST_TAG)
                 .unlockedBy("has_hammer", has(ATOTagRegistry.ORE_HAMMERS))
                 .save(recipeOutput, shapelessIORecipeDir("dust", "electrum", "alloy_blending"));
 
         ShapelessRecipeBuilder
                 .shapeless(RecipeCategory.MISC, ATORegistry.BRONZE.DUST.get(), 4)
-                .requires(ATORegistry.COPPER.DUST.get(), 3)
+                .requires(Ingredient.of(ATORegistry.COPPER.DUST_TAG), 3)
                 .requires(ATORegistry.TIN.DUST_TAG)
                 .unlockedBy("has_hammer", has(ATOTagRegistry.ORE_HAMMERS))
                 .save(recipeOutput, shapelessIORecipeDir("dust", "bronze", "alloy_blending"));
 
         ShapelessRecipeBuilder
                 .shapeless(RecipeCategory.MISC, ATORegistry.BRASS.DUST.get(), 4)
-                .requires(ATORegistry.COPPER.DUST.get(), 3)
+                .requires(Ingredient.of(ATORegistry.COPPER.DUST_TAG), 3)
                 .requires(ATORegistry.ZINC.DUST_TAG)
                 .unlockedBy("has_hammer", has(ATOTagRegistry.ORE_HAMMERS))
                 .save(recipeOutput, shapelessIORecipeDir("dust", "brass", "alloy_blending"));
@@ -437,20 +437,20 @@ public class ATORecipeProvider extends RecipeProvider {
                 .shapeless(RecipeCategory.MISC, ATORegistry.LUMIUM.DUST.get(), 4)
                 .requires(Items.GLOWSTONE_DUST, 4)
                 .requires(ATORegistry.SILVER.DUST_TAG)
-                .requires(ATORegistry.TIN.DUST.get(), 3)
+                .requires(Ingredient.of(ATORegistry.TIN.DUST_TAG), 3)
                 .unlockedBy("has_hammer", has(ATOTagRegistry.ORE_HAMMERS))
                 .save(recipeOutput, shapelessIORecipeDir("dust", "lumium", "alloy_blending"));
 
         ShapelessRecipeBuilder
                 .shapeless(RecipeCategory.MISC, ATORegistry.CONSTANTAN.DUST.get(), 2)
-                .requires(ATORegistry.COPPER.DUST.get())
+                .requires(ATORegistry.COPPER.DUST_TAG)
                 .requires(ATORegistry.NICKEL.DUST_TAG)
                 .unlockedBy("has_hammer", has(ATOTagRegistry.ORE_HAMMERS))
                 .save(recipeOutput, shapelessIORecipeDir("dust", "constantan", "alloy_blending"));
 
         ShapelessRecipeBuilder
                 .shapeless(RecipeCategory.MISC, ATORegistry.SIGNALUM.DUST.get(), 4)
-                .requires(ATORegistry.COPPER.DUST.get(), 3)
+                .requires(Ingredient.of(ATORegistry.COPPER.DUST_TAG), 3)
                 .requires(ATORegistry.SILVER.DUST_TAG)
                 .requires(Items.REDSTONE, 4)
                 .unlockedBy("has_hammer", has(ATOTagRegistry.ORE_HAMMERS))
@@ -458,7 +458,7 @@ public class ATORecipeProvider extends RecipeProvider {
 
         ShapelessRecipeBuilder
                 .shapeless(RecipeCategory.MISC, ATORegistry.ENDERIUM.DUST.get(), 4)
-                .requires(ATORegistry.LEAD.DUST.get(), 3)
+                .requires(Ingredient.of(ATORegistry.LEAD.DUST_TAG), 3)
                 .requires(ATORegistry.PLATINUM.DUST_TAG)
                 .requires(Items.ENDER_PEARL, 2)
                 .requires(ATOTagRegistry.ORE_HAMMERS)
