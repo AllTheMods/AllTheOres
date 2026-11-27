@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "alltheores:gold_dust",
+    "#c:dusts/gold",
     "#c:dusts/silver"
   ],
   "result": {

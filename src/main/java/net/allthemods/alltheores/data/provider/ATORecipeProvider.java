@@ -287,41 +287,41 @@ public class ATORecipeProvider extends RecipeProvider {
     
     private void addAlloyBlendingRecipes() {
         this.alloyBlend(Materials.INVAR, 3, false,
-                RecipeIngredient.item(Material.item(Materials.IRON.get(ItemPartType.DUST)), 2),
+                RecipeIngredient.tag(ItemPartType.DUST.getTag("iron"), 2),
                 RecipeIngredient.tag(ItemPartType.DUST.getTag("nickel"))
         );
         this.alloyBlend(Materials.STEEL, 1, true,
-                RecipeIngredient.item(Material.item(Materials.IRON.get(ItemPartType.DUST))),
+                RecipeIngredient.tag(ItemPartType.DUST.getTag("iron")),
                 RecipeIngredient.item(Items.COAL, 4)
         );
         this.alloyBlend(Materials.ELECTRUM, 2, false,
-                RecipeIngredient.item(Material.item(Materials.GOLD.get(ItemPartType.DUST))),
+                RecipeIngredient.tag(ItemPartType.DUST.getTag("gold")),
                 RecipeIngredient.tag(ItemPartType.DUST.getTag("silver"))
         );
         this.alloyBlend(Materials.BRONZE, 4, false,
-                RecipeIngredient.item(Material.item(Materials.COPPER.get(ItemPartType.DUST)), 3),
+                RecipeIngredient.tag(ItemPartType.DUST.getTag("copper"), 3),
                 RecipeIngredient.tag(ItemPartType.DUST.getTag("tin"))
         );
         this.alloyBlend(Materials.BRASS, 4, false,
-                RecipeIngredient.item(Material.item(Materials.COPPER.get(ItemPartType.DUST)), 3),
+                RecipeIngredient.tag(ItemPartType.DUST.getTag("copper"), 3),
                 RecipeIngredient.tag(ItemPartType.DUST.getTag("zinc"))
         );
         this.alloyBlend(Materials.LUMIUM, 4, false,
                 RecipeIngredient.item(Items.GLOWSTONE_DUST, 4),
                 RecipeIngredient.tag(ItemPartType.DUST.getTag("silver")),
-                RecipeIngredient.item(Material.item(Materials.TIN.get(ItemPartType.DUST)), 3)
+                RecipeIngredient.tag(ItemPartType.DUST.getTag("tin"), 3)
         );
         this.alloyBlend(Materials.CONSTANTAN, 2, false,
-                RecipeIngredient.item(Material.item(Materials.COPPER.get(ItemPartType.DUST))),
+                RecipeIngredient.tag(ItemPartType.DUST.getTag("copper")),
                 RecipeIngredient.tag(ItemPartType.DUST.getTag("nickel"))
         );
         this.alloyBlend(Materials.SIGNALUM, 4, false,
-                RecipeIngredient.item(Material.item(Materials.COPPER.get(ItemPartType.DUST)), 3),
+                RecipeIngredient.tag(ItemPartType.DUST.getTag("copper"), 3),
                 RecipeIngredient.tag(ItemPartType.DUST.getTag("silver")),
                 RecipeIngredient.item(Items.REDSTONE, 4)
         );
         this.alloyBlend(Materials.ENDERIUM, 4, true,
-                RecipeIngredient.item(Material.item(Materials.LEAD.get(ItemPartType.DUST)), 3),
+                RecipeIngredient.tag(ItemPartType.DUST.getTag("lead"), 3),
                 RecipeIngredient.tag(ItemPartType.DUST.getTag("platinum")),
                 RecipeIngredient.item(Items.ENDER_PEARL, 2)
         );
