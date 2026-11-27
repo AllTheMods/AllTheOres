@@ -3,13 +3,13 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "alltheores:lead_dust"
+      "tag": "c:dusts/lead"
     },
     {
-      "item": "alltheores:lead_dust"
+      "tag": "c:dusts/lead"
     },
     {
-      "item": "alltheores:lead_dust"
+      "tag": "c:dusts/lead"
     },
     {
       "tag": "c:dusts/platinum"

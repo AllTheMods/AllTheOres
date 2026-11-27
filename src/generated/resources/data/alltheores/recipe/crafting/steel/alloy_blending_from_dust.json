@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "alltheores:iron_dust"
+      "tag": "c:dusts/iron"
     },
     {
       "item": "minecraft:coal"

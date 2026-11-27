@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "alltheores:copper_dust"
+      "tag": "c:dusts/copper"
     },
     {
       "tag": "c:dusts/nickel"
