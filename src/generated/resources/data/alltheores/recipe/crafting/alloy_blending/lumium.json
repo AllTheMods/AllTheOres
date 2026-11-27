@@ -7,9 +7,9 @@
     "minecraft:glowstone_dust",
     "minecraft:glowstone_dust",
     "#c:dusts/silver",
-    "alltheores:tin_dust",
-    "alltheores:tin_dust",
-    "alltheores:tin_dust"
+    "#c:dusts/tin",
+    "#c:dusts/tin",
+    "#c:dusts/tin"
   ],
   "result": {
     "count": 4,

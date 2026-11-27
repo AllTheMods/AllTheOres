@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "#alltheores:ore_hammers",
-    "alltheores:iron_dust",
+    "#c:dusts/iron",
     "minecraft:coal",
     "minecraft:coal",
     "minecraft:coal",

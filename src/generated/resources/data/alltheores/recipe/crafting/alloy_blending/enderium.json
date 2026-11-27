@@ -3,9 +3,9 @@
   "category": "misc",
   "ingredients": [
     "#alltheores:ore_hammers",
-    "alltheores:lead_dust",
-    "alltheores:lead_dust",
-    "alltheores:lead_dust",
+    "#c:dusts/lead",
+    "#c:dusts/lead",
+    "#c:dusts/lead",
     "#c:dusts/platinum",
     "minecraft:ender_pearl",
     "minecraft:ender_pearl"

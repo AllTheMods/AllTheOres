@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "alltheores:copper_dust",
-    "alltheores:copper_dust",
-    "alltheores:copper_dust",
+    "#c:dusts/copper",
+    "#c:dusts/copper",
+    "#c:dusts/copper",
     "#c:dusts/tin"
   ],
   "result": {

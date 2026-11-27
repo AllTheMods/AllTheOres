@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "alltheores:iron_dust",
-    "alltheores:iron_dust",
+    "#c:dusts/iron",
+    "#c:dusts/iron",
     "#c:dusts/nickel"
   ],
   "result": {
